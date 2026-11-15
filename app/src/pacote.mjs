@@ -13,7 +13,8 @@ export const TABELAS_DO_APP = ['tipos_roster.json', 'tipos_confirmados.json', 'm
 // inimigo guardada com a pasta velha do app e achada na biblioteca da nova (forge.mjs inLibrary)
 // 1.0.2 (15/11): o CMBS Roguelike.exe de outra pasta pergunta antes de reabrir a versao que ja esta rodando
 // 1.0.3 (15/11, autor): sem a pergunta — o .exe de outra pasta fecha a versao que roda e sobe a dele
-export const APP_VERSION = '1.0.3';
+// 1.0.4 (15/11, autor): o Force ratio sem os creditos do inimigo (a proporcao so)
+export const APP_VERSION = '1.0.4';
 
 // O Node minimo: o codigo usa import.meta.dirname (20.11); o Node 18 trava na partida.
 export const NODE_MINIMO = [20, 11];

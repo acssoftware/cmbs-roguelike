@@ -458,15 +458,17 @@ function profileWord(p) {
 
 
 // A RAZAO DE FORCA (30/10, a escada): a dificuldade. As opcoes saem da regra; o preset que usa cada uma vai no rotulo.
-// Desde 01/11 ela escala o inimigo do Attack: o rotulo diz o tamanho dele na batalha 1.
+// Desde 01/11 ela escala o inimigo do Attack. 15/11 (autor): o rotulo dizia "enemy N cr in battle 1" (startingCredits / R),
+// numero que nao e o do inimigo de verdade (o peso do no e o mapa o movem); agora diz so a proporcao.
 function fillRatio() {
   const D = STATUS.rules.difficulty || {};
   const pres = D.presets || [];
   const padrao = pres.find((p) => p.name === D.default)?.ratio;
   $('#param-ratio').replaceChildren(...(D.ratioOptions || []).map((v) => {
     const quem = pres.find((p) => Number(p.ratio) === v);
+    const leitura = v >= 1 ? `you field ${v}× the enemy` : `the enemy fields ${(1 / v).toFixed(2)}× you`;
     return el('option', { value: String(v), ...(v === padrao ? { selected: 'selected' } : {}) },
-      `${v} : 1 — enemy ${Math.round((STATUS.rules.startingCredits || 0) / v).toLocaleString('en-US')} cr in battle 1${quem ? ` (${quem.name})` : ''}`);
+      `${v} : 1 — ${leitura}${quem ? ` (${quem.name})` : ''}`);
   }));
 }
 
