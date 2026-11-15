@@ -1,0 +1,237 @@
+{
+ "geradoEm": "2026-10-05T00:49:42.503Z",
+ "origem": "Quick Battle Maps de fabrica do CMBS (Steam), copiados com o sufixo ' CMBSRL'; a selecao e app/data/mapas.json (autor, 04/10/2026)",
+ "arquivos": [
+  {
+   "arquivo": "City  (688 X 736) 047r Attack CMBSRL.btt",
+   "jogo": "City  (688 X 736) 047r Attack.btt",
+   "tier": 1,
+   "sha256": "d84c59994476f73936c313d89db97a8de144493c3782533d04e5c63935930ddd",
+   "bytes": 167592
+  },
+  {
+   "arquivo": "City-Water (560 X 1072) 081r Attack CMBSRL.btt",
+   "jogo": "City-Water (560 X 1072) 081r Attack.btt",
+   "tier": 2,
+   "sha256": "c7cdc2ff2542babedf4626d7b53acbb37e2fd187d8ff07b773eb1a94ca65358f",
+   "bytes": 168446
+  },
+  {
+   "arquivo": "City-Water-Rough (640 X 1168) 053r Attack CMBSRL.btt",
+   "jogo": "City-Water-Rough (640 X 1168) 053r Attack.btt",
+   "tier": 2,
+   "sha256": "cd0b5f8f47ff8e1576829be323b4b9554588741e672fdb3a0423525cca8e118c",
+   "bytes": 154316
+  },
+  {
+   "arquivo": "Forest-Rural (1600 X 1600) 42r Attack CMBSRL.btt",
+   "jogo": "Forest-Rural (1600 X 1600) 42r Attack.btt",
+   "tier": 4,
+   "sha256": "b0704f104a8f1f6a80876f3adda8455d7bd3f0043395767bc1db9c3c6659edce",
+   "bytes": 270224
+  },
+  {
+   "arquivo": "Hill-Water-Village (912 X 816) 078r Attack CMBSRL.btt",
+   "jogo": "Hill-Water-Village (912 X 816) 078r Attack.btt",
+   "tier": 2,
+   "sha256": "c6febd2dc1aaa01b9ca9ff6062aed98bc91a6cba782231a2db2ec04c5e299d8b",
+   "bytes": 114441
+  },
+  {
+   "arquivo": "Hills-Forest (848 X 1008) 228 Attack CMBSRL.btt",
+   "jogo": "Hills-Forest (848 X 1008) 228 Attack.btt",
+   "tier": 2,
+   "sha256": "db07738db7e23a90e4b71362e5afbe5c1d46e09dcf04355e87fc0caa0ca85d33",
+   "bytes": 197062
+  },
+  {
+   "arquivo": "Hills-Water (1072 X 816) 037r Attack CMBSRL.btt",
+   "jogo": "Hills-Water (1072 X 816) 037r Attack.btt",
+   "tier": 2,
+   "sha256": "eb8220f7046ef122035a82dabcf561bc9f75890f894717a80cfe1e6445cdebb1",
+   "bytes": 612487
+  },
+  {
+   "arquivo": "Huge Asintorf-Town (2400 X 2000) 091 Attack CMBSRL.btt",
+   "jogo": "Huge Asintorf-Town (2400 X 2000) 091 Attack.btt",
+   "tier": 5,
+   "sha256": "005c6f5e7e9178933cc5aa4b824509a2342efff772b3136205c574225e4f8448",
+   "bytes": 274627
+  },
+  {
+   "arquivo": "Huge Orekhovsk-Village (2208 X 1568) 092 Attack CMBSRL.btt",
+   "jogo": "Huge Orekhovsk-Village (2208 X 1568) 092 Attack.btt",
+   "tier": 4,
+   "sha256": "82fe687602398e380eb49d1f6d8c1c65f50d74ac8578e97ea99fc78951783179",
+   "bytes": 354992
+  },
+  {
+   "arquivo": "Huge Rough-Water-Town (3040 X 2000) 026r Attack CMBSRL.btt",
+   "jogo": "Huge Rough-Water-Town (3040 X 2000) 026r Attack.btt",
+   "tier": 5,
+   "sha256": "93ed3e94c4def855a0ce3571b4913bd8211c2465717cad75230921c9f3ac5961",
+   "bytes": 2037538
+  },
+  {
+   "arquivo": "Khalmi-Rough (1088 X 1104) 085r Attack CMBSRL.btt",
+   "jogo": "Khalmi-Rough (1088 X 1104) 085r Attack.btt",
+   "tier": 3,
+   "sha256": "d74c1acc7c6de4e985bff3be157610ae6224758d4899702c42718c6188b4fbc8",
+   "bytes": 170437
+  },
+  {
+   "arquivo": "Open-Hills (1248 X 1200) 314 Attack CMBSRL.btt",
+   "jogo": "Open-Hills (1248 X 1200) 314 Attack.btt",
+   "tier": 3,
+   "sha256": "4c0b5e1092f408dc74ce18ad2b5d1ecf7b4f27bf2f838b076b5ff8ba6beb8638",
+   "bytes": 229306
+  },
+  {
+   "arquivo": "Open-Rough (1840 X 1242) 035r Attack CMBSRL.btt",
+   "jogo": "Open-Rough (1840 X 1242) 035r Attack.btt",
+   "tier": 4,
+   "sha256": "0dc2dd81c6810cb1f8ace3e7208bb8a0e2d52625541df57eb7ad21856f52a918",
+   "bytes": 210744
+  },
+  {
+   "arquivo": "Open-Rural (944 X 848) 312 Attack CMBSRL.btt",
+   "jogo": "Open-Rural (944 X 848) 312 Attack.btt",
+   "tier": 2,
+   "sha256": "8ed8d3bb15546649c2d8f53d7ee8a75d52e7374c5edc5516ce7b65a09a7150e4",
+   "bytes": 155416
+  },
+  {
+   "arquivo": "Open-Rural-Water (912 X 816) 123 Attack CMBSRL.btt",
+   "jogo": "Open-Rural-Water (912 X 816) 123 Attack.btt",
+   "tier": 2,
+   "sha256": "a893ce1cb36fffe89a4dbbbafc2ed73ff7cba7df6ab509b982314f48c6475491",
+   "bytes": 113966
+  },
+  {
+   "arquivo": "Plehany-Open (1200 X 1280) 099 Attack CMBSRL.btt",
+   "jogo": "Plehany-Open (1200 X 1280) 099 Attack .btt",
+   "tier": 3,
+   "sha256": "7bca36a2127bede43c6036c57143e6d6b1b321e40a96b2de41193a2e966b89a0",
+   "bytes": 148438
+  },
+  {
+   "arquivo": "Podlypyky-Rough (1936 X 1808) 088 Attack CMBSRL.btt",
+   "jogo": "Podlypyky-Rough (1936 X 1808) 088 Attack.btt",
+   "tier": 4,
+   "sha256": "5261b235338cdc41aabda32ec30a8a52c50088d00ff652a56559f248031ba855",
+   "bytes": 262059
+  },
+  {
+   "arquivo": "Small City-Water (416 X 848) 051r Attack CMBSRL.btt",
+   "jogo": "Small City-Water (416 X 848) 051r Attack.btt",
+   "tier": 1,
+   "sha256": "8575679f8dc9b4be6dfaee005042e25c22ca1ed456373d4e7c6d8993c656b52a",
+   "bytes": 135741
+  },
+  {
+   "arquivo": "Small Hills-Forest (624 X 528) 023r Attack CMBSRL.btt",
+   "jogo": "Small Hills-Forest (624 X 528) 023r Attack.btt",
+   "tier": 1,
+   "sha256": "04fb0d12f18c3e1ab3ba08cacd3df92a0cc241a1608ec1a75bb949196c73297f",
+   "bytes": 136656
+  },
+  {
+   "arquivo": "Small Town-Forest (656 X 688) 017r Attack CMBSRL.btt",
+   "jogo": "Small Town-Forest (656 X 688) 017r Attack.btt",
+   "tier": 1,
+   "sha256": "54002b4f54fa8b27d6658a6fb5c36fb45ca67bd41e19accc3ad4ce3e102ff184",
+   "bytes": 121801
+  },
+  {
+   "arquivo": "Small Village (554 X 848) 019r Attack CMBSRL.btt",
+   "jogo": "Small Village (554 X 848) 019r Attack.btt",
+   "tier": 1,
+   "sha256": "6d729c40dcfe9db998809f150377a32186befdf34aeba90d1d2a9bc33c9c0c48",
+   "bytes": 135805
+  },
+  {
+   "arquivo": "Town-Forest (720 X 1024) 040r Attack CMBSRL.btt",
+   "jogo": "Town-Forest (720 X 1024) 040r Attack.btt",
+   "tier": 2,
+   "sha256": "3c86291d1fcdfafe138c8d5841bf2b26f4f87d298ba297e3ef6341d528972e81",
+   "bytes": 162668
+  },
+  {
+   "arquivo": "Town-Hills (608 X 1152) 069r Attack CMBSRL.btt",
+   "jogo": "Town-Hills (608 X 1152) 069r Attack.btt",
+   "tier": 2,
+   "sha256": "6a4f47b1ac4f1663aa7767defed7ea94618be20f9b26c4f7d3a79074c04d8d8a",
+   "bytes": 160040
+  },
+  {
+   "arquivo": "Town-Hills (800 X 928) 065 Attack CMBSRL.btt",
+   "jogo": "Town-Hills (800 X 928) 065 Attack.btt",
+   "tier": 2,
+   "sha256": "9364570c7cc1bd15841af5fb6a4bd4888918a8741ad485f02ce933700ab9568c",
+   "bytes": 160529
+  },
+  {
+   "arquivo": "Town-Rural (1600 X 1600) 271 Attack CMBSRL.btt",
+   "jogo": "Town-Rural (1600 X 1600) 271 Attack.btt",
+   "tier": 4,
+   "sha256": "690312e869f1edfe6a3d2f15b67ae858e7ed2041d86df9e661331659d77dd336",
+   "bytes": 273277
+  },
+  {
+   "arquivo": "Town-Water (1504 X 1008) 275 Attack CMBSRL.btt",
+   "jogo": "Town-Water (1504 X 1008) 275 Attack.btt",
+   "tier": 3,
+   "sha256": "5554022d005294c9cd7bd322a2aa256d006462892aa7b96336101928e1b722e2",
+   "bytes": 185926
+  },
+  {
+   "arquivo": "Village (544 X 800) 059r Attack CMBSRL.btt",
+   "jogo": "Village (544 X 800) 059r Attack.btt",
+   "tier": 1,
+   "sha256": "4209341cc167794d887aa48865e23c15f05a1196953f69f194a3d6d3037fde47",
+   "bytes": 162476
+  },
+  {
+   "arquivo": "Village-Forest (1040 X 848) 007r Attack CMBSRL.btt",
+   "jogo": "Village-Forest (1040 X 848) 007r Attack.btt",
+   "tier": 2,
+   "sha256": "8238007c866742296c25c324e2f9ba430fb9725bd934d60a20f7603462ad2fec",
+   "bytes": 151186
+  },
+  {
+   "arquivo": "Village-Forest (720 X 496) 057r Attack CMBSRL.btt",
+   "jogo": "Village-Forest (720 X 496) 057r Attack.btt",
+   "tier": 1,
+   "sha256": "a801d49d9f4980e9ce516e70a7135aba32fd7cc284ee02e8ee8a4f1194bcebf4",
+   "bytes": 129075
+  },
+  {
+   "arquivo": "Village-Hills (688 X 736) 300 Attack CMBSRL.btt",
+   "jogo": "Village-Hills (688 X 736) 300 Attack.btt",
+   "tier": 1,
+   "sha256": "a4dc03902a75dc7b9e09f2e7ae8b508bb416ee26e7dcfd738b41ea20425a8e18",
+   "bytes": 140765
+  },
+  {
+   "arquivo": "Village-Hills (912 X 816) 272 Attack CMBSRL.btt",
+   "jogo": "Village-Hills (912 X 816) 272 Attack.btt",
+   "tier": 2,
+   "sha256": "8536a35eb156ae6700c67a413d38247b37bf4cab0e6e1500fc143f282a131459",
+   "bytes": 142397
+  },
+  {
+   "arquivo": "Village-Water (560 X 912) 122 Attack CMBSRL.btt",
+   "jogo": "Village-Water (560 X 912) 122 Attack.btt",
+   "tier": 1,
+   "sha256": "a5c135d78dfb6f2d4def3cb0a43a0957fc87ecbdb9e00b67925d401ac2582194",
+   "bytes": 115648
+  },
+  {
+   "arquivo": "Village-Water (864 X 592) 299 Attack CMBSRL.btt",
+   "jogo": "Village-Water (864 X 592) 299 Attack.btt",
+   "tier": 1,
+   "sha256": "86653743778a09e3b64e31eb1669b585fd6e129a815a9e115ff0f096a20e3268",
+   "bytes": 151449
+  }
+ ]
+}

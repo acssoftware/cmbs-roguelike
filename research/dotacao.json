@@ -1,0 +1,3108 @@
+{
+ "nota": "A dotacao de FABRICA por vaga do TO&E, colhida so de saves que o app nunca tocou: partida rapida/cenario (sem batalha de campanha dentro) ou campanha ANTES do primeiro arquivo do app. So esquadrao inteiro vota, e a medida e a MODA — nao o maximo, que somava maximos de saves diferentes e inflava o esquadrao a cada batalha (E76/E80). Refazer com: node tools/re/dotacao.mjs --gravar",
+ "saves": 182,
+ "unidades": 422,
+ "tipos": {
+  "260": {
+   "0": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "261": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 1
+    },
+    "arma": "2/32",
+    "arma2": "2/26",
+    "vistos": 11,
+    "acordo": 0.91,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240,
+     "482": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "4/16",
+    "vistos": 11,
+    "acordo": 0.91,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 11,
+    "acordo": 0.73,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 11,
+    "acordo": 0.73,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 11,
+    "acordo": 0.82,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240,
+     "482": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "4/16",
+    "vistos": 11,
+    "acordo": 0.91,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 11,
+    "acordo": 0.91,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 11,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "772": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 7,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 7,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 7,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "1028": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "1029": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 1
+    },
+    "arma": "2/32",
+    "arma2": "2/26",
+    "vistos": 28,
+    "acordo": 0.96,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "5": 500
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/41",
+    "arma2": "8/0",
+    "vistos": 28,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240,
+     "5": 400,
+     "482": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "4/16",
+    "vistos": 28,
+    "acordo": 0.86,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/32",
+    "arma2": "2/26",
+    "vistos": 28,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240,
+     "39": 1,
+     "42": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "4/14",
+    "arma2": "2/30",
+    "vistos": 28,
+    "acordo": 0.96,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240,
+     "38": 1,
+     "42": 2
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 28,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "2054": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 1
+    },
+    "arma": "2/31",
+    "arma2": "2/24",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 0.6
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 0.4
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "2310": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 1
+    },
+    "arma": "2/31",
+    "arma2": "2/24",
+    "vistos": 6,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 6,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   }
+  },
+  "2564": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "2566": {
+   "0": {
+    "municao": {
+     "1": 150
+    },
+    "granadas": {
+     "1,4": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 17,
+    "acordo": 0.65,
+    "acordoGranada": 0.65
+   },
+   "1": {
+    "municao": {
+     "1": 150
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 17,
+    "acordo": 0.65,
+    "acordoGranada": 0.94
+   }
+  },
+  "2822": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "6": 48
+    },
+    "granadas": {
+     "1,2": 2,
+     "1,4": 1
+    },
+    "arma": "2/24",
+    "arma2": "2/43",
+    "vistos": 5,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "3078": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "6": 48
+    },
+    "granadas": {
+     "1,2": 2,
+     "1,4": 1
+    },
+    "arma": "2/24",
+    "arma2": "2/43",
+    "vistos": 3,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "3333": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 6,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "4": 800,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "3/17",
+    "arma2": "2/5",
+    "vistos": 6,
+    "acordo": 0.83,
+    "acordoGranada": 0.5
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 6,
+    "acordo": 0.83,
+    "acordoGranada": 0.5
+   },
+   "3": {
+    "municao": {
+     "4": 800,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "3/17",
+    "arma2": "2/5",
+    "vistos": 6,
+    "acordo": 0.67,
+    "acordoGranada": 0.5
+   },
+   "4": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 6,
+    "acordo": 0.67,
+    "acordoGranada": 0.5
+   }
+  },
+  "3845": {
+   "0": {
+    "municao": {
+     "2": 291
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 291
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 758
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 291,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 291,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 291,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "2": 757
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 290,
+     "497": 40,
+     "516": 4,
+     "517": 4
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/6",
+    "arma2": "2/3",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "4": 140
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/9",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "4100": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "4101": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "4": 800,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "3/17",
+    "arma2": "2/5",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "4": 800,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "3/17",
+    "arma2": "2/5",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "4358": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "4613": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 210,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 9,
+    "acordo": 0.44,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 9,
+    "acordo": 0.33,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 9,
+    "acordo": 0.44,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 210,
+     "497": 40,
+     "516": 4,
+     "517": 4
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/6",
+    "arma2": "2/3",
+    "vistos": 9,
+    "acordo": 0.33,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "4": 140
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/9",
+    "arma2": "8/0",
+    "vistos": 9,
+    "acordo": 0.33,
+    "acordoGranada": 1
+   }
+  },
+  "5126": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2,
+     "1,4": 1
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 0.5
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 0.5
+   }
+  },
+  "6150": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 14,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 225
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 14,
+    "acordo": 0.86,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 216
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 14,
+    "acordo": 0.86,
+    "acordoGranada": 1
+   }
+  },
+  "6404": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 2210
+    },
+    "granadas": {},
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "6917": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2,
+     "1,4": 1
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240,
+     "41": 1,
+     "42": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "4/13",
+    "arma2": "2/29",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240,
+     "41": 3
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240,
+     "481": 1
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "4/15",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "7174": {
+   "0": {
+    "municao": {
+     "5": 300,
+     "6": 48
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,3": 1
+    },
+    "arma": "3/38",
+    "arma2": "2/43",
+    "vistos": 40,
+    "acordo": 0.72,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240,
+     "5": 400
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 40,
+    "acordo": 0.72,
+    "acordoGranada": 1
+   }
+  },
+  "7428": {
+   "0": {
+    "municao": {
+     "2": 3210
+    },
+    "granadas": {
+     "0,0": 1,
+     "0,2": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "8964": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/29",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/29",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/29",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "9221": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 1
+    },
+    "arma": "2/31",
+    "arma2": "2/24",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 1060,
+     "481": 1
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/44",
+    "arma2": "4/15",
+    "vistos": 3,
+    "acordo": 0.33,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "5": 300,
+     "6": 48
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/36",
+    "arma2": "2/43",
+    "vistos": 3,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/31",
+    "arma2": "2/24",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240,
+     "41": 1,
+     "42": 1
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "4/13",
+    "arma2": "2/29",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240,
+     "41": 3
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 1
+   }
+  },
+  "10245": {
+   "0": {
+    "municao": {
+     "2": 274,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/3",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 583
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 1015,
+     "2": 278,
+     "481": 1
+    },
+    "granadas": {
+     "1,1": 3,
+     "1,2": 3
+    },
+    "arma": "2/4",
+    "arma2": "4/15",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 0.5
+   },
+   "3": {
+    "municao": {
+     "2": 277,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 1,
+     "1,3": 1
+    },
+    "arma": "2/14",
+    "arma2": "2/3",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "4": 140,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/9",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 277,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/4",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   }
+  },
+  "10756": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/30",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/30",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/30",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 0.5
+   }
+  },
+  "11524": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/27",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/27",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/27",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/27",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/29",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "11781": {
+   "0": {
+    "municao": {
+     "2": 74
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 164
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 449
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 201,
+     "14": 7
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 109
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 280,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "2": 738
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 283,
+     "497": 39,
+     "517": 4
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/6",
+    "arma2": "2/3",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "2": 282
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/3",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "12036": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2,
+     "1,4": 1
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 0.75
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/24",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 0.75
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {},
+    "arma": "2/29",
+    "arma2": "8/0",
+    "vistos": 3,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "12037": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 0.9
+   },
+   "2": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 0.8
+   },
+   "3": {
+    "municao": {
+     "2": 210,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 10,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 10,
+    "acordo": 0.4,
+    "acordoGranada": 0.8
+   },
+   "6": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 210,
+     "497": 40,
+     "516": 4,
+     "517": 4
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/6",
+    "arma2": "2/3",
+    "vistos": 10,
+    "acordo": 0.4,
+    "acordoGranada": 0.8
+   },
+   "8": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/3",
+    "arma2": "8/0",
+    "vistos": 10,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   }
+  },
+  "12293": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 210,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 210,
+     "14": 26
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/3",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.6,
+    "acordoGranada": 1
+   }
+  },
+  "12549": {
+   "0": {
+    "municao": {
+     "2": 60
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 0.75
+   },
+   "2": {
+    "municao": {
+     "2": 1000
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.25,
+    "acordoGranada": 0.5
+   },
+   "3": {
+    "municao": {
+     "2": 270,
+     "14": 25
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 0.5
+   },
+   "4": {
+    "municao": {
+     "2": 120,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 30,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 0.5
+   },
+   "6": {
+    "municao": {
+     "2": 745
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 180,
+     "14": 22
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "4": 118
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/9",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   }
+  },
+  "12805": {
+   "0": {
+    "municao": {
+     "2": 39
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 87
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 342
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 246,
+     "14": 8
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "2": 16
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "2": 272,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "4/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "6": {
+    "municao": {
+     "2": 737
+    },
+    "granadas": {
+     "1,1": 2
+    },
+    "arma": "2/19",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "7": {
+    "municao": {
+     "2": 290,
+     "14": 21
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "8": {
+    "municao": {
+     "4": 133
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/9",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "15109": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "16646": {
+   "0": {
+    "municao": {
+     "5": 50
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/46",
+    "arma2": "8/0",
+    "vistos": 17,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "5": 50
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/46",
+    "arma2": "8/0",
+    "vistos": 17,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "18949": {
+   "0": {
+    "municao": {
+     "1": 240,
+     "482": 1
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/25",
+    "arma2": "4/16",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 1060
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/44",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "5": 50
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/45",
+    "arma2": "8/0",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240,
+     "67": 10
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/31",
+    "arma2": "2/25",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240,
+     "481": 1
+    },
+    "granadas": {
+     "1,2": 3
+    },
+    "arma": "2/24",
+    "arma2": "4/15",
+    "vistos": 5,
+    "acordo": 0.4,
+    "acordoGranada": 1
+   }
+  },
+  "19973": {
+   "0": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 1,
+     "1,4": 2
+    },
+    "arma": "2/26",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "4": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/30",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "5": {
+    "municao": {
+     "1": 240
+    },
+    "granadas": {
+     "1,2": 2
+    },
+    "arma": "2/30",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "22534": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "27654": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 15,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 15,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "27910": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 15,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 15,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "28934": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/3",
+    "arma2": "8/0",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210,
+     "14": 25
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/13",
+    "arma2": "2/2",
+    "vistos": 13,
+    "acordo": 0.85,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210,
+     "56": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/2",
+    "vistos": 13,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "33542": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 6,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "40454": {
+   "0": {
+    "municao": {
+     "2": 209,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 209
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   }
+  },
+  "40710": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "40966": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "44550": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "45830": {
+   "0": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "46086": {
+   "0": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "46342": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "3": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "48646": {
+   "0": {
+    "municao": {
+     "2": 210,
+     "7": 45
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "2/5",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 2,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "48902": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "49158": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  },
+  "50438": {
+   "0": {
+    "municao": {
+     "2": 210,
+     "57": 1
+    },
+    "granadas": {
+     "1,1": 3
+    },
+    "arma": "2/2",
+    "arma2": "4/1",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210,
+     "57": 1
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 4,
+    "acordo": 0.5,
+    "acordoGranada": 0.5
+   }
+  },
+  "53254": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 0.67
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 3,
+    "acordo": 0.67,
+    "acordoGranada": 0.67
+   }
+  },
+  "55046": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 8,
+    "acordo": 0.63,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/4",
+    "arma2": "8/0",
+    "vistos": 8,
+    "acordo": 0.88,
+    "acordoGranada": 1
+   },
+   "2": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 8,
+    "acordo": 0.63,
+    "acordoGranada": 1
+   }
+  },
+  "55302": {
+   "0": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 2,
+     "1,3": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 8,
+    "acordo": 1,
+    "acordoGranada": 1
+   },
+   "1": {
+    "municao": {
+     "2": 210
+    },
+    "granadas": {
+     "1,1": 1
+    },
+    "arma": "2/2",
+    "arma2": "8/0",
+    "vistos": 8,
+    "acordo": 1,
+    "acordoGranada": 1
+   }
+  }
+ }
+}

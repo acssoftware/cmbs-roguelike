@@ -1,0 +1,96 @@
+{
+ "nota": "OS MAPAS DO ROGUELIKE (autor, 04/10/2026). A selecao por tier de mapa e dele: so estes mapas entram no sorteio, na versao Attack (23/10: as tres versoes do jogo, Probe/Attack/Assault, sao o mesmo mapa), e o tier daqui manda sobre o tier de area do censo. Os arquivos vivem no pacote (assets/qb_attack), copiados do jogo; o app nao le a pasta do jogo. O censo (research/mapas_attack.json) continua dando zonas, capacidade e perfil. Nome = o arquivo sem o tipo e sem '.btt' (espacos repetidos nao contam). Plehany-Open 099 Attack tem um espaco antes do .btt no proprio jogo.",
+ "tiers": {
+  "1": [
+   "Small City-Water (416 X 848) 051r",
+   "Small Hills-Forest (624 X 528) 023r",
+   "Small Town-Forest (656 X 688) 017r",
+   "Small Village (554 X 848) 019r",
+   "Village (544 X 800) 059r",
+   "Village-Forest (720 X 496) 057r",
+   "City  (688 X 736) 047r",
+   "Village-Hills (688 X 736) 300",
+   "Village-Water (864 X 592) 299",
+   "Village-Water (560 X 912) 122"
+  ],
+  "2": [
+   "City-Water (560 X 1072) 081r",
+   "City-Water-Rough (640 X 1168) 053r",
+   "Hill-Water-Village (912 X 816) 078r",
+   "Hills-Forest (848 X 1008) 228",
+   "Hills-Water (1072 X 816) 037r",
+   "Open-Rural (944 X 848) 312",
+   "Open-Rural-Water (912 X 816) 123",
+   "Town-Forest (720 X 1024) 040r",
+   "Town-Hills (608 X 1152) 069r",
+   "Town-Hills (800 X 928) 065",
+   "Village-Forest (1040 X 848) 007r",
+   "Village-Hills (912 X 816) 272"
+  ],
+  "3": [
+   "Khalmi-Rough (1088 X 1104) 085r",
+   "Open-Hills (1248 X 1200) 314",
+   "Plehany-Open (1200 X 1280) 099",
+   "Town-Water (1504 X 1008) 275"
+  ],
+  "4": [
+   "Huge Orekhovsk-Village (2208 X 1568) 092",
+   "Open-Rough (1840 X 1242) 035r",
+   "Podlypyky-Rough (1936 X 1808) 088",
+   "Huge Asintorf-Town (2400 X 2000) 091"
+  ]
+ },
+ "perfisNota": "O PERFIL DO AUTOR (12/10/2026, revisao_ia_mapas.xlsx): manda sobre o perfil do censo (research/mapas_*.json, calculado pela densidade de predios), nas tres versoes do mapa. O perfil escolhe as fatias da defesa que o app compra (planDefense). So os mapas em que ele discorda do censo; o valor do censo fica em perfilCenso.",
+ "perfis": {
+  "Small City-Water (416 X 848) 051r": "misto",
+  "Small Hills-Forest (624 X 528) 023r": "aberto",
+  "Small Town-Forest (656 X 688) 017r": "urbano",
+  "Village-Hills (688 X 736) 300": "aberto",
+  "Village-Water (864 X 592) 299": "misto",
+  "City-Water-Rough (640 X 1168) 053r": "misto",
+  "Town-Hills (608 X 1152) 069r": "aberto",
+  "Town-Hills (800 X 928) 065": "aberto",
+  "Village-Forest (1040 X 848) 007r": "misto"
+ },
+ "meet": {
+  "nota": "OS MEETING ENGAGEMENT DO ROGUELIKE (autor, 05/10/2026), 25 mapas por tier (24 desde 12/10: o Hills-Forest 283 foi descartado; 17 desde 24/10: sairam os 7 restritos a batalha 1 -- 306, 024r, 018r, 015r, 110, 072, 261 --, pequenos e apertados para o tamanho das batalhas do app), todos elegiveis na bateria E146 (research/bateria/me1). Nome = o arquivo sem \" Meet\" e sem \".btt\". Os arquivos vivem no pacote em assets/qb_meet com o sufixo CMBSRL; o censo e research/mapas_meet.json. AINDA NAO SORTEADOS: falta decidir em que batalhas de cada tier entra um encontro (rules.tiers[].kinds) e o orcamento da defesa num encontro.",
+  "_pacoteAjustado": "mapas cuja copia no pacote foi ajustada antes do plano (tools/re/trocar_lados.mjs): trocarLados (pintura do setup, planos de IA, vagas de objetivo e alvos de apoio trocam de lado) e unificarSetup (as pinturas de cada lado viram uma so, com o vao preenchido). O censo aplica as ops em ordem ao copiar; o sha256 do censo continua o do original do jogo e o daqui e o da copia ajustada (o escritor nao recomprime como o jogo). Hills-Farmland 282 e Open-Hills 315 (17/10/2026): o autor desenhou o plano com o azul do outro lado. Dueling Balalaikas (17/10): dois setups por lado, unificados.",
+  "pacoteAjustado": {
+   "Hills-Farmland (1344 X 848) 282": { "ops": ["trocarLados"], "sha256": "3a42ee85eaab76355f087069fd26a4f0f5261bfc25c4b16265c449f2ac578c3d" },
+   "Open-Hills (1248 X 1200) 315": { "ops": ["trocarLados"], "sha256": "9bc14bf01dd8b51d8fc5489fd9dfef7ad4501ae5b759cb26eb21a699928a47c9" },
+   "Dueling Balalaikas (2320 X 1488)": { "ops": ["unificarSetup"], "sha256": "1c341ab1e60d77fd7518405c36176720eede2a719700e712719fa3a1e96d2fd7" }
+  },
+  "_tiers": "chaves de tier (autor, 17/10, planilha revisao_ia_mapas.xlsx): \"1\"..\"4\" = um tier; \"3-4\" = sorteado em qualquer tier da faixa; \"b1\" = so na batalha 1 (a primeira do tier 1). catalog.meetTierKey/meetFits. Town 230 sem tier na planilha: ficou no 2.",
+  "tiers": {
+   "1": [
+    "Small Open-Hills (352 X 800) 301",
+    "Open-Rural (944 X 848) 313",
+    "Village-Forest (928 X 922) 012r",
+    "Town-Hills (800 X 1008) 066r",
+    "Town-Hills (608 X 1504) 070r"
+   ],
+   "2": [
+    "Town (672 X 720) 230",
+    "Hills-Open-Farmland (752 X 1104) 307",
+    "Rough-Village (1072 X 896) 077r"
+   ],
+   "3": [
+    "Forest-Hills-Open (928 X 1056) 305"
+   ],
+   "4": [
+    "Dueling Balalaikas (2320 X 1488)",
+    "Wiktorow-Open (1600 X 1040) 101",
+    "Open-Rough (1344 X 848) 036r",
+    "Podlypyky-Town (1728 X 864) 089",
+    "Forest-Water-Town (1616 X 1616) 257"
+   ],
+   "1-2": [
+    "City-Rural (608 X 1200) 278"
+   ],
+   "3-4": [
+    "Hills-Farmland (1344 X 848) 282",
+    "Open-Hills (1248 X 1200) 315"
+   ]
+  }
+ }
+}

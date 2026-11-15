@@ -1,0 +1,873 @@
+{
+ "note": "node tools/re/galeria_mapas.mjs --app (E178): terrain and setup zones of every map of the selection, 2 px per 8 m tile, north up",
+ "maps": {
+  "City  (688 X 736) 047r Assault.btt": {
+   "id": "City_688_X_736_047r_Assault",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "City-Water (560 X 1072) 081r Assault.btt": {
+   "id": "City_Water_560_X_1072_081r_Assault",
+   "w": 140,
+   "h": 268,
+   "W": 70,
+   "H": 134
+  },
+  "City-Water-Rough (640 X 1168) 053r Assault.btt": {
+   "id": "City_Water_Rough_640_X_1168_053r_Assault",
+   "w": 160,
+   "h": 292,
+   "W": 80,
+   "H": 146
+  },
+  "Forest-Rural (1600 X 1600) 42r Assault.btt": {
+   "id": "Forest_Rural_1600_X_1600_42r_Assault",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Hill-Water-Village (912 X 816) 078r Assault.btt": {
+   "id": "Hill_Water_Village_912_X_816_078r_Assault",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Hills-Forest (848 X 1008) 228 Assault.btt": {
+   "id": "Hills_Forest_848_X_1008_228_Assault",
+   "w": 212,
+   "h": 252,
+   "W": 106,
+   "H": 126
+  },
+  "Hills-Water (1072 X 816) 037r Assault.btt": {
+   "id": "Hills_Water_1072_X_816_037r_Assault",
+   "w": 268,
+   "h": 204,
+   "W": 134,
+   "H": 102
+  },
+  "Huge Asintorf-Town (2400 X 2000) 091 Assault.btt": {
+   "id": "Huge_Asintorf_Town_2400_X_2000_091_Assault",
+   "w": 600,
+   "h": 500,
+   "W": 300,
+   "H": 250
+  },
+  "Huge Orekhovsk-Village (2208 X 1568) 092 Assault.btt": {
+   "id": "Huge_Orekhovsk_Village_2208_X_1568_092_Assault",
+   "w": 552,
+   "h": 392,
+   "W": 276,
+   "H": 196
+  },
+  "Huge Rough-Water-Town (3040 X 2000) 026r Assault.btt": {
+   "id": "Huge_Rough_Water_Town_3040_X_2000_026r_Assault",
+   "w": 760,
+   "h": 500,
+   "W": 380,
+   "H": 250
+  },
+  "Khalmi-Rough (1088 X 1104) 085r Assault.btt": {
+   "id": "Khalmi_Rough_1088_X_1104_085r_Assault",
+   "w": 272,
+   "h": 276,
+   "W": 136,
+   "H": 138
+  },
+  "Open-Hills (1248 X 1200) 314 Assault.btt": {
+   "id": "Open_Hills_1248_X_1200_314_Assault",
+   "w": 312,
+   "h": 300,
+   "W": 156,
+   "H": 150
+  },
+  "Open-Rough (1840 X 1242) 035r Assault.btt": {
+   "id": "Open_Rough_1840_X_1242_035r_Assault",
+   "w": 460,
+   "h": 308,
+   "W": 230,
+   "H": 154
+  },
+  "Open-Rural (944 X 848) 312 Assault.btt": {
+   "id": "Open_Rural_944_X_848_312_Assault",
+   "w": 236,
+   "h": 212,
+   "W": 118,
+   "H": 106
+  },
+  "Open-Rural-Water (912 X 816) 123 Assault.btt": {
+   "id": "Open_Rural_Water_912_X_816_123_Assault",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Plehany-Open (1200 X 1280) 099 Assault.btt": {
+   "id": "Plehany_Open_1200_X_1280_099_Assault",
+   "w": 300,
+   "h": 320,
+   "W": 150,
+   "H": 160
+  },
+  "Podlypyky-Rough (1936 X 1808) 088 Assault.btt": {
+   "id": "Podlypyky_Rough_1936_X_1808_088_Assault",
+   "w": 484,
+   "h": 452,
+   "W": 242,
+   "H": 226
+  },
+  "Small City-Water (416 X 848) 051r Assault.btt": {
+   "id": "Small_City_Water_416_X_848_051r_Assault",
+   "w": 104,
+   "h": 212,
+   "W": 52,
+   "H": 106
+  },
+  "Small Hills-Forest (624 X 528) 023r Assault.btt": {
+   "id": "Small_Hills_Forest_624_X_528_023r_Assault",
+   "w": 156,
+   "h": 132,
+   "W": 78,
+   "H": 66
+  },
+  "Small Town-Forest (656 X 688) 017r Assault.btt": {
+   "id": "Small_Town_Forest_656_X_688_017r_Assault",
+   "w": 164,
+   "h": 172,
+   "W": 82,
+   "H": 86
+  },
+  "Small Village (554 X 848) 019r Assault.btt": {
+   "id": "Small_Village_554_X_848_019r_Assault",
+   "w": 136,
+   "h": 212,
+   "W": 68,
+   "H": 106
+  },
+  "Town-Forest (720 X 1024) 040r Assault.btt": {
+   "id": "Town_Forest_720_X_1024_040r_Assault",
+   "w": 180,
+   "h": 256,
+   "W": 90,
+   "H": 128
+  },
+  "Town-Hills (608 X 1152) 069r Assault.btt": {
+   "id": "Town_Hills_608_X_1152_069r_Assault",
+   "w": 152,
+   "h": 288,
+   "W": 76,
+   "H": 144
+  },
+  "Town-Hills (800 X 928) 065 Assault.btt": {
+   "id": "Town_Hills_800_X_928_065_Assault",
+   "w": 200,
+   "h": 232,
+   "W": 100,
+   "H": 116
+  },
+  "Town-Rural (1600 X 1600) 271 Assault.btt": {
+   "id": "Town_Rural_1600_X_1600_271_Assault",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Town-Water (1504 X 1008) 275 Assault.btt": {
+   "id": "Town_Water_1504_X_1008_275_Assault",
+   "w": 376,
+   "h": 252,
+   "W": 188,
+   "H": 126
+  },
+  "Village (544 X 800) 059r Assault.btt": {
+   "id": "Village_544_X_800_059r_Assault",
+   "w": 136,
+   "h": 200,
+   "W": 68,
+   "H": 100
+  },
+  "Village-Forest (1040 X 848) 007r Assault.btt": {
+   "id": "Village_Forest_1040_X_848_007r_Assault",
+   "w": 260,
+   "h": 212,
+   "W": 130,
+   "H": 106
+  },
+  "Village-Forest (720 X 496) 057r Assault.btt": {
+   "id": "Village_Forest_720_X_496_057r_Assault",
+   "w": 180,
+   "h": 124,
+   "W": 90,
+   "H": 62
+  },
+  "Village-Hills (688 X 736) 300 Assault.btt": {
+   "id": "Village_Hills_688_X_736_300_Assault",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "Village-Hills (912 X 816) 272 Assault.btt": {
+   "id": "Village_Hills_912_X_816_272_Assault",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Village-Water (560 X 912) 122 Assault.btt": {
+   "id": "Village_Water_560_X_912_122_Assault",
+   "w": 140,
+   "h": 228,
+   "W": 70,
+   "H": 114
+  },
+  "Village-Water (864 X 592) 299 Assault.btt": {
+   "id": "Village_Water_864_X_592_299_Assault",
+   "w": 216,
+   "h": 148,
+   "W": 108,
+   "H": 74
+  },
+  "City  (688 X 736) 047r Attack.btt": {
+   "id": "City_688_X_736_047r_Attack",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "City-Water (560 X 1072) 081r Attack.btt": {
+   "id": "City_Water_560_X_1072_081r_Attack",
+   "w": 140,
+   "h": 268,
+   "W": 70,
+   "H": 134
+  },
+  "City-Water-Rough (640 X 1168) 053r Attack.btt": {
+   "id": "City_Water_Rough_640_X_1168_053r_Attack",
+   "w": 160,
+   "h": 292,
+   "W": 80,
+   "H": 146
+  },
+  "Forest-Rural (1600 X 1600) 42r Attack.btt": {
+   "id": "Forest_Rural_1600_X_1600_42r_Attack",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Hill-Water-Village (912 X 816) 078r Attack.btt": {
+   "id": "Hill_Water_Village_912_X_816_078r_Attack",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Hills-Forest (848 X 1008) 228 Attack.btt": {
+   "id": "Hills_Forest_848_X_1008_228_Attack",
+   "w": 212,
+   "h": 252,
+   "W": 106,
+   "H": 126
+  },
+  "Hills-Water (1072 X 816) 037r Attack.btt": {
+   "id": "Hills_Water_1072_X_816_037r_Attack",
+   "w": 268,
+   "h": 204,
+   "W": 134,
+   "H": 102
+  },
+  "Huge Asintorf-Town (2400 X 2000) 091 Attack.btt": {
+   "id": "Huge_Asintorf_Town_2400_X_2000_091_Attack",
+   "w": 600,
+   "h": 500,
+   "W": 300,
+   "H": 250
+  },
+  "Huge Orekhovsk-Village (2208 X 1568) 092 Attack.btt": {
+   "id": "Huge_Orekhovsk_Village_2208_X_1568_092_Attack",
+   "w": 552,
+   "h": 392,
+   "W": 276,
+   "H": 196
+  },
+  "Huge Rough-Water-Town (3040 X 2000) 026r Attack.btt": {
+   "id": "Huge_Rough_Water_Town_3040_X_2000_026r_Attack",
+   "w": 760,
+   "h": 500,
+   "W": 380,
+   "H": 250
+  },
+  "Khalmi-Rough (1088 X 1104) 085r Attack.btt": {
+   "id": "Khalmi_Rough_1088_X_1104_085r_Attack",
+   "w": 272,
+   "h": 276,
+   "W": 136,
+   "H": 138
+  },
+  "Open-Hills (1248 X 1200) 314 Attack.btt": {
+   "id": "Open_Hills_1248_X_1200_314_Attack",
+   "w": 312,
+   "h": 300,
+   "W": 156,
+   "H": 150
+  },
+  "Open-Rough (1840 X 1242) 035r Attack.btt": {
+   "id": "Open_Rough_1840_X_1242_035r_Attack",
+   "w": 460,
+   "h": 308,
+   "W": 230,
+   "H": 154
+  },
+  "Open-Rural (944 X 848) 312 Attack.btt": {
+   "id": "Open_Rural_944_X_848_312_Attack",
+   "w": 236,
+   "h": 212,
+   "W": 118,
+   "H": 106
+  },
+  "Open-Rural-Water (912 X 816) 123 Attack.btt": {
+   "id": "Open_Rural_Water_912_X_816_123_Attack",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Plehany-Open (1200 X 1280) 099 Attack .btt": {
+   "id": "Plehany_Open_1200_X_1280_099_Attack",
+   "w": 300,
+   "h": 320,
+   "W": 150,
+   "H": 160
+  },
+  "Podlypyky-Rough (1936 X 1808) 088 Attack.btt": {
+   "id": "Podlypyky_Rough_1936_X_1808_088_Attack",
+   "w": 484,
+   "h": 452,
+   "W": 242,
+   "H": 226
+  },
+  "Small City-Water (416 X 848) 051r Attack.btt": {
+   "id": "Small_City_Water_416_X_848_051r_Attack",
+   "w": 104,
+   "h": 212,
+   "W": 52,
+   "H": 106
+  },
+  "Small Hills-Forest (624 X 528) 023r Attack.btt": {
+   "id": "Small_Hills_Forest_624_X_528_023r_Attack",
+   "w": 156,
+   "h": 132,
+   "W": 78,
+   "H": 66
+  },
+  "Small Town-Forest (656 X 688) 017r Attack.btt": {
+   "id": "Small_Town_Forest_656_X_688_017r_Attack",
+   "w": 164,
+   "h": 172,
+   "W": 82,
+   "H": 86
+  },
+  "Small Village (554 X 848) 019r Attack.btt": {
+   "id": "Small_Village_554_X_848_019r_Attack",
+   "w": 136,
+   "h": 212,
+   "W": 68,
+   "H": 106
+  },
+  "Town-Forest (720 X 1024) 040r Attack.btt": {
+   "id": "Town_Forest_720_X_1024_040r_Attack",
+   "w": 180,
+   "h": 256,
+   "W": 90,
+   "H": 128
+  },
+  "Town-Hills (608 X 1152) 069r Attack.btt": {
+   "id": "Town_Hills_608_X_1152_069r_Attack",
+   "w": 152,
+   "h": 288,
+   "W": 76,
+   "H": 144
+  },
+  "Town-Hills (800 X 928) 065 Attack.btt": {
+   "id": "Town_Hills_800_X_928_065_Attack",
+   "w": 200,
+   "h": 232,
+   "W": 100,
+   "H": 116
+  },
+  "Town-Rural (1600 X 1600) 271 Attack.btt": {
+   "id": "Town_Rural_1600_X_1600_271_Attack",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Town-Water (1504 X 1008) 275 Attack.btt": {
+   "id": "Town_Water_1504_X_1008_275_Attack",
+   "w": 376,
+   "h": 252,
+   "W": 188,
+   "H": 126
+  },
+  "Village (544 X 800) 059r Attack.btt": {
+   "id": "Village_544_X_800_059r_Attack",
+   "w": 136,
+   "h": 200,
+   "W": 68,
+   "H": 100
+  },
+  "Village-Forest (1040 X 848) 007r Attack.btt": {
+   "id": "Village_Forest_1040_X_848_007r_Attack",
+   "w": 260,
+   "h": 212,
+   "W": 130,
+   "H": 106
+  },
+  "Village-Forest (720 X 496) 057r Attack.btt": {
+   "id": "Village_Forest_720_X_496_057r_Attack",
+   "w": 180,
+   "h": 124,
+   "W": 90,
+   "H": 62
+  },
+  "Village-Hills (688 X 736) 300 Attack.btt": {
+   "id": "Village_Hills_688_X_736_300_Attack",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "Village-Hills (912 X 816) 272 Attack.btt": {
+   "id": "Village_Hills_912_X_816_272_Attack",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Village-Water (560 X 912) 122 Attack.btt": {
+   "id": "Village_Water_560_X_912_122_Attack",
+   "w": 140,
+   "h": 228,
+   "W": 70,
+   "H": 114
+  },
+  "Village-Water (864 X 592) 299 Attack.btt": {
+   "id": "Village_Water_864_X_592_299_Attack",
+   "w": 216,
+   "h": 148,
+   "W": 108,
+   "H": 74
+  },
+  "City  (688 X 736) 047r Probe.btt": {
+   "id": "City_688_X_736_047r_Probe",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "City-Water (560 X 1072) 081r Probe.btt": {
+   "id": "City_Water_560_X_1072_081r_Probe",
+   "w": 140,
+   "h": 268,
+   "W": 70,
+   "H": 134
+  },
+  "City-Water-Rough (640 X 1168) 053r Probe.btt": {
+   "id": "City_Water_Rough_640_X_1168_053r_Probe",
+   "w": 160,
+   "h": 292,
+   "W": 80,
+   "H": 146
+  },
+  "Forest-Rural (1600 X 1600) 42r Probe.btt": {
+   "id": "Forest_Rural_1600_X_1600_42r_Probe",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Hill-Water-Village (912 X 816) 078r Probe.btt": {
+   "id": "Hill_Water_Village_912_X_816_078r_Probe",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Hills-Forest (848 X 1008) 228 Probe.btt": {
+   "id": "Hills_Forest_848_X_1008_228_Probe",
+   "w": 212,
+   "h": 252,
+   "W": 106,
+   "H": 126
+  },
+  "Hills-Water (1072 X 816) 037r Probe.btt": {
+   "id": "Hills_Water_1072_X_816_037r_Probe",
+   "w": 268,
+   "h": 204,
+   "W": 134,
+   "H": 102
+  },
+  "Huge Asintorf-Town (2400 X 2000) 091 Probe.btt": {
+   "id": "Huge_Asintorf_Town_2400_X_2000_091_Probe",
+   "w": 600,
+   "h": 500,
+   "W": 300,
+   "H": 250
+  },
+  "Huge Orekhovsk-Village (2208 X 1568) 092 Probe.btt": {
+   "id": "Huge_Orekhovsk_Village_2208_X_1568_092_Probe",
+   "w": 552,
+   "h": 392,
+   "W": 276,
+   "H": 196
+  },
+  "Huge Rough-Water-Town (3040 X 2000) 026r Probe.btt": {
+   "id": "Huge_Rough_Water_Town_3040_X_2000_026r_Probe",
+   "w": 760,
+   "h": 500,
+   "W": 380,
+   "H": 250
+  },
+  "Khalmi-Rough (1088 X 1104) 085r Probe.btt": {
+   "id": "Khalmi_Rough_1088_X_1104_085r_Probe",
+   "w": 272,
+   "h": 276,
+   "W": 136,
+   "H": 138
+  },
+  "Open-Hills (1248 X 1200) 314 Probe.btt": {
+   "id": "Open_Hills_1248_X_1200_314_Probe",
+   "w": 312,
+   "h": 300,
+   "W": 156,
+   "H": 150
+  },
+  "Open-Rough (1840 X 1242) 035r Probe.btt": {
+   "id": "Open_Rough_1840_X_1242_035r_Probe",
+   "w": 460,
+   "h": 308,
+   "W": 230,
+   "H": 154
+  },
+  "Open-Rural (944 X 848) 312 Probe.btt": {
+   "id": "Open_Rural_944_X_848_312_Probe",
+   "w": 236,
+   "h": 212,
+   "W": 118,
+   "H": 106
+  },
+  "Open-Rural-Water (912 X 816) 123 Probe.btt": {
+   "id": "Open_Rural_Water_912_X_816_123_Probe",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Plehany-Open (1200 X 1280) 099 Probe.btt": {
+   "id": "Plehany_Open_1200_X_1280_099_Probe",
+   "w": 300,
+   "h": 320,
+   "W": 150,
+   "H": 160
+  },
+  "Podlypyky-Rough (1936 X 1808) 088 Probe.btt": {
+   "id": "Podlypyky_Rough_1936_X_1808_088_Probe",
+   "w": 484,
+   "h": 452,
+   "W": 242,
+   "H": 226
+  },
+  "Small City-Water (416 X 848) 051r Probe.btt": {
+   "id": "Small_City_Water_416_X_848_051r_Probe",
+   "w": 104,
+   "h": 212,
+   "W": 52,
+   "H": 106
+  },
+  "Small Hills-Forest (624 X 528) 023r Probe.btt": {
+   "id": "Small_Hills_Forest_624_X_528_023r_Probe",
+   "w": 156,
+   "h": 132,
+   "W": 78,
+   "H": 66
+  },
+  "Small Town-Forest (656 X 688) 017r Probe.btt": {
+   "id": "Small_Town_Forest_656_X_688_017r_Probe",
+   "w": 164,
+   "h": 172,
+   "W": 82,
+   "H": 86
+  },
+  "Small Village (554 X 848) 019r Probe.btt": {
+   "id": "Small_Village_554_X_848_019r_Probe",
+   "w": 136,
+   "h": 212,
+   "W": 68,
+   "H": 106
+  },
+  "Town-Forest (720 X 1024) 040r Probe.btt": {
+   "id": "Town_Forest_720_X_1024_040r_Probe",
+   "w": 180,
+   "h": 256,
+   "W": 90,
+   "H": 128
+  },
+  "Town-Hills (608 X 1152) 069r Probe.btt": {
+   "id": "Town_Hills_608_X_1152_069r_Probe",
+   "w": 152,
+   "h": 288,
+   "W": 76,
+   "H": 144
+  },
+  "Town-Hills (800 X 928) 065 Probe.btt": {
+   "id": "Town_Hills_800_X_928_065_Probe",
+   "w": 200,
+   "h": 232,
+   "W": 100,
+   "H": 116
+  },
+  "Town-Rural (1600 X 1600) 271 Probe.btt": {
+   "id": "Town_Rural_1600_X_1600_271_Probe",
+   "w": 400,
+   "h": 400,
+   "W": 200,
+   "H": 200
+  },
+  "Town-Water (1504 X 1008) 275 Probe.btt": {
+   "id": "Town_Water_1504_X_1008_275_Probe",
+   "w": 376,
+   "h": 252,
+   "W": 188,
+   "H": 126
+  },
+  "Village (544 X 800) 059r Probe.btt": {
+   "id": "Village_544_X_800_059r_Probe",
+   "w": 136,
+   "h": 200,
+   "W": 68,
+   "H": 100
+  },
+  "Village-Forest (1040 X 848) 007r Probe.btt": {
+   "id": "Village_Forest_1040_X_848_007r_Probe",
+   "w": 260,
+   "h": 212,
+   "W": 130,
+   "H": 106
+  },
+  "Village-Forest (720 X 496) 057r Probe.btt": {
+   "id": "Village_Forest_720_X_496_057r_Probe",
+   "w": 180,
+   "h": 124,
+   "W": 90,
+   "H": 62
+  },
+  "Village-Hills (688 X 736) 300 Probe.btt": {
+   "id": "Village_Hills_688_X_736_300_Probe",
+   "w": 172,
+   "h": 184,
+   "W": 86,
+   "H": 92
+  },
+  "Village-Hills (912 X 816) 272 Probe.btt": {
+   "id": "Village_Hills_912_X_816_272_Probe",
+   "w": 228,
+   "h": 204,
+   "W": 114,
+   "H": 102
+  },
+  "Village-Water (560 X 912) 122 Probe.btt": {
+   "id": "Village_Water_560_X_912_122_Probe",
+   "w": 140,
+   "h": 228,
+   "W": 70,
+   "H": 114
+  },
+  "Village-Water (864 X 592) 299 Probe.btt": {
+   "id": "Village_Water_864_X_592_299_Probe",
+   "w": 216,
+   "h": 148,
+   "W": 108,
+   "H": 74
+  },
+  "City-Rural (608 X 1200) 278 Meet.btt": {
+   "id": "City_Rural_608_X_1200_278_Meet",
+   "w": 152,
+   "h": 300,
+   "W": 76,
+   "H": 150
+  },
+  "Dueling Balalaikas (2320 X 1488) Meet.btt": {
+   "id": "Dueling_Balalaikas_2320_X_1488_Meet",
+   "w": 580,
+   "h": 372,
+   "W": 290,
+   "H": 186
+  },
+  "Forest-Hills-Open (928 X 1056) 305 Meet.btt": {
+   "id": "Forest_Hills_Open_928_X_1056_305_Meet",
+   "w": 232,
+   "h": 264,
+   "W": 116,
+   "H": 132
+  },
+  "Forest-Water-Town (1616 X 1616) 257 Meet.btt": {
+   "id": "Forest_Water_Town_1616_X_1616_257_Meet",
+   "w": 404,
+   "h": 404,
+   "W": 202,
+   "H": 202
+  },
+  "Hills-Farmland (1344 X 848) 282 Meet.btt": {
+   "id": "Hills_Farmland_1344_X_848_282_Meet",
+   "w": 336,
+   "h": 212,
+   "W": 168,
+   "H": 106
+  },
+  "Hills-Forest (560 X 736) 283 Meet.btt": {
+   "id": "Hills_Forest_560_X_736_283_Meet",
+   "w": 140,
+   "h": 184,
+   "W": 70,
+   "H": 92
+  },
+  "Hills-Open-Farmland (752 X 1104) 307 Meet.btt": {
+   "id": "Hills_Open_Farmland_752_X_1104_307_Meet",
+   "w": 188,
+   "h": 276,
+   "W": 94,
+   "H": 138
+  },
+  "Open-Hills (1248 X 1200) 315 Meet.btt": {
+   "id": "Open_Hills_1248_X_1200_315_Meet",
+   "w": 312,
+   "h": 300,
+   "W": 156,
+   "H": 150
+  },
+  "Open-Rough (1344 X 848) 036r Meet.btt": {
+   "id": "Open_Rough_1344_X_848_036r_Meet",
+   "w": 336,
+   "h": 212,
+   "W": 168,
+   "H": 106
+  },
+  "Open-Rural (672 X 720) 306 Meet.btt": {
+   "id": "Open_Rural_672_X_720_306_Meet",
+   "w": 168,
+   "h": 180,
+   "W": 84,
+   "H": 90
+  },
+  "Open-Rural (944 X 848) 313 Meet.btt": {
+   "id": "Open_Rural_944_X_848_313_Meet",
+   "w": 236,
+   "h": 212,
+   "W": 118,
+   "H": 106
+  },
+  "Podlypyky-Town (1728 X 864) 089 Meet.btt": {
+   "id": "Podlypyky_Town_1728_X_864_089_Meet",
+   "w": 432,
+   "h": 216,
+   "W": 216,
+   "H": 108
+  },
+  "Rough-Village (1072 X 896) 077r Meet.btt": {
+   "id": "Rough_Village_1072_X_896_077r_Meet",
+   "w": 268,
+   "h": 224,
+   "W": 134,
+   "H": 112
+  },
+  "Small Hills-Forest-Village (368 X592) 024r Meet.btt": {
+   "id": "Small_Hills_Forest_Village_368_X592_024r_Meet",
+   "w": 92,
+   "h": 148,
+   "W": 46,
+   "H": 74
+  },
+  "Small Open-Hills (352 X 800) 301 Meet.btt": {
+   "id": "Small_Open_Hills_352_X_800_301_Meet",
+   "w": 88,
+   "h": 200,
+   "W": 44,
+   "H": 100
+  },
+  "Small Town-Forest (624 X 608) 018r Meet.btt": {
+   "id": "Small_Town_Forest_624_X_608_018r_Meet",
+   "w": 156,
+   "h": 152,
+   "W": 78,
+   "H": 76
+  },
+  "Small Village (976 X 400) 015r Meet.btt": {
+   "id": "Small_Village_976_X_400_015r_Meet",
+   "w": 244,
+   "h": 100,
+   "W": 122,
+   "H": 50
+  },
+  "Town (672 X 720) 230 Meet.btt": {
+   "id": "Town_672_X_720_230_Meet",
+   "w": 168,
+   "h": 180,
+   "W": 84,
+   "H": 90
+  },
+  "Town (704 X 512) 110 Meet.btt": {
+   "id": "Town_704_X_512_110_Meet",
+   "w": 176,
+   "h": 128,
+   "W": 88,
+   "H": 64
+  },
+  "Town-Hills (608 X 1504) 070r Meet.btt": {
+   "id": "Town_Hills_608_X_1504_070r_Meet",
+   "w": 152,
+   "h": 376,
+   "W": 76,
+   "H": 188
+  },
+  "Town-Hills (800 X 1008) 066r Meet.btt": {
+   "id": "Town_Hills_800_X_1008_066r_Meet",
+   "w": 200,
+   "h": 252,
+   "W": 100,
+   "H": 126
+  },
+  "Village-Forest (928 X 922) 012r Meet.btt": {
+   "id": "Village_Forest_928_X_922_012r_Meet",
+   "w": 232,
+   "h": 248,
+   "W": 116,
+   "H": 124
+  },
+  "Village-Hills-Forest (736 X 544) 072 Meet.btt": {
+   "id": "Village_Hills_Forest_736_X_544_072_Meet",
+   "w": 184,
+   "h": 136,
+   "W": 92,
+   "H": 68
+  },
+  "Village-Open (352 X 800) 261 Meet.btt": {
+   "id": "Village_Open_352_X_800_261_Meet",
+   "w": 88,
+   "h": 200,
+   "W": 44,
+   "H": 100
+  },
+  "Wiktorow-Open (1600 X 1040) 101 Meet.btt": {
+   "id": "Wiktorow_Open_1600_X_1040_101_Meet",
+   "w": 400,
+   "h": 260,
+   "W": 200,
+   "H": 130
+  }
+ }
+}

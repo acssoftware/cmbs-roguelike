@@ -1,0 +1,7 @@
+{
+  "name": "cmbs-re",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ferramental de engenharia reversa do container Combat Mission",
+  "dependencies": { "capstone-wasm": "^1.0.3" }
+}

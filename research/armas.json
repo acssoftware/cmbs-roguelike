@@ -1,0 +1,497 @@
+{
+ "nota": "A ARMA DE CADA `classe/item`, lida do tooltip do jogo em 08/09/2026. O metodo: carregar um save de campanha cujo roster decodifica (`MVSC - TRANSITION 1 [B02] (rebuilt 5).bts`, 107 homens, todos vivos e todos com arma legivel), ciclar as unidades com `=` e passar o mouse por cada icone. O painel lista os homens POR COLUNA -- esquerda de cima para baixo, depois a direita -- e essa ordem e a mesma do roster, provado no esquadrao coreId 51, onde os tres `2/4` e os dois `2/3` caem exatamente nas posicoes 1,2,6 e 8,9. Os nomes sao a grafia exata do jogo, conferida contra o dicionario `strings.txt` de `black sea v217.brz`. Faltam as dez armas russas: elas precisam da batalha `ZZ ARMAS RU`. | 09/09/2026: a campanha `ZZ ARMAS UKR`, montada de proposito com uma copia de cada tipo que faltava, trouxe 12 pares novos numa batalha encerrada por cease fire em tres minutos. Cinco nomeados aqui, sete pendentes. | 17/09/2026 (E66): oito pares nomeados numa sessao de hover na `ZZ ARMAS UKR T1`, com a geometria do painel remedida — UMA COLUNA POR TIME e SEIS fileiras, nao cinco. Resolvida a duvida SKIF x AT-4C de 09/09 (5/21 = SKIF, 5/6 = AT-4C). TRES PARES DE GEMEOS apareceram: 2/24 e 2/25 mostram \"AK-74\", 2/27 e 2/28 mostram \"AKS-74\", 3/52 e 3/53 mostram o mesmo rotulo de canhao (gravados como \"MT-12\", que e o que o dicionario do jogo tem; \"L/63\" e linha gerada e nao existe no strings.txt — ver FORMATO 118.2) — ids diferentes com o mesmo nome na tela, e o campo `gemeo` diz quem e quem. E ATENCAO: o id da arma e POR EXERCITO (FORMATO 118.1), entao todo nome aqui vale para o `lado` em que foi lido e para mais nenhum. | 17/09/2026 (E67): o 4/15 entrou SEM tooltip, pelo nome da MUNICAO — quando um item de municao e exclusivo de uma arma e o painel escreve o nome dele (\"RPG-22 HEAT\"), o nome da arma vem de graca. Vale para todo lancador descartavel: o 482 faz o mesmo pelo 4/16 no dia em que um print mostrar a caixa de municao de uma unidade que o carregue. | 17/09/2026 (E68): a CAIXA VERDE do painel escreve nome+categoria+calibre da arma da UNIDADE e a coluna AMMO escreve o nome do tiro dela. Isso abre a classe 4 e a 5, que nunca tiveram icone de homem para passar o mouse porque andam sempre na mao 2: entraram 4/20 = Corsar, 4/24 = Igla, 4/16 = RPG-26 e 4/17 = RPO-A. E DERRUBOU UM GEMEO DO E66: 3/52 e 3/53 nao mostram o mesmo nome — sao \"100mm L/63 MT-12\" e \"100mm L/63 MT-12K\", e o K carrega o missil AT-10 (item 89). O recorte de 90 px da varredura de hover cortava o K. Sobram dois pares de gemeos (AK-74 e AKS-74). | 17/09/2026 (E70): DOZE ARMAS RUSSAS, na forca a pe da campanha descartavel `ZZ PE RU` (uma copia de cada folha a pe da biblioteca RU, 22 unidades, 1.312 cr, batalha encerrada por cease fire). 2/26 = AK-74M, 2/30 = AKS-74U, 2/32 = AK-74M/GP-30, 2/41 = PKP, 2/46 = SVD, 3/38 = PKM, 3/51 = AGS-30, 4/14 = RPG-7V2, 4/16 = RPG-26, 4/18 = RPO-M Shmel, 4/26 = Igla-S, 5/10 = AT-13 Saxhorn. Sobra o 2/43, a pistola, que anda SEMPRE na mao 2 e por isso nao tem icone para passar o mouse. ONDE O PAR COINCIDE ENTRE EXERCITOS o arquivo guarda o segundo em `porLado` — o id e por exercito (118.1) e sobrescrever seria perder a leitura antiga.",
+ "metodo": {
+  "save": "MVSC - TRANSITION 1 [B02] (rebuilt 5).bts",
+  "ordemDoPainel": "por coluna: L1..Ln, depois R1..Rn — igual a ordem do roster",
+  "vocabulario": "research/armas_candidatas.json (79 nomes possiveis, extraidos do proprio jogo)"
+ },
+ "armas": {
+  "2/2": {
+   "nome": "M4A1",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicao 5"
+  },
+  "2/3": {
+   "nome": "M4A1 ACOG",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicoes 8 e 9; coreId 346 posicao 1"
+  },
+  "2/4": {
+   "nome": "M4A1 ACOG/TWS",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicoes 1,2,6; coreId 346 posicoes 3,6; coreId 53 posicao 1"
+  },
+  "2/6": {
+   "nome": "M25 CDTE",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicao 3",
+   "municao": "25mm ABHE e 25mm HEDP, que so esta arma usa"
+  },
+  "2/7": {
+   "nome": "M107A1",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ PE US T1 (batalha 2), 21/09/2026 (E89): rotulo do homem 2 do `Sniper Team` (Bueno) — \"M110 / M107A1 / M4A1 ACOG/M320\"; o roster do MESMO tipo de unidade no save do autor (`E2 BTT 7 TRANSITION`, core 507) e `2/8 2/7 2/14`, e o 2/8 (M110) e o 2/14 (M4A1 ACOG/M320) caem nas posicoes 1 e 3. O time do Bueno nao tem registro de soldado no roster (nunca lutou), por isso a amarra e pelo tipo",
+   "municao": "item 10 (.50cal Mk211); a caixa do painel escreve \".50cal Mk211 70\""
+  },
+  "2/8": {
+   "nome": "M110",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): rotulo do homem 1 do `3rd Team (Sniper)` core 951 (Rees), contra `2/8 2/10 2/14` — o 2/14 (M4A1 ACOG/M320) cai na posicao 3 e fecha a ordem",
+   "municao": "7.62x51mm (item 4)"
+  },
+  "2/9": {
+   "nome": "M110 CSASS",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 346 posicao 5",
+   "municao": "7.62x51mm"
+  },
+  "2/10": {
+   "nome": "Mk21 PSR 7.62",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): rotulo do homem 2 do `3rd Team (Sniper)` core 951 (Lafer); o nome inteiro esta no dicionario, ao lado do \"Mk21 PSR .300\" e do \".338\"",
+   "municao": "7.62x51mm (item 4)"
+  },
+  "2/13": {
+   "nome": "M4A1/M320",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicao 4",
+   "municao": "40x46mm HEDP"
+  },
+  "2/14": {
+   "nome": "M4A1 ACOG/M320",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 346 posicao 4",
+   "municao": "40x46mm HEDP"
+  },
+  "2/19": {
+   "nome": "M249 PIP",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 51 posicao 7; coreId 346 posicao 2"
+  },
+  "2/24": {
+   "nome": "AK-74",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "coreId 263 posicao 6",
+   "gemeo": "2/25"
+  },
+  "2/25": {
+   "nome": "AK-74",
+   "lado": "UKR",
+   "confianca": "confirmado por eliminacao",
+   "gemeo": "2/24",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: `Squad (Recon)` core 213 (Kushnir) tem 2/25 + 2/44 + 2/45 + 2/31 + 2x 2/24 e o painel mostra 3x AK-74, RPK-74, SVD e AK-74/GP-25 — com 2/45 = SVD, o terceiro AK-74 e o 2/25. Derruba o candidato de 10/09, que era SVD pela municao: o 2/25 leva 5,45, nao 7,62x54R",
+   "municao": "5,45 x240, e 40mm HE em 57% dos portadores"
+  },
+  "2/26": {
+   "nome": "AK-74M",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): rotulo do `Staff Squad` core 187 (Aushev): 5 homens AK-74M e 2 AKS-74U, contra `5x 2/26 + 2x 2/30` no roster; reconfirmado no `1st Squad` core 229. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "5,45x39 x240"
+  },
+  "2/27": {
+   "nome": "AKS-74",
+   "confianca": "confirmado",
+   "prova": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. Duas unidades independentes: `1st Team Recon` (RPK-74 + 2 iguais) contra o roster `2x 2/27 + 1x 2/44`, e uma `Squad (Recon)` de `4x 2/27 + 1x 2/31` contra 4 AKS-74 + 1 AK-74/GP-25.",
+   "gemeo": "2/28",
+   "lado": "UKR",
+   "onde": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. Duas unidades independentes: `1st Team Recon` (RPK-74 + 2 iguais) contra o roster `2x 2/27 + 1x 2/44`, e uma `Squad (Recon)` de `4x 2/27 + 1x 2/31` contra 4 AKS-74 + 1 AK-74/GP-25. | E70 (17/09): o campo lado faltava; e UKR, pela forca em que foi lido (ZZ ARMAS UKR T1)."
+  },
+  "2/28": {
+   "nome": "AKS-74",
+   "lado": "UKR",
+   "confianca": "confirmado por eliminacao",
+   "gemeo": "2/27",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: `Squad (Recon)` core 451 (Havrylyuk) tem 2/28 + 4x 2/27 + 2/31 e o painel mostra 5x AKS-74 + 1x AK-74/GP-25 — com 2/27 = AKS-74 confirmado, o 2/28 leva o MESMO nome",
+   "municao": "5,45 x240"
+  },
+  "2/30": {
+   "nome": "AKS-74U",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): os dois ultimos homens do `Staff Squad` core 187. ATENCAO: o recorte de 140 px mostrava \"AKS-74\" e o \"U\" estava CORTADO — na coluna 2 o rotulo passa do centro do icone. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "5,45x39 x240"
+  },
+  "2/31": {
+   "nome": "AK-74/GP-25",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "coreId 263 posicoes 1 e 4"
+  },
+  "2/32": {
+   "nome": "AK-74M/GP-30",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): os dois homens de lanca-granadas do `1st Squad` core 229 (Pavlinov), que e quem carrega os 20 tiros de 40mm VOG. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "5,45x39 x240 + 40mm VOG HE x10"
+  },
+  "2/36": {
+   "nome": "PKM",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "coreId 263 posicao 3",
+   "municao": "7.62x54mmR"
+  },
+  "2/41": {
+   "nome": "PKP",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): o metralhador do `1st Squad` core 229 — o unico com 500 de 7,62x54R. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "7.62x54R x500"
+  },
+  "2/44": {
+   "nome": "RPK-74",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "coreId 263 posicao 2",
+   "municao": "5.45x39mm x1060"
+  },
+  "2/45": {
+   "nome": "SVD",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: `Squad (Recon)` core 442 (Ishchenko) — o painel escreve \"Gunner SVD\" e, tirados o PKM, os dois AKS-74 e o AK-74/GP-25, sobra o 2/45. A municao fecha sozinha: 50 tiros de 7,62x54R e nada mais, em 5 portadores",
+   "municao": "7.62x54R x50"
+  },
+  "2/46": {
+   "nome": "SVD",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): o atirador do `1st Squad` core 229, e os quatro homens das duas `Sniper Team` (cores 762 e 848), com 50 de 7,62x54R cada. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "7.62x54R x50"
+  },
+  "3/1": {
+   "nome": "M2A1",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): rotulo do homem 2 do `HMG Team` core 379 (Taylor), contra `2/4 3/1 2/2 2/13` no roster — os outros tres ja tinham nome e caem nas posicoes certas; caixa verde \"M2A1 / HMG / 12.7mm\"",
+   "municao": "item 541 (.50cal AP-I) x600"
+  },
+  "3/17": {
+   "nome": "M240L",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "coreId 53 posicao 2",
+   "municao": "7.62x51mm x800"
+  },
+  "3/21": {
+   "nome": "Mk19",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): rotulo do homem 2 do `Grenade Launcher Team` core 387 (Lockwood), contra `2/4 3/21 2/2 2/13`; caixa verde \"Mk19 Grenade Launch / 40mm\", AMMO \"40x53mm 144\"",
+   "municao": "item 79 (40x53mm HEDP) x144"
+  },
+  "3/37": {
+   "nome": "PKM",
+   "confianca": "confirmado",
+   "prova": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. `Squad (Machinegun)` = `3x 2/24 + 3x 3/37`; os tres times (A/B/C) mostram uma PKM cada. Atencao: a PKM tambem e `2/36` quando e o metralhador de uma esquadra de fuzileiros — o mesmo cano em duas classes.",
+   "lado": "UKR",
+   "onde": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. `Squad (Machinegun)` = `3x 2/24 + 3x 3/37`; os tres times (A/B/C) mostram uma PKM cada. Atencao: a PKM tambem e `2/36` quando e o metralhador de uma esquadra de fuzileiros — o mesmo cano em duas classes. | E70 (17/09): o campo `lado` faltava e e UKR — a leitura foi na `ZZ ARMAS UKR T1`."
+  },
+  "3/38": {
+   "nome": "PKM",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): os tres times da `Squad (Machinegun)` core 111 e a `Machinegun Team` core 526; a caixa verde escreve \"PKM / MMG / 7.62mm\". Perdeu o nome que tinha em 09/09 (era indicacao antiga) e ganhou prova. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "7.62x54R x700 + 9mm x48"
+  },
+  "3/50": {
+   "nome": "AGS-17",
+   "confianca": "confirmado",
+   "prova": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. `Squad (Grenade Launcher)` = `4x 2/24 + 2x 3/50`; os dois times mostram AGS-17.",
+   "lado": "UKR",
+   "onde": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. `Squad (Grenade Launcher)` = `4x 2/24 + 2x 3/50`; os dois times mostram AGS-17. | E70 (17/09): o campo lado faltava; e UKR, pela forca em que foi lido (ZZ ARMAS UKR T1)."
+  },
+  "3/51": {
+   "nome": "AGS-30",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): caixa verde dos dois times da `Squad (Grenade Launcher)` core 219: \"AGS-30 / Grenade Laun / 30mm\", AMMO \"30mm HE 202\" contra o item 12 x232 do save. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 12 (30mm HE) x116 por time"
+  },
+  "3/52": {
+   "nome": "MT-12",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. `2nd Team Antitank Gun` core 608 (Shapoval, artilheiro Yatsenko): a caixa verde escreve \"100mm L/63 MT-12\" e a coluna AMMO \"100mm HE 3 · 100mm HEAT 3 · 100mm APFSDS 15\" — nada de missil",
+   "municao": "item 487 (100mm APFSDS) x15, item 486 (100mm HEAT) x3, item 489 (100mm HE) x3",
+   "rotulo": "o rotulo do painel e \"100mm L/63 MT-12\"; o \"L/63\" e linha gerada e nao existe no strings.txt (ver FORMATO 118.2)"
+  },
+  "3/53": {
+   "nome": "MT-12K",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. `1st Team Antitank Gun` core 586 (Babenko, artilheiro Lysenko): a caixa verde escreve \"100mm L/63 MT-12K\" — COM O K — e a coluna AMMO traz \"AT-10 ATGM 1\" ao lado dos tiros de 100mm. O AT-10 e o item 89, que so o 3/53 carrega: e ele que separa as duas armas",
+   "municao": "item 487 (100mm APFSDS) x12, item 486 (100mm HEAT) x3, item 489 (100mm HE) x3, item 89 (AT-10 ATGM) x1",
+   "rotulo": "o rotulo do painel e \"100mm L/63 MT-12K\""
+  },
+  "4/1": {
+   "nome": "Javelin",
+   "lado": "US",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): mao 2 do Lusk no `2nd Team (Javelin)` core 261 — caixa verde \"Javelin / ATGM / 127mm\", AMMO \"Javelin ATGM 2\" contra o item 57 x2 (um por homem); o mesmo par e o mesmo item no Camarillo da `1st Section (Scout)` core 240",
+   "municao": "item 57 (Javelin ATGM)"
+  },
+  "4/2": {
+   "nome": "M136 AT4",
+   "lado": "US",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ PE US (batalhas 1 e 2), 21/09/2026 (E89): mao 2 de seis homens em cinco unidades (cores 51 x2, 240, 628, 669, 1114), cada um com o item 56 x1; a caixa de municao de quatro delas escreve \"M136 AT4 1\" e o icone de equipamento da `2nd Squad (Rifle)` core 51, \"M136 AT4\" x2",
+   "municao": "item 56 (M136 AT4) x1"
+  },
+  "4/4": {
+   "nome": "Stinger",
+   "lado": "US",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ PE US T1 (batalha 2), 21/09/2026 (E89): caixa verde da `2nd Team (Stinger)` \"Stinger / SAM / 70mm\", AMMO \"Stinger SAM 2\"; os icones de equipamento escrevem \"Stinger Launcher\" e \"Stinger\". No save do autor (`E2 BTT 7 TRANSITION`, core 671) o 4/4 esta na mao 2 do Pineda e cada homem da dupla leva o item 492 x1 — os dois tiros do painel",
+   "municao": "item 492 (Stinger SAM) x1 por homem"
+  },
+  "4/13": {
+   "nome": "RPG-7V1",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "coreId 263 posicao 5",
+   "classe": "arma pesada"
+  },
+  "4/14": {
+   "nome": "RPG-7V2",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): duas fontes concordam: o rotulo do artilheiro do `1st Squad` core 229 e a caixa verde do `1st Team Recon` core 714 (\"RPG-7V2 / Rocket / 93mm\", AMMO TBG-7V Therm 1 / PG-7VR 3 / OG-7V HE 1). Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 42 (PG-7VR) x3 + item 38 (OG-7V HE) x1 + item 39 (TBG-7V Therm) x1 — o par 38/39 separado no E92 (quantidade escrita numa copia ZZ e lida na coluna AMMO e no icone de equipamento)"
+  },
+  "4/15": {
+   "nome": "RPG-22",
+   "lado": "UKR",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "nao veio de tooltip: veio do item de municao. O painel do `Squad (Recon)` core 213 da `ZZ ARMAS UKR T1` escreve \"RPG-22 HEAT 2\" e o unico item daquela unidade que soma 2 e o 481 (E67); dos 318 portadores do 481 em 272 saves, 312 tem o 4/15 numa das maos e os 6 restantes sao saqueados (`2/44 + 8/0`), que perderam o tubo e ficaram com o tiro",
+   "municao": "item 481 (RPG-22 HEAT) x1"
+  },
+  "4/16": {
+   "nome": "RPG-26",
+   "lado": "UKR",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. a caixa da esquerda do `1st Squad Engineer` core 185 (Kravchuk) escreve \"RPG-26 HEAT 1\", e o item 482 e exclusivo do 4/16 (365 portadores em 272 saves, todos com ele na mao). Mesmo caminho do 4/15 = RPG-22",
+   "municao": "item 482 (RPG-26 HEAT) x1"
+  },
+  "4/17": {
+   "nome": "RPO-A",
+   "lado": "UKR",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. a caixa da esquerda do `1st Team RPO` core 341 (Marchenko) escreve \"RPO-A Therm 2\" contra o item 483 x2 do save, e o tipo da unidade e `RPO Team`",
+   "municao": "item 483 (RPO-A Therm) x1 por homem"
+  },
+  "4/18": {
+   "nome": "RPO-M Shmel",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): caixa verde das duas `RPO Team` (cores 371 e a gemea): \"RPO-M Shmel / Rocket / 90mm\", AMMO \"RPO-M Therm 4\" contra o item 484 x4. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 484 (RPO-M Therm) x4"
+  },
+  "4/20": {
+   "nome": "Corsar",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. `1st Team ATGM` core 72 (Prykhodko): \"Corsar / ATGM / 107mm\", e a coluna AMMO diz \"Corsar ATGM 5\" contra os 5 do item 485 no save",
+   "municao": "item 485 (Corsar ATGM) x5"
+  },
+  "4/24": {
+   "nome": "Igla",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026 (E68): lido na CAIXA VERDE do painel, que escreve nome, categoria e calibre da arma da unidade. Nao precisa de hover — e por isso serve para a classe 4 e a 5, que andam sempre na mao 2 e nunca tem icone de homem. `4th Team Igla` core 194 (Mishchenko, um homem so): \"Igla / SAM / 72mm\", AMMO \"Igla SAM 1\" contra o item 493 x1. O tipo da unidade no roster tambem diz `Igla Team`",
+   "municao": "item 493 (Igla SAM) x1"
+  },
+  "4/26": {
+   "nome": "Igla-S",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): caixa verde da `Igla-S Team` core 354 (Ustinov, um homem so): \"Igla-S / SAM / 72mm\", AMMO \"Igla-S SAM 1\" contra o item 494 x1. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 494 (Igla-S SAM) x1"
+  },
+  "5/6": {
+   "nome": "AT-4C Spigot",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: `Squad (ATGM)` core 318 (Kushnir/Lutsenko), o outro lado da duvida de 09/09 | E68: caixa verde \"AT-4C Spigot / ATGM / 120mm\", AMMO \"AT-4C ATGM\" (item 54)",
+   "municao": "item 54 x5"
+  },
+  "5/9": {
+   "nome": "AT-7 Saxhorn",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: os dois `Team (ATGM)` de 3 homens (core 464 Marchuk e 465 Bondarchuk) mostram AT-7 no primeiro homem, e a caixa de equipamento escreve \"Saxhorn\" | E68: a caixa verde escreve \"AT-7 Saxhorn / ATGM / 94mm\" de uma vez, o que confirma que o nome composto nao era invencao minha, e a coluna AMMO diz \"AT-7 ATGM 5\" (item 62)",
+   "municao": "item 62 x1 por homem, mais 5,45 do fuzil da guarnicao"
+  },
+  "5/10": {
+   "nome": "AT-13 Saxhorn",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): caixa verde dos tres times da `Squad (ATGM)` core 112: \"AT-13 Saxhorn / ATGM / 130mm\", AMMO \"AT-13 ATGM\". O jogo chama de Saxhorn tanto o AT-7 ucraniano (5/9) quanto este — mesmo nome de guerra, designacoes diferentes. Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 66 (AT-13 ATGM) x3 por time"
+  },
+  "5/19": {
+   "nome": "SPG-9 Spear",
+   "confianca": "confirmado",
+   "prova": "ZZ ARMAS UKR T1.bts, 09/09/2026: conjunto de armas do roster x painel do jogo, unidade a unidade. `Squad (Recoilless)` = `6x 2/24 + 2x 5/19`; tres times de recoilless mostram SPG-9 (a caixa da unidade diz \"SPG-9 Spear\", 73mm).",
+   "onde": "ZZ ARMAS UKR T1 (forca ucraniana): o core 320 e a Squad (Recoilless) daquele save. | E68: a caixa verde do `3rd Squad A/B Team Recoilless` core 320 (Kravets/Demchenko) escreve \"SPG-9 Spear / Recoilless / 73mm\", e a coluna AMMO nomeia os tres tiros: OG-9V HE (item 43), PG-9N HEAT (45) e PG-9VNT (46) | E70 (17/09): o campo lado faltava e e UKR, pela forca em que o core 320 foi lido.",
+   "municao": "item 43 (OG-9V HE) x4, item 46 (PG-9VNT) x3, item 45 (PG-9N HEAT) x2",
+   "lado": "UKR"
+  },
+  "5/21": {
+   "nome": "SKIF",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ ARMAS UKR T1, 17/09/2026: `Squad (ATGM)` core 27 (Bondarenko/Kravets), um SKIF em cada time A/B — resolve a duvida de 09/09 entre SKIF e AT-4C | E68: caixa verde \"SKIF / ATGM / 130mm\", AMMO \"Stugna ATGM\" (item 490) — o lancador e SKIF e o missil e Stugna",
+   "municao": "item 490 x4"
+  },
+  "2/43": {
+   "nome": "PM",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ E92 PISTOLA RU (copia ZZ do meu `ZZ PE RU T1`), 21/09/2026 (E92): a pistola anda SEMPRE na mao 2 e nao tem icone — so aparece quando sobe para a mao 1 (E54). Entao ela foi ESCRITA na mao 1 do Shagaev, chefe da `Machinegun Team (PKM)` core 526 (`rearmMen`, o caminho do E54/E64: 3/38 + 2/43 -> 2/43 + 2/43). No painel o icone do homem 1 virou uma pistola e o rotulo vermelho escreveu \"PM\" (o homem 2 continuou \"AK-74M\"). A Makarov. Lida na forca RUSSA; na ucraniana o mesmo par pode ser outra arma (118.1).",
+   "municao": "9mm (item 6) x48"
+  },
+  "2/5": {
+   "nome": "M9A1",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ E92 PISTOLA US (copia ZZ do meu `ZZ PE US T1`), 21/09/2026 (E92): pelo mesmo caminho do 2/43 — escrita na mao 1 do Barton, chefe da `Operations Team` core 7 (2/2 + 2/5 -> 2/5 + 2/5). Icone de pistola e rotulo \"M9A1\"; o Caspersen, ao lado, continuou \"M4A1\". E a mao 2 de Operations Team, Advisor Team, Sniper Team, LRS e Squad (Weapons) na forca US.",
+   "municao": "9mm x45 na unidade (a caixa do painel escreve \"9mm 45\")"
+  },
+  "2/29": {
+   "nome": "AKS-74U",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES UKR (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "5/11": {
+   "nome": "AT-14 Kornet",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "7/1": {
+   "nome": "M224A1",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES US (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "60mm (caixa verde: Mortar 60mm)"
+  },
+  "7/3": {
+   "nome": "M120",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES US (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "120mm (caixa verde: Mortar 120mm)"
+  },
+  "7/4": {
+   "nome": "2B14",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "82mm (caixa verde: Mortar 82mm)"
+  },
+  "7/6": {
+   "nome": "2B11",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "120mm (caixa verde: Mortar 120mm)"
+  },
+  "2/11": {
+   "nome": "Mk21 PSR .300",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES US (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "2/18": {
+   "nome": "M240L",
+   "lado": "US",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES US (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  }
+ },
+ "faltam": {
+  "nota": "So aparecem em unidades russas, que nao existem na campanha do autor. A batalha `ZZ ARMAS RU` em Game Files\\Scenarios foi feita para elas, mas um cenario avulso NAO tem roster de campanha — e sem roster nao ha como amarrar posicao a id. Precisa de uma campanha russa que ja tenha passado por uma virada de batalha.",
+  "ids": [
+   "2/25",
+   "2/26",
+   "2/27",
+   "2/30",
+   "2/32",
+   "2/41",
+   "2/45",
+   "2/46",
+   "4/14"
+  ]
+ },
+ "pendentes": {
+  "nota": "Vistas nesta campanha, com candidato mas sem prova fechada. Resolver na proxima passada — falta so distinguir qual e qual."
+ },
+ "porLado": {
+  "RU|4/16": {
+   "nome": "RPG-26",
+   "lado": "RU",
+   "confianca": "confirmado pela municao nomeada",
+   "onde": "ZZ PE RU T1 (batalha 2), 17/09/2026 (E70): a caixa de municao da `2nd Squad (Engineer)` core 205 escreve \"RPG-26 HEAT 2\" contra o item 482 x2, e o 482 e exclusivo do 4/16. E o MESMO par e o MESMO item do lado ucraniano — os dois exercitos coincidem aqui, o que nao e regra (118.1). Forca russa montada de proposito com uma copia de cada folha a pe da biblioteca (22 unidades, 1.312 cr) — os pares russos so aparecem em saves onde o russo e a IA, e ali o `=` nao cicla.",
+   "municao": "item 482 (RPG-26 HEAT) x1"
+  },
+  "RU|3/50": {
+   "nome": "AGS-17",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "RU|4/24": {
+   "nome": "Igla",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "RU|5/6": {
+   "nome": "AT-4C Spigot",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "RU|5/9": {
+   "nome": "AT-7 Saxhorn",
+   "lado": "RU",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES RU (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "UKR|2/43": {
+   "nome": "PM",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES UKR (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =."
+  },
+  "UKR|7/4": {
+   "nome": "2B14",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES UKR (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "82mm (caixa verde: Mortar 82mm)"
+  },
+  "UKR|7/6": {
+   "nome": "2B11",
+   "lado": "UKR",
+   "confianca": "confirmado",
+   "onde": "ZZ NOMES UKR (copia ZZ de uma virada de colheita ZZ FAB com o par escrito na mao 1), 28/09/2026 (E108): rotulo do hover no painel da unidade selecionada por =.",
+   "calibre": "120mm (caixa verde: Mortar 120mm)"
+  }
+ }
+}

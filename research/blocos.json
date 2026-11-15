@@ -1,0 +1,3316 @@
+{
+ "nota": "O caminho dos blocos de equipamento do editor, por exercito e por GRUPO (a primeira entrada da lista de tipos no fim do registro da unidade, FORMATO 43.2). Cada opcao e um tipo (0xTAB,0xVAL) com a lista inteira, a raridade que o editor grava com ele e o tamanho do conteudo do registro (base + 1 + 2 x niveis). So unidades POSICIONADAS (time/veiculo) entram: a mesma tela oferece tambem grupos que moram num registro de formacao (Assault Platoon: Standard/Antitank) ou num sem-posicao (morteiros e obuses off-map, FORMATO 41.1), e esses ainda nao estao aqui. `rotulo`, `variante` e `rotuloTela` vem de blocos_rotulos.json (lidos na tela, E96). Refazer com `node tools/re/blocos.mjs minerar --gravar`.",
+ "gerado": "2026-09-28",
+ "fontes": 263,
+ "exercitos": {
+  "RU": {
+   "grupos": {
+    "603": {
+     "rotulo": "Mortar",
+     "opcoes": {
+      "0x00,0x1b": {
+       "tipo": "0x00,0x1b",
+       "val": 27,
+       "tab": 0,
+       "nome": "3 x 120mm Mortar (2B11)",
+       "lista": [
+        603,
+        604
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 644,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x1b"
+      },
+      "0x00,0x3a@603/656": {
+       "tipo": "0x00,0x3a",
+       "val": 58,
+       "tab": 0,
+       "nome": "3 x 82mm Mortar (2B14)",
+       "lista": [
+        603,
+        656
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 459,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x3a@603/656"
+      },
+      "0x00,0x3a@603/657": {
+       "tipo": "0x00,0x3a",
+       "val": 58,
+       "tab": 0,
+       "nome": "3 x 82mm Mortar (2S24)",
+       "lista": [
+        603,
+        657
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 1036,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x3a@603/657"
+      }
+     },
+     "niveis": 2
+    },
+    "608": {
+     "rotulo": "HQ Vehicle",
+     "opcoes": {
+      "0x05,0x44": {
+       "tipo": "0x05,0x44",
+       "val": 68,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-82A)",
+       "lista": [
+        608
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 264,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x44"
+      },
+      "0x05,0x96": {
+       "tipo": "0x05,0x96",
+       "val": 150,
+       "tab": 5,
+       "nome": "Command Vehicle (BTR-80AK)",
+       "lista": [
+        608
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 134,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x96"
+      },
+      "0x05,0x97": {
+       "tipo": "0x05,0x97",
+       "val": 151,
+       "tab": 5,
+       "nome": "Command Vehicle (BTR-82K)",
+       "lista": [
+        608
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 770,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x97"
+      }
+     },
+     "niveis": 1
+    },
+    "609": {
+     "rotulo": "BTR",
+     "opcoes": {
+      "0x05,0x42": {
+       "tipo": "0x05,0x42",
+       "val": 66,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-80A)",
+       "lista": [
+        609
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 13203,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x42"
+      },
+      "0x05,0x43": {
+       "tipo": "0x05,0x43",
+       "val": 67,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-82)",
+       "lista": [
+        609
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 9945,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x43"
+      },
+      "0x05,0x44": {
+       "tipo": "0x05,0x44",
+       "val": 68,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-82A)",
+       "lista": [
+        609
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 7017,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x44"
+      }
+     },
+     "niveis": 1
+    },
+    "611": {
+     "rotulo": "Armored Personnel Carrier",
+     "opcoes": {
+      "0x05,0x5d": {
+       "tipo": "0x05,0x5d",
+       "val": 93,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (MT-LBM 6MA)",
+       "lista": [
+        611
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 13356,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x5d"
+      },
+      "0x05,0x64": {
+       "tipo": "0x05,0x64",
+       "val": 100,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (MT-LBM 6MB)",
+       "lista": [
+        611
+       ],
+       "niveis": 1,
+       "raridade": 6,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1266,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x64"
+      },
+      "0x05,0x61": {
+       "tipo": "0x05,0x61",
+       "val": 97,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (MT-LBM)",
+       "lista": [
+        611
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 16893,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x61"
+      }
+     },
+     "niveis": 1
+    },
+    "612": {
+     "rotulo": "Vehicle",
+     "opcoes": {
+      "0x05,0x51": {
+       "tipo": "0x05,0x51",
+       "val": 81,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr)",
+       "lista": [
+        612
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 842,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x51"
+      },
+      "0x00,0x30": {
+       "tipo": "0x00,0x30",
+       "val": 48,
+       "tab": 0,
+       "nome": "Multipurpose Vehicle (UAZ-469)",
+       "lista": [
+        612
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 713,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x30"
+      }
+     },
+     "niveis": 1
+    },
+    "613": {
+     "rotulo": "Multipurpose Vehicle",
+     "opcoes": {
+      "0x00,0x30": {
+       "tipo": "0x00,0x30",
+       "val": 48,
+       "tab": 0,
+       "nome": "Multipurpose Vehicle (UAZ-469)",
+       "lista": [
+        613
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 65,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x30"
+      },
+      "0x05,0x52": {
+       "tipo": "0x05,0x52",
+       "val": 82,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr (AGS-17))",
+       "lista": [
+        613,
+        658
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 64,
+       "fontes": [
+        "templates"
+       ],
+       "chave": "0x05,0x52"
+      },
+      "0x05,0x51": {
+       "tipo": "0x05,0x51",
+       "val": 81,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr)",
+       "lista": [
+        613,
+        658
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 65,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x51"
+      }
+     },
+     "niveis": 2
+    },
+    "614": {
+     "rotulo": "HQ Vehicle",
+     "opcoes": {
+      "0x00,0x29": {
+       "tipo": "0x00,0x29",
+       "val": 41,
+       "tab": 0,
+       "nome": "Command Vehicle (BMP-2K)",
+       "lista": [
+        614
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 261,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x29"
+      },
+      "0x05,0x40": {
+       "tipo": "0x05,0x40",
+       "val": 64,
+       "tab": 5,
+       "nome": "Command Vehicle (BMP-3K)",
+       "lista": [
+        614
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 323,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x40"
+      }
+     },
+     "niveis": 1
+    },
+    "615": {
+     "rotulo": "BMP",
+     "opcoes": {
+      "0x05,0x58": {
+       "tipo": "0x05,0x58",
+       "val": 88,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (BMP-3M (Arena))",
+       "lista": [
+        615,
+        616,
+        692
+       ],
+       "niveis": 3,
+       "raridade": 4,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 128,
+       "fontes": [
+        "templates"
+       ],
+       "variante": "BMP-3 > BMP-3M",
+       "chave": "0x05,0x58"
+      },
+      "0x05,0x5a": {
+       "tipo": "0x05,0x5a",
+       "val": 90,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (BMP-3M (ERA))",
+       "lista": [
+        615,
+        616,
+        692
+       ],
+       "niveis": 3,
+       "raridade": 6,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 715,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "variante": "BMP-3 > BMP-3M",
+       "chave": "0x05,0x5a"
+      },
+      "0x05,0x59": {
+       "tipo": "0x05,0x59",
+       "val": 89,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (BMP-3M (Shtora))",
+       "lista": [
+        615,
+        616,
+        692
+       ],
+       "niveis": 3,
+       "raridade": 5,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 453,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "variante": "BMP-3 > BMP-3M",
+       "chave": "0x05,0x59"
+      },
+      "0x00,0x3a": {
+       "tipo": "0x00,0x3a",
+       "val": 58,
+       "tab": 0,
+       "nome": "Infantry Fighting Vehicle (BMP-3M)",
+       "lista": [
+        615,
+        616,
+        692
+       ],
+       "niveis": 3,
+       "raridade": 7,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1617,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "variante": "BMP-3 > BMP-3M",
+       "chave": "0x00,0x3a"
+      },
+      "0x05,0x3c": {
+       "tipo": "0x05,0x3c",
+       "val": 60,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (BMP-3)",
+       "lista": [
+        615,
+        616,
+        747
+       ],
+       "niveis": 3,
+       "raridade": 7,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8167,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "BMP-3 > BMP-3",
+       "chave": "0x05,0x3c"
+      },
+      "0x00,0x28": {
+       "tipo": "0x00,0x28",
+       "val": 40,
+       "tab": 0,
+       "nome": "Infantry Fighting Vehicle (BMP-2)",
+       "lista": [
+        615,
+        617
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8200,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "BMP-2",
+       "chave": "0x00,0x28"
+      },
+      "0x05,0x3f": {
+       "tipo": "0x05,0x3f",
+       "val": 63,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (BMP-2M)",
+       "lista": [
+        615,
+        617
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 6393,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "BMP-2",
+       "chave": "0x05,0x3f"
+      }
+     },
+     "niveis": 3
+    },
+    "619": {
+     "rotulo": "Reconnaissance Vehicle",
+     "opcoes": {
+      "0x05,0x3d": {
+       "tipo": "0x05,0x3d",
+       "val": 61,
+       "tab": 5,
+       "nome": "Reconnaissance Vehicle (BRM-1K)",
+       "lista": [
+        619
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 455,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x3d"
+      },
+      "0x05,0x3e": {
+       "tipo": "0x05,0x3e",
+       "val": 62,
+       "tab": 5,
+       "nome": "Reconnaissance Vehicle (BRM-3K)",
+       "lista": [
+        619
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 321,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x3e"
+      }
+     },
+     "niveis": 1
+    },
+    "620": {
+     "rotulo": "Multipurpose Vehicle / Truck",
+     "opcoes": {
+      "0x05,0x52": {
+       "tipo": "0x05,0x52",
+       "val": 82,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr (AGS-17))",
+       "lista": [
+        620
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 132,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x52"
+      },
+      "0x05,0x53": {
+       "tipo": "0x05,0x53",
+       "val": 83,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr (MG))",
+       "lista": [
+        620
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 450,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x53"
+      },
+      "0x05,0x51": {
+       "tipo": "0x05,0x51",
+       "val": 81,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr)",
+       "lista": [
+        620
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 193,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x51"
+      },
+      "0x00,0x30": {
+       "tipo": "0x00,0x30",
+       "val": 48,
+       "tab": 0,
+       "nome": "Multipurpose Vehicle (UAZ-469)",
+       "lista": [
+        620
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 256,
+       "fontes": [
+        "templates"
+       ],
+       "chave": "0x00,0x30"
+      },
+      "0x05,0x57": {
+       "tipo": "0x05,0x57",
+       "val": 87,
+       "tab": 5,
+       "nome": "Truck (Ural-4320)",
+       "lista": [
+        620
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 133,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x57"
+      }
+     },
+     "niveis": 1
+    },
+    "624": {
+     "rotulo": "Main Battle Tank",
+     "opcoes": {
+      "0x05,0x36": {
+       "tipo": "0x05,0x36",
+       "val": 54,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-90A)",
+       "lista": [
+        624,
+        625,
+        744
+       ],
+       "niveis": 3,
+       "raridade": 7,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 3321,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "T-90 > T-90A",
+       "chave": "0x05,0x36"
+      },
+      "0x05,0x91": {
+       "tipo": "0x05,0x91",
+       "val": 145,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-90AM (APS))",
+       "lista": [
+        624,
+        625,
+        745
+       ],
+       "niveis": 3,
+       "raridade": 5,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1566,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "T-90 > T-90AM",
+       "chave": "0x05,0x91"
+      },
+      "0x05,0x37": {
+       "tipo": "0x05,0x37",
+       "val": 55,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-90AM)",
+       "lista": [
+        624,
+        625,
+        745
+       ],
+       "niveis": 3,
+       "raridade": 7,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8859,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "T-90 > T-90AM",
+       "chave": "0x05,0x37"
+      },
+      "0x05,0x90": {
+       "tipo": "0x05,0x90",
+       "val": 144,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-72B3 (APS))",
+       "lista": [
+        624,
+        627,
+        746
+       ],
+       "niveis": 3,
+       "raridade": 4,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1175,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "T-72 > T-72B3",
+       "chave": "0x05,0x90"
+      },
+      "0x05,0x34": {
+       "tipo": "0x05,0x34",
+       "val": 52,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-72B3)",
+       "lista": [
+        624,
+        627,
+        746
+       ],
+       "niveis": 3,
+       "raridade": 7,
+       "tam": 54,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 24175,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "T-72 > T-72B3",
+       "chave": "0x05,0x34"
+      }
+     },
+     "niveis": 3
+    },
+    "629": {
+     "rotulo": "ATGM Vehicle / Tank Destroyer",
+     "opcoes": {
+      "0x05,0x5e": {
+       "tipo": "0x05,0x5e",
+       "val": 94,
+       "tab": 5,
+       "nome": "Tank Destroyer (9P149 Shturm-S)",
+       "lista": [
+        629
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1170,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x5e"
+      },
+      "0x00,0x41": {
+       "tipo": "0x00,0x41",
+       "val": 65,
+       "tab": 0,
+       "nome": "ATGM Vehicle (BRDM-2 (AT-5))",
+       "lista": [
+        629,
+        605
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2304,
+       "fontes": [
+        "templates"
+       ],
+       "chave": "0x00,0x41"
+      },
+      "0x05,0x63": {
+       "tipo": "0x05,0x63",
+       "val": 99,
+       "tab": 5,
+       "nome": "ATGM Vehicle (BRDM-2M (AT-5))",
+       "lista": [
+        629,
+        605
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 18,
+       "fontes": [
+        "lib"
+       ],
+       "chave": "0x05,0x63"
+      }
+     },
+     "niveis": 2
+    },
+    "630": {
+     "rotulo": "Reconnaissance Vehicle",
+     "opcoes": {
+      "0x00,0x26": {
+       "tipo": "0x00,0x26",
+       "val": 38,
+       "tab": 0,
+       "nome": "Reconnaissance Vehicle (BRDM-2)",
+       "lista": [
+        630
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 34,
+       "fontes": [
+        "all",
+        "lib"
+       ],
+       "chave": "0x00,0x26"
+      },
+      "0x05,0x62": {
+       "tipo": "0x05,0x62",
+       "val": 98,
+       "tab": 5,
+       "nome": "Reconnaissance Vehicle (BRDM-2M)",
+       "lista": [
+        630
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 3264,
+       "fontes": [
+        "templates"
+       ],
+       "chave": "0x05,0x62"
+      }
+     },
+     "niveis": 1
+    },
+    "631": {
+     "rotulo": "Multipurpose Vehicle",
+     "opcoes": {
+      "0x05,0x52": {
+       "tipo": "0x05,0x52",
+       "val": 82,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr (AGS-17))",
+       "lista": [
+        631
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1171,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x52"
+      },
+      "0x05,0x53": {
+       "tipo": "0x05,0x53",
+       "val": 83,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr (MG))",
+       "lista": [
+        631
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1041,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x53"
+      },
+      "0x05,0x51": {
+       "tipo": "0x05,0x51",
+       "val": 81,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (Tigr)",
+       "lista": [
+        631
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1678,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x51"
+      }
+     },
+     "niveis": 1
+    },
+    "632": {
+     "rotulo": "Forward Observer",
+     "opcoes": {
+      "0x05,0x45": {
+       "tipo": "0x05,0x45",
+       "val": 69,
+       "tab": 5,
+       "nome": "Artillery Observation Vehicle (BTR-80 1V152)",
+       "lista": [
+        632
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 259,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x45"
+      },
+      "0x05,0x60": {
+       "tipo": "0x05,0x60",
+       "val": 96,
+       "tab": 5,
+       "nome": "Artillery Observation Vehicle (MT-LBU 1V14)",
+       "lista": [
+        632
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 257,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x60"
+      },
+      "0x05,0x92": {
+       "tipo": "0x05,0x92",
+       "val": 146,
+       "tab": 5,
+       "nome": "Artillery Observation Vehicle (PRP-4M)",
+       "lista": [
+        632
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1039,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x92"
+      }
+     },
+     "niveis": 1
+    },
+    "714": {
+     "rotulo": "Grenade Launcher",
+     "opcoes": {
+      "0x00,0xe2": {
+       "tipo": "0x00,0xe2",
+       "val": 226,
+       "tab": 0,
+       "nome": "Squad (Grenade Launcher)",
+       "lista": [
+        714
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2718,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "AGS-30",
+       "chave": "0x00,0xe2"
+      },
+      "0x04,0x3e": {
+       "tipo": "0x04,0x3e",
+       "val": 62,
+       "tab": 4,
+       "nome": "Squad (Grenade Launcher)",
+       "lista": [
+        714
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2538,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "AGS-17",
+       "chave": "0x04,0x3e"
+      }
+     },
+     "niveis": 1
+    },
+    "718": {
+     "rotulo": "Artillery",
+     "opcoes": {
+      "0x00,0x94": {
+       "tipo": "0x00,0x94",
+       "val": 148,
+       "tab": 0,
+       "nome": "3 x 122mm Howitzer (2S1)",
+       "lista": [
+        718
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 772,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x94"
+      },
+      "0x00,0xa2": {
+       "tipo": "0x00,0xa2",
+       "val": 162,
+       "tab": 0,
+       "nome": "3 x 152mm Howitzer (2S19M2)",
+       "lista": [
+        718
+       ],
+       "niveis": 1,
+       "raridade": 4,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 6,
+       "fontes": [
+        "all",
+        "lib"
+       ],
+       "chave": "0x00,0xa2"
+      },
+      "0x00,0x9c": {
+       "tipo": "0x00,0x9c",
+       "val": 156,
+       "tab": 0,
+       "nome": "3 x 152mm Howitzer (2S3M1)",
+       "lista": [
+        718
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 650,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x9c"
+      },
+      "0x00,0x9e": {
+       "tipo": "0x00,0x9e",
+       "val": 158,
+       "tab": 0,
+       "nome": "3 x 152mm Howitzer (2S3M2)",
+       "lista": [
+        718
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 906,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x9e"
+      }
+     },
+     "niveis": 1
+    }
+   }
+  },
+  "UKR": {
+   "grupos": {
+    "665": {
+     "rotulo": "HQ Vehicle",
+     "opcoes": {
+      "0x05,0x46": {
+       "tipo": "0x05,0x46",
+       "val": 70,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-4E)",
+       "lista": [
+        665
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 843,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x46"
+      },
+      "0x05,0x95": {
+       "tipo": "0x05,0x95",
+       "val": 149,
+       "tab": 5,
+       "nome": "Command Vehicle (BTR-70K)",
+       "lista": [
+        665
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 713,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x95"
+      }
+     },
+     "niveis": 1
+    },
+    "666": {
+     "rotulo": "BTR",
+     "opcoes": {
+      "0x00,0x71": {
+       "tipo": "0x00,0x71",
+       "val": 113,
+       "tab": 0,
+       "nome": "Armored Personnel Carrier (BTR-70)",
+       "lista": [
+        666,
+        667
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 26626,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x71"
+      },
+      "0x05,0x46": {
+       "tipo": "0x05,0x46",
+       "val": 70,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (BTR-4E)",
+       "lista": [
+        666,
+        668
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 10684,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x46"
+      }
+     },
+     "niveis": 2
+    },
+    "671": {
+     "rotulo": "Mortar Platoon",
+     "opcoes": {
+      "0x00,0x1b": {
+       "tipo": "0x00,0x1b",
+       "val": 27,
+       "tab": 0,
+       "nome": "3 x 120mm Mortar (2B11)",
+       "lista": [
+        671,
+        673
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 1301,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x1b"
+      }
+     },
+     "niveis": 2
+    },
+    "677": {
+     "rotulo": "HQ Vehicle",
+     "opcoes": {
+      "0x05,0x7c": {
+       "tipo": "0x05,0x7c",
+       "val": 124,
+       "tab": 5,
+       "nome": "Command Vehicle (BMP-2K)",
+       "lista": [
+        677
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 779,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x7c"
+      }
+     },
+     "niveis": 1
+    },
+    "678": {
+     "rotulo": "BMP",
+     "opcoes": {
+      "0x00,0x28": {
+       "tipo": "0x00,0x28",
+       "val": 40,
+       "tab": 0,
+       "nome": "Infantry Fighting Vehicle (BMP-2)",
+       "lista": [
+        678
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 35437,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x28"
+      }
+     },
+     "niveis": 1
+    },
+    "679": {
+     "rotulo": "Recon",
+     "opcoes": {
+      "0x05,0x7b": {
+       "tipo": "0x05,0x7b",
+       "val": 123,
+       "tab": 5,
+       "nome": "Reconnaissance Vehicle (BRM-1K)",
+       "lista": [
+        679
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2729,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x7b"
+      }
+     },
+     "niveis": 1
+    },
+    "681": {
+     "rotulo": "Reconnaissance Vehicle",
+     "opcoes": {
+      "0x00,0x26": {
+       "tipo": "0x00,0x26",
+       "val": 38,
+       "tab": 0,
+       "nome": "Reconnaissance Vehicle (BRDM-2)",
+       "lista": [
+        681
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 194,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x26"
+      }
+     },
+     "niveis": 1
+    },
+    "682": {
+     "rotulo": "Tank Destroyer",
+     "opcoes": {
+      "0x05,0x5e": {
+       "tipo": "0x05,0x5e",
+       "val": 94,
+       "tab": 5,
+       "nome": "Tank Destroyer (9P149 Shturm-S)",
+       "lista": [
+        682
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 3492,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x5e"
+      }
+     },
+     "niveis": 1
+    },
+    "683": {
+     "rotulo": "Multipurpose Vehicle / Truck",
+     "opcoes": {
+      "0x00,0x30": {
+       "tipo": "0x00,0x30",
+       "val": 48,
+       "tab": 0,
+       "nome": "Multipurpose Vehicle (UAZ-469)",
+       "lista": [
+        683
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 646,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x30"
+      },
+      "0x05,0x57": {
+       "tipo": "0x05,0x57",
+       "val": 87,
+       "tab": 5,
+       "nome": "Truck (Ural-4320)",
+       "lista": [
+        683
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 518,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x57"
+      }
+     },
+     "niveis": 1
+    },
+    "684": {
+     "rotulo": "Forward Observer",
+     "opcoes": {
+      "0x05,0x7d": {
+       "tipo": "0x05,0x7d",
+       "val": 125,
+       "tab": 5,
+       "nome": "Artillery Observation Vehicle (MT-LBU 1V14)",
+       "lista": [
+        684
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 131,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x7d"
+      },
+      "0x05,0x92": {
+       "tipo": "0x05,0x92",
+       "val": 146,
+       "tab": 5,
+       "nome": "Artillery Observation Vehicle (PRP-4M)",
+       "lista": [
+        684
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 840,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x92"
+      }
+     },
+     "niveis": 1
+    },
+    "685": {
+     "rotulo": "Main Battle Tank",
+     "opcoes": {
+      "0x05,0x33": {
+       "tipo": "0x05,0x33",
+       "val": 51,
+       "tab": 5,
+       "nome": "Main Battle Tank (BM Bulat)",
+       "lista": [
+        685,
+        686
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 9657,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x33"
+      },
+      "0x05,0x32": {
+       "tipo": "0x05,0x32",
+       "val": 50,
+       "tab": 5,
+       "nome": "Main Battle Tank (T-64BV)",
+       "lista": [
+        685,
+        686
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 7784,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x32"
+      },
+      "0x05,0x35": {
+       "tipo": "0x05,0x35",
+       "val": 53,
+       "tab": 5,
+       "nome": "Main Battle Tank (BM Oplot (APS))",
+       "lista": [
+        685,
+        687
+       ],
+       "niveis": 2,
+       "raridade": 4,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2000,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x35"
+      },
+      "0x05,0x9a": {
+       "tipo": "0x05,0x9a",
+       "val": 154,
+       "tab": 5,
+       "nome": "Main Battle Tank (BM Oplot)",
+       "lista": [
+        685,
+        687
+       ],
+       "niveis": 2,
+       "raridade": 6,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 11471,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x9a"
+      }
+     },
+     "niveis": 2
+    },
+    "689": {
+     "rotulo": "Transport Vehicle",
+     "opcoes": {
+      "0x00,0x71": {
+       "tipo": "0x00,0x71",
+       "val": 113,
+       "tab": 0,
+       "nome": "Armored Personnel Carrier (BTR-70)",
+       "lista": [
+        689
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 267,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x71"
+      },
+      "0x05,0x61": {
+       "tipo": "0x05,0x61",
+       "val": 97,
+       "tab": 5,
+       "nome": "Armored Personnel Carrier (MT-LBM)",
+       "lista": [
+        689
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 706,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x61"
+      }
+     },
+     "niveis": 1
+    },
+    "717": {
+     "rotulo": "3 x 100mm Gun",
+     "opcoes": {
+      "0x00,0x90": {
+       "tipo": "0x00,0x90",
+       "val": 144,
+       "tab": 0,
+       "nome": "3 x 100mm Gun (MT-12 Rapira)",
+       "lista": [
+        717
+       ],
+       "niveis": 1,
+       "raridade": 4,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 322,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x90"
+      }
+     },
+     "niveis": 1
+    },
+    "719": {
+     "rotulo": "Artillery",
+     "opcoes": {
+      "0x00,0x94": {
+       "tipo": "0x00,0x94",
+       "val": 148,
+       "tab": 0,
+       "nome": "3 x 122mm Howitzer (2S1)",
+       "lista": [
+        719
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 644,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x94"
+      },
+      "0x00,0xa8": {
+       "tipo": "0x00,0xa8",
+       "val": 168,
+       "tab": 0,
+       "nome": "3 x 152mm Howitzer (2S3M1)",
+       "lista": [
+        719
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 912,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0xa8"
+      }
+     },
+     "niveis": 1
+    }
+   }
+  },
+  "US": {
+   "grupos": {
+    "633": {
+     "rotulo": "M2A3",
+     "opcoes": {
+      "0x05,0x38": {
+       "tipo": "0x05,0x38",
+       "val": 56,
+       "tab": 5,
+       "nome": "Infantry Fighting Vehicle (M2A3 Bradley (APS))",
+       "lista": [
+        633
+       ],
+       "niveis": 1,
+       "raridade": 4,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1617,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x38"
+      },
+      "0x00,0x48": {
+       "tipo": "0x00,0x48",
+       "val": 72,
+       "tab": 0,
+       "nome": "Infantry Fighting Vehicle (M2A3 Bradley (ERA))",
+       "lista": [
+        633
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 13321,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x48"
+      }
+     },
+     "niveis": 1
+    },
+    "634": {
+     "rotulo": "M7A3 BFIST",
+     "opcoes": {
+      "0x05,0x3a": {
+       "tipo": "0x05,0x3a",
+       "val": 58,
+       "tab": 5,
+       "nome": "Fire Support Vehicle (M7A3 BFIST Bradley (APS))",
+       "lista": [
+        634
+       ],
+       "niveis": 1,
+       "raridade": 4,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 193,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x3a"
+      },
+      "0x00,0x4a": {
+       "tipo": "0x00,0x4a",
+       "val": 74,
+       "tab": 0,
+       "nome": "Fire Support Vehicle (M7A3 BFIST Bradley (ERA))",
+       "lista": [
+        634
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1941,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x4a"
+      }
+     },
+     "niveis": 1
+    },
+    "635": {
+     "rotulo": "M3A3",
+     "opcoes": {
+      "0x05,0x39": {
+       "tipo": "0x05,0x39",
+       "val": 57,
+       "tab": 5,
+       "nome": "Cavalry Fighting Vehicle (M3A3 Bradley (APS))",
+       "lista": [
+        635
+       ],
+       "niveis": 1,
+       "raridade": 4,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 393,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x39"
+      },
+      "0x00,0x49": {
+       "tipo": "0x00,0x49",
+       "val": 73,
+       "tab": 0,
+       "nome": "Cavalry Fighting Vehicle (M3A3 Bradley (ERA))",
+       "lista": [
+        635
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8725,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x49"
+      }
+     },
+     "niveis": 1
+    },
+    "636": {
+     "rotulo": "Abrams",
+     "opcoes": {
+      "0x05,0x5c": {
+       "tipo": "0x05,0x5c",
+       "val": 92,
+       "tab": 5,
+       "nome": "Main Battle Tank (M1A2 SEP Abrams (APS))",
+       "lista": [
+        636
+       ],
+       "niveis": 1,
+       "raridade": 5,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2128,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x5c"
+      },
+      "0x05,0x3b": {
+       "tipo": "0x05,0x3b",
+       "val": 59,
+       "tab": 5,
+       "nome": "Main Battle Tank (M1A2 SEP Abrams)",
+       "lista": [
+        636
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 9124,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x3b"
+      }
+     },
+     "niveis": 1
+    },
+    "637": {
+     "rotulo": "M1126",
+     "opcoes": {
+      "0x00,0x0c": {
+       "tipo": "0x00,0x0c",
+       "val": 12,
+       "tab": 0,
+       "nome": "Infantry Carrier Vehicle (M1126 Stryker (Mk19))",
+       "lista": [
+        637,
+        703
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8534,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "ERA",
+       "rotuloTela": "Grenade Launcher",
+       "chave": "0x00,0x0c"
+      },
+      "0x00,0x01": {
+       "tipo": "0x00,0x01",
+       "val": 1,
+       "tab": 0,
+       "nome": "Infantry Carrier Vehicle (M1126 Stryker)",
+       "lista": [
+        637,
+        703
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 8344,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "ERA",
+       "rotuloTela": ".50cal M2HB HMG",
+       "chave": "0x00,0x01"
+      }
+     },
+     "niveis": 2
+    },
+    "638": {
+     "rotulo": "M1127",
+     "opcoes": {
+      "0x00,0x2c": {
+       "tipo": "0x00,0x2c",
+       "val": 44,
+       "tab": 0,
+       "nome": "Reconnaissance Vehicle (M1127 Stryker (Mk19))",
+       "lista": [
+        638,
+        705
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 4400,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x2c"
+      },
+      "0x00,0x0d": {
+       "tipo": "0x00,0x0d",
+       "val": 13,
+       "tab": 0,
+       "nome": "Reconnaissance Vehicle (M1127 Stryker)",
+       "lista": [
+        638,
+        705
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 52,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 4718,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x0d"
+      }
+     },
+     "niveis": 2
+    },
+    "639": {
+     "rotulo": "Sniper Rifle",
+     "opcoes": {
+      "0x0d,0x2a": {
+       "tipo": "0x0d,0x2a",
+       "val": 42,
+       "tab": 13,
+       "nome": "Sniper Team",
+       "lista": [
+        639
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2845,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "M107A1",
+       "chave": "0x0d,0x2a"
+      },
+      "0x0d,0xdc": {
+       "tipo": "0x0d,0xdc",
+       "val": 220,
+       "tab": 13,
+       "nome": "Sniper Team",
+       "lista": [
+        639,
+        660
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 454,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "Precision Sniper Rifle",
+       "rotuloTela": ".300 Win Mag",
+       "chave": "0x0d,0xdc"
+      },
+      "0x0d,0xdd": {
+       "tipo": "0x0d,0xdd",
+       "val": 221,
+       "tab": 13,
+       "nome": "Sniper Team",
+       "lista": [
+        639,
+        660
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 968,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "Precision Sniper Rifle",
+       "rotuloTela": ".338 Lapua",
+       "chave": "0x0d,0xdd"
+      },
+      "0x0d,0xdb": {
+       "tipo": "0x0d,0xdb",
+       "val": 219,
+       "tab": 13,
+       "nome": "Team (Sniper) (7.62mm)",
+       "lista": [
+        639,
+        660
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 389,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "Precision Sniper Rifle",
+       "rotuloTela": "7.62mm",
+       "chave": "0x0d,0xdb"
+      }
+     },
+     "niveis": 2
+    },
+    "640": {
+     "rotulo": "HMMWV",
+     "opcoes": {
+      "0x05,0x4c": {
+       "tipo": "0x05,0x4c",
+       "val": 76,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (M2))",
+       "lista": [
+        640
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 453,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4c"
+      },
+      "0x05,0x4e": {
+       "tipo": "0x05,0x4e",
+       "val": 78,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (Mk19))",
+       "lista": [
+        640
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 323,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4e"
+      }
+     },
+     "niveis": 1
+    },
+    "641": {
+     "rotulo": "HMMWV",
+     "opcoes": {
+      "0x05,0x4c": {
+       "tipo": "0x05,0x4c",
+       "val": 76,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (M2))",
+       "lista": [
+        641
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 771,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4c"
+      },
+      "0x05,0x4a": {
+       "tipo": "0x05,0x4a",
+       "val": 74,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (M240B))",
+       "lista": [
+        641
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 390,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4a"
+      },
+      "0x05,0x4e": {
+       "tipo": "0x05,0x4e",
+       "val": 78,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (Mk19))",
+       "lista": [
+        641
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 779,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4e"
+      }
+     },
+     "niveis": 1
+    },
+    "642": {
+     "rotulo": "Multipurpose Vehicle / Truck",
+     "opcoes": {
+      "0x05,0x4c": {
+       "tipo": "0x05,0x4c",
+       "val": 76,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (M2))",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 451,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x4c"
+      },
+      "0x05,0x4a": {
+       "tipo": "0x05,0x4a",
+       "val": 74,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (M240B))",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 513,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4a"
+      },
+      "0x05,0x4e": {
+       "tipo": "0x05,0x4e",
+       "val": 78,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV (Mk19))",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 323,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x4e"
+      },
+      "0x05,0x49": {
+       "tipo": "0x05,0x49",
+       "val": 73,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1151 HMMWV)",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 325,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x49"
+      },
+      "0x05,0x50": {
+       "tipo": "0x05,0x50",
+       "val": 80,
+       "tab": 5,
+       "nome": "Multipurpose Vehicle (M1152 HMMWV)",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 385,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x05,0x50"
+      },
+      "0x00,0x69": {
+       "tipo": "0x00,0x69",
+       "val": 105,
+       "tab": 0,
+       "nome": "Truck (LMTV (Armored))",
+       "lista": [
+        642
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 323,
+       "fontes": [
+        "all",
+        "templates"
+       ],
+       "chave": "0x00,0x69"
+      }
+     },
+     "niveis": 1
+    },
+    "643": {
+     "rotulo": "2 x 120mm Mortar",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        643
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 196,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      }
+     },
+     "niveis": 1
+    },
+    "644": {
+     "rotulo": "Heavy Mortar",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        644
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 390,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      }
+     },
+     "niveis": 1
+    },
+    "646": {
+     "rotulo": "Engineer Squad",
+     "opcoes": {
+      "0x04,0x0f": {
+       "tipo": "0x04,0x0f",
+       "val": 15,
+       "tab": 4,
+       "nome": "Squad (Engineer)",
+       "lista": [
+        646
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 646,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "Javelin",
+       "chave": "0x04,0x0f"
+      },
+      "0x04,0x48": {
+       "tipo": "0x04,0x48",
+       "val": 72,
+       "tab": 4,
+       "nome": "Squad (Engineer)",
+       "lista": [
+        646
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 325,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "M240L",
+       "chave": "0x04,0x48"
+      },
+      "0x04,0x08": {
+       "tipo": "0x04,0x08",
+       "val": 8,
+       "tab": 4,
+       "nome": "Squad (Engineer)",
+       "lista": [
+        646
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 581,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "Standard",
+       "chave": "0x04,0x08"
+      }
+     },
+     "niveis": 1
+    },
+    "647": {
+     "rotulo": "Section",
+     "opcoes": {
+      "0x04,0x0b": {
+       "tipo": "0x04,0x0b",
+       "val": 11,
+       "tab": 4,
+       "nome": "Section (Scout)",
+       "lista": [
+        647
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 195,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x04,0x0b"
+      },
+      "0x04,0x49": {
+       "tipo": "0x04,0x49",
+       "val": 73,
+       "tab": 4,
+       "nome": "Section (Scout)",
+       "lista": [
+        647
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 453,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x04,0x49"
+      },
+      "0x04,0x05": {
+       "tipo": "0x04,0x05",
+       "val": 5,
+       "tab": 4,
+       "nome": "Section (Scout)",
+       "lista": [
+        647
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 516,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x04,0x05"
+      }
+     },
+     "niveis": 1
+    },
+    "648": {
+     "rotulo": "Scout",
+     "opcoes": {
+      "0x04,0x02": {
+       "tipo": "0x04,0x02",
+       "val": 2,
+       "tab": 4,
+       "nome": "Section (Scout)",
+       "lista": [
+        648
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 259,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "Javelin",
+       "chave": "0x04,0x02"
+      },
+      "0x04,0x0c": {
+       "tipo": "0x04,0x0c",
+       "val": 12,
+       "tab": 4,
+       "nome": "Section (Scout)",
+       "lista": [
+        648
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 905,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "No Javelin",
+       "chave": "0x04,0x0c"
+      }
+     },
+     "niveis": 1
+    },
+    "649": {
+     "rotulo": "Light Mortar",
+     "opcoes": {
+      "0x00,0x03": {
+       "tipo": "0x00,0x03",
+       "val": 3,
+       "tab": 0,
+       "nome": "2 x 60mm Mortar (M224A1)",
+       "lista": [
+        649
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 582,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x03"
+      }
+     },
+     "niveis": 1
+    },
+    "650": {
+     "rotulo": "2 x 120mm Mortar",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        650
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 323,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      }
+     },
+     "niveis": 1
+    },
+    "651": {
+     "rotulo": "Battalion Mortars",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        651,
+        652
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 194,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      },
+      "0x00,0x04": {
+       "tipo": "0x00,0x04",
+       "val": 4,
+       "tab": 0,
+       "nome": "2 x 81mm Mortar (M252A1)",
+       "lista": [
+        651,
+        653
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 29,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 258,
+       "fontes": [
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x04"
+      }
+     },
+     "niveis": 2
+    },
+    "654": {
+     "rotulo": "Mortar Section",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        654
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 1035,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      }
+     },
+     "niveis": 1
+    },
+    "655": {
+     "rotulo": "Battalion Mortars",
+     "opcoes": {
+      "0x00,0x02": {
+       "tipo": "0x00,0x02",
+       "val": 2,
+       "tab": 0,
+       "nome": "2 x 120mm Mortar (M120)",
+       "lista": [
+        655
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 453,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x02"
+      }
+     },
+     "niveis": 1
+    },
+    "699": {
+     "rotulo": "Rifle Squad",
+     "opcoes": {
+      "0x04,0x03": {
+       "tipo": "0x04,0x03",
+       "val": 3,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        699,
+        710
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2596,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M25 CDTE",
+       "chave": "0x04,0x03"
+      },
+      "0x04,0x2a": {
+       "tipo": "0x04,0x2a",
+       "val": 42,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        699,
+        710
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2390,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M25 CDTE",
+       "chave": "0x04,0x2a"
+      },
+      "0x04,0x2e": {
+       "tipo": "0x04,0x2e",
+       "val": 46,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        699,
+        712
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 2394,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M320 GL",
+       "chave": "0x04,0x2e"
+      },
+      "0x04,0x2f": {
+       "tipo": "0x04,0x2f",
+       "val": 47,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        699,
+        712
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 3096,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M320 GL",
+       "chave": "0x04,0x2f"
+      }
+     },
+     "niveis": 2
+    },
+    "701": {
+     "rotulo": "M1130",
+     "opcoes": {
+      "0x00,0x08": {
+       "tipo": "0x00,0x08",
+       "val": 8,
+       "tab": 0,
+       "nome": "Command Vehicle (M1130 Stryker) | AH-64D Apache Longbow (Attack Helicopter)",
+       "lista": [
+        701
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2522,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x08"
+      }
+     },
+     "niveis": 1
+    },
+    "702": {
+     "rotulo": "M1132",
+     "opcoes": {
+      "0x00,0x2d": {
+       "tipo": "0x00,0x2d",
+       "val": 45,
+       "tab": 0,
+       "nome": "Engineer Support Vehicle (M1132 Stryker)",
+       "lista": [
+        702
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 3104,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x2d"
+      }
+     },
+     "niveis": 1
+    },
+    "704": {
+     "rotulo": "M1131",
+     "opcoes": {
+      "0x00,0x0e": {
+       "tipo": "0x00,0x0e",
+       "val": 14,
+       "tab": 0,
+       "nome": "Fire Support Vehicle (M1131 Stryker)",
+       "lista": [
+        704
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 1940,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x0e"
+      }
+     },
+     "niveis": 1
+    },
+    "706": {
+     "rotulo": "M1134",
+     "opcoes": {
+      "0x00,0x0f": {
+       "tipo": "0x00,0x0f",
+       "val": 15,
+       "tab": 0,
+       "nome": "ATGM Vehicle (M1134 Stryker)",
+       "lista": [
+        706
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2328,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x0f"
+      }
+     },
+     "niveis": 1
+    },
+    "708": {
+     "rotulo": "M1129",
+     "opcoes": {
+      "0x05,0x77": {
+       "tipo": "0x05,0x77",
+       "val": 119,
+       "tab": 5,
+       "nome": "Mortar Carrier (M1129 Stryker)",
+       "lista": [
+        708
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 50,
+       "base": 47,
+       "kind": "veiculo",
+       "amostras": 2068,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x05,0x77"
+      }
+     },
+     "niveis": 1
+    },
+    "709": {
+     "rotulo": "Rifle Squad",
+     "opcoes": {
+      "0x04,0x07": {
+       "tipo": "0x04,0x07",
+       "val": 7,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        709,
+        700
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 4656,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M25 CDTE",
+       "chave": "0x04,0x07"
+      },
+      "0x04,0x2b": {
+       "tipo": "0x04,0x2b",
+       "val": 43,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        709,
+        700
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 4845,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M25 CDTE",
+       "chave": "0x04,0x2b"
+      },
+      "0x04,0x2d": {
+       "tipo": "0x04,0x2d",
+       "val": 45,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        709,
+        711
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 3632,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M320 GL",
+       "chave": "0x04,0x2d"
+      },
+      "0x04,0x2c": {
+       "tipo": "0x04,0x2c",
+       "val": 44,
+       "tab": 4,
+       "nome": "Squad (Rifle)",
+       "lista": [
+        709,
+        711
+       ],
+       "niveis": 2,
+       "raridade": 7,
+       "tam": 50,
+       "base": 45,
+       "kind": "time",
+       "amostras": 4327,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "variante": "M320 GL",
+       "chave": "0x04,0x2c"
+      }
+     },
+     "niveis": 2
+    },
+    "721": {
+     "rotulo": "Artillery",
+     "opcoes": {
+      "0x00,0x88": {
+       "tipo": "0x00,0x88",
+       "val": 136,
+       "tab": 0,
+       "nome": "3 x 105mm Howitzer (M119A3)",
+       "lista": [
+        721
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 27,
+       "base": 24,
+       "kind": "sem-posicao",
+       "amostras": 388,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "chave": "0x00,0x88"
+      }
+     },
+     "niveis": 1
+    },
+    "725": {
+     "rotulo": "3rd Engineer Squad",
+     "opcoes": {
+      "0x04,0x48": {
+       "tipo": "0x04,0x48",
+       "val": 72,
+       "tab": 4,
+       "nome": "Squad (Engineer)",
+       "lista": [
+        725
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 388,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "M240L",
+       "chave": "0x04,0x48"
+      },
+      "0x04,0x08": {
+       "tipo": "0x04,0x08",
+       "val": 8,
+       "tab": 4,
+       "nome": "Squad (Engineer)",
+       "lista": [
+        725
+       ],
+       "niveis": 1,
+       "raridade": 7,
+       "tam": 48,
+       "base": 45,
+       "kind": "time",
+       "amostras": 388,
+       "fontes": [
+        "all",
+        "lib",
+        "templates"
+       ],
+       "rotuloTela": "Standard",
+       "chave": "0x04,0x08"
+      }
+     },
+     "niveis": 1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,9 @@
+# what the app writes when run from a checkout
+app/campaigns/
+app/settings.json
+
+# the portable Node.js and the compiled launcher ship in the release zip, not here
+app/node/
+CMBS Roguelike.exe
+dist/
+*.zip

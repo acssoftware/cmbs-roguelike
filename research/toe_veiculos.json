@@ -1,0 +1,658 @@
+{
+ "nota": "O paiol de cada unidade que TEM paiol: veiculo, canhao e tubo. Lido pela gramatica do rabo do bloco (FORMATO 110.8, `toe_veiculos.lerRabo`): maior visto por (nome, item), paiol e carga em separado. A lista branca sai daqui, pelo NOME do tipo na ponte (`tipos_ponte.json`). Refazer com `node tools/re/paiol_maquinas.mjs --gravar`.",
+ "saves": 344,
+ "unidades": 145545,
+ "comLista": 3018,
+ "ambiguos": 11,
+ "itens": {
+  "Armored Personnel Carrier (BTR-4E)": {
+   "5": 1200,
+   "12": 149,
+   "92": 180,
+   "94": 180,
+   "519": 2
+  },
+  "Main Battle Tank (T-64BV)": {
+   "5": 1250,
+   "8": 300,
+   "24": 11,
+   "31": 11,
+   "36": 20
+  },
+  "Main Battle Tank (T-90AM)": {
+   "5": 2600,
+   "35": 10,
+   "91": 4,
+   "480": 14,
+   "526": 22
+  },
+  "Infantry Fighting Vehicle (M2A3 Bradley (ERA))": {
+   "4": 2200,
+   "68": 690,
+   "69": 210,
+   "518": 5
+  },
+  "Infantry Fighting Vehicle (M2A3 Bradley (APS))": {
+   "4": 2200,
+   "68": 690,
+   "69": 210,
+   "518": 5
+  },
+  "Main Battle Tank (M1A2 SEP Abrams)": {
+   "4": 11400,
+   "524": 21,
+   "531": 21,
+   "541": 1000
+  },
+  "Infantry Carrier Vehicle (M1126 Stryker (Mk19))": {
+   "1": 6,
+   "32": 0,
+   "79": 432
+  },
+  "Infantry Carrier Vehicle (M1126 Stryker)": {
+   "541": 2000
+  },
+  "Fire Support Vehicle (M1131 Stryker)": {
+   "541": 2000
+  },
+  "Truck (LMTV (Armored))": {
+   "541": 800
+  },
+  "Mortar Carrier (M1129 Stryker)": {
+   "4": 2000,
+   "101": 50,
+   "125": 6,
+   "495": 4
+  },
+  "Reconnaissance Vehicle (BRM-1K)": {
+   "5": 1473,
+   "47": 10,
+   "48": 10
+  },
+  "Armored Personnel Carrier (BTR-70)": {
+   "5": 500,
+   "71": 500
+  },
+  "Armored Personnel Carrier (MT-LBM)": {
+   "5": 2500
+  },
+  "Multipurpose Vehicle (M1151 HMMWV (Mk19))": {
+   "79": 48
+  },
+  "Engineer Support Vehicle (M1132 Stryker)": {
+   "541": 1995
+  },
+  "Infantry Fighting Vehicle (BMP-2)": {
+   "5": 1287,
+   "92": 340,
+   "94": 160,
+   "95": 4
+  },
+  "4 x 81mm Mortar (M252A1)": {
+   "98": 169,
+   "122": 16
+  },
+  "3 x 105mm Howitzer (M119A3)": {
+   "37": 117,
+   "124": 12,
+   "196": 105,
+   "204": 30,
+   "522": 12
+  },
+  "Main Battle Tank (M1A2 SEP Abrams (APS))": {
+   "4": 11400,
+   "524": 21,
+   "531": 21,
+   "541": 1000
+  },
+  "3 x 152mm Howitzer (2S3M1)": {
+   "281": 127,
+   "282": 30
+  },
+  "3 x 120mm Mortar (2B11)": {
+   "100": 90,
+   "123": 18,
+   "496": 12
+  },
+  "3 x 155mm Howitzer (M777A2)": {
+   "37": 169,
+   "124": 18,
+   "522": 7
+  }
+ },
+ "carga": {
+  "Armored Personnel Carrier (BTR-4E)": {
+   "1": 2160,
+   "5": 1500,
+   "41": 5,
+   "42": 1,
+   "43": 5,
+   "45": 5,
+   "46": 3,
+   "490": 8
+  },
+  "Main Battle Tank (T-64BV)": {},
+  "Main Battle Tank (T-90AM)": {},
+  "Infantry Fighting Vehicle (M2A3 Bradley (ERA))": {
+   "2": 2800,
+   "4": 2200,
+   "14": 88,
+   "57": 2,
+   "497": 20,
+   "517": 12
+  },
+  "Infantry Fighting Vehicle (M2A3 Bradley (APS))": {
+   "2": 2800,
+   "4": 2200,
+   "14": 88,
+   "57": 2,
+   "497": 20,
+   "517": 12
+  },
+  "Main Battle Tank (M1A2 SEP Abrams)": {},
+  "Infantry Carrier Vehicle (M1126 Stryker (Mk19))": {
+   "2": 3360,
+   "4": 5200,
+   "14": 40,
+   "56": 2,
+   "57": 2,
+   "497": 40,
+   "517": 24
+  },
+  "Infantry Carrier Vehicle (M1126 Stryker)": {
+   "2": 3360,
+   "4": 3200,
+   "14": 40,
+   "57": 2,
+   "497": 40,
+   "517": 12
+  },
+  "Fire Support Vehicle (M1131 Stryker)": {
+   "2": 1500
+  },
+  "Truck (LMTV (Armored))": {
+   "2": 3360,
+   "4": 4200,
+   "14": 72,
+   "57": 2,
+   "497": 40
+  },
+  "Mortar Carrier (M1129 Stryker)": {},
+  "Reconnaissance Vehicle (BRM-1K)": {
+   "1": 2160,
+   "5": 1500,
+   "41": 5,
+   "42": 2
+  },
+  "Armored Personnel Carrier (BTR-70)": {
+   "1": 2160,
+   "5": 1500,
+   "41": 5,
+   "493": 8
+  },
+  "Armored Personnel Carrier (MT-LBM)": {
+   "1": 2160,
+   "5": 1500,
+   "41": 5,
+   "486": 2,
+   "487": 6,
+   "489": 2,
+   "493": 4
+  },
+  "Multipurpose Vehicle (M1151 HMMWV (Mk19))": {
+   "2": 500,
+   "4": 1000,
+   "79": 240,
+   "497": 40
+  },
+  "Engineer Support Vehicle (M1132 Stryker)": {
+   "2": 3360,
+   "4": 3200,
+   "14": 40,
+   "497": 20,
+   "517": 12
+  },
+  "Infantry Fighting Vehicle (BMP-2)": {
+   "1": 2160,
+   "5": 1500,
+   "11": 116,
+   "41": 5
+  },
+  "4 x 81mm Mortar (M252A1)": {},
+  "3 x 105mm Howitzer (M119A3)": {},
+  "Main Battle Tank (M1A2 SEP Abrams (APS))": {},
+  "3 x 152mm Howitzer (2S3M1)": {},
+  "3 x 120mm Mortar (2B11)": {},
+  "3 x 155mm Howitzer (M777A2)": {}
+ },
+ "sequencias": {
+  "Armored Personnel Carrier (BTR-4E)": [
+   [
+    5,
+    92,
+    94,
+    12,
+    519
+   ],
+   [
+    5,
+    94,
+    12,
+    519
+   ],
+   [
+    5,
+    94,
+    519
+   ]
+  ],
+  "Main Battle Tank (T-64BV)": [
+   [
+    5,
+    8,
+    24,
+    31,
+    36
+   ],
+   [
+    24
+   ],
+   [
+    5,
+    24,
+    31
+   ],
+   [
+    5,
+    24,
+    31,
+    36
+   ],
+   [
+    5,
+    24
+   ],
+   [
+    5,
+    8,
+    24,
+    31
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    5,
+    8,
+    31
+   ]
+  ],
+  "Main Battle Tank (T-90AM)": [
+   [
+    5,
+    480
+   ],
+   [
+    5,
+    480,
+    35,
+    526,
+    91
+   ]
+  ],
+  "Infantry Fighting Vehicle (M2A3 Bradley (ERA))": [
+   [
+    4,
+    68,
+    69,
+    518
+   ],
+   [
+    4,
+    69,
+    518
+   ]
+  ],
+  "Infantry Fighting Vehicle (M2A3 Bradley (APS))": [
+   [
+    4,
+    68,
+    69,
+    518
+   ],
+   [
+    4,
+    69,
+    518
+   ]
+  ],
+  "Main Battle Tank (M1A2 SEP Abrams)": [
+   [
+    4,
+    541,
+    531,
+    524
+   ],
+   [
+    4,
+    541,
+    531
+   ]
+  ],
+  "Infantry Carrier Vehicle (M1126 Stryker (Mk19))": [
+   [
+    79
+   ],
+   [
+    1,
+    32
+   ]
+  ],
+  "Infantry Carrier Vehicle (M1126 Stryker)": [
+   [
+    541
+   ]
+  ],
+  "Fire Support Vehicle (M1131 Stryker)": [
+   [
+    541
+   ]
+  ],
+  "Truck (LMTV (Armored))": [
+   [
+    541
+   ]
+  ],
+  "Mortar Carrier (M1129 Stryker)": [
+   [
+    4,
+    101,
+    495,
+    125
+   ],
+   [
+    4,
+    101,
+    125
+   ]
+  ],
+  "Reconnaissance Vehicle (BRM-1K)": [
+   [
+    5,
+    48,
+    47
+   ]
+  ],
+  "Armored Personnel Carrier (BTR-70)": [
+   [
+    5,
+    71
+   ]
+  ],
+  "Armored Personnel Carrier (MT-LBM)": [
+   [
+    5
+   ]
+  ],
+  "Multipurpose Vehicle (M1151 HMMWV (Mk19))": [
+   [
+    79
+   ]
+  ],
+  "Engineer Support Vehicle (M1132 Stryker)": [
+   [
+    541
+   ]
+  ],
+  "Infantry Fighting Vehicle (BMP-2)": [
+   [
+    5,
+    92,
+    94,
+    95
+   ]
+  ],
+  "4 x 81mm Mortar (M252A1)": [
+   [
+    98,
+    122
+   ]
+  ],
+  "3 x 105mm Howitzer (M119A3)": [
+   [
+    37,
+    522,
+    124
+   ],
+   [
+    196,
+    204
+   ]
+  ],
+  "Main Battle Tank (M1A2 SEP Abrams (APS))": [
+   [
+    4,
+    541,
+    531,
+    524
+   ],
+   [
+    4,
+    541,
+    531
+   ]
+  ],
+  "3 x 152mm Howitzer (2S3M1)": [
+   [
+    281,
+    282
+   ]
+  ],
+  "3 x 120mm Mortar (2B11)": [
+   [
+    100,
+    496,
+    123
+   ]
+  ],
+  "3 x 155mm Howitzer (M777A2)": [
+   [
+    37,
+    522,
+    124
+   ]
+  ]
+ },
+ "descartados": {
+  "1801": {
+   "porque": "desconhecido",
+   "nome": "tipo 1801",
+   "itens": {
+    "196": 210,
+    "204": 60
+   }
+  },
+  "2054": {
+   "porque": "desconhecido",
+   "nome": "tipo 2054",
+   "itens": {
+    "2": 0,
+    "4": 0,
+    "513": 256
+   }
+  },
+  "2310": {
+   "porque": "a-pe",
+   "nome": "Team (Headquarters)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "2566": {
+   "porque": "desconhecido",
+   "nome": "tipo 2566",
+   "itens": {
+    "4": 0,
+    "1025": 256
+   }
+  },
+  "3077": {
+   "porque": "a-pe",
+   "nome": "Squad (Engineer)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "3078": {
+   "porque": "desconhecido",
+   "nome": "tipo 3078",
+   "itens": {
+    "4": 0,
+    "513": 256
+   }
+  },
+  "4358": {
+   "porque": "desconhecido",
+   "nome": "tipo 4358",
+   "itens": {
+    "4": 0,
+    "1025": 256
+   }
+  },
+  "5126": {
+   "porque": "desconhecido",
+   "nome": "tipo 5126",
+   "itens": {
+    "4": 0,
+    "1025": 256
+   }
+  },
+  "6661": {
+   "porque": "a-pe",
+   "nome": "Squad (Rifle)",
+   "itens": {
+    "2": 0,
+    "4": 0,
+    "513": 256
+   }
+  },
+  "6917": {
+   "porque": "a-pe",
+   "nome": "Squad (Engineer)",
+   "itens": {
+    "1": 0,
+    "2": 0,
+    "257": 256,
+    "513": 256
+   }
+  },
+  "7173": {
+   "porque": "a-pe",
+   "nome": "Squad (Engineer)",
+   "itens": {
+    "2": 0,
+    "4": 0,
+    "513": 256
+   }
+  },
+  "8709": {
+   "porque": "a-pe",
+   "nome": "Squad (Recon)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "9221": {
+   "porque": "a-pe",
+   "nome": "Squad (Rifle)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "9477": {
+   "porque": "a-pe",
+   "nome": "Squad (Rifle)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "9733": {
+   "porque": "a-pe",
+   "nome": "Squad (Rifle)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "16645": {
+   "porque": "a-pe",
+   "nome": "Squad (Command)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "16646": {
+   "porque": "a-pe",
+   "nome": "Sniper Team",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "17158": {
+   "porque": "a-pe",
+   "nome": "Team (Sniper)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "18693": {
+   "porque": "a-pe",
+   "nome": "Squad (Rifle)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "18949": {
+   "porque": "a-pe",
+   "nome": "Squad (Recon)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "19205": {
+   "porque": "a-pe",
+   "nome": "Squad (Recon)",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "23814": {
+   "porque": "desconhecido",
+   "nome": "tipo 23814",
+   "itens": {
+    "2": 0,
+    "513": 256
+   }
+  },
+  "54790": {
+   "porque": "a-pe",
+   "nome": "Team (Headquarters)",
+   "itens": {
+    "4": 0,
+    "1025": 256
+   }
+  }
+ }
+}

@@ -1,0 +1,727 @@
+{
+ "nota": "MAPAS DO PACOTE COM PLANO DE IA AUTORAL. O arquivo em assets/qb_attack/ (23/10: so a versao Attack de cada mapa; as tres eram o mesmo mapa) e em assets/qb_meet/ nao e mais a copia do jogo: o plano de IA azul (e os triggers) foi trocado. censo_mapas.mjs nao recopia estes mapas por cima, e o teste do pacote confere o hash daqui, nao o do censo. Para passar um plano ajustado no editor: node tools/re/scratch/ia_passar_plano.mjs <cenario> <mapa do pacote>, e atualizar o sha256 aqui. Desde 07/10 (E157) o mapa autoral e o PROPRIO arquivo que o autor salvou no editor (versao 9b, com Withdraw), passado por tools/re/scratch/ia_passar_editor.mjs para as tres versoes.",
+ "mapas": {
+  "qb_attack/Small Village (554 X 848) 019r Attack CMBSRL.btt": {
+   "sha256": "8effb0f0be3d71f07406750f942a775f89356284923937b0b91dee7db7a5650b",
+   "origem": "o plano do Assault (o autor, 06/10: as regras valem para Assault, Attack e Probe do mapa; mesma pintura e mesmos objetivos)",
+   "nota": "doutrina das 7 regras (E136) ajustada no editor pelo autor: research/ia/small_village_019r_ajustes.md",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/City  (688 X 736) 047r Attack CMBSRL.btt": {
+   "sha256": "da50f5f0a1150f8bc31543e824851d5f5af11795a009eeb1a2d04d6b9cfb9d0d",
+   "origem": "Scenarios/ZZ IA CITY (688 X 736) 047R AUTOR.btt (autor, 06/10/2026), sobre a doutrina com eixo, modo urbano e research/ia/city_047r.ajustes.json",
+   "nota": " Withdraw preservados (G5 e G10).",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Small City-Water (416 X 848) 051r Attack CMBSRL.btt": {
+   "sha256": "cddc939427cc3bedfc18aadd8af058b3568a87319bb6a82a339ebdd4bcc0ae83",
+   "origem": "Scenarios/ZZ IA SMALL CITY-WATER (416 X 848) 051R AUTOR.btt (autor, 07/10/2026), sobre research/ia/small_city_water_051r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Posto avancado na margem norte junto as travessias, linha do rio; o G2 segura a margem norte sem recuar (29/10); Withdraw do G5 em (23,43).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)",
+   "revisoes": [
+    "29/10/2026 (autor): o G2 (metralhadoras do posto avancado) nao recua mais quando o atacante entra na margem norte: sem a espera do \"ZZ Trig North Bank\" e sem a ordem Quick para a margem sul (tools/re/scratch/ia_051r_sem_recuo.mjs)"
+   ]
+  },
+  "qb_attack/Small Hills-Forest (624 X 528) 023r Attack CMBSRL.btt": {
+   "sha256": "14d431ec0b397ed8293bad77a4deaec45b40211f144d7bb1eb6489152690f1df",
+   "origem": "Scenarios/ZZ IA SMALL HILLS-FOREST (624 X 528) 023R AUTOR.btt (autor, 07/10/2026), sobre research/ia/small_hills_forest_023r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Defesa recuada para o cruzamento e os morros (o atacante tem a crista); so a emboscada na encosta da frente; Withdraw do G5 em (19,29).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Small Town-Forest (656 X 688) 017r Attack CMBSRL.btt": {
+   "sha256": "64d8d38abb4fdd9286c8945263bb42a2acdb8fb6e1d9cec56663c74f6a72cfd9",
+   "origem": "Scenarios/ZZ IA SMALL TOWN-FOREST (656 X 688) 017R AUTOR.btt (autor, 07/10/2026), sobre o desenho dele em research/ia/small_town_forest_017r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "A/C na estrada y=46-47, B na cidade, reserva atras da mata do nordeste, ATGM e snipers na mata alta do norte; Withdraw do G5 em (33,42).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Village (544 X 800) 059r Attack CMBSRL.btt": {
+   "sha256": "988b2f8e22647b977054fa7278d4a2f2becc4a3ed44c7c0d59da947f03298e36",
+   "origem": "Scenarios/ZZ IA VILLAGE (544 X 800) 059R AUTOR.btt (autor, 07/10/2026), sobre research/ia/village_059r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Infantaria de apoio (LMG, HMG) recuada da crista aberta para a cobertura da vila; Withdraw do G5 em (33,37).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Village-Forest (720 X 496) 057r Attack CMBSRL.btt": {
+   "sha256": "646206443cc85481a30181b895fe4eaf4413b9c725603fc89c22f3d87b2e518c",
+   "origem": "Scenarios/ZZ IA VILLAGE-FOREST (720 X 496) 057R AUTOR.btt (autor, 07/10/2026), sobre research/ia/village_forest_057r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Linha da estrada x=52 na borda leste da vila; snipers so nos predios altos; Withdraw do G5 em (36,30). 1 trailer com lixo que imitava registro teve os bytes 1..4 zerados (E167); arquivo regravado pelo nosso escritor.",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Village-Hills (688 X 736) 300 Attack CMBSRL.btt": {
+   "sha256": "43680253d532f7ea7c66862f008a53526e9684376b6dd6a540376d467ee29891",
+   "origem": "Scenarios/ZZ IA VILLAGE-HILLS (688 X 736) 300 autor.btt (autor, 07/10/2026), sobre research/ia/village_hills_300.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Objetivos seguros atras do campo aberto; HMG e ATGM recuados e concentrados; Withdraw do G5 em (47,21).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)",
+   "revisoes": [
+    "28/10/2026 (autor): Setup do G4 + terreno alto x 0-40, y 0-10 (z >= p90, 41.4 m) — armas de apoio tambem nas cristas (tools/re/scratch/ia_zonas_editar.mjs)"
+   ]
+  },
+  "qb_attack/Village-Water (560 X 912) 122 Attack CMBSRL.btt": {
+   "sha256": "f120506b4bbf8b2a9fc1c2252c423b11ca1c196a0a11105de126a2c66503240c",
+   "origem": "Scenarios/ZZ IA VILLAGE-WATER (560 X 912) 122 autor.btt (autor, 07/10/2026), sobre o desenho dele em research/ia/village_water_122.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Tudo do lado de ca do rio (exceto emboscada); triggers A e C encolhidos para perto das passagens; apoio na borda sul da cidade; Withdraw do G5 em (33,70).",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/Village-Water (864 X 592) 299 Attack CMBSRL.btt": {
+   "sha256": "864669f89e88ecfc6f990052f055338160b50b7de4168f9dded0a85ee5ae2099",
+   "origem": "Scenarios/ZZ IA VILLAGE-WATER (864 X 592) 299 AUTOR.btt (autor, 08/10/2026), sobre o desenho dele em research/ia/village_water_299.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Tudo do lado de ca do rio (exceto emboscada); A/C escondidos nas estradas entre matas, B se divide entre as pontes; infantaria nas matas do acesso do centro.",
+   "g14g15": "autor, 11/10: G14 e G15 so com o Setup, sem espera e sem ordem (tools/re/scratch/ia_parar_objetivo.mjs)"
+  },
+  "qb_attack/City-Water (560 X 1072) 081r Attack CMBSRL.btt": {
+   "sha256": "b93a83be67a394eb6d32b85a7beec48378cf76df9ff7b53ee38e0fc2d5bddea5",
+   "origem": "Scenarios/ZZ IA CITY-WATER (560 X 1072) 081R AUTOR.btt (autor, 11/10/2026), sobre research/ia/city_water_081r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "nota": "Tier 2. Posicao avancada no suburbio; blindados na margem norte saem para a ponte (x=19) e o vau (x 56-59) por trigger; ATGM, HMG e observadores redistribuidos pelo autor ate a borda da cidade; Withdraw do G5 em (19,71)."
+  },
+  "qb_attack/City-Water-Rough (640 X 1168) 053r Attack CMBSRL.btt": {
+   "sha256": "81733be594c0e108ac2363b33f26ade27f7a6efc6955a8b2809d4f94ef77ca23",
+   "origem": "Scenarios/ZZ IA CITY-WATER-ROUGH (640 X 1168) 053R autor.btt (autor, 11/10/2026), sobre research/ia/city_water_rough_053r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (os modelos de predio 15, 17 e 23 renumerados +2 pela versao, como a grade +9)",
+   "nota": "Tier 2. Desenho do autor: Forward Deployed, emboscada e blindados avancados na margem do jogador; o resto na margem norte. Blindados por setor de travessia; Withdraw do G5 em (39,84)."
+  },
+  "qb_attack/Hill-Water-Village (912 X 816) 078r Attack CMBSRL.btt": {
+   "sha256": "4876b08a868b4dc7b10cf7b1ca9598fe0e883e0d218d413e0dcd0d327f81f833",
+   "origem": "Scenarios/ZZ IA HILL-WATER-VILLAGE (912 X 816) 078R autor.btt (autor, 11/10/2026), sobre research/ia/hill_water_village_078r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 373 tiles; 4 rotulos de lugar na grade)",
+   "nota": "Tier 2. Desenho do autor: so Forward Deployed e emboscada na margem do jogador; G5 segura as saidas da ponte (y=45), do vau raso do norte (y=91) e do vau profundo do sul (y=17); blindados A/B/C reforcam a passagem do setor por trigger."
+  },
+  "qb_attack/Hills-Forest (848 X 1008) 228 Attack CMBSRL.btt": {
+   "sha256": "3384fa60df8d6c10a773ff072a24ffaf08f6be2c50f19c96b715ab109a076106",
+   "origem": "Scenarios/ZZ IA HILLS-FOREST (848 X 1008) 228 autor.btt (autor, 12/10/2026), sobre research/ia/hills_forest_228.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 61 tiles)",
+   "nota": "Tier 2. Desenho do autor para mapa aberto: G2/G13 nas matas perto da entrada do jogador; infantaria no OBJ 2 e nas casas; ATGM/HMG/obs nos pontos altos; reserva e antiaerea escondidas no planalto atras do OBJ 1, sobem as bordas dele na metade do mapa; G5 nas plantacoes do OBJ 2."
+  },
+  "qb_attack/Hills-Water (1072 X 816) 037r Attack CMBSRL.btt": {
+   "sha256": "64cd8cb7340a877c26117e315ca4776729ca1f757b14fffe8506986c77e7cfb5",
+   "origem": "Scenarios/ZZ IA HILLS-WATER (1072 X 816) 037R autor.btt (autor, 12/10/2026), sobre research/ia/hills_water_037r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao",
+   "gruposComOrdem": [
+    15
+   ],
+   "nota": "Tier 2. Regras proprias do autor: G2/ATGM/HMG/snipers/obs na borda das matas do defensor; emboscada na mata do atacante, avanca a borda dela pela faixa entre os acessos 1 e 3; G15 (EXCECAO, gruposComOrdem) escondido no norte da floresta central, sai aos flancos quando o rio e atravessado; B/C saem aos acessos 1/4; reserva aos flancos da floresta central."
+  },
+  "qb_attack/Open-Rural (944 X 848) 312 Attack CMBSRL.btt": {
+   "sha256": "ca964b8e8bf113969a01b822a8be2e8a1b26d4a8748cff692067eb88e78ecf3b",
+   "origem": "Scenarios/ZZ IA OPEN-RURAL (944 X 848) 312 autor.btt (autor, 12/10/2026), sobre research/ia/open_rural_312.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 463 tiles)",
+   "nota": "Tier 2, mapa aberto, desenho meu revisado pelo autor: avancados e emboscada nas matas e cercas da borda leste; ATGM e observadores nas matas da encosta do morro norte; G5 parado no morro; A/B/C por setor (sul, rodovia, norte)."
+  },
+  "qb_attack/Open-Rural-Water (912 X 816) 123 Attack CMBSRL.btt": {
+   "sha256": "85931a6b085f7790ea213fc9a14c3a915f1d10cb43cf7c3fe00d527ae5fb5272",
+   "origem": "Scenarios/ZZ IA OPEN-RURAL-WATER (912 X 816) 123 autor.btt (autor, 12/10/2026), sobre research/ia/open_rural_water_123.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 108 tiles)",
+   "nota": "Tier 2, padrao dos mapas de rio, redesenhado pelo autor: G2, G14 e G15 no norte da margem oeste (x 21-46 y 59-101); emboscada na margem do jogador; G5 nas saidas das pontes; A/B/C reforcam a ponte do setor; ATGM e HMG mais ao fundo, a oeste."
+  },
+  "qb_attack/Town-Forest (720 X 1024) 040r Attack CMBSRL.btt": {
+   "sha256": "7ad4f38809c1a0185135f3f60a6236277152611d3d65cfcbcd8f10f245e94d07",
+   "origem": "Scenarios/ZZ IA TOWN-FOREST (720 X 1024) 040R autor.btt (autor, 12/10/2026), sobre research/ia/town_forest_040r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 837 tiles)",
+   "nota": "Tier 2, tres faixas diagonais (desenho do autor): avancados e emboscada na floresta/pantano; HMG/ATGM/obs e G5 na borda da cidade; G15/G14 nas metades da cidade; A/B/C na faixa aberta entram na cidade quando o atacante entra."
+  },
+  "qb_attack/Town-Hills (608 X 1152) 069r Attack CMBSRL.btt": {
+   "sha256": "77fdbe65bf90d8327f363e4059b00772352c73a2129c905f5216c49fe40c050b",
+   "origem": "Scenarios/ZZ IA TOWN-HILLS (608 X 1152) 069R autor.btt (autor, 12/10/2026), sobre research/ia/town_hills_069r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 250 tiles)",
+   "nota": "Tier 2, cidade no vale: HMG/ATGM/obs nas elevacoes do fundo e nas casas de 3+ andares (pedido do autor); avancados e emboscada no vale; G5 na Town East e na ponte; G15 na Town West, G14 na Town East e no Road North; A/B/C por setor."
+  },
+  "qb_attack/Town-Hills (800 X 928) 065 Attack CMBSRL.btt": {
+   "sha256": "41a9b7efdf43e3ac6761fc087d9b292c1946eddb3642abd878da525dfc337aa2",
+   "origem": "Scenarios/ZZ IA TOWN-HILLS (800 X 928) 065 autor.btt (autor, 12/10/2026), sobre research/ia/town_hills_065.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 483 tiles)",
+   "nota": "Tier 2, cidade no vale (regras do 069r): HMG/ATGM/obs nos altos do sul e nas casas de 3+ andares; avancados e emboscada nos campos ao norte; G5 na borda norte; A/B/C por setor."
+  },
+  "qb_attack/Village-Forest (1040 X 848) 007r Attack CMBSRL.btt": {
+   "sha256": "dd3a1e76dc2046f7ca5008a1575c4519e322a0d6467d2110a8ab925227aad31d",
+   "origem": "Scenarios/ZZ IA VILLAGE-FOREST (1040 X 848) 007R autor.btt (autor, 12/10/2026), sobre research/ia/village_forest_007r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 765 tiles)",
+   "nota": "Tier 2, mapa misto, desenho meu revisado pelo autor: avancados e emboscada nas matas e cercas da metade sul (corredores e bacia); apoio na crista oeste e na borda sul da vila; G5 na borda sul; A/B/C por corredor."
+  },
+  "qb_attack/Town-Water (1504 X 1008) 275 Attack CMBSRL.btt": {
+   "sha256": "771083351d5622add2348a1aca33827d87e104e807ff92f727a79c212ddf2c90",
+   "origem": "Scenarios/ZZ IA TOWN-WATER (1504 X 1008) 275 autor.btt (autor, 12/10/2026), sobre research/ia/town_water_275.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 1194 tiles)",
+   "nota": "Tier 3, primeiro do tier. Plano com tudo o que o autor revisou, aprovado sem mudancas: G2 na margem do defensor nas saidas das quatro travessias; emboscada na margem do jogador; apoio em cobertura (predios altos, morro noroeste); G5 nas saidas; A/B/C por travessia; G15 no lado da cidade da ponte principal, G14 nas tres menores."
+  },
+  "qb_attack/Podlypyky-Rough (1936 X 1808) 088 Attack CMBSRL.btt": {
+   "sha256": "4b70a06ca731fdf3a30cf1ff3289d60e9c4c0ba63e357daedf492b8306e0bfa2",
+   "origem": "Scenarios/ZZ IA PODLYPYKY-ROUGH (1936 X 1808) 088 autor.btt (autor, 12/10/2026), sobre research/ia/podlypyky_rough_088.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 940 tiles)",
+   "nota": "Tier 4, regras do autor. Ele corrigiu a linha de floresta: G2/ATGM/HMG/snipers na BORDA QUE ENCARA O ATACANTE (y 54-142, a beira das matas voltada aos pantanos), e alguns focos de ATGM/HMG/snipers atras do Podlypyky (y 195-208); emboscada ampliada."
+  },
+  "qb_attack/Plehany-Open (1200 X 1280) 099 Attack CMBSRL.btt": {
+   "sha256": "5f101de82cfcc38724bfe17c1740554f62b990fd9164b38755b87ed265d8a938",
+   "origem": "Scenarios/ZZ IA PLEHANY-OPEN (1200 X 1280) 099 autor.btt (autor, 12/10/2026), sobre research/ia/plehany_open_099.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 413 tiles; 1 Withdraw)",
+   "nota": "Tier 3, regras do autor: G2 na borda do NW Woods que encara o atacante; ATGM/HMG/obs/snipers na borda da floresta do leste e nos predios de 3+; emboscada na floresta central avanca a borda dela; HQ no SE Road; G5 a leste do lago; A no NW Woods (ele tirou da mata: blindado nunca dentro de floresta); B a frente do Plehany; C sai para oeste; reserva entra no Plehany.",
+   "revisoes": [
+    "08/11/2026 (autor): Setup do G14 + abrigo de x 134-149, y 69-104 e x 101-142, y 27-38 — o minoritario segura os objetivos menores (East Rd vazio na US b7) (tools/re/scratch/ia_zonas_editar.mjs --filtro abrigo)"
+   ]
+  },
+  "qb_attack/Village-Hills (912 X 816) 272 Attack CMBSRL.btt": {
+   "sha256": "dd2faa797efce4cd0584e860d5ee0a45498990153db04051db891efe58b0f2d8",
+   "origem": "Scenarios/ZZ IA VILLAGE-HILLS (912 X 816) 272 AUTOR.btt (autor, 12/10/2026), sobre research/ia/village_hills_272.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 390 tiles)",
+   "nota": "Tier 2, rascunho de um agente por mapa (12/10), aprovado sem mudancas: G2 e emboscada na faixa leste do azul; apoio na tree line da escarpa e nos predios; G5 nos tres acessos; A/B/C escondidos (A na contraencosta) saem por triggers de setor; reserva entra no West Road Net."
+  },
+  "qb_attack/Open-Hills (1248 X 1200) 314 Attack CMBSRL.btt": {
+   "sha256": "166799f7b8ace737c515d2894f32d7f70e5ef5fd186bfc24b5fc5b18a605260d",
+   "origem": "Scenarios/ZZ IA OPEN-HILLS (1248 X 1200) 314 AUTOR.btt (autor, 12/10/2026), sobre research/ia/open_hills_314.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 407 tiles)",
+   "nota": "Tier 3, rascunho de um agente por mapa (12/10), aprovado sem mudancas: atacante na crista leste; frente na encosta como no 312; A/B/C escondidos saem por South Road / Hill & Road / North Road; reserva entra na vila."
+  },
+  "qb_attack/Huge Orekhovsk-Village (2208 X 1568) 092 Attack CMBSRL.btt": {
+   "sha256": "7c1c9e00788f7062bc52392c2479f95c49ff60f90cfbe5686a61bc43ddf79951",
+   "origem": "Scenarios/ZZ IA HUGE OREKHOVSK-VILLAGE (2208 X 1568) 092 AUTOR.btt (autor, 12/10/2026), sobre research/ia/huge_orekhovsk_village_092.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 4253 tiles)",
+   "nota": "Tier 4, rascunho de um agente por mapa (12/10); o autor recuou os snipers (G12 so y 90+). Bolsoes espalhados em tres faixas; A/B/C na contraencosta saem por West Woods / Centre Corridor / East Woods; reserva entra no Orekhovsk."
+  },
+  "qb_attack/Open-Rough (1840 X 1242) 035r Attack CMBSRL.btt": {
+   "sha256": "b40fedfe9851b4a57c2698175a76cc93d2856a43856ace8fdd3b4d9afd744c7a",
+   "origem": "Scenarios/ZZ IA OPEN-ROUGH (1840 X 1242) 035R AUTOR.btt (autor, 12/10/2026), sobre research/ia/open_rough_035r.ajustes.json",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 2203 tiles)",
+   "nota": "Tier 4, rascunho de um agente por mapa (12/10); o autor ampliou ATGM, emboscada (ate y 152) e G14. A/B/C na contraencosta saem por West Approach / Central Hill / East Lowland; reserva entra no North Road Net."
+  },
+  "qb_attack/Khalmi-Rough (1088 X 1104) 085r Attack CMBSRL.btt": {
+   "sha256": "050603eca161b335568b67fa81bf0b57654a616735100386b2c0e8fb902ae3be",
+   "origem": "Scenarios/ZZ IA KHALMI-ROUGH (1088 X 1104) 085R autor.btt (autor, 12/10/2026), sobre research/ia/khalmi_rough_085r.ajustes.json e o mapa dele \"Khalmi-Rough (1088 X 1104) 085r AUTOREDIT\"",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 1125 tiles); TERRENO EDITADO por ele: mata da area de deploy do atacante limpa (x 125-135 y 32-73, 731 campos de tile), aceito por ia_passar_editor --terreno-de",
+   "nota": "Tier 3, regras do autor no norte (alem do rio): G2/G5 nos arredores do North East Rd; A escondido na clareira a oeste (ele levou para x 43-74 y 127-137) defende o objetivo quando o atacante se aproxima; emboscada nas matas do norte (ele alargou ate x 17). Sul: G15 Khalmi, G14 so no sul (ele tirou do NE Rd), apoio na borda leste de Khalmi longe das saidas da mata (nao piorar para o atacante), B/C/reserva por trigger.",
+   "revisoes": [
+    "08/11/2026 (autor): Setup do G9 = rodavel de x 30-64, y 76-100 — a reserva junto do complexo industrial, nao no fundo oeste (tanques na borda oeste na US b9) (tools/re/scratch/ia_zonas_editar.mjs --filtro rodavel --substituir)"
+   ]
+  },
+  "qb_attack/Huge Asintorf-Town (2400 X 2000) 091 Attack CMBSRL.btt": {
+   "sha256": "ce3b46dd7304c9bc576fe0cbb4ad76c81c821a648f799ac1251d3cf853dcf0d2",
+   "origem": "Scenarios/ZZ IA HUGE ASINTORF-TOWN (2400 X 2000) 091 autor.btt (autor, 12/10/2026), sobre research/ia/huge_asintorf_town_091.ajustes.json e o mapa dele \"Huge Asintorf-Town (2400 X 2000) 091 AUTOREDIT\"",
+   "formato": "editor 9b (E157): o arquivo salvo pelo autor, com tipo e titulo da versao (estrada +9 em 2073 tiles); TERRENO EDITADO por ele: mata da area de deploy do atacante limpa (x 209-299 y 191-249: o AUTOREDIT e mais limpeza feita na revisao), aceito por ia_passar_editor --terreno-de",
+   "nota": "Tier de mapa 5 (tier 4 da campanha), plano meu sobre o AUTOREDIT: duas rotas (corredor norte e East Road Junction), G2 de ponta a ponta (ele enxugou ate x 245), emboscada na mata central e saidas (ele alargou ate x 111), apoio em cobertura de frente para as duas rotas e no fundo de Asintorf, G5 nos acessos, A/B/C por trigger, reserva entra em Asintorf; G14 nos cruzamentos (ele ampliou ate y 50)."
+  },
+  "qb_meet_fora/Small Village (976 X 400) 015r Meet CMBSRL.btt": {
+   "sha256": "fe29704f9b2372385d20594d58b62fadc4e9de86c9f1fb32e8a5f96043059185",
+   "origem": "tools/re/ia_encontro.mjs (assalto direto, 2026-10-14), o plano gerado aprovado pelo autor no ZZ IA SMALL VILLAGE (976 X 400) 015R MEET",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 3 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 1, 45 min: assalto direto — tanques/recon/escolta pela rua ao centro do objetivo em Assault na hora zero; pelotao mecanizado dividido (esquadras e IFVs em grupos separados): parcela 1 desmonta nas casas do centro e os IFVs vao as arvores atras e entram aos 30:00, parcela 2 desmonta nas casas afastadas e os IFVs flanqueiam ate ~15 tiles do setup do jogador; esquadras afastadas entram aos 15:00; leves metade escolta, metade guarda de flanco; aos 35:00 todos investem ate 3/4 do mapa.",
+   "encontro": true,
+   "doutrina": "assalto",
+   "grupos": {
+    "tanks": 1,
+    "recon": 2,
+    "escort": 3,
+    "guardA": 4,
+    "guardC": 5,
+    "centreVeh": 6,
+    "centreInf": 7,
+    "farVehA": 8,
+    "farInfA": 9,
+    "farVehC": 10,
+    "farInfC": 11,
+    "teams": 12,
+    "aa": 13,
+    "rest": 14
+   },
+   "variantes": {
+    "1": "flankLeft",
+    "2": "flankRight",
+    "3": "both"
+   }
+  },
+  "qb_meet_fora/Open-Rural (672 X 720) 306 Meet CMBSRL.btt": {
+   "sha256": "be27cff3fb02a2de09c86d282c1b26642de4f198d3297902dfa95ee7b35b5a34",
+   "origem": "tools/re/ia_encontro.mjs (terreno aberto, 2026-10-14), o plano gerado aprovado pelo autor no ZZ IA OPEN-RURAL (672 X 720) 306 MEET",
+   "formato": "formato antigo (8c) gravado pelo app, sem Withdraw; 2 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 1, 45 min: terreno aberto — os pesados em dois grupos (o recon junto) tomam o objetivo na hora zero; a parcela 1 da mecanizada desembarca nas casas do objetivo e os IFVs ficam atras delas; equipes e a parcela 2 desembarcam atras da floresta e vao a pe a borda dela; os IFVs da parcela 2 voltam ao setup coberto pelo relevo, sobem pela borda do mapa e flanqueiam; leves metade vigia na borda da floresta, metade flanco; AA no setup; aos 35:00 os blindados em lances ate 3/4 do mapa, os flanqueadores viram para dentro e a infantaria da floresta ataca as casas do jogador.",
+   "encontro": true,
+   "doutrina": "aberto",
+   "grupos": {
+    "tanksA": 1,
+    "tanksC": 2,
+    "lightOver": 3,
+    "lightFlank": 4,
+    "centreVeh": 5,
+    "centreInf": 6,
+    "forestVeh": 7,
+    "forestInf": 8,
+    "teamVeh": 9,
+    "teams": 10,
+    "aa": 11,
+    "rest": 12
+   },
+   "variantes": {
+    "1": "flankLeft",
+    "2": "flankRight"
+   }
+  },
+  "qb_meet_fora/Small Hills-Forest-Village (368 X592) 024r Meet CMBSRL.btt": {
+   "sha256": "d48570c4c78eac3f261f8c002b17af03a722eba304865727febdf0b7a2fccf60",
+   "origem": "tools/re/ia_encontro.mjs (posicional, 2026-10-14), o plano gerado aprovado pelo autor no ZZ IA SMALL HILLS-FOREST-VILLAGE (368 X592) 024R MEET, com research/ia/small_hills_forest_village_024r.meet.ajustes.json",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 2 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 1, 45 min: posicional (mapa apertado) — pesados e recon pela rua central ao objetivo na hora zero; a mecanizada em dois grupos: o vermelho desmonta na mata ao sul da vila (forest) ou nas arvores do comeco da seta e flanqueia por ela em lances (flank), o amarelo nas casas do lado azul da vila; aos 35:00 a infantaria toma o resto da cidade e para; leves e equipes na linha verde (o alto que ve a cidade), aos 35:00 os leves ocupam o objetivo inteiro; AA e o resto no setup.",
+   "encontro": true,
+   "doutrina": "posicional",
+   "grupos": {
+    "tanks": 1,
+    "lightOver": 2,
+    "redVeh": 3,
+    "redInf": 4,
+    "yellowVeh": 5,
+    "yellowInf": 6,
+    "teams": 7,
+    "aa": 8,
+    "rest": 9
+   },
+   "garantias": {
+    "morteiro": true
+   },
+   "apoio": "azul: 1 Smoke 81t, 2 Smoke 68t, 3 Suppress 25t, 4 Suppress 59t; vermelho: 1 Suppress 45t, 2 Suppress 30t, 3 Suppress 43t, 4 Smoke 67t (de ZZ IA SMALL HILLS-FOREST-VILLAGE (368 X592) 024R MEET FOREST.btt; o computador sorteia entre eles no inicio)",
+   "variantes": {
+    "1": "forest",
+    "2": "flank"
+   }
+  },
+  "qb_meet/Open-Rural (944 X 848) 313 Meet CMBSRL.btt": {
+   "sha256": "d5e3aaaaf1f032e1a89bc55ffc4a5758a9c7b1531e4a2a0a7b7879e299478e24",
+   "origem": "o plano do roteiro (research/ia/open_rural_313.meet.ajustes.json) revisado pelo autor no editor e salvo em ZZ IA OPEN-RURAL (944 X 848) 313 MEET PLANO autor.btt (2026-10-17), posto no pacote pelo ia_passar_editor",
+   "formato": "o arquivo do editor (versao 9b, trailer 19); 1 plano(s) azul(is) usado(s), o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 2, 60 min: roteiro do mapa (research/ia/open_rural_313.meet.ajustes.json): plano = o desenho do autor (16/10): vermelho, verde, roxo, azul e rosa.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "tanks": 1,
+    "lightN": 2,
+    "lightM": 3,
+    "lightS": 4,
+    "purpleVeh": 5,
+    "purpleInf": 6,
+    "pinkVeh": 7,
+    "pinkInf": 8,
+    "teamsS": 9,
+    "teamsW": 10,
+    "aa": 11,
+    "rest": 12
+   },
+   "alocacao": {
+    "tank": "tanks",
+    "recon": "tanks",
+    "light": [
+     "lightN",
+     "lightM",
+     "lightS"
+    ],
+    "mech": [
+     [
+      "purpleVeh",
+      "purpleInf"
+     ],
+     [
+      "pinkVeh",
+      "pinkInf"
+     ]
+    ],
+    "mechShares": [
+     0.6,
+     0.4
+    ],
+    "team": [
+     "teamsS",
+     "teamsW"
+    ],
+    "ride": [
+     "teamsS",
+     "teamsW"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   }
+  },
+  "qb_meet/Hills-Farmland (1344 X 848) 282 Meet CMBSRL.btt": {
+   "sha256": "4c30a98d30e6120d35800159eb16fea29fd4c55eb937c2c9e8c9badac5ba0c51",
+   "origem": "o plano do roteiro (research/ia/hills_farmland_282.meet.ajustes.json) revisado pelo autor no editor e salvo em ZZ IA HILLS-FARMLAND (1344 X 848) 282 MEET autor.btt (2026-10-17), posto no pacote pelo ia_passar_editor",
+   "formato": "o arquivo do editor (versao 9b, trailer 19); 1 plano(s) azul(is) usado(s), o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 3, 80 min: roteiro do mapa (research/ia/hills_farmland_282.meet.ajustes.json): plano = o desenho do autor (17/10), com o azul no leste: rosa, vermelho, azul norte e azul sul (rota pelo sul).",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "armour": 1,
+    "nVeh": 2,
+    "nInf": 3,
+    "sVeh": 4,
+    "sInf": 5,
+    "teamsA": 6,
+    "teamsB": 7,
+    "teamsC": 8,
+    "aa": 9,
+    "rest": 10,
+    "tanks": 11
+   },
+   "alocacao": {
+    "tank": "tanks",
+    "recon": "armour",
+    "light": "armour",
+    "mech": [
+     [
+      "nVeh",
+      "nInf"
+     ],
+     [
+      "sVeh",
+      "sInf"
+     ]
+    ],
+    "team": [
+     "teamsA",
+     "teamsB",
+     "teamsC"
+    ],
+    "ride": [
+     "teamsA",
+     "teamsB",
+     "teamsC"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   },
+   "revisoes": [
+    "29/10/2026 (autor): os tanques no G11, Setup nas duas colunas da frente (x 162-163) e saida em 0:00; recon/leves (G1), mecanizada e equipes saem em 1:00 (tools/re/scratch/ia_282_tanques.mjs)"
+   ]
+  },
+  "qb_meet/Hills-Open-Farmland (752 X 1104) 307 Meet CMBSRL.btt": {
+   "sha256": "23d9bbbc9b3b3b9ebb8fe92f8f766658d6a88cd7f97901259c62338dd8f93f03",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-17), o plano gerado aprovado pelo autor no ZZ IA HILLS-OPEN-FARMLAND (752 X 1104) 307 MEET, com research/ia/hills_open_farmland_307.meet.ajustes.json",
+   "formato": "formato antigo (8c) gravado pelo app, sem Withdraw; 1 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 3, 80 min: roteiro do mapa (research/ia/hills_open_farmland_307.meet.ajustes.json): plano = o desenho do autor (17/10): vermelho, verde, azul oeste/leste e rosa; todos saem na hora zero.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "armour": 1,
+    "light": 2,
+    "wVeh": 3,
+    "wInf": 4,
+    "eVeh": 5,
+    "eInf": 6,
+    "teams": 7,
+    "aa": 8,
+    "rest": 9
+   },
+   "alocacao": {
+    "tank": "armour",
+    "recon": "armour",
+    "light": "light",
+    "mech": [
+     [
+      "wVeh",
+      "wInf"
+     ],
+     [
+      "eVeh",
+      "eInf"
+     ]
+    ],
+    "team": "teams",
+    "ride": "teams",
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   }
+  },
+  "qb_meet/Rough-Village (1072 X 896) 077r Meet CMBSRL.btt": {
+   "sha256": "ab2ff1976b2d3ca30eac595201bbd6c0e8628cb7d63b58940dfbb2c672db2610",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-17), o plano gerado aprovado pelo autor no ZZ IA ROUGH-VILLAGE (1072 X 896) 077R MEET, com research/ia/rough_village_077r.meet.ajustes.json",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 1 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 3, 80 min: roteiro do mapa (research/ia/rough_village_077r.meet.ajustes.json): plano = o desenho do autor (17/10): rosa, amarelo, vermelho em dois grupos e roxo; todos saem na hora zero.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "armourN": 1,
+    "armourS": 2,
+    "lightN": 3,
+    "lightS": 4,
+    "mechVeh": 5,
+    "mechInf": 6,
+    "teamsN": 7,
+    "teamsV": 8,
+    "teamsS": 9,
+    "aa": 10,
+    "rest": 11
+   },
+   "alocacao": {
+    "tank": [
+     "armourN",
+     "armourS"
+    ],
+    "recon": [
+     "armourN",
+     "armourS"
+    ],
+    "light": [
+     "lightN",
+     "lightS"
+    ],
+    "mech": [
+     [
+      "mechVeh",
+      "mechInf"
+     ]
+    ],
+    "team": [
+     "teamsN",
+     "teamsV",
+     "teamsS"
+    ],
+    "ride": [
+     "teamsN",
+     "teamsV",
+     "teamsS"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   }
+  },
+  "qb_meet/Village-Forest (928 X 922) 012r Meet CMBSRL.btt": {
+   "sha256": "17a528edc0da254641f4b669e0e2fff4ad52dfff00fa4786ca3173041011ca31",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-29), o plano gerado aprovado pelo autor no ZZ IA VILLAGE-FOREST (928 X 922) 012R MEET, com research/ia/village_forest_012r.meet.ajustes.json",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 1 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 1, 45 min: roteiro do mapa (research/ia/village_forest_012r.meet.ajustes.json): plano = o desenho do autor (17/10): vermelho 1/2/3, rosa, azul oeste e principal; 28/10: os tanques (def1-3) saem na hora zero, o resto em 1:00.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "def1": 1,
+    "def2": 2,
+    "def3": 3,
+    "wVeh": 4,
+    "wInf": 5,
+    "mVeh": 6,
+    "mInf": 7,
+    "teamsN": 8,
+    "teamsV": 9,
+    "teamsE": 10,
+    "aa": 11,
+    "rest": 12
+   },
+   "alocacao": {
+    "armour": {
+     "grupos": [
+      "def1",
+      "def2",
+      "def3"
+     ],
+     "shares": [
+      0.2,
+      0.4,
+      0.4
+     ]
+    },
+    "mech": [
+     [
+      "wVeh",
+      "wInf"
+     ],
+     [
+      "mVeh",
+      "mInf"
+     ]
+    ],
+    "mechShares": [
+     0.4,
+     0.6
+    ],
+    "team": [
+     "teamsN",
+     "teamsV",
+     "teamsE"
+    ],
+    "ride": [
+     "teamsN",
+     "teamsV",
+     "teamsE"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "apoio": "azul: Suppress 157t, Suppress 172t, Suppress 119t, Smoke 216t (ajustes do mapa; o computador sorteia entre eles no inicio)",
+   "variantes": {
+    "1": "plano"
+   }
+  },
+  "qb_meet_fora/Small Town-Forest (624 X 608) 018r Meet CMBSRL.btt": {
+   "sha256": "92a03efefb6dfd38c3bc28bb95bd20d3b33c6d11f672ff6fe1eab6961b5a6b42",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-17), o plano gerado aprovado pelo autor no ZZ IA SMALL TOWN-FOREST (624 X 608) 018R MEET, com research/ia/small_town_forest_018r.meet.ajustes.json",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 2 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 1, 45 min: roteiro do mapa (research/ia/small_town_forest_018r.meet.ajustes.json): tanksLead = pesados e recon pela rua ate a entrada da cidade, aos 35:00 entram; leves no plato, aos 35:00 na faixa sul; mecanizada desmonta no terco oeste e os IFVs vao ao aberto; aos 35:00 a infantaria toma o resto; equipes nas casas da rua; lightLead = a mesma coisa com as ordens dos leves e dos pesados trocadas.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "tanks": 1,
+    "light": 2,
+    "mechVeh": 3,
+    "mechInf": 4,
+    "teams": 5,
+    "aa": 6,
+    "rest": 7
+   },
+   "alocacao": {
+    "tank": "tanks",
+    "recon": "tanks",
+    "light": "light",
+    "mech": [
+     [
+      "mechVeh",
+      "mechInf"
+     ]
+    ],
+    "team": "teams",
+    "ride": "teams",
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "apoio": "azul: Suppress 54t, Suppress 65t, Suppress 33t, Smoke 118t, Suppress 110t (ajustes do mapa; o computador sorteia entre eles no inicio)",
+   "garantias": {
+    "morteiro": true
+   },
+   "variantes": {
+    "1": "tanksLead",
+    "2": "lightLead"
+   }
+  },
+  "qb_meet/Dueling Balalaikas (2320 X 1488) Meet CMBSRL.btt": {
+   "sha256": "610f0b4822c9ca80f778bd8f2d522e966c130cccbd6686bfdd1c28f1fd265545",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-17), o plano gerado aprovado pelo autor no ZZ IA DUELING BALALAIKAS (2320 X 1488) MEET, com research/ia/dueling_balalaikas.meet.ajustes.json",
+   "formato": "formato antigo (8b) gravado pelo app, sem Withdraw; 1 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 4, 90 min: roteiro do mapa (research/ia/dueling_balalaikas.meet.ajustes.json): plano = o desenho do autor (17/10): rosa, azul norte e sul, vermelho 1/2/3; todos saem na hora zero.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "arm1": 1,
+    "arm2": 2,
+    "arm3": 3,
+    "nVeh": 4,
+    "nInf": 5,
+    "sVeh": 6,
+    "sInf": 7,
+    "teamsW": 8,
+    "teamsS": 9,
+    "aa": 10,
+    "rest": 11
+   },
+   "alocacao": {
+    "armour": {
+     "grupos": [
+      "arm1",
+      "arm2",
+      "arm3"
+     ],
+     "shares": [
+      0.2,
+      0.6,
+      0.2
+     ]
+    },
+    "mech": [
+     [
+      "nVeh",
+      "nInf"
+     ],
+     [
+      "sVeh",
+      "sInf"
+     ]
+    ],
+    "team": [
+     "teamsW",
+     "teamsS"
+    ],
+    "ride": [
+     "teamsW",
+     "teamsS"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   }
+  },
+  "qb_meet/Open-Hills (1248 X 1200) 315 Meet CMBSRL.btt": {
+   "sha256": "e11fb281c3eb28e1874e5e4c86d983536fe37f8a3f26ece2a81e61ae56c89d40",
+   "origem": "tools/re/ia_encontro.mjs (roteiro do mapa, 2026-10-29), o plano gerado aprovado pelo autor no ZZ IA OPEN-HILLS (1248 X 1200) 315 MEET, com research/ia/open_hills_315.meet.ajustes.json",
+   "formato": "formato antigo (8c) gravado pelo app, sem Withdraw; 1 planos azuis usados, o app sorteia um (meetVariantFor) e grava a copia so com ele (meetMapCopy)",
+   "nota": "Encontro (Meeting Engagement), tier 4, 90 min: roteiro do mapa (research/ia/open_hills_315.meet.ajustes.json): plano = o desenho do autor (17/10), com o azul no NE: vermelho norte/leste, rosa, azul norte/leste; 28/10: blindados em 0:00, o resto em 1:00; rotas raio 8 / passo 16.",
+   "encontro": true,
+   "doutrina": "roteiro",
+   "grupos": {
+    "armN": 1,
+    "armE": 2,
+    "nVeh": 3,
+    "nInf": 4,
+    "eVeh": 5,
+    "eInf": 6,
+    "teamsN": 7,
+    "teamsX": 8,
+    "teamsR": 9,
+    "aa": 10,
+    "rest": 11
+   },
+   "alocacao": {
+    "armour": {
+     "grupos": [
+      "armN",
+      "armE"
+     ],
+     "shares": [
+      0.4,
+      0.6
+     ]
+    },
+    "mech": [
+     [
+      "nVeh",
+      "nInf"
+     ],
+     [
+      "eVeh",
+      "eInf"
+     ]
+    ],
+    "mechShares": [
+     0.7,
+     0.3
+    ],
+    "team": [
+     "teamsN",
+     "teamsX",
+     "teamsR"
+    ],
+    "ride": [
+     "teamsN",
+     "teamsX",
+     "teamsR"
+    ],
+    "aa": "aa",
+    "rest": "rest"
+   },
+   "variantes": {
+    "1": "plano"
+   }
+  }
+ }
+}

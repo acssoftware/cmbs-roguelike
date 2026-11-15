@@ -1,0 +1,387 @@
+{
+ "nota": "Preco e categoria de cada arma e item de inventario, por \"EXERCITO|par\" (o par classe/item do jogo; o mesmo par e outra arma em outro exercito) ou demo:2, demo:4, laser. preco/classe valem para a arma na mao; precoItem/classeItem, quando existem, para o lancador vendido como item. O que nao esta aqui e cobrado pela categoria das regras (rules.gear.price, rules.kit.price). Fonte: aba \"Armas\" de precos.xlsx (do autor, fora do git), por tools/precos_armas_importar.mjs.",
+ "armas": {
+  "demo:2": {
+   "nome": "Demo Charge ×2",
+   "classe": "demo2",
+   "preco": 10
+  },
+  "demo:4": {
+   "nome": "Demo Charge ×4",
+   "classe": "demo4",
+   "preco": 20
+  },
+  "laser": {
+   "nome": "Laser Designator",
+   "classe": "laser",
+   "preco": 60
+  },
+  "RU|2/26": {
+   "nome": "AK-74M",
+   "classe": "personal",
+   "preco": 0
+  },
+  "RU|2/30": {
+   "nome": "AKS-74U",
+   "classe": "personal",
+   "preco": 0
+  },
+  "RU|2/32": {
+   "nome": "AK-74M/GP-30",
+   "classe": "grenadeLauncher",
+   "preco": 20
+  },
+  "RU|2/41": {
+   "nome": "PKP",
+   "classe": "mg",
+   "preco": 40
+  },
+  "RU|2/43": {
+   "nome": "PM",
+   "classe": "personal",
+   "preco": 0
+  },
+  "RU|2/46": {
+   "nome": "SVD",
+   "classe": "sniper",
+   "preco": 40
+  },
+  "RU|3/38": {
+   "nome": "PKM",
+   "classe": "mg",
+   "preco": 20
+  },
+  "RU|3/50": {
+   "nome": "AGS-17",
+   "classe": "grenadeLauncher",
+   "preco": 60
+  },
+  "RU|3/51": {
+   "nome": "AGS-30",
+   "classe": "grenadeLauncher",
+   "preco": 60
+  },
+  "RU|4/14": {
+   "nome": "RPG-7V2",
+   "classe": "at",
+   "preco": 60
+  },
+  "RU|4/16": {
+   "nome": "RPG-26",
+   "classe": "at",
+   "preco": 60
+  },
+  "RU|4/18": {
+   "nome": "RPO-M Shmel",
+   "classe": "at",
+   "preco": 65
+  },
+  "RU|4/24": {
+   "nome": "Igla",
+   "classe": "at",
+   "preco": 100,
+   "classeItem": "manpads",
+   "precoItem": 80
+  },
+  "RU|4/26": {
+   "nome": "Igla-S",
+   "classe": "at",
+   "preco": 100,
+   "classeItem": "manpads",
+   "precoItem": 80
+  },
+  "RU|5/10": {
+   "nome": "AT-13 Saxhorn",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "RU|5/11": {
+   "nome": "AT-14 Kornet",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "RU|5/6": {
+   "nome": "AT-4C Spigot",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "RU|5/9": {
+   "nome": "AT-7 Saxhorn",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "RU|7/4": {
+   "nome": "2B14",
+   "classe": "other",
+   "preco": 40
+  },
+  "RU|7/6": {
+   "nome": "2B11",
+   "classe": "other",
+   "preco": 40
+  },
+  "UKR|2/24": {
+   "nome": "AK-74",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/25": {
+   "nome": "AK-74",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/27": {
+   "nome": "AKS-74",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/28": {
+   "nome": "AKS-74",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/29": {
+   "nome": "AKS-74U",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/31": {
+   "nome": "AK-74/GP-25",
+   "classe": "grenadeLauncher",
+   "preco": 20
+  },
+  "UKR|2/36": {
+   "nome": "PKM",
+   "classe": "mg",
+   "preco": 20
+  },
+  "UKR|2/43": {
+   "nome": "PM",
+   "classe": "personal",
+   "preco": 0
+  },
+  "UKR|2/44": {
+   "nome": "RPK-74",
+   "classe": "mg",
+   "preco": 20
+  },
+  "UKR|2/45": {
+   "nome": "SVD",
+   "classe": "sniper",
+   "preco": 60
+  },
+  "UKR|3/37": {
+   "nome": "PKM",
+   "classe": "mg",
+   "preco": 20
+  },
+  "UKR|3/50": {
+   "nome": "AGS-17",
+   "classe": "grenadeLauncher",
+   "preco": 60
+  },
+  "UKR|3/52": {
+   "nome": "MT-12",
+   "classe": "crew",
+   "preco": 100
+  },
+  "UKR|3/53": {
+   "nome": "MT-12K",
+   "classe": "crew",
+   "preco": 100
+  },
+  "UKR|4/13": {
+   "nome": "RPG-7V1",
+   "classe": "at",
+   "preco": 60
+  },
+  "UKR|4/15": {
+   "nome": "RPG-22",
+   "classe": "at",
+   "preco": 60
+  },
+  "UKR|4/16": {
+   "nome": "RPG-26",
+   "classe": "at",
+   "preco": 60
+  },
+  "UKR|4/17": {
+   "nome": "RPO-A",
+   "classe": "at",
+   "preco": 60
+  },
+  "UKR|4/20": {
+   "nome": "Corsar",
+   "classe": "at",
+   "preco": 60,
+   "classeItem": "atgm",
+   "precoItem": 120
+  },
+  "UKR|4/24": {
+   "nome": "Igla",
+   "classe": "at",
+   "preco": 100,
+   "classeItem": "manpads",
+   "precoItem": 80
+  },
+  "UKR|5/19": {
+   "nome": "SPG-9 Spear",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "UKR|5/21": {
+   "nome": "SKIF",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "UKR|5/6": {
+   "nome": "AT-4C Spigot",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "UKR|5/9": {
+   "nome": "AT-7 Saxhorn",
+   "classe": "atgm",
+   "preco": 120
+  },
+  "UKR|7/4": {
+   "nome": "2B14",
+   "classe": "other",
+   "preco": 40
+  },
+  "UKR|7/6": {
+   "nome": "2B11",
+   "classe": "other",
+   "preco": 40
+  },
+  "UKR|reload:4/20": {
+   "nome": "Corsar missile",
+   "classe": "reload",
+   "preco": 60
+  },
+  "US|2/10": {
+   "nome": "Mk21 PSR 7.62",
+   "classe": "sniper",
+   "preco": 60
+  },
+  "US|2/11": {
+   "nome": "Mk21 PSR .300",
+   "classe": "sniper",
+   "preco": 70
+  },
+  "US|2/13": {
+   "nome": "M4A1/M320",
+   "classe": "grenadeLauncher",
+   "preco": 20
+  },
+  "US|2/14": {
+   "nome": "M4A1 ACOG/M320",
+   "classe": "grenadeLauncher",
+   "preco": 25
+  },
+  "US|2/18": {
+   "nome": "M240L",
+   "classe": "mg",
+   "preco": 40
+  },
+  "US|2/19": {
+   "nome": "M249 PIP",
+   "classe": "mg",
+   "preco": 30
+  },
+  "US|2/2": {
+   "nome": "M4A1",
+   "classe": "personal",
+   "preco": 0
+  },
+  "US|2/3": {
+   "nome": "M4A1 ACOG",
+   "classe": "personal",
+   "preco": 0
+  },
+  "US|2/4": {
+   "nome": "M4A1 ACOG/TWS",
+   "classe": "sniper",
+   "preco": 40
+  },
+  "US|2/5": {
+   "nome": "M9A1",
+   "classe": "personal",
+   "preco": 0
+  },
+  "US|2/6": {
+   "nome": "M25 CDTE",
+   "classe": "sniper",
+   "preco": 100
+  },
+  "US|2/7": {
+   "nome": "M107A1",
+   "classe": "sniper",
+   "preco": 100
+  },
+  "US|2/8": {
+   "nome": "M110",
+   "classe": "sniper",
+   "preco": 100
+  },
+  "US|2/9": {
+   "nome": "M110 CSASS",
+   "classe": "sniper",
+   "preco": 60
+  },
+  "US|3/1": {
+   "nome": "M2A1",
+   "classe": "crew",
+   "preco": 60
+  },
+  "US|3/17": {
+   "nome": "M240L",
+   "classe": "mg",
+   "preco": 40
+  },
+  "US|3/21": {
+   "nome": "Mk19",
+   "classe": "crew",
+   "preco": 60
+  },
+  "US|4/1": {
+   "nome": "Javelin",
+   "classe": "at",
+   "preco": 400,
+   "classeItem": "atgm",
+   "precoItem": 200
+  },
+  "US|4/2": {
+   "nome": "M136 AT4",
+   "classe": "at",
+   "preco": 60
+  },
+  "US|4/4": {
+   "nome": "Stinger",
+   "classe": "at",
+   "preco": 100,
+   "classeItem": "manpads",
+   "precoItem": 80
+  },
+  "US|7/1": {
+   "nome": "M224A1",
+   "classe": "other",
+   "preco": 40
+  },
+  "US|7/3": {
+   "nome": "M120",
+   "classe": "other",
+   "preco": 40
+  },
+  "US|reload:4/1": {
+   "nome": "Javelin missile",
+   "classe": "reload",
+   "preco": 200
+  },
+  "US|reload:4/4": {
+   "nome": "Stinger missile",
+   "classe": "reload",
+   "preco": 80
+  }
+ }
+}

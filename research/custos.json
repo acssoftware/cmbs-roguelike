@@ -1,0 +1,1757 @@
+[
+ {
+  "arquivo": "RU - (Barbed Wire).btt",
+  "exercito": "RU",
+  "nome": "RU - (Barbed Wire)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - (Foxholes).btt",
+  "exercito": "RU",
+  "nome": "RU - (Foxholes)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - (Orlan-10).btt",
+  "exercito": "RU",
+  "nome": "RU - (Orlan-10)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - (Pchela-1T).btt",
+  "exercito": "RU",
+  "nome": "RU - (Pchela-1T)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - (Sandbag Wall).btt",
+  "exercito": "RU",
+  "nome": "RU - (Sandbag Wall)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - (Target Reference Point).btt",
+  "exercito": "RU",
+  "nome": "RU - (Target Reference Point)",
+  "pontos": 301,
+  "cabecalhoCurto": false,
+  "registros": 6,
+  "unidades": 5
+ },
+ {
+  "arquivo": "RU - (Trench).btt",
+  "exercito": "RU",
+  "nome": "RU - (Trench)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - (Zala 421-08).btt",
+  "exercito": "RU",
+  "nome": "RU - (Zala 421-08)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Air Controller Section [RU C2 15].btt",
+  "exercito": "RU",
+  "nome": "RU - Air Controller Section [RU C2 15]",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Air Controller Section.btt",
+  "exercito": "RU",
+  "nome": "RU - Air Controller Section",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Air Defense Missile Battery [RU C2 11].btt",
+  "exercito": "RU",
+  "nome": "RU - Air Defense Missile Battery [RU C2 11]",
+  "pontos": 1521,
+  "cabecalhoCurto": false,
+  "registros": 30,
+  "unidades": 27
+ },
+ {
+  "arquivo": "RU - Air Defense Missile Battery.btt",
+  "exercito": "RU",
+  "nome": "RU - Air Defense Missile Battery",
+  "pontos": 485,
+  "cabecalhoCurto": false,
+  "registros": 10,
+  "unidades": 7
+ },
+ {
+  "arquivo": "RU - Alligator (KA-52).btt",
+  "exercito": "RU",
+  "nome": "RU - Alligator (KA-52)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Battalion (Antitank).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Antitank)",
+  "pontos": 1788,
+  "cabecalhoCurto": false,
+  "registros": 37,
+  "unidades": 28
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BMP]) [RU C2 02].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BMP]) [RU C2 02]",
+  "pontos": 5846,
+  "cabecalhoCurto": false,
+  "registros": 117,
+  "unidades": 102
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BMP]) [RU C6 02].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BMP]) [RU C6 02]",
+  "pontos": 6638,
+  "cabecalhoCurto": false,
+  "registros": 131,
+  "unidades": 114
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BMP]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BMP])",
+  "pontos": 5846,
+  "cabecalhoCurto": false,
+  "registros": 117,
+  "unidades": 102
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BTR]) [RU C2 03].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BTR]) [RU C2 03]",
+  "pontos": 7617,
+  "cabecalhoCurto": false,
+  "registros": 154,
+  "unidades": 131
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BTR]) [RU C6 03].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BTR]) [RU C6 03]",
+  "pontos": 6891,
+  "cabecalhoCurto": false,
+  "registros": 140,
+  "unidades": 119
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [BTR]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [BTR])",
+  "pontos": 7254,
+  "cabecalhoCurto": false,
+  "registros": 147,
+  "unidades": 125
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [MT-LB]) [RU C2 04].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [MT-LB]) [RU C2 04]",
+  "pontos": 7250,
+  "cabecalhoCurto": false,
+  "registros": 147,
+  "unidades": 125
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [MT-LB]) [RU C6 04].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [MT-LB]) [RU C6 04]",
+  "pontos": 6887,
+  "cabecalhoCurto": false,
+  "registros": 140,
+  "unidades": 119
+ },
+ {
+  "arquivo": "RU - Battalion (Motor Rifle [MT-LB]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Motor Rifle [MT-LB])",
+  "pontos": 7250,
+  "cabecalhoCurto": false,
+  "registros": 147,
+  "unidades": 125
+ },
+ {
+  "arquivo": "RU - Battalion (Reconnaissance [new]) [RU C2 08].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Reconnaissance [new]) [RU C2 08]",
+  "pontos": 2051,
+  "cabecalhoCurto": false,
+  "registros": 43,
+  "unidades": 36
+ },
+ {
+  "arquivo": "RU - Battalion (Reconnaissance [new]) [RU C6 08].btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Reconnaissance [new]) [RU C6 08]",
+  "pontos": 2051,
+  "cabecalhoCurto": false,
+  "registros": 43,
+  "unidades": 36
+ },
+ {
+  "arquivo": "RU - Battalion (Reconnaissance [new]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Reconnaissance [new])",
+  "pontos": 2051,
+  "cabecalhoCurto": false,
+  "registros": 43,
+  "unidades": 36
+ },
+ {
+  "arquivo": "RU - Battalion (Tank 31).btt",
+  "exercito": "RU",
+  "nome": "RU - Battalion (Tank 31)",
+  "pontos": 2235,
+  "cabecalhoCurto": false,
+  "registros": 44,
+  "unidades": 31
+ },
+ {
+  "arquivo": "RU - Battery (Air Defense Artillery) [RU C2 12].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Air Defense Artillery) [RU C2 12]",
+  "pontos": 507,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 7
+ },
+ {
+  "arquivo": "RU - Battery (Air Defense Artillery).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Air Defense Artillery)",
+  "pontos": 507,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 7
+ },
+ {
+  "arquivo": "RU - Battery (Gun [light]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Gun [light])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Howitzer [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Mortar [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Mortar [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Gun [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Gun [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 1,
+  "unidades": 0
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 16].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 16]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 18].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 18]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 20].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 20]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 22].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 22]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 24].btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 24]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Battery (Self-Propelled Howitzer [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Battery (Self-Propelled Howitzer [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Engineer Sapper Company [RU C2 10].btt",
+  "exercito": "RU",
+  "nome": "RU - Engineer Sapper Company [RU C2 10]",
+  "pontos": 543,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 9
+ },
+ {
+  "arquivo": "RU - Engineer Sapper Company.btt",
+  "exercito": "RU",
+  "nome": "RU - Engineer Sapper Company",
+  "pontos": 543,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 9
+ },
+ {
+  "arquivo": "RU - Fencer D (Su-24M2 [antitank]).btt",
+  "exercito": "RU",
+  "nome": "RU - Fencer D (Su-24M2 [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Fencer D (Su-24M2).btt",
+  "exercito": "RU",
+  "nome": "RU - Fencer D (Su-24M2)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Frogfoot (Su-25SM [antitank]).btt",
+  "exercito": "RU",
+  "nome": "RU - Frogfoot (Su-25SM [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Frogfoot (Su-25SM).btt",
+  "exercito": "RU",
+  "nome": "RU - Frogfoot (Su-25SM)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Fullback (Su-34 [antitank]).btt",
+  "exercito": "RU",
+  "nome": "RU - Fullback (Su-34 [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Fullback (Su-34).btt",
+  "exercito": "RU",
+  "nome": "RU - Fullback (Su-34)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Havoc (Mi-28N).btt",
+  "exercito": "RU",
+  "nome": "RU - Havoc (Mi-28N)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Hind F (Mi-24PN [antitank]).btt",
+  "exercito": "RU",
+  "nome": "RU - Hind F (Mi-24PN [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Hind F (Mi-24PN).btt",
+  "exercito": "RU",
+  "nome": "RU - Hind F (Mi-24PN)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Mines (Antipersonnel).btt",
+  "exercito": "RU",
+  "nome": "RU - Mines (Antipersonnel)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - Mines (Antivehicle).btt",
+  "exercito": "RU",
+  "nome": "RU - Mines (Antivehicle)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - Mines (Mixed).btt",
+  "exercito": "RU",
+  "nome": "RU - Mines (Mixed)",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "RU - Platoon (Gun [light]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Gun [light])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Howitzer [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Mortar [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Mortar [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (RPO).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (RPO)",
+  "pontos": 721,
+  "cabecalhoCurto": false,
+  "registros": 14,
+  "unidades": 13
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Gun [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Gun [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 1,
+  "unidades": 0
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15].btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 17].btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 17]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 19].btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 19]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 21].btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 21]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 23].btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 23]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Platoon (Self-Propelled Howitzer [medium]).btt",
+  "exercito": "RU",
+  "nome": "RU - Platoon (Self-Propelled Howitzer [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "RU - Reconnaissance Battalion [old].btt",
+  "exercito": "RU",
+  "nome": "RU - Reconnaissance Battalion [old]",
+  "pontos": 3722,
+  "cabecalhoCurto": false,
+  "registros": 74,
+  "unidades": 62
+ },
+ {
+  "arquivo": "RU - Reconnaissance Company [old].btt",
+  "exercito": "RU",
+  "nome": "RU - Reconnaissance Company [old]",
+  "pontos": 966,
+  "cabecalhoCurto": false,
+  "registros": 19,
+  "unidades": 16
+ },
+ {
+  "arquivo": "RU - Section (Forward Observer) [RU C2 14].btt",
+  "exercito": "RU",
+  "nome": "RU - Section (Forward Observer) [RU C2 14]",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Section (Forward Observer).btt",
+  "exercito": "RU",
+  "nome": "RU - Section (Forward Observer)",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "RU - Section (Supply) [RU C2 13].btt",
+  "exercito": "RU",
+  "nome": "RU - Section (Supply) [RU C2 13]",
+  "pontos": 211,
+  "cabecalhoCurto": false,
+  "registros": 4,
+  "unidades": 3
+ },
+ {
+  "arquivo": "RU - Section (Supply).btt",
+  "exercito": "RU",
+  "nome": "RU - Section (Supply)",
+  "pontos": 211,
+  "cabecalhoCurto": false,
+  "registros": 4,
+  "unidades": 3
+ },
+ {
+  "arquivo": "RU - Sniper Platoon.btt",
+  "exercito": "RU",
+  "nome": "RU - Sniper Platoon",
+  "pontos": 1013,
+  "cabecalhoCurto": false,
+  "registros": 21,
+  "unidades": 17
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [BMP]) [RU C6 05].btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [BMP]) [RU C6 05]",
+  "pontos": 8201,
+  "cabecalhoCurto": false,
+  "registros": 164,
+  "unidades": 142
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [BMP]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [BMP])",
+  "pontos": 8301,
+  "cabecalhoCurto": false,
+  "registros": 166,
+  "unidades": 144
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [BTR]) [RU C6 06].btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [BTR]) [RU C6 06]",
+  "pontos": 9310,
+  "cabecalhoCurto": false,
+  "registros": 188,
+  "unidades": 160
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [BTR]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [BTR])",
+  "pontos": 8847,
+  "cabecalhoCurto": false,
+  "registros": 179,
+  "unidades": 152
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [MT-LB]) [RU C6 07].btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [MT-LB]) [RU C6 07]",
+  "pontos": 8843,
+  "cabecalhoCurto": false,
+  "registros": 179,
+  "unidades": 152
+ },
+ {
+  "arquivo": "RU - Tactical Group (Battalion [MT-LB]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Battalion [MT-LB])",
+  "pontos": 8943,
+  "cabecalhoCurto": false,
+  "registros": 181,
+  "unidades": 154
+ },
+ {
+  "arquivo": "RU - Tactical Group (Tank Battalion [BMP]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Tank Battalion [BMP])",
+  "pontos": 5276,
+  "cabecalhoCurto": false,
+  "registros": 105,
+  "unidades": 86
+ },
+ {
+  "arquivo": "RU - Tactical Group (Tank Battalion [BTR]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Tank Battalion [BTR])",
+  "pontos": 5239,
+  "cabecalhoCurto": false,
+  "registros": 105,
+  "unidades": 85
+ },
+ {
+  "arquivo": "RU - Tactical Group (Tank Battalion [MT-LB]).btt",
+  "exercito": "RU",
+  "nome": "RU - Tactical Group (Tank Battalion [MT-LB])",
+  "pontos": 5239,
+  "cabecalhoCurto": false,
+  "registros": 105,
+  "unidades": 85
+ },
+ {
+  "arquivo": "RU - Tank Battalion 41 [RU C6 01].btt",
+  "exercito": "RU",
+  "nome": "RU - Tank Battalion 41 [RU C6 01]",
+  "pontos": 2945,
+  "cabecalhoCurto": false,
+  "registros": 58,
+  "unidades": 41
+ },
+ {
+  "arquivo": "RU - Tank Battalion 41.btt",
+  "exercito": "RU",
+  "nome": "RU - Tank Battalion 41",
+  "pontos": 2945,
+  "cabecalhoCurto": false,
+  "registros": 58,
+  "unidades": 41
+ },
+ {
+  "arquivo": "UKR - ATGM Battery.btt",
+  "exercito": "UKR",
+  "nome": "UKR - ATGM Battery",
+  "pontos": 737,
+  "cabecalhoCurto": false,
+  "registros": 15,
+  "unidades": 11
+ },
+ {
+  "arquivo": "UKR - Antipersonnel Mines.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Antipersonnel Mines",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Antivehicle Mines.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Antivehicle Mines",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Barbed Wire.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Barbed Wire",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Battalion (Artillery Brigade Antitank).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Artillery Brigade Antitank)",
+  "pontos": 3647,
+  "cabecalhoCurto": false,
+  "registros": 75,
+  "unidades": 62
+ },
+ {
+  "arquivo": "UKR - Battalion (Corps Reconnaissance) [UKR C6 07].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Corps Reconnaissance) [UKR C6 07]",
+  "pontos": 4486,
+  "cabecalhoCurto": false,
+  "registros": 90,
+  "unidades": 76
+ },
+ {
+  "arquivo": "UKR - Battalion (Corps Reconnaissance).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Corps Reconnaissance)",
+  "pontos": 4486,
+  "cabecalhoCurto": false,
+  "registros": 90,
+  "unidades": 76
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BMP]) [UKR C2 02].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BMP]) [UKR C2 02]",
+  "pontos": 6178,
+  "cabecalhoCurto": false,
+  "registros": 125,
+  "unidades": 107
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BMP]) [UKR C6 02].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BMP]) [UKR C6 02]",
+  "pontos": 5815,
+  "cabecalhoCurto": false,
+  "registros": 118,
+  "unidades": 101
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BMP]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BMP])",
+  "pontos": 6178,
+  "cabecalhoCurto": false,
+  "registros": 125,
+  "unidades": 107
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BTR]) [UKR C2 03].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BTR]) [UKR C2 03]",
+  "pontos": 7642,
+  "cabecalhoCurto": false,
+  "registros": 152,
+  "unidades": 132
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BTR]) [UKR C6 03].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BTR]) [UKR C6 03]",
+  "pontos": 8368,
+  "cabecalhoCurto": false,
+  "registros": 166,
+  "unidades": 144
+ },
+ {
+  "arquivo": "UKR - Battalion (Mech Infantry [BTR]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mech Infantry [BTR])",
+  "pontos": 7642,
+  "cabecalhoCurto": false,
+  "registros": 152,
+  "unidades": 132
+ },
+ {
+  "arquivo": "UKR - Battalion (Mountain Infantry) [UKR C6 06].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mountain Infantry) [UKR C6 06]",
+  "pontos": 7787,
+  "cabecalhoCurto": false,
+  "registros": 158,
+  "unidades": 135
+ },
+ {
+  "arquivo": "UKR - Battalion (Mountain Infantry).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Mountain Infantry)",
+  "pontos": 7787,
+  "cabecalhoCurto": false,
+  "registros": 158,
+  "unidades": 135
+ },
+ {
+  "arquivo": "UKR - Battalion (Tank 31).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Tank 31)",
+  "pontos": 2173,
+  "cabecalhoCurto": false,
+  "registros": 44,
+  "unidades": 31
+ },
+ {
+  "arquivo": "UKR - Battalion (Tank 40) [UKR C6 01].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Tank 40) [UKR C6 01]",
+  "pontos": 2686,
+  "cabecalhoCurto": false,
+  "registros": 53,
+  "unidades": 40
+ },
+ {
+  "arquivo": "UKR - Battalion (Tank 40).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battalion (Tank 40)",
+  "pontos": 2686,
+  "cabecalhoCurto": false,
+  "registros": 53,
+  "unidades": 40
+ },
+ {
+  "arquivo": "UKR - Battery (Air Defense) [UKR C2 08].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Air Defense) [UKR C2 08]",
+  "pontos": 534,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 8
+ },
+ {
+  "arquivo": "UKR - Battery (Air Defense).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Air Defense)",
+  "pontos": 534,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 8
+ },
+ {
+  "arquivo": "UKR - Battery (Antitank Gun).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Antitank Gun)",
+  "pontos": 1046,
+  "cabecalhoCurto": false,
+  "registros": 21,
+  "unidades": 18
+ },
+ {
+  "arquivo": "UKR - Battery (Gun [light]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Gun [light])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (Howitzer [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (MANPADS) [UKR C2 09].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (MANPADS) [UKR C2 09]",
+  "pontos": 2249,
+  "cabecalhoCurto": false,
+  "registros": 45,
+  "unidades": 41
+ },
+ {
+  "arquivo": "UKR - Battery (MANPADS).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (MANPADS)",
+  "pontos": 2249,
+  "cabecalhoCurto": false,
+  "registros": 45,
+  "unidades": 41
+ },
+ {
+  "arquivo": "UKR - Battery (Mortar [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (Mortar [medium]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 14].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 14]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 16].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 16]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Battery (Self-Propelled Howitzer [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Battery (Self-Propelled Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Company (Brigade Reconnaissance) [UKR C2 07].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Brigade Reconnaissance) [UKR C2 07]",
+  "pontos": 1304,
+  "cabecalhoCurto": false,
+  "registros": 26,
+  "unidades": 22
+ },
+ {
+  "arquivo": "UKR - Company (Brigade Reconnaissance) [UKR C6 08].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Brigade Reconnaissance) [UKR C6 08]",
+  "pontos": 1304,
+  "cabecalhoCurto": false,
+  "registros": 26,
+  "unidades": 22
+ },
+ {
+  "arquivo": "UKR - Company (Brigade Reconnaissance).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Brigade Reconnaissance)",
+  "pontos": 1304,
+  "cabecalhoCurto": false,
+  "registros": 26,
+  "unidades": 22
+ },
+ {
+  "arquivo": "UKR - Company (Engineer Sapper) [UKR C2 06].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Engineer Sapper) [UKR C2 06]",
+  "pontos": 732,
+  "cabecalhoCurto": false,
+  "registros": 15,
+  "unidades": 12
+ },
+ {
+  "arquivo": "UKR - Company (Engineer Sapper).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Engineer Sapper)",
+  "pontos": 732,
+  "cabecalhoCurto": false,
+  "registros": 15,
+  "unidades": 12
+ },
+ {
+  "arquivo": "UKR - Company (Sniper).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Company (Sniper)",
+  "pontos": 1185,
+  "cabecalhoCurto": false,
+  "registros": 24,
+  "unidades": 21
+ },
+ {
+  "arquivo": "UKR - Fencer D (Su-24M [antitank]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Fencer D (Su-24M [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Fencer D (Su-24M).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Fencer D (Su-24M)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Foxholes.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Foxholes",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Frogfoot (Su-25 [antitank]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Frogfoot (Su-25 [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Frogfoot (Su-25).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Frogfoot (Su-25)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Hind F (Mi-24P [antitank]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Hind F (Mi-24P [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Hind F (Mi-24P).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Hind F (Mi-24P)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Hind F (Mi-24PM [antitank]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Hind F (Mi-24PM [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Hind F (Mi-24PM).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Hind F (Mi-24PM)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Mixed Mines.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Mixed Mines",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Platoon (Gun [light]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Gun [light])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (Howitzer [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (Mortar [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (Mortar [medium]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (RPO).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (RPO)",
+  "pontos": 1136,
+  "cabecalhoCurto": false,
+  "registros": 23,
+  "unidades": 20
+ },
+ {
+  "arquivo": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 13].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 13]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 15].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 15]",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Platoon (Self-Propelled Howitzer [heavy]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Platoon (Self-Propelled Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "UKR - Sandbag Wall.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Sandbag Wall",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "UKR - Section (Air Controller) [UKR C2 12].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Air Controller) [UKR C2 12]",
+  "pontos": 150,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Section (Air Controller).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Air Controller)",
+  "pontos": 150,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Section (Forward Observer) [UKR C2 11].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Forward Observer) [UKR C2 11]",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Section (Forward Observer).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Forward Observer)",
+  "pontos": 152,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "UKR - Section (Supply) [UKR C2 10].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Supply) [UKR C2 10]",
+  "pontos": 211,
+  "cabecalhoCurto": false,
+  "registros": 4,
+  "unidades": 3
+ },
+ {
+  "arquivo": "UKR - Section (Supply).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Section (Supply)",
+  "pontos": 211,
+  "cabecalhoCurto": false,
+  "registros": 4,
+  "unidades": 3
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Battalion [BMP]) [UKR C6 04].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Battalion [BMP]) [UKR C6 04]",
+  "pontos": 8609,
+  "cabecalhoCurto": false,
+  "registros": 174,
+  "unidades": 149
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Battalion [BMP]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Battalion [BMP])",
+  "pontos": 7883,
+  "cabecalhoCurto": false,
+  "registros": 160,
+  "unidades": 137
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Battalion [BTR]) [UKR C6 05].btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Battalion [BTR]) [UKR C6 05]",
+  "pontos": 9718,
+  "cabecalhoCurto": false,
+  "registros": 194,
+  "unidades": 168
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Battalion [BTR]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Battalion [BTR])",
+  "pontos": 10081,
+  "cabecalhoCurto": false,
+  "registros": 201,
+  "unidades": 174
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Tank Battalion [BMP]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Tank Battalion [BMP])",
+  "pontos": 5273,
+  "cabecalhoCurto": false,
+  "registros": 107,
+  "unidades": 87
+ },
+ {
+  "arquivo": "UKR - Tactical Group (Tank Battalion [BTR]).btt",
+  "exercito": "UKR",
+  "nome": "UKR - Tactical Group (Tank Battalion [BTR])",
+  "pontos": 5303,
+  "cabecalhoCurto": false,
+  "registros": 107,
+  "unidades": 87
+ },
+ {
+  "arquivo": "UKR - Target Reference Point.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Target Reference Point",
+  "pontos": 301,
+  "cabecalhoCurto": false,
+  "registros": 6,
+  "unidades": 5
+ },
+ {
+  "arquivo": "UKR - Trench.btt",
+  "exercito": "UKR",
+  "nome": "UKR - Trench",
+  "pontos": 556,
+  "cabecalhoCurto": false,
+  "registros": 11,
+  "unidades": 10
+ },
+ {
+  "arquivo": "US - Apache Guardian (AH-64E [antitank]).btt",
+  "exercito": "US",
+  "nome": "US - Apache Guardian (AH-64E [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Apache Guardian (AH-64E).btt",
+  "exercito": "US",
+  "nome": "US - Apache Guardian (AH-64E)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Apache Longbow (AH-64D [antitank]).btt",
+  "exercito": "US",
+  "nome": "US - Apache Longbow (AH-64D [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Apache Longbow (AH-64D).btt",
+  "exercito": "US",
+  "nome": "US - Apache Longbow (AH-64D)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Battalion (Brigade Engineer [Stryker]).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Brigade Engineer [Stryker])",
+  "pontos": 2162,
+  "cabecalhoCurto": false,
+  "registros": 44,
+  "unidades": 38
+ },
+ {
+  "arquivo": "US - Battalion (Brigade Engineer).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Brigade Engineer)",
+  "pontos": 2152,
+  "cabecalhoCurto": false,
+  "registros": 44,
+  "unidades": 38
+ },
+ {
+  "arquivo": "US - Battalion (Combined Arms [Task Force]).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Combined Arms [Task Force])",
+  "pontos": 9815,
+  "cabecalhoCurto": false,
+  "registros": 199,
+  "unidades": 170
+ },
+ {
+  "arquivo": "US - Battalion (Combined Arms).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Combined Arms)",
+  "pontos": 7933,
+  "cabecalhoCurto": false,
+  "registros": 160,
+  "unidades": 136
+ },
+ {
+  "arquivo": "US - Battalion (Infantry [Task Force]).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Infantry [Task Force])",
+  "pontos": 10371,
+  "cabecalhoCurto": false,
+  "registros": 214,
+  "unidades": 185
+ },
+ {
+  "arquivo": "US - Battalion (Infantry).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Infantry)",
+  "pontos": 8638,
+  "cabecalhoCurto": false,
+  "registros": 178,
+  "unidades": 154
+ },
+ {
+  "arquivo": "US - Battalion (Stryker Infantry [Task Force]).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Stryker Infantry [Task Force])",
+  "pontos": 10760,
+  "cabecalhoCurto": false,
+  "registros": 215,
+  "unidades": 190
+ },
+ {
+  "arquivo": "US - Battalion (Stryker Infantry).btt",
+  "exercito": "US",
+  "nome": "US - Battalion (Stryker Infantry)",
+  "pontos": 8706,
+  "cabecalhoCurto": false,
+  "registros": 172,
+  "unidades": 153
+ },
+ {
+  "arquivo": "US - Battery (Howitzer [heavy]).btt",
+  "exercito": "US",
+  "nome": "US - Battery (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Battery (Howitzer [medium]).btt",
+  "exercito": "US",
+  "nome": "US - Battery (Howitzer [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Battery (Self-Propelled Howitzer).btt",
+  "exercito": "US",
+  "nome": "US - Battery (Self-Propelled Howitzer)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Brigade Engineer Battalion [armored].btt",
+  "exercito": "US",
+  "nome": "US - Brigade Engineer Battalion [armored]",
+  "pontos": 1846,
+  "cabecalhoCurto": false,
+  "registros": 38,
+  "unidades": 32
+ },
+ {
+  "arquivo": "US - Cavalry Squadron.btt",
+  "exercito": "US",
+  "nome": "US - Cavalry Squadron",
+  "pontos": 5354,
+  "cabecalhoCurto": false,
+  "registros": 113,
+  "unidades": 91
+ },
+ {
+  "arquivo": "US - Fighting Falcon (F-16CJ [antitank]).btt",
+  "exercito": "US",
+  "nome": "US - Fighting Falcon (F-16CJ [antitank])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Fighting Falcon (F-16CJ).btt",
+  "exercito": "US",
+  "nome": "US - Fighting Falcon (F-16CJ)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Gray Eagle (MQ-1C).btt",
+  "exercito": "US",
+  "nome": "US - Gray Eagle (MQ-1C)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - MANPADS Platoon.btt",
+  "exercito": "US",
+  "nome": "US - MANPADS Platoon",
+  "pontos": 1354,
+  "cabecalhoCurto": false,
+  "registros": 27,
+  "unidades": 24
+ },
+ {
+  "arquivo": "US - Platoon (Howitzer [heavy]).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (Howitzer [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Platoon (Howitzer [medium]).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (Howitzer [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Platoon (LRS).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (LRS)",
+  "pontos": 301,
+  "cabecalhoCurto": false,
+  "registros": 6,
+  "unidades": 5
+ },
+ {
+  "arquivo": "US - Platoon (Mortar [heavy]).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Platoon (Mortar [medium]).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Platoon (Self-Propelled Howitzer).btt",
+  "exercito": "US",
+  "nome": "US - Platoon (Self-Propelled Howitzer)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Raven (RQ-11B).btt",
+  "exercito": "US",
+  "nome": "US - Raven (RQ-11B)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Section (Air Controller).btt",
+  "exercito": "US",
+  "nome": "US - Section (Air Controller)",
+  "pontos": 150,
+  "cabecalhoCurto": false,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Section (COLT).btt",
+  "exercito": "US",
+  "nome": "US - Section (COLT)",
+  "pontos": 99,
+  "cabecalhoCurto": false,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Section (LNO Advisor).btt",
+  "exercito": "US",
+  "nome": "US - Section (LNO Advisor)",
+  "pontos": 258,
+  "cabecalhoCurto": false,
+  "registros": 5,
+  "unidades": 4
+ },
+ {
+  "arquivo": "US - Section (Mortar [heavy]).btt",
+  "exercito": "US",
+  "nome": "US - Section (Mortar [heavy])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Section (Mortar [light]).btt",
+  "exercito": "US",
+  "nome": "US - Section (Mortar [light])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Section (Mortar [medium]).btt",
+  "exercito": "US",
+  "nome": "US - Section (Mortar [medium])",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Section (Supply).btt",
+  "exercito": "US",
+  "nome": "US - Section (Supply)",
+  "pontos": 266,
+  "cabecalhoCurto": false,
+  "registros": 5,
+  "unidades": 4
+ },
+ {
+  "arquivo": "US - Shadow (RQ-7B).btt",
+  "exercito": "US",
+  "nome": "US - Shadow (RQ-7B)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 2,
+  "unidades": 1
+ },
+ {
+  "arquivo": "US - Squadron (Cavalry [Stryker]).btt",
+  "exercito": "US",
+  "nome": "US - Squadron (Cavalry [Stryker])",
+  "pontos": 5788,
+  "cabecalhoCurto": false,
+  "registros": 116,
+  "unidades": 103
+ },
+ {
+  "arquivo": "US - Squadron (Cavalry).btt",
+  "exercito": "US",
+  "nome": "US - Squadron (Cavalry)",
+  "pontos": 5901,
+  "cabecalhoCurto": false,
+  "registros": 121,
+  "unidades": 107
+ },
+ {
+  "arquivo": "US - Strike Eagle (F-15E).btt",
+  "exercito": "US",
+  "nome": "US - Strike Eagle (F-15E)",
+  "pontos": null,
+  "cabecalhoCurto": true,
+  "registros": 3,
+  "unidades": 2
+ },
+ {
+  "arquivo": "US - Troop (Weapons).btt",
+  "exercito": "US",
+  "nome": "US - Troop (Weapons)",
+  "pontos": 1412,
+  "cabecalhoCurto": false,
+  "registros": 29,
+  "unidades": 22
+ }
+]

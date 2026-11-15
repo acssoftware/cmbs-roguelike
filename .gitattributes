@@ -1,0 +1,14 @@
+# text files are stored with LF and checked out with LF; the two Windows scripts keep CRLF
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# the game's files and the images are bytes
+*.btt binary
+*.bts binary
+*.cam binary
+*.png binary
+*.jpg binary
+*.bmp binary
+*.ico binary
+*.exe binary

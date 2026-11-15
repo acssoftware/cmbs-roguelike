@@ -1,0 +1,3100 @@
+{
+ "nota": "Os arquivos [XX Cn NN] da biblioteca contra a base de mesmo nome (FORMATO 124): igual = so raridade/C2; composicao = outro equipamento ou outra TO&E; formacao-tipo = outra formacao (artilharia off-map). Refazer com `node tools/re/blocos.mjs variantes --gravar`.",
+ "gerado": "2026-09-23",
+ "variantes": [
+  {
+   "arquivo": "RU - Air Controller Section [RU C2 15].btt",
+   "base": "RU - Air Controller Section.btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x65",
+     "nome": "Air Controller Section"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x65",
+     "nome": "Air Controller Section"
+    }
+   },
+   "registros": {
+    "de": 3,
+    "para": 3
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "RU - Air Defense Missile Battery [RU C2 11].btt",
+   "base": "RU - Air Defense Missile Battery.btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x12",
+     "nome": "Air Defense Missile Battery"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x12",
+     "nome": "Air Defense Missile Battery"
+    }
+   },
+   "registros": {
+    "de": 10,
+    "para": 30
+   },
+   "diferencas": [
+    {
+     "tipo": "0x07,0xb3",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x0f,0x11",
+     "nome": "Igla-S Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x0d,0xce",
+     "nome": "Igla-S Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 12
+    },
+    {
+     "tipo": "0x05,0x64",
+     "nome": "Armored Personnel Carrier (MT-LBM 6MB)",
+     "lista": [
+      611
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x5f",
+     "nome": "Self-Propelled Antiaircraft (9K35 Strela 10M3)",
+     "lista": [],
+     "tam": 48,
+     "de": 6,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [BMP]) [RU C2 02].btt",
+   "base": "RU - Battalion (Motor Rifle [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x31",
+     "nome": "Battalion (Motor Rifle [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x31",
+     "nome": "Battalion (Motor Rifle [BMP])"
+    }
+   },
+   "registros": {
+    "de": 117,
+    "para": 117
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x40",
+     "nome": "Command Vehicle (BMP-3K)",
+     "lista": [
+      614
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      603,
+      604
+     ],
+     "tam": 29,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x00,0x29",
+     "nome": "Command Vehicle (BMP-2K)",
+     "lista": [
+      614
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [BMP]) [RU C6 02].btt",
+   "base": "RU - Battalion (Motor Rifle [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x31",
+     "nome": "Battalion (Motor Rifle [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x31",
+     "nome": "Battalion (Motor Rifle [BMP])"
+    }
+   },
+   "registros": {
+    "de": 117,
+    "para": 131
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x3c",
+     "nome": "Infantry Fighting Vehicle (BMP-3)",
+     "lista": [
+      615,
+      616,
+      747
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 33
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 2,
+     "para": 8
+    },
+    {
+     "tipo": "0x07,0xb5",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x3f",
+     "nome": "Infantry Fighting Vehicle (BMP-2M)",
+     "lista": [
+      615,
+      617
+     ],
+     "tam": 52,
+     "de": 33,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [BTR]) [RU C2 03].btt",
+   "base": "RU - Battalion (Motor Rifle [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x2f",
+     "nome": "Battalion (Motor Rifle [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x2f",
+     "nome": "Battalion (Motor Rifle [BTR])"
+    }
+   },
+   "registros": {
+    "de": 147,
+    "para": 154
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x42",
+     "nome": "Armored Personnel Carrier (BTR-80A)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 45
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 7,
+     "para": 10
+    },
+    {
+     "tipo": "0x00,0xe4",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x00,0xe3",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x07,0xb5",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x44",
+     "nome": "Armored Personnel Carrier (BTR-82A)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 45,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe5",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe6",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [BTR]) [RU C6 03].btt",
+   "base": "RU - Battalion (Motor Rifle [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x2f",
+     "nome": "Battalion (Motor Rifle [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x2f",
+     "nome": "Battalion (Motor Rifle [BTR])"
+    }
+   },
+   "registros": {
+    "de": 147,
+    "para": 140
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x43",
+     "nome": "Armored Personnel Carrier (BTR-82)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 45
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 7,
+     "para": 4
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 3,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xe3",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x44",
+     "nome": "Armored Personnel Carrier (BTR-82A)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 45,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe6",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xb5",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [MT-LB]) [RU C2 04].btt",
+   "base": "RU - Battalion (Motor Rifle [MT-LB]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x30",
+     "nome": "Battalion (Motor Rifle [MT-LB])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x30",
+     "nome": "Battalion (Motor Rifle [MT-LB])"
+    }
+   },
+   "registros": {
+    "de": 147,
+    "para": 147
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 1
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      603,
+      604
+     ],
+     "tam": 29,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x07,0xd0",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Motor Rifle [MT-LB]) [RU C6 04].btt",
+   "base": "RU - Battalion (Motor Rifle [MT-LB]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x30",
+     "nome": "Battalion (Motor Rifle [MT-LB])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x30",
+     "nome": "Battalion (Motor Rifle [MT-LB])"
+    }
+   },
+   "registros": {
+    "de": 147,
+    "para": 140
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 7,
+     "para": 4
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 3
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xb5",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battalion (Reconnaissance [new]) [RU C2 08].btt",
+   "base": "RU - Battalion (Reconnaissance [new]).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xb2",
+     "nome": "Battalion (Reconnaissance [new])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xb2",
+     "nome": "Battalion (Reconnaissance [new])"
+    }
+   },
+   "registros": {
+    "de": 43,
+    "para": 43
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "RU - Battalion (Reconnaissance [new]) [RU C6 08].btt",
+   "base": "RU - Battalion (Reconnaissance [new]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xb2",
+     "nome": "Battalion (Reconnaissance [new])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xb2",
+     "nome": "Battalion (Reconnaissance [new])"
+    }
+   },
+   "registros": {
+    "de": 43,
+    "para": 43
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x53",
+     "nome": "Multipurpose Vehicle (Tigr (MG))",
+     "lista": [
+      631
+     ],
+     "tam": 50,
+     "de": 3,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x52",
+     "nome": "Multipurpose Vehicle (Tigr (AGS-17))",
+     "lista": [
+      631
+     ],
+     "tam": 50,
+     "de": 4,
+     "para": 3
+    },
+    {
+     "tipo": "0x05,0x51",
+     "nome": "Multipurpose Vehicle (Tigr)",
+     "lista": [
+      631
+     ],
+     "tam": 50,
+     "de": 3,
+     "para": 1
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battery (Air Defense Artillery) [RU C2 12].btt",
+   "base": "RU - Battery (Air Defense Artillery).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x63",
+     "nome": "Battery (Air Defense Artillery)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x63",
+     "nome": "Battery (Air Defense Artillery)"
+    }
+   },
+   "registros": {
+    "de": 11,
+    "para": 11
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 16].btt",
+   "base": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xec",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xee",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x9b",
+     "nome": "6 x 152mm Howitzer (2S19M1)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x99",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 18].btt",
+   "base": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xec",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x11",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa3",
+     "nome": "6 x 152mm Howitzer (2S19M2)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x99",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 20].btt",
+   "base": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xec",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xf0",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x9d",
+     "nome": "6 x 152mm Howitzer (2S3M1)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x99",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 22].btt",
+   "base": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xec",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xf2",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x9f",
+     "nome": "6 x 152mm Howitzer (2S3M2)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x99",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Battery (Self-Propelled Howitzer [heavy]) [RU C3 24].btt",
+   "base": "RU - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xec",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xf4",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa1",
+     "nome": "4 x 203mm Gun (2S7M Mialka)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x99",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Engineer Sapper Company [RU C2 10].btt",
+   "base": "RU - Engineer Sapper Company.btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x3e",
+     "nome": "Engineer Sapper Company"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x3e",
+     "nome": "Engineer Sapper Company"
+    }
+   },
+   "registros": {
+    "de": 11,
+    "para": 11
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15].btt",
+   "base": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xeb",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xed",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x01",
+     "nome": "Infantry Carrier Vehicle (M1126 Stryker)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x98",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 17].btt",
+   "base": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xeb",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x10",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa2",
+     "nome": "3 x 152mm Howitzer (2S19M2)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x98",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 19].btt",
+   "base": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xeb",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xef",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x9c",
+     "nome": "3 x 152mm Howitzer (2S3M1)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x98",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 21].btt",
+   "base": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xeb",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xf1",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x9e",
+     "nome": "3 x 152mm Howitzer (2S3M2)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x98",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 23].btt",
+   "base": "RU - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0xeb",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xf3",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa0",
+     "nome": "2 x 203mm Gun (2S7M Mialka)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x98",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Section (Forward Observer) [RU C2 14].btt",
+   "base": "RU - Section (Forward Observer).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x64",
+     "nome": "Section (Forward Observer)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x64",
+     "nome": "Section (Forward Observer)"
+    }
+   },
+   "registros": {
+    "de": 3,
+    "para": 3
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "RU - Section (Supply) [RU C2 13].btt",
+   "base": "RU - Section (Supply).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x5f",
+     "nome": "Section (Supply)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x5f",
+     "nome": "Section (Supply)"
+    }
+   },
+   "registros": {
+    "de": 4,
+    "para": 4
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x52",
+     "nome": "Multipurpose Vehicle (Tigr (AGS-17))",
+     "lista": [
+      620
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [
+      620
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x53",
+     "nome": "Multipurpose Vehicle (Tigr (MG))",
+     "lista": [
+      620
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x51",
+     "nome": "Multipurpose Vehicle (Tigr)",
+     "lista": [
+      620
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Tactical Group (Battalion [BMP]) [RU C6 05].btt",
+   "base": "RU - Tactical Group (Battalion [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x16",
+     "nome": "Tactical Group (Battalion [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x16",
+     "nome": "Tactical Group (Battalion [BMP])"
+    }
+   },
+   "registros": {
+    "de": 166,
+    "para": 164
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x29",
+     "nome": "Command Vehicle (BMP-2K)",
+     "lista": [
+      614
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x51",
+     "nome": "Multipurpose Vehicle (Tigr)",
+     "lista": [
+      612
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x92",
+     "nome": "Artillery Observation Vehicle (PRP-4M)",
+     "lista": [
+      632
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x34",
+     "nome": "Main Battle Tank (T-72B3)",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 9
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 3,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x28",
+     "nome": "Infantry Fighting Vehicle (BMP-2)",
+     "lista": [
+      615,
+      617
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 36
+    },
+    {
+     "tipo": "0x05,0x90",
+     "nome": "Main Battle Tank (T-72B3 (APS))",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 8,
+     "para": 6
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x7e",
+     "nome": "Mortar Carrier (2S24)",
+     "lista": [],
+     "tam": 48,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x05,0x40",
+     "nome": "Command Vehicle (BMP-3K)",
+     "lista": [
+      614
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x30",
+     "nome": "Multipurpose Vehicle (UAZ-469)",
+     "lista": [
+      612
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x60",
+     "nome": "Artillery Observation Vehicle (MT-LBU 1V14)",
+     "lista": [
+      632
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x37",
+     "nome": "Main Battle Tank (T-90AM)",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 8,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x3f",
+     "nome": "Infantry Fighting Vehicle (BMP-2M)",
+     "lista": [
+      615,
+      617
+     ],
+     "tam": 52,
+     "de": 36,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x91",
+     "nome": "Main Battle Tank (T-90AM (APS))",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Tactical Group (Battalion [BTR]) [RU C6 06].btt",
+   "base": "RU - Tactical Group (Battalion [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x14",
+     "nome": "Tactical Group (Battalion [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x14",
+     "nome": "Tactical Group (Battalion [BTR])"
+    }
+   },
+   "registros": {
+    "de": 179,
+    "para": 188
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x30",
+     "nome": "Multipurpose Vehicle (UAZ-469)",
+     "lista": [
+      612
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x45",
+     "nome": "Artillery Observation Vehicle (BTR-80 1V152)",
+     "lista": [
+      632
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x36",
+     "nome": "Main Battle Tank (T-90A)",
+     "lista": [
+      624,
+      625,
+      744
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 10
+    },
+    {
+     "tipo": "0x05,0x42",
+     "nome": "Armored Personnel Carrier (BTR-80A)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 48
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 5,
+     "para": 10
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xe6",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x07,0xb5",
+     "nome": "Headquarters Team",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x07,0xd0",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x00,0x94",
+     "nome": "3 x 122mm Howitzer (2S1)",
+     "lista": [
+      718
+     ],
+     "tam": 27,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x51",
+     "nome": "Multipurpose Vehicle (Tigr)",
+     "lista": [
+      612
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x92",
+     "nome": "Artillery Observation Vehicle (PRP-4M)",
+     "lista": [
+      632
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x34",
+     "nome": "Main Battle Tank (T-72B3)",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 10,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x43",
+     "nome": "Armored Personnel Carrier (BTR-82)",
+     "lista": [
+      609
+     ],
+     "tam": 50,
+     "de": 48,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe3",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x7e",
+     "nome": "Mortar Carrier (2S24)",
+     "lista": [],
+     "tam": 48,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xa2",
+     "nome": "3 x 152mm Howitzer (2S19M2)",
+     "lista": [
+      718
+     ],
+     "tam": 27,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Tactical Group (Battalion [MT-LB]) [RU C6 07].btt",
+   "base": "RU - Tactical Group (Battalion [MT-LB]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x15",
+     "nome": "Tactical Group (Battalion [MT-LB])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x15",
+     "nome": "Tactical Group (Battalion [MT-LB])"
+    }
+   },
+   "registros": {
+    "de": 181,
+    "para": 179
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x34",
+     "nome": "Main Battle Tank (T-72B3)",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 8
+    },
+    {
+     "tipo": "0x05,0x61",
+     "nome": "Armored Personnel Carrier (MT-LBM)",
+     "lista": [
+      611
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 48
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 7,
+     "para": 5
+    },
+    {
+     "tipo": "0x00,0xe4",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x00,0xe2",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 2,
+     "para": 1
+    },
+    {
+     "tipo": "0x04,0x3e",
+     "nome": "Squad (Grenade Launcher)",
+     "lista": [
+      714
+     ],
+     "tam": 48,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x00,0xe3",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x05,0x90",
+     "nome": "Main Battle Tank (T-72B3 (APS))",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x7e",
+     "nome": "Mortar Carrier (2S24)",
+     "lista": [],
+     "tam": 48,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      657
+     ],
+     "tam": 29,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x0f,0x10",
+     "nome": "Team (Igla)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x0d,0xcd",
+     "nome": "Igla Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x00,0x9c",
+     "nome": "3 x 152mm Howitzer (2S3M1)",
+     "lista": [
+      718
+     ],
+     "tam": 27,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x37",
+     "nome": "Main Battle Tank (T-90AM)",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 7,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x5d",
+     "nome": "Armored Personnel Carrier (MT-LBM 6MA)",
+     "lista": [
+      611
+     ],
+     "tam": 50,
+     "de": 48,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe5",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0xe6",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x91",
+     "nome": "Main Battle Tank (T-90AM (APS))",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x3a",
+     "nome": "Infantry Fighting Vehicle (BMP-3M)",
+     "lista": [
+      603,
+      656
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x07,0xcf",
+     "nome": "Medium Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x0f,0x11",
+     "nome": "Igla-S Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x0d,0xce",
+     "nome": "Igla-S Team",
+     "lista": [],
+     "tam": 46,
+     "de": 6,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x9e",
+     "nome": "3 x 152mm Howitzer (2S3M2)",
+     "lista": [
+      718
+     ],
+     "tam": 27,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "RU - Tank Battalion 41 [RU C6 01].btt",
+   "base": "RU - Tank Battalion 41.btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x0b,0x34",
+     "nome": "Tank Battalion 41"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x0b,0x34",
+     "nome": "Tank Battalion 41"
+    }
+   },
+   "registros": {
+    "de": 58,
+    "para": 58
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x34",
+     "nome": "Main Battle Tank (T-72B3)",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 37
+    },
+    {
+     "tipo": "0x05,0x90",
+     "nome": "Main Battle Tank (T-72B3 (APS))",
+     "lista": [
+      624,
+      627,
+      746
+     ],
+     "tam": 54,
+     "de": 0,
+     "para": 4
+    },
+    {
+     "tipo": "0x05,0x37",
+     "nome": "Main Battle Tank (T-90AM)",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 37,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x91",
+     "nome": "Main Battle Tank (T-90AM (APS))",
+     "lista": [
+      624,
+      625,
+      745
+     ],
+     "tam": 54,
+     "de": 4,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Corps Reconnaissance) [UKR C6 07].btt",
+   "base": "UKR - Battalion (Corps Reconnaissance).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x4b",
+     "nome": "Battalion (Corps Reconnaissance)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x4b",
+     "nome": "Battalion (Corps Reconnaissance)"
+    }
+   },
+   "registros": {
+    "de": 90,
+    "para": 90
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      666,
+      667
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 18
+    },
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      666,
+      668
+     ],
+     "tam": 52,
+     "de": 18,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Mech Infantry [BMP]) [UKR C2 02].btt",
+   "base": "UKR - Battalion (Mech Infantry [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x47",
+     "nome": "Battalion (Mech Infantry [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x47",
+     "nome": "Battalion (Mech Infantry [BMP])"
+    }
+   },
+   "registros": {
+    "de": 125,
+    "para": 125
+   },
+   "diferencas": [
+    {
+     "tipo": "0x04,0x17",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x16",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Mech Infantry [BMP]) [UKR C6 02].btt",
+   "base": "UKR - Battalion (Mech Infantry [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x47",
+     "nome": "Battalion (Mech Infantry [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x47",
+     "nome": "Battalion (Mech Infantry [BMP])"
+    }
+   },
+   "registros": {
+    "de": 125,
+    "para": 118
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      671,
+      673
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x0d,0xf2",
+     "nome": "Team (Headquarters)",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x0e,0x0e",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 3,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Mech Infantry [BTR]) [UKR C2 03].btt",
+   "base": "UKR - Battalion (Mech Infantry [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x43",
+     "nome": "Battalion (Mech Infantry [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x43",
+     "nome": "Battalion (Mech Infantry [BTR])"
+    }
+   },
+   "registros": {
+    "de": 152,
+    "para": 152
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x95",
+     "nome": "Command Vehicle (BTR-70K)",
+     "lista": [
+      665
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      666,
+      668
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 50
+    },
+    {
+     "tipo": "0x04,0x17",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      665
+     ],
+     "tam": 50,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      666,
+      667
+     ],
+     "tam": 52,
+     "de": 50,
+     "para": 0
+    },
+    {
+     "tipo": "0x04,0x16",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Mech Infantry [BTR]) [UKR C6 03].btt",
+   "base": "UKR - Battalion (Mech Infantry [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x43",
+     "nome": "Battalion (Mech Infantry [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x43",
+     "nome": "Battalion (Mech Infantry [BTR])"
+    }
+   },
+   "registros": {
+    "de": 152,
+    "para": 166
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x95",
+     "nome": "Command Vehicle (BTR-70K)",
+     "lista": [
+      665
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x04,0x17",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x0d,0xf2",
+     "nome": "Team (Headquarters)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x0e,0x0e",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      665
+     ],
+     "tam": 50,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x04,0x16",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      671,
+      673
+     ],
+     "tam": 29,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battalion (Mountain Infantry) [UKR C6 06].btt",
+   "base": "UKR - Battalion (Mountain Infantry).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x7a",
+     "nome": "Battalion (Mountain Infantry)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x7a",
+     "nome": "Battalion (Mountain Infantry)"
+    }
+   },
+   "registros": {
+    "de": 158,
+    "para": 158
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "UKR - Battalion (Tank 40) [UKR C6 01].btt",
+   "base": "UKR - Battalion (Tank 40).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x5e",
+     "nome": "Battalion (Tank 40)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x5e",
+     "nome": "Battalion (Tank 40)"
+    }
+   },
+   "registros": {
+    "de": 53,
+    "para": 53
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x32",
+     "nome": "Main Battle Tank (T-64BV)",
+     "lista": [
+      685,
+      686
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 40
+    },
+    {
+     "tipo": "0x05,0x9a",
+     "nome": "Main Battle Tank (BM Oplot)",
+     "lista": [
+      685,
+      687
+     ],
+     "tam": 52,
+     "de": 38,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x35",
+     "nome": "Main Battle Tank (BM Oplot (APS))",
+     "lista": [
+      685,
+      687
+     ],
+     "tam": 52,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battery (Air Defense) [UKR C2 08].btt",
+   "base": "UKR - Battery (Air Defense).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x74",
+     "nome": "Battery (Air Defense)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x74",
+     "nome": "Battery (Air Defense)"
+    }
+   },
+   "registros": {
+    "de": 11,
+    "para": 11
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "UKR - Battery (MANPADS) [UKR C2 09].btt",
+   "base": "UKR - Battery (MANPADS).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x76",
+     "nome": "Battery (MANPADS)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x76",
+     "nome": "Battery (MANPADS)"
+    }
+   },
+   "registros": {
+    "de": 45,
+    "para": 45
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      689
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x61",
+     "nome": "Armored Personnel Carrier (MT-LBM)",
+     "lista": [
+      689
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 14].btt",
+   "base": "UKR - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x01",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xff",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa9",
+     "nome": "6 x 152mm Howitzer (2S3M1)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xa7",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Battery (Self-Propelled Howitzer [heavy]) [UKR C3 16].btt",
+   "base": "UKR - Battery (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x01",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xfd",
+     "nome": "Battery (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa1",
+     "nome": "4 x 203mm Gun (2S7M Mialka)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xa7",
+     "nome": "6 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Company (Brigade Reconnaissance) [UKR C2 07].btt",
+   "base": "UKR - Company (Brigade Reconnaissance).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x53",
+     "nome": "Company (Brigade Reconnaissance)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x53",
+     "nome": "Company (Brigade Reconnaissance)"
+    }
+   },
+   "registros": {
+    "de": 26,
+    "para": 26
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      666,
+      668
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 4
+    },
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      666,
+      667
+     ],
+     "tam": 52,
+     "de": 4,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Company (Brigade Reconnaissance) [UKR C6 08].btt",
+   "base": "UKR - Company (Brigade Reconnaissance).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x53",
+     "nome": "Company (Brigade Reconnaissance)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x53",
+     "nome": "Company (Brigade Reconnaissance)"
+    }
+   },
+   "registros": {
+    "de": 26,
+    "para": 26
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "UKR - Company (Engineer Sapper) [UKR C2 06].btt",
+   "base": "UKR - Company (Engineer Sapper).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x51",
+     "nome": "Company (Engineer Sapper)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x51",
+     "nome": "Company (Engineer Sapper)"
+    }
+   },
+   "registros": {
+    "de": 15,
+    "para": 15
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      666,
+      668
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      666,
+      667
+     ],
+     "tam": 52,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 13].btt",
+   "base": "UKR - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x02",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x00",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa8",
+     "nome": "3 x 152mm Howitzer (2S3M1)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xa6",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Platoon (Self-Propelled Howitzer [heavy]) [UKR C3 15].btt",
+   "base": "UKR - Platoon (Self-Propelled Howitzer [heavy]).btt",
+   "classe": "formacao-tipo",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x02",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0xfe",
+     "nome": "Platoon (Self-Propelled Howitzer [heavy])"
+    }
+   },
+   "registros": {
+    "de": 2,
+    "para": 2
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0xa0",
+     "nome": "2 x 203mm Gun (2S7M Mialka)",
+     "lista": [],
+     "tam": 25,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x00,0xa6",
+     "nome": "3 x 152mm Howitzer (2S19)",
+     "lista": [],
+     "tam": 25,
+     "de": 1,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Section (Air Controller) [UKR C2 12].btt",
+   "base": "UKR - Section (Air Controller).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x5c",
+     "nome": "Section (Air Controller)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x5c",
+     "nome": "Section (Air Controller)"
+    }
+   },
+   "registros": {
+    "de": 3,
+    "para": 3
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "UKR - Section (Forward Observer) [UKR C2 11].btt",
+   "base": "UKR - Section (Forward Observer).btt",
+   "classe": "igual",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x5b",
+     "nome": "Section (Forward Observer)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x5b",
+     "nome": "Section (Forward Observer)"
+    }
+   },
+   "registros": {
+    "de": 3,
+    "para": 3
+   },
+   "diferencas": []
+  },
+  {
+   "arquivo": "UKR - Section (Supply) [UKR C2 10].btt",
+   "base": "UKR - Section (Supply).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x19,0x5a",
+     "nome": "Section (Supply)"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x19,0x5a",
+     "nome": "Section (Supply)"
+    }
+   },
+   "registros": {
+    "de": 4,
+    "para": 4
+   },
+   "diferencas": [
+    {
+     "tipo": "0x00,0x30",
+     "nome": "Multipurpose Vehicle (UAZ-469)",
+     "lista": [
+      683
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [
+      683
+     ],
+     "tam": 50,
+     "de": 2,
+     "para": 1
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Tactical Group (Battalion [BMP]) [UKR C6 04].btt",
+   "base": "UKR - Tactical Group (Battalion [BMP]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x1b",
+     "nome": "Tactical Group (Battalion [BMP])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x1b",
+     "nome": "Tactical Group (Battalion [BMP])"
+    }
+   },
+   "registros": {
+    "de": 160,
+    "para": 174
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x9a",
+     "nome": "Main Battle Tank (BM Oplot)",
+     "lista": [
+      685,
+      687
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 12
+    },
+    {
+     "tipo": "0x04,0x16",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x35",
+     "nome": "Main Battle Tank (BM Oplot (APS))",
+     "lista": [
+      685,
+      687
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x0d,0xf2",
+     "nome": "Team (Headquarters)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 2
+    },
+    {
+     "tipo": "0x0e,0x0e",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 2,
+     "para": 8
+    },
+    {
+     "tipo": "0x05,0x32",
+     "nome": "Main Battle Tank (T-64BV)",
+     "lista": [
+      685,
+      686
+     ],
+     "tam": 52,
+     "de": 13,
+     "para": 0
+    },
+    {
+     "tipo": "0x04,0x17",
+     "nome": "Squad (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 2,
+     "para": 0
+    },
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      671,
+      673
+     ],
+     "tam": 29,
+     "de": 2,
+     "para": 0
+    }
+   ]
+  },
+  {
+   "arquivo": "UKR - Tactical Group (Battalion [BTR]) [UKR C6 05].btt",
+   "base": "UKR - Tactical Group (Battalion [BTR]).btt",
+   "classe": "composicao",
+   "topo": {
+    "de": {
+     "id": 1,
+     "tipo": "0x1a,0x1d",
+     "nome": "Tactical Group (Battalion [BTR])"
+    },
+    "para": {
+     "id": 1,
+     "tipo": "0x1a,0x1d",
+     "nome": "Tactical Group (Battalion [BTR])"
+    }
+   },
+   "registros": {
+    "de": 201,
+    "para": 194
+   },
+   "diferencas": [
+    {
+     "tipo": "0x05,0x7d",
+     "nome": "Artillery Observation Vehicle (MT-LBU 1V14)",
+     "lista": [
+      684
+     ],
+     "tam": 50,
+     "de": 0,
+     "para": 1
+    },
+    {
+     "tipo": "0x05,0x9a",
+     "nome": "Main Battle Tank (BM Oplot)",
+     "lista": [
+      685,
+      687
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 13
+    },
+    {
+     "tipo": "0x00,0x71",
+     "nome": "Armored Personnel Carrier (BTR-70)",
+     "lista": [
+      666,
+      667
+     ],
+     "tam": 52,
+     "de": 0,
+     "para": 50
+    },
+    {
+     "tipo": "0x0e,0x05",
+     "nome": "Team (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 3
+    },
+    {
+     "tipo": "0x0e,0x08",
+     "nome": "ATGM Team",
+     "lista": [],
+     "tam": 46,
+     "de": 0,
+     "para": 6
+    },
+    {
+     "tipo": "0x00,0x1b",
+     "nome": "3 x 120mm Mortar (2B11)",
+     "lista": [
+      671,
+      673
+     ],
+     "tam": 29,
+     "de": 1,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x57",
+     "nome": "Truck (Ural-4320)",
+     "lista": [],
+     "tam": 48,
+     "de": 5,
+     "para": 2
+    },
+    {
+     "tipo": "0x05,0x92",
+     "nome": "Artillery Observation Vehicle (PRP-4M)",
+     "lista": [
+      684
+     ],
+     "tam": 50,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x32",
+     "nome": "Main Battle Tank (T-64BV)",
+     "lista": [
+      685,
+      686
+     ],
+     "tam": 52,
+     "de": 13,
+     "para": 0
+    },
+    {
+     "tipo": "0x05,0x46",
+     "nome": "Armored Personnel Carrier (BTR-4E)",
+     "lista": [
+      666,
+      668
+     ],
+     "tam": 52,
+     "de": 50,
+     "para": 0
+    },
+    {
+     "tipo": "0x0e,0x09",
+     "nome": "Team (ATGM)",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    },
+    {
+     "tipo": "0x0e,0x0c",
+     "nome": "ATGM Team (Corsar)",
+     "lista": [],
+     "tam": 46,
+     "de": 6,
+     "para": 0
+    },
+    {
+     "tipo": "0x0d,0xf2",
+     "nome": "Team (Headquarters)",
+     "lista": [],
+     "tam": 46,
+     "de": 1,
+     "para": 0
+    },
+    {
+     "tipo": "0x0e,0x0e",
+     "nome": "Heavy Mortar Team",
+     "lista": [],
+     "tam": 46,
+     "de": 3,
+     "para": 0
+    }
+   ]
+  }
+ ]
+}

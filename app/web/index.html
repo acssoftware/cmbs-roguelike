@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMBS Roguelike</title>
+<!-- Inline so the browser stops asking for /favicon.ico and logging a 404 on every load. -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2310130e'/><path d='M3 12h10M8 3v9M4 7h8' stroke='%23d9b444' stroke-width='1.6' fill='none'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 id="title-home" title="Home">CMBS <span>Roguelike</span></h1>
+  <nav>
+    <span class="textsize">
+      <button id="font-down" class="linky">A−</button>
+      <button id="font-up" class="linky">A+</button>
+    </span>
+    <button data-go="start" class="linky">Home</button>
+    <button data-go="home" class="linky">Campaigns</button>
+    <button data-go="setup" class="linky">Setup</button>
+    <button id="log-toggle" class="linky">Log</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- Shown on every screen: the page and the server can drift apart, because `web/` is re-read on
+     every request and `src/*.mjs` only when the process starts. -->
+<div id="stale" class="banner bad" hidden></div>
+
+<!-- A LINHA DE NAVEGACAO (E177): "← Back" volta a tela anterior (o historico do navegador); as migalhas dizem onde
+     se esta e levam a qualquer ponto acima. Escondida na home, no job e no encerramento. -->
+<nav id="navbar" class="crumbs navbar" hidden></nav>
+
+<!-- --------------------------------------------------------- start (E176) -->
+<!-- The first screen: a menu on the left over a black field (autor, 11/10: the background image comes later). -->
+<section id="start" hidden>
+  <nav class="start-menu">
+    <div class="start-title">CMBS <span>Roguelike</span></div>
+    <div class="start-version" id="start-version"></div>
+    <button id="go-campaign" class="start-item">Campaign</button>
+    <button id="go-rules" class="start-item">Rules</button>
+    <button id="go-about" class="start-item">About</button>
+    <button id="go-youtube" class="start-item" title="https://www.youtube.com/@andreartsstudio">YouTube</button>
+    <button id="go-quit" class="start-item">Quit</button>
+  </nav>
+</section>
+
+<!-- ----------------------------------------------------------- rules (25/10) -->
+<section id="rules" hidden>
+  <div class="about rules" id="rules-body"></div>
+</section>
+
+<!-- ----------------------------------------------------------- about (11/10) -->
+<section id="about" hidden>
+  <div class="about">
+    <h2>About</h2>
+    <p>This is a project by a decade-long, passionate member of the Combat Mission community, one who keeps craving more
+      content around this amazing work of art that is the Combat Mission series.</p>
+    <p>Check out any updates on the app on <a href="https://www.youtube.com/@andreartsstudio" target="_blank" rel="noopener">my YouTube channel</a>.</p>
+    <p>I hope this mod makes you enjoy Combat Mission even more.</p>
+    <p class="hint" id="about-version"></p>
+    <h3>Why Node.js?</h3>
+    <p>Before there was an app, there were months of reverse engineering of the game's files: how a battle, a campaign and a
+      save are packed, compressed and read back. That work was written in JavaScript, and every piece of it was proven
+      inside the game, often after long sessions of trial and error. Node.js runs that same code unchanged, so the app is
+      built directly on what was already proven to work, instead of rewriting it and testing it all over again in the game.</p>
+    <p>It also keeps things simple for you:</p>
+    <ul class="about-links">
+      <li><b>Nothing to install.</b> The app carries its own copy of Node.js (about 30 MB) that runs from its folder, with no
+        installer and no administrator rights.</li>
+      <li><b>No extra packages.</b> The app's server uses only what comes with Node.js: nothing is downloaded from the internet.</li>
+      <li><b>Your browser is the window.</b> The screens are plain web pages served by the app on your own computer
+        (only to it, never to the network). The app opens them in a window of its own through Microsoft Edge, which every
+        Windows 10/11 has, or in your default browser.</li>
+    </ul>
+    <p class="hint">The other options weighed less well. An old-style Windows HTML application (HTA) runs on the retired
+      Internet Explorer engine, too slow to open a 16 MB save, and would have meant rewriting everything. Electron would
+      wrap the same Node.js in about 200 MB more. C# or Python would have meant a full rewrite, or an installation.</p>
+    <h3>The people behind Combat Mission</h3>
+    <p>None of this would exist without the game. If you enjoy what this mod does with it, go and support the people who
+      make it, and meet the people who play it:</p>
+    <ul class="about-links">
+      <li><a href="https://www.battlefront.com/" target="_blank" rel="noopener">Battlefront.com</a> — the developer of
+        Combat Mission: every title and module of the series, the news and the store.</li>
+      <li><a href="https://community.battlefront.com/" target="_blank" rel="noopener">The Battlefront community forums</a>
+        — where players and developers have met for decades: scenarios, campaigns, mods, after-action reports and help.</li>
+      <li><a href="https://store.steampowered.com/app/1502380/" target="_blank" rel="noopener">Combat Mission: Black Sea on
+        Steam</a>, and <a href="https://store.steampowered.com/search/?term=Combat%20Mission" target="_blank" rel="noopener">the
+        whole Combat Mission series on Steam</a> — a review there helps the series more than you would think.</li>
+    </ul>
+    <p class="hint">This is a fan-made mod. It is not made, endorsed or supported by Battlefront, Slitherine or Matrix
+      Games. Combat Mission is a trademark of its owners.</p>
+  </div>
+</section>
+
+<!-- -------------------------------------------------------- closed (E176) -->
+<section id="closed" hidden>
+  <h2>The app is closed</h2>
+  <p class="hint">The server has stopped. You can close this window; start the app again with <code>CMBS Roguelike.exe</code>
+    (or <code>app\Start Campaign.cmd</code>).</p>
+</section>
+
+<!-- ------------------------------------------------------------------ home -->
+<section id="home" hidden>
+  <div id="env-warning" class="banner bad" hidden></div>
+  <div id="hall-of-fame" hidden></div>
+  <h2>Campaigns</h2>
+  <div id="campaign-list" class="cards"></div>
+  <button id="new-campaign" class="primary">New campaign</button>
+</section>
+
+<!-- ----------------------------------------------------------------- setup -->
+<section id="setup" hidden>
+  <h2>Setup</h2>
+  <p class="hint">The app writes the campaign file into the game's <code>Campaigns</code> folder and reads
+     the transition save from <code>Saved Games</code>. Nothing else in the game folder is touched, and
+     no file is ever overwritten. Undoing a battle deletes the saves the app wrote for it — never one the
+     game wrote.</p>
+  <div id="find-game" class="banner bad" hidden></div>
+  <label>Game Files folder
+    <input id="game-files" type="text" spellcheck="false" placeholder="…/Combat Mission Black Sea/Game Files">
+  </label>
+  <p class="hint" id="game-files-how"></p>
+  <label class="row"><input id="use-game-lib" type="checkbox"> Use the formation library beside the game folder instead of the one in the repository (only when editing the library itself)</label>
+  <button id="save-settings">Save</button>
+  <button id="detect-game">Search for it</button>
+  <div id="settings-note" class="banner" hidden></div>
+  <h3>Your campaigns</h3>
+  <p class="hint">Your settings and every campaign the app makes are kept in this folder.</p>
+  <div class="file" id="data-dir"></div>
+  <p class="hint" id="data-dir-how"></p>
+  <button id="open-data-dir">Open folder</button>
+  <h3>System check</h3>
+  <p class="hint" id="system-summary"></p>
+  <button id="run-system-check">Run the system check</button>
+  <h3>Environment</h3>
+  <table id="env-table" class="grid"></table>
+</section>
+
+<!-- ----------------------------------------------------------------- system check -->
+<!-- the first run opens here (29/10): what this computer has for the app, and how to fix what it lacks -->
+<section id="system" hidden>
+  <h2>System check</h2>
+  <p class="hint">Before the first campaign, the app makes sure this computer has what it needs: the game folder,
+     permission to write battles into it, the game version, and the app's own files. Nothing is installed or changed,
+     except the game's <code>Campaigns</code> and <code>Saved Games</code> folders, created if they are missing.</p>
+  <div id="system-verdict" class="banner" hidden></div>
+  <div id="system-list" class="sys-list"></div>
+  <div class="actions">
+    <button id="system-continue" class="primary">Continue</button>
+    <button id="system-again">Check again</button>
+    <button id="system-setup" hidden>Open Setup</button>
+  </div>
+</section>
+
+<!-- ------------------------------------------------- new campaign: the parameters -->
+<!-- Everything that is decided ONCE and holds for the whole campaign. It lives on a screen of its
+     own because that is what it is: changing any of it halfway would make the battles behind and
+     the battles ahead two different games. The force comes later: the campaign is born without one, and it is
+     raised in the Quartermaster once battle 1 is chosen on the battle path (autor, 18/10). -->
+<section id="params" hidden>
+  <h2>New campaign</h2>
+  <p class="hint">These hold for the whole campaign. None of them can be changed once it is raised —
+     the battles behind and the battles ahead have to be the same game.</p>
+
+  <!-- O QUE CADA PARAMETRO FAZ mora atras de um "?" e nao embaixo do titulo. A tela tinha quatro
+       paragrafos de explicacao para quatro escolhas: quem ja sabe rolava por cima deles toda vez, e
+       quem nao sabe lia tudo antes de decidir qualquer coisa. O balao aparece no hover E no foco de
+       teclado, entao a explicacao continua alcancavel sem mouse. -->
+  <label>Name
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">The name of the
+      campaign, and what the app calls its files: a campaign named <em>Donbas Run</em> writes
+      <code>CMBSDC DONBAS-RUN.cam</code> into the game's Campaigns folder. Sixty characters, and it
+      cannot be changed later.</span></span>
+    <input id="new-name" type="text" maxlength="60" placeholder="Donbas Run">
+  </label>
+
+  <h3>Difficulty
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">Sets every parameter below in one
+      go. Change any of them and the campaign becomes Custom; put them back and it is the preset again.</span></span>
+  </h3>
+  <div id="param-difficulty" class="choices"></div>
+
+  <h3>Your library
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">The armies you may
+      buy from, now and between battles. Pick more than one and your force can mix them — the battle
+      file declares one nationality, and the app writes whichever army most of your force belongs
+      to. Nothing stops you putting the enemy's army in here and fighting your own: the game has two
+      sides, not three allegiances.</span></span>
+  </h3>
+  <div id="param-armies" class="choices"></div>
+
+  <h3>The enemy
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">Which side holds
+      the ground you attack. You are the attacker in every battle. Where the side has two armies the
+      defending one is drawn fresh each battle, so a campaign against the American side really does
+      put Ukrainians across the line some of the time. The enemy is generated from scratch for every
+      battle and carries nothing forward — only your force keeps its dead.</span></span>
+  </h3>
+  <div id="param-enemy" class="choices"></div>
+  <p class="hint" id="enemy-note"></p>
+
+  <h3>Force ratio
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">Your force against
+      the enemy's in an ordinary battle. You always start with the same credits and every difficulty pays
+      the same; the enemy's budget is your ladder divided by this ratio. A Meeting Engagement is 1 : 1 at
+      every level. A player who loses nothing stays at this ratio the whole campaign; losses are covered
+      only in part. Lower is harder.</span></span>
+  </h3>
+  <select id="param-ratio"></select>
+
+  <h3>Rescued soldiers
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">A man who is
+      wounded rather than killed was carried off the field. This is his chance of being back with his
+      squad by the next battle at no cost; the rest you pay for at the quartermaster like any other
+      replacement. The roll is seeded — campaign, battle and the man's place in the roster — so
+      reading the same result twice gives the same men back, and the screen can promise before you
+      pay exactly what the writing will do.</span></span>
+  </h3>
+  <select id="param-rescue"></select>
+
+  <h3>Operational points
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">The campaign is a
+      branching path of battles, and what waits in each one is hidden: the map, and the enemy. Operational
+      points buy a look before you choose — the map of a battle, or the whole enemy order of battle in the
+      Intel (the Rules page has the prices). Some battles pay points back when you do not lose them. This is how many you start
+      with.</span></span>
+  </h3>
+  <select id="param-ops"></select>
+
+  <h3>Defeats
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">How many battles you can lose before
+      the campaign is lost. The next defeat after the last one you can afford ends it. In Ironman, the first defeat ends
+      the campaign; unlimited, no defeat does — the campaign always runs to its last battle.</span></span>
+  </h3>
+  <select id="param-defeats"></select>
+
+  <h3>Special forces
+    <span class="ajuda" tabindex="0" aria-label="what this is">?<span class="balao">What a special forces formation costs
+      in this campaign. A campaign fields at most one, and every unit of it is a veteran whatever the price. Free matches no difficulty preset: the campaign becomes Custom and its score multiplier drops.</span></span>
+  </h3>
+  <select id="param-sf"></select>
+
+  <p>
+    <button id="params-next" class="primary">Create campaign</button>
+    <button id="params-cancel">Cancel</button>
+  </p>
+  <div id="params-error" class="banner bad" hidden></div>
+</section>
+
+<!-- --------------------------------------------------------- new campaign: the force -->
+<!-- -------------------------------------------------------------- campaign -->
+<section id="campaign" hidden>
+  <div id="camp-head"></div>
+  <div id="camp-body"></div>
+</section>
+
+<!-- ------------------------------------------------------------------- job -->
+<section id="job" hidden>
+  <h2 id="job-title">Working…</h2>
+  <div class="spinner"></div>
+  <p id="job-elapsed" class="hint"></p>
+  <ol id="job-steps" class="steps checklist"></ol>
+  <div id="job-error" class="banner bad" hidden></div>
+  <p id="job-back" hidden><button class="linky" id="job-back-btn">← Back</button></p>
+</section>
+
+<aside id="mods" hidden></aside>
+
+</main>
+
+<aside id="log-drawer" hidden>
+  <div class="log-head">
+    <strong>Log</strong>
+    <span id="log-slug" class="hint"></span>
+    <button id="log-refresh" class="linky">Refresh</button>
+    <button id="log-download" class="linky">Save diagnostics</button>
+    <button id="log-close" class="linky">Close</button>
+  </div>
+  <pre id="log-body"></pre>
+</aside>
+
+<script src="canvas.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

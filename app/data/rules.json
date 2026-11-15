@@ -1,0 +1,1133 @@
+{
+ "version": 2,
+ "note": "Every tunable number of the campaign lives here. The code reads it and never hardcodes a value; change a number, restart the server, and the next campaign uses it. Values marked CALIBRATE are first guesses to be adjusted by playing.",
+ "game": {
+  "note": "29/10 (autor): the patch the app was tested on. The system check (app/src/sistema.mjs) reads the newest `black sea vNNN.brz` in the Data folder at the game root; an older patch is a warning, not a stop: the file formats the app writes were measured on this one.",
+  "testedVersion": 217
+ },
+ "trimBattle": {
+  "note": "13/11 (REMEDIDO): as medidas de 08-11/11 estavam contaminadas pela linha do RQ-7B Shadow com 4 bytes a mais (molde de 43 B; roster.cortarSobraSemHomens), que deslocava a leitura de tudo o que vinha depois dela. Com a linha certa, a b12 do autor INTEIRA (504 linhas, 409 ausentes) carrega com 2.462 MB, a enxuta com 2.489, com +107 ausentes (611 linhas) 2.453, com +1 formacao de Apache 2.462 e com 3 secoes de Air Controller 2.446: unidade ausente, linha de roster, aeronave e Air Controller custam NADA. A regra fica ligada porque e caminho provado em jogo (TRIM, TRIM2B, b12 do autor) e deixa o roster pequeno, nao por memoria. 10/11 (bateria do limite da US, medidas SUPERADAS): o teto da US nao e de linhas, e de MEMORIA. O CM Black Sea e um executavel de 32 bits (Large Address Aware) e da Out of memory com ~4.050-4.085 MB de memoria virtual. Linha de roster de dormente custa zero; unidade AUSENTE na batalha custa ~2 MB (b12 do autor no setup: 3.304 MB com 409 dormentes, 2.430 sem elas); linha orfa (sem unidade na batalha) custa ~280 MB. Ligado, a entrega tira do arquivo da batalha e do roster toda unidade ausente sem homem na linha (campaign.enxugarEntrega, tools/re/remover.mjs); ela continua da campanha e volta como recruta quando for paga. Provado em jogo 10/11: ZZ LIM3 ENXUTA carregou, jogou um turno e a transicao (ZZ B2 TRANSITION) foi lida inteira.",
+  "on": true
+ },
+ "rosterCap": {
+  "note": "13/11: o 508 tambem era o Shadow de 43 B na linha 501 (ver trimBattle): com a linha certa, 504, 506 e 611 linhas carregam com ~2,46 GB. O max fica so como guarda da criacao e da loja, sem medida de teto real; com trimBattle ligado o roster entregue tem ~100 linhas e a guarda nao morde. 10/11: o 508 da US foi coincidencia de MEMORIA (ver trimBattle), nao um limite de linhas; fica como guarda da criacao e da loja. 08/11 (autor, ZZ ART US): o roster da campanha (uma linha por unidade core, presente ou nao) tem teto. Medido pelo caminho real do app na US: 504, 506 e 508 linhas carregam; 509, 510, 512 e 514 dao Out of memory a 5% (Read File), com as pecas novas ligadas ou desligadas na batalha e com a cauda estendida. A loja e a criacao recusam o que passaria do teto. POR EXERCITO: a colheita ZZ FAB (FORMATO 126) carregou uma UKR de 882 unidades e teve de dividir a US em campanhas de ~480; a RU carregou 384 e morreu com 1.449. Medido de novo 08/11 com linhas de unidades podadas (--linhas): US 520 morre (o teto vale para qualquer linha, nao so peca sem homens); RU 520, 700 e 882 carregam. Nao e o tamanho em bytes: o roster RU de 882 linhas tem 100 KB e carrega; o US de 509 tem 64,7 KB e morre.",
+  "max": { "US": 508, "UKR": 882, "RU": 882 },
+  "visibleNote": "13/11 REFUTADA: o limite de 501 linhas tambem era o Shadow de 43 B na linha 501 (ver trimBattle): tudo depois dele era lido deslocado. Com a linha certa, o Apache Guardian presente na linha 503 da b12 inteira (504 linhas, ZZ AR V22) entrou com indice de apoio 12. O valor fica por enquanto (so morde com mais de 501 unidades PRESENTES, e a troca de lugar e inocua); candidato a sair. 08/11 (ZZ PROVA AR P): na US o jogo so ENXERGA as primeiras linhas: o F-16 na linha 503 nao entrava (indice de apoio 0) e a mesma linha na 34 entrou; o que foi comprado ate a b10 (linha 501 a mais funda aceita) entra. A entrega troca a linha de unidade presente alem do limite com a de uma ausente antes dele (roster.presentesNoAlcance). RU e UKR nao mostraram limite (RU 31 pecas ate a linha 277).",
+  "visible": { "US": 501, "RU": 882, "UKR": 882 },
+  "visibleRU": "08/11: a RU NAO tem corte. O T-90AM da linha 797 no L882 apareceu (1st Tactical Group HQ, print do autor): os quatro presentes na forca estavam la; o quinto esperado era erro de contagem. Com a sonda (pecas 700-800 aceitas), RU le o roster inteiro ate o teto de 882. So a US corta (501).",
+  "visibleSonda": "08/11 (sonda, save do setup + artilharia_conferir): UKR 882 linhas com 21 pecas espalhadas de 854 a 881, todas aceitas -> sem corte ate o teto. RU 828 linhas com 31 pecas de 700 a 800, todas aceitas; mas no L882 (882 linhas) o T-90AM da linha 797 nao apareceu (4 de 5). As duas medidas nao fecham numa linha fixa (o corte pode depender do total de linhas, ou o tanque faltou por outro motivo); a RU fica no 700 provado nos dois.",
+  "visibleUKR": "08/11: a colheita ZZ FAB UKR (882 linhas, research/colheita_fab) tem homens nomeados em unidades ate a linha 853, espalhadas por todas as centenas: a UKR le pelo menos ate a 853.",
+  "visibleMeasured": "08/11 (noite): RU L700 (Pchela-1T na linha 700 entrou) e L882 (T-90AM na linha 797 ficou fora: 4 de 5): o corte da RU fica entre 700 e 796; UKR sem medida, no valor da RU. US: campanha NOVA (.cam) com 506 linhas deu Out of memory (o save aguenta 508; a criacao ja recusa acima de 501). Unidade COM homens trocada de lugar (Section LRS #1, linha 1 -> 492) entrou com os mesmos homens: o jogo pareia pelo core id tambem para elas.",
+  "armiesNote": "08/11: max e visible valem pelo PIOR exercito da biblioteca da campanha (US+UKR segue o US): nao se mediu se o limite e da nacao do jogador ou das unidades. A loja exige presentes <= visible (senao a troca de lugar nao tem onde por a linha) e a criacao recusa mais linhas que visible (o roster do .cam sai na ordem da forca). A regra da k-esima linha do tipo (ordenarSemHomens) foi refutada no mesmo dia: o Raven 582 entrou na linha 500 com 12 ausentes do tipo antes; o jogo pareia pelo core id."
+ },
+ "fieldCap": {
+  "note": "05/10 (E139, bateria de memoria m1-m3, processo novo por caso, pico medido ate 20 s depois do setup): quem estoura e o MAPA, nao as unidades. Com 3 unidades os mapas custam 1,7 a 2,4 GB e o Huge Rough-Water-Town 026r da Out of memory (os tres OOM de 03/10, a 1.285-1.306 unidades, foram todos nele; o crash a 1.035 era um mapa reprovado). No Asintorf, o pior mapa que carrega, 154 unidades dao 2.467 MB e 1.035 dao 2.491; no Open-Rough, 312 dao 2.100 e 904 dao 2.131: a forca quase nao pesa na carga. O teto fica em 950 por margem: a memoria durante o jogo (turnos, saves) nao foi medida. Acima de warn a tela avisa; acima de max a criacao e o Apply recusam.",
+  "warn": 900,
+  "max": 950
+ },
+ "defeatsAllowed": 2,
+ "defeatsAllowedOptions": [0, 1, 2, 3, 4, "unlimited"],
+ "defeatsAllowedNote": "11/10 (E179, autor): quantas derrotas a campanha aguenta e parametro da criacao; defeatsAllowed e o padrao. \"unlimited\" = nenhuma derrota encerra a campanha (state.defeatsUnlimited, defeatsLeft null).",
+ "battlesToWin": 12,
+ "startingCreditsNote": "01/11 (autor): os creditos iniciais sao fixos em todo nivel; a dificuldade escala o inimigo (difficulty.ratioNote). Sao o primeiro degrau da escada do jogador (reward.note).",
+ "startingCredits": 2500,
+ "honours": { "top": 3, "spotters": "Observer|Air Controller|JTAC|TACP|FIST", "spottersNote": "06/11: o jogo credita ao observador o que a artilharia e a aviacao que ele chamou abateram (na RUS o Air Controller Team tinha 32 kills e 3 tanques); fora de toda lista ordenada por kills.", "note":"06/11 (autor): as mencoes honrosas da tela de fim (src/honours.mjs), no lugar de The force at the end; top = unidades por lista. Kills = Total Campaign Victories por batalha (diferenca entre o save de cada batalha e o anterior). 06/11 (autor): uma linha por VIDA: o veiculo destruido e reposto na vaga e uma maquina nova; a vida vai da Battle Hired a Battle Died (marca destroyed do result.json), com kills, lider (o do save da ultima batalha da vida), veterancia e leadership so dela. Esquadrao tem uma vida." },
+ "score": {
+  "note": "05/10 (E143, autor): o placar da campanha encerrada = soma dos niveis de cada batalha (0 Total Defeat, 4 Draw, 8 Total Victory) x perLevel + creditos restantes. 25/10 (autor, componentes novos): + forca preservada (preco das unidades em campo e nao destruidas x forceShare) + razao de baixas (homens inimigos perdidos / seus, ate ratioCap, x perRatio) - derrotas x perDefeat, tudo x o multiplicador da dificuldade. [calibrar]",
+  "perLevel": 1000,
+  "forceShare": 0.5,
+  "perRatio": 2000,
+  "ratioCap": 5,
+  "perDefeat": 2000,
+  "difficultyNote": "25/10: o multiplicador sai dos parametros gravados na criacao (as campanhas Custom tambem tem um): a base do exercito do jogador + os ajustes de derrotas permitidas, chance de resgate e pontos operacionais iniciais, vezes o fator da razao de forca (ratio; 30/10, no lugar do esforco do inimigo, que saiu da criacao; 01/11 as razoes 1,6 a 0,9). Os presets dao Very Easy 0,52 · Easy 0,72 · Medium 1,00 · Hard 1,16 · Very Hard 1,63. 06/11 (autor): + o ajuste do preco da Special Forces (specialForces; gratis desconta). [calibrar]",
+  "difficulty": {
+   "armies": { "UKR,US": 0.85, "US": 0.9, "RU": 1.0, "UKR": 1.2 },
+   "defeats": { "0": 0.2, "1": 0.1, "2": 0, "3": -0.05, "4": -0.1, "unlimited": -0.3 },
+   "rescue": { "0": 0.1, "0.25": 0.05, "0.5": 0, "0.75": -0.05, "1": -0.1 },
+   "opPoints": { "0": 0.1, "1": 0.08, "2": 0.05, "3": 0, "4": -0.03, "5": -0.05 },
+   "specialForces": { "0": -0.05, "600": 0 },
+   "ratio": { "1.6": 0.8, "1.45": 0.9, "1.3": 1, "1.1": 1.1, "0.9": 1.3 }
+  },
+  "ranksNote": "25/10 (autor): a letra da campanha encerrada pelo placar final; a primeira faixa cujo minimo o placar alcanca. 06/11 (autor): campanha perdida e sempre a ultima faixa (D), qualquer que seja o placar. [calibrar]",
+  "ranks": [ { "rank": "S", "min": 110000 }, { "rank": "A", "min": 85000 }, { "rank": "B", "min": 60000 }, { "rank": "C", "min": 35000 }, { "rank": "D", "min": 0 } ]
+ },
+ "units": {
+  "note": "What a unit costs depends on what it IS. `roles` is tried in order, first match on the unit name wins; a unit that never sets foot on the map (category 0x50/0x58) is moved to its off-map role first. `price` is in credits, before the nation and role factors. CALIBRATE: all of it. Cuidado com sigla curta: `RPO` sem limite de palavra casa dentro de \"MultipuRPOse Vehicle\" e transformava todo HMMWV em equipe anticarro — por isso os limites \b. O TRP e a unica fortificacao oferecida (autor): 100 por ponto, e a fonte da biblioteca traz cinco — 500 pela capacidade — sem fator de nacao. O HMMWV (Stinger) e transporte com Stingers no inventario, nao MANPADS (autor, 02/11): vem antes da regra do Stinger e cai em `truck`, como o M1152 comum.",
+  "roles": [
+   {
+    "match": "Target Reference Point",
+    "role": "trp"
+   },
+   {
+    "match": "Main Battle Tank|Tank Destroyer",
+    "role": "tank"
+   },
+   {
+    "match": "Infantry Fighting Vehicle|Bradley|BMP-|BMD-|Fighting Vehicle",
+    "role": "ifv"
+   },
+   {
+    "match": "Armored Personnel Carrier|BTR-|MT-LB|Stryker|Armored Vehicle",
+    "role": "apc"
+   },
+   {
+    "match": "Antiaircraft|Anti-aircraft|Air Defense|Tunguska|Shilka|Strela-10|Gepard",
+    "role": "aa"
+   },
+   {
+    "match": "HMMWV \\(Stinger\\)",
+    "role": "truck"
+   },
+   {
+    "match": "\\bMANPADS\\b|\\bIgla|Stinger",
+    "role": "manpads"
+   },
+   {
+    "match": "Unmanned Drone|Raven|Shadow|Gray Eagle|Orlan|Pchela|Zala",
+    "role": "drone"
+   },
+   {
+    "match": "Attack Helicopter|Ground Attack|Fighter Bomber",
+    "role": "air"
+   },
+   {
+    "match": "Howitzer|mm Gun|Gun \\(|Rocket",
+    "role": "artillery"
+   },
+   {
+    "match": "Mortar",
+    "role": "mortar"
+   },
+   {
+    "match": "\\bATGM\\b|Javelin|Kornet|Konkurs|Metis|\\bTOW\\b|\\bSKIF\\b",
+    "role": "atgm"
+   },
+   {
+    "match": "\\bRPG|\\bRPO\\b|Carl Gustav|\\bAT4\\b|\\bSMAW\\b|Antitank|Grenade Launcher",
+    "role": "at_inf"
+   },
+   {
+    "match": "Machinegun|Machine Gun|\\bHMG\\b|\\bPKM\\b|\\bPKP\\b|\\bLMG\\b|\\bKord\\b|\\bM240\\b|\\bM2\\b",
+    "role": "mg"
+   },
+   {
+    "match": "Sniper",
+    "role": "sniper"
+   },
+   {
+    "match": "Engineer|Sapper|Breach|Flamethrower",
+    "role": "engineer"
+   },
+   {
+    "match": "Scout|Reconnaissance|Recon",
+    "role": "recon"
+   },
+   {
+    "match": "Truck|Ural|KamAZ|MTVR|HEMTT|LMTV|Multipurpose Vehicle|Utility Vehicle|Cargo",
+    "role": "truck"
+   },
+   {
+    "match": "Headquarters|Command|XO Team|Leader",
+    "role": "hq"
+   },
+   {
+    "match": "Supply|Forward Observer|Fire Support|TACP|Air Controller|Ambulance|Truck|Multipurpose Vehicle|Utility|Cargo|LMTV|Ural|GAZ|KamAZ",
+    "role": "support"
+   },
+   {
+    "match": "Squad|Team|Section",
+    "role": "infantry"
+   }
+  ],
+  "offMapRole": {
+   "mortar": "mortar_off",
+   "artillery": "artillery_off",
+   "infantry": "artillery_off",
+   "support": "support"
+  },
+  "price": {
+   "tank": 400,
+   "ifv": 250,
+   "apc": 150,
+   "aa": 200,
+   "manpads": 70,
+   "drone": 120,
+   "air": 500,
+   "artillery": 200,
+   "artillery_off": 300,
+   "mortar": 80,
+   "mortar_off": 250,
+   "atgm": 90,
+   "at_inf": 55,
+   "mg": 45,
+   "sniper": 60,
+   "engineer": 70,
+   "recon": 90,
+   "hq": 30,
+   "support": 25,
+   "infantry": 60,
+   "other": 50,
+   "trp": 100,
+   "truck": 40
+  },
+  "nationFactor": {
+   "US": 1.25,
+   "RU": 1,
+   "UKR": 1
+  },
+  "roleFactor": {
+   "note": "autor: American armour is better and has to hurt the budget. Overrides the nation factor for those roles.",
+   "US": {
+    "tank": 2,
+    "ifv": 2,
+    "trp": 1
+   },
+   "RU": {
+    "trp": 1
+   },
+   "UKR": {
+    "trp": 1
+   }
+  },
+  "experienceLevels": [
+   "Conscript",
+   "Green",
+   "Regular",
+   "Veteran",
+   "Crack",
+   "Elite"
+  ],
+  "experienceFactor": {
+   "Conscript": 0.75,
+   "Green": 0.8,
+   "Regular": 0.9,
+   "Veteran": 1,
+   "Crack": 2,
+   "Elite": 3
+  },
+  "experiencePricing": {
+   "note": "What a units experience does to its price, on Andres own scale: Conscript 0.75, Green 0.8, Regular 0.9, Veteran 1, Crack 2, Elite 3. The bottom of the scale was raised on 09/09/2026 (it was 0.4 / 0.55 / 0.75): a conscript at 40% of the price was the cheap way to field twice the force, and half-price troops that still shoot are worth more than the discount says. Anchored at Veteran because that is what most of a bought formation is, so the same force costs what it always did (+1% on the force in play) and the choice is what moves the bill. `mode: absolute` prices every unit for what it IS, so the veterans the library hands out are no longer free - the library roll is frozen per file, and without this the best-rolled sources would simply be the right answer every time. `mode: relative` would charge only for what the player CHANGES. `enemy: false` keeps the defense planner on the base price, because the enemys experience comes from the tier and its budget is a difficulty knob already tuned. Target reference points never pay it.",
+   "mode": "absolute",
+   "enemy": false
+  }
+ },
+ "replacement": {
+  "note": "Between battles the app puts a man back on his feet by rewriting his state in the campaign roster (FORMATO 116). State 3 is the dead man and only comes back as a replacement someone paid for, at creditsPerMan. State 2 is the WOUNDED man -- he was carried off the field -- and each of them gets one seeded roll at the campaign rescue chance to rejoin for nothing -- the player picks it when the campaign is raised, from rescueChanceOptions, and rescueChance is only the default offered. A man who is only scratched (state 1) is not a casualty at all and heals for free when healLightWounds is on. A machine costs a fraction of its price to bring back, by what happened to it: destroyed is a new machine at full price (knocked out counts as destroyed: the save does not tell them apart and the author settled it, E91), immobilized is free and the GAME repairs it: an immobilized BTR-4E (Vehicle Status 2) entered the next battle through the app's delivered save with full mobility and drove 570 m (E91, FORMATO 110.11). The E62 belief that it does not come back came from a T-64BV that was in fact destroyed. swapImmobilized turns the old workaround back on (a dormant twin takes the immobilized machine's place). CALIBRATE.",
+  "creditsPerManNote": "18/10 (autor): 5 cr por homem reposto (era 30). Na planilha um homem vale ~6-9 cr dentro da esquadra; a 30, repor 3 baixas de uma esquadra russa custava mais que comprar outra inteira.",
+  "creditsPerMan": 5,
+  "healLightWounds": true,
+  "rescueChance": 0.5,
+  "vehicle": {
+   "destroyed": 1,
+   "immobilized": 0
+  },
+  "swapImmobilized": false,
+  "machineRoles": [
+   "apc",
+   "ifv",
+   "tank",
+   "afv",
+   "artillery",
+   "mortar",
+   "drone",
+   "manpads"
+  ],
+  "machineRolesNote": "The roles the quartermaster treats as MACHINES: they are replaced whole, from a dormant twin that takes the field with its own crew (FORMATO 112.8, E14A). Their men are crew, not soldiers, so they are never on the replacement list — a machine that is replaced brings a new crew, and one that comes back brings its crew back with it for nothing, the same as its damage. Read by the page and by the server, so the two never disagree about who is crew.",
+  "rescueChanceOptions": [
+   0,
+   0.25,
+   0.5,
+   0.75,
+   1
+  ],
+  "vehicleExperience": "Green",
+  "vehicleExperienceNote": "The level a replaced machine comes at, and the level its replacement is priced at (E57, autor: every vehicle replacement offered Green). A new machine is a new machine: the Crack Bradley the library rolled does not cost twice its Veteran twins to replace. Remove the key to price and deliver the replacement at the level of the dormant twin.",
+  "trimToIssue": true,
+  "trimToIssueNote": "The refit puts a unit's ammunition AT its issue, not just up to it (E76, autor: a squad came back with 12037 rounds of 5.45 against an issue of 2298 and lost Fast and Quick to the weight). A squad's ammunition is one pool that the game splits between the men as it pleases, so the account is per unit: the issue of every man on his feet, added up, from the global harvest (research/toe_armas.json). With this off the refit only ever adds, and whatever the squad acquired from its carrier follows it for the rest of the campaign.",
+  "appResupply": 1,
+  "appResupplyNote": "Quanto da dotacao o APP devolve no refit, de 0 a 1 -- coisa diferente do RESUPPLY que vai para o arquivo da campanha, que e o que o JOGO faz. Eram o mesmo numero ate 08/09, e por isso desligar o ressuprimento do jogo desligava o do app junto.",
+  "resetLaunchers": true,
+  "stripVehicleGear": {
+   "on": false,
+   "offNote": "17/10, DESLIGADA no mesmo dia (autor): o Stryker de pelotao leva Javelin e custa mais na planilha; o avulso (Single Vehicle do editor, molde em research/moldes_avulsos.json) nao leva e tem preco proprio. O codigo e o teste 166 ficam.",
+   "note": "17/10 (autor): os Strykers do jogador nunca levam Javelin -- nem o CLU (lancador 4/1) nem os misseis (carga 57). Silencioso: nada na tela nem no briefing. Ultimo passo do reset de fabrica (que os devolveria), com ou sem refill. So onde ha bloco legivel: a partir da segunda batalha do veiculo; na batalha 1 e na primeira de um recrutado o jogo cria o inventario pela TO&E.",
+   "rules": [ { "army": "US", "match": "Stryker", "launchers": ["4/1"], "cargo": [57] } ]
+  },
+  "resetSmoke": true,
+  "resetSmokeNote": "02/10 (E121): a terceira lista do bloco do veiculo e a carga do lanca-fumaca (vazia, o jogo apaga o Pop Smoke); volta a de fabrica a cada batalha (BMP-2M 8 = 18, T-90AM 9 = 24, Abrams 5 = 12, Stryker 6 = 32).",
+  "resetLaunchersNote": "02/10: os lancadores que o veiculo leva para a infantaria (AT4/Javelin no Stryker, RPG-26 no BMP — FORMATO 131) voltam a lista de fabrica da formacao a cada batalha; uma variante de fabrica vista fica.",
+  "resetWeapons": true,
+  "resetWeaponsNote": "A weapon a man picked up in battle does not travel to the next map (E78, autor: \"nao devemos carregar munição e armas obtidas da batalha de um mapa para outro\"). The test is not \"differs from the slot winner\" -- the second hand genuinely varies between squads of the same type (RPG-22 in one, RPG-26 in the next) and the two hands are not written in a fixed order. It is: has this weapon EVER been seen in this slot, in saves the game itself wrote (research/toe_armas.json, mao1/mao2, two observations minimum)? If never, that hand goes back to the slot issue; 8/0 means the hand is emptied. A weapon the player BOUGHT at the quartermaster is remembered in state.gear by (coreId, slot) and is never reverted.",
+  "vehicleNamesNote": "22/10 (autor: \"o ideal e que todo veiculo seja substituivel\"): alem dos papeis de machineRoles, e maquina (marcada pelo save, reposta na vaga, tripulacao que volta com ela) todo veiculo — pelo nome (Vehicle/Truck: Tigr, UAZ, Ural, LMTV, HMMWV, BRDM, BRM, M1167, PRP-4M) ou pela aba 5 da tabela de tipos. A tela separa os de formacao dos avulsos (single).",
+  "vehicleNames": "\\b(Vehicle|Truck)\\b",
+  "machineExcludes": "\\b(Squad|Team|Section)\\b",
+  "machineExcludesNote": "Uma unidade cujo papel esta em machineRoles mas cujo NOME e de tropa a pe nao e maquina (E82, autor: \"por que as equipes de stinger entram na janela de vehicles and guns?\"). O papel nao separa: `manpads` cobre `Team (Stinger)` e `Igla Team`, e `mortar` cobre a `Heavy Mortar Team` (tres homens carregando o tubo) E o `3 x 120mm Mortar (2B11)` (a peca). O nome separa, e e a mesma ponte que a colheita de paiol ja usava (paiol_maquinas.mjs): Squad/Team/Section e gente. Importa porque os homens de uma MAQUINA sao tripulacao e nunca entram na lista de reposicao — uma dupla de Stinger que perde um homem nao tinha como ser reposta a nao ser comprando a equipe inteira, e a linha dela na tela pedia para marcar \"immobilized\", que numa dupla a pe nao quer dizer nada."
+ },
+ "reward": {
+  "note": "30/10 (autor: \"qual o nivel de recompensa maximo que o jogador pode ter em cada batalha e utilizar isto como o fator de acrescimo da forca inimiga\"): A ESCADA. 01/11 (autor): o jogador comeca SEMPRE com startingCredits (2.500) e sobe a ESCADA DO JOGADOR P_n = startingCredits x E_n / E_1, onde E_n e o orcamento da batalha n em 1x (tierBudgets, sem o fator do encontro nem o peso do no); a dificuldade e o tamanho do inimigo (difficulty.ratioNote). O debrief da batalha n paga tres linhas, iguais em todo nivel: o DEGRAU P_n+1 - P_n, garantido, faca o jogador o que fizer (a guerra crescendo; nada depois da ultima batalha); a COBERTURA DE REPOSICAO min(conta, teto) x nota, onde a conta e o que o Quartermaster cobraria para repor tudo o que se perdeu na batalha (maquinas em Green + homens x replacement.creditsPerMan) e o teto e replacement.capShare x P_n x o peso do no; e o BONUS replacement.unusedBonus x (teto - coberto) x nota. A nota (0..1) e a media ponderada (weights) de objetivos, baixas do inimigo e forca trazida para casa x engajamento. Antes (ate 30/10) a renda era ate 1,1x o custo da defesa + 15% da proxima: proporcional ao TAMANHO do inimigo, enquanto ele crescia pelo DELTA, e a forca de quem vencia crescia ~4x mais rapido que a escada (UKR: 1,9:1 na b4). Agora ninguem passa do par a nao ser pelo bonus. [calibrar]",
+  "model": "ladder",
+  "weights": {
+   "objectives": 0.5,
+   "attrition": 0.3,
+   "survival": 0.3
+  },
+  "vehicleShare": 0.5,
+  "survivalNeedsEngagement": true,
+  "replacement": {
+   "note": "30/10 (autor), 01/11 na escada do jogador: capShare = a fatia do par P_n que a cobertura paga no maximo (as perdas acima dela ficam por conta do jogador); unusedBonus = a fracao do teto nao usado que vira bonus, o unico caminho para ficar acima do par, e devagar (no maximo capShare x unusedBonus do par por batalha). O peso do no do caminho (path.enemyWeights[].mult) age so aqui, no teto. [calibrar]",
+   "capShare": 0.15,
+   "unusedBonus": 0.25
+  }
+ },
+ "tiers": [
+  {
+   "tier": 1,
+   "battles": [
+    1,
+    2,
+    3
+   ],
+   "mapTiers": [
+    1
+   ],
+   "duration": 45,
+   "durationMax": 45,
+   "bigMapArea": 0.47,
+   "experience": "Green",
+   "motivation": "Normal",
+   "note": "autor, 07/09: as primeiras missoes sao de 45 minutos e ponto. O teto igual a base e o que garante isso — o mapa grande e a defesa grande nao empurram o relogio no tier 1. autor, 11/10: recon, morteiro e MANPADS ja no tier 1; 200 creditos das equipes para as esquadras (700/500 -> 900/300); morteiro fora do mapa por sorteio de 35%.",
+   "unlocks": ["atgm", "recon", "manpads", "mortar_off"],
+   "teamQuotaNote": "20/10 (autor): o tier 1 estava facil, quase so esquadras. COTA por papel, sorteada no intervalo e comprada logo depois dos pelotoes, em fonte que nao ocupa vaga de maxSources (defense.planDefense): 3-4 metralhadoras (papel mg: HMG, PKM, Kord, Squad (Machinegun)) e 2-3 ATGM, 1-2 na batalha 1 do tier (byBattle, pela posicao no tier). 22/10 (autor): a escada por batalha do tier — b1 HMG 3-4 e ATGM 1-2, b2 HMG 3-4 e ATGM 3, b3 HMG 4-6 e ATGM 4 (simulado: nenhuma cota incompleta, esquadras e transportes no orcamento). A cota e tambem o teto do papel. Orcamento 900/300 -> 550/650 (esquadras/equipes), o total do tier igual (1550), para ela caber; e a fatia dos tanques do mapa aberto nao tira das equipes quando o tier tem cota.",
+   "teamQuota": { "mg": [3, 4], "atgm": [2, 3], "mgSingles": [1, 2], "byBattle": { "1": { "atgm": [1, 2] }, "2": { "atgm": [3, 3] }, "3": { "mg": [4, 6], "atgm": [4, 4], "mgSingles": [2, 3] } } },
+   "mgSinglesNote": "28/10 (autor): PARTE da cota mg (nao a mais) sai das equipes de metralhadora AVULSAS do editor (Specialist Teams: LMG Team (PKP), Machinegun Team (PKM)), das fontes de defense.specialistTeams; o resto da cota vem como antes. Sem fonte para a nacao, nada muda. Elas vao fixas para o G4 (papelFino, pelo bit de avulsa).",
+   "budgets": {
+    "squads": 550,
+    "teams": 650,
+    "carriers": 350,
+    "tanks": 0,
+    "offMap": 0
+   },
+   "tankShareByProfileNote": "18/10 (autor): 20% do orcamento para tanques no mapa aberto (defense.tankLadder).",
+   "tankShareByProfile": { "aberto": 0.2 },
+   "tankChanceNote": "18/10 (autor): sem tanque surpresa no tier 1. O trade-off fica para o jogador: a defesa e mais dificil de vencer mas nao tem tanque; o Meeting Engagement e mais facil e rapido, mas o inimigo tem tanque.",
+   "tankChance": 0,
+   "mortarChance": 0.35
+  },
+  {
+   "tier": 2,
+   "battles": [
+    4,
+    5,
+    6
+   ],
+   "mapTiers": [
+    2
+   ],
+   "duration": 60,
+   "durationMax": 80,
+   "bigMapArea": 0.75,
+   "experience": "Regular",
+   "motivation": "Normal",
+   "unlocks": [
+    "atgm",
+    "recon",
+    "mortar",
+    "mortar_off",
+    "manpads",
+    "artillery_off",
+    "air"
+   ],
+   "unlocksNote": "autor, 11/10: o morteiro inimigo so existe fora do mapa (mortarOnMap false), entao o tier 2 libera mortar_off para gastar o orcamento offMap. autor, 14/10: desde o tier 2 a artilharia e o aereo fora do mapa tambem (defesa e encontro).",
+   "budgets": {
+    "squads": 1280,
+    "teams": 1070,
+    "carriers": 850,
+    "tanks": 0,
+    "offMap": 550
+   },
+   "tankShareByProfileNote": "18/10 (autor): 20% do orcamento para tanques nos mapas aberto e misto (defense.tankLadder).",
+   "tankShareByProfile": { "aberto": 0.2, "misto": 0.2 },
+   "tankChanceNote": "18/10 (autor): sem tanque surpresa no tier 2, como no tier 1. Tanque na defesa so a partir do tier 3, com verba propria; antes disso, so no Meeting Engagement.",
+   "tankChance": 0,
+   "aaQuotaNote": "02/11 (autor): a antiaerea nao pode depender do sorteio (a batalha 8 da RUS saiu sem nenhuma). COTA por papel como a teamQuota, comprada antes dos pelotoes e teto do papel: tier 2 0-2 MANPADS, tier 3 1 SPAAG, tier 4 2 SPAAG. SPAAG que a forca nao tem para comprar vira uma equipe MANPADS (defense.planDefense). Chave propria: a teamQuota muda o caminho do dinheiro entre baldes.",
+   "aaQuota": { "manpads": [0, 2] }
+  },
+  {
+   "tier": 3,
+   "battles": [
+    7,
+    8,
+    9
+   ],
+   "mapTiers": [
+    3
+   ],
+   "duration": 80,
+   "durationMax": 100,
+   "bigMapArea": 1.52,
+   "experience": "Regular",
+   "motivation": "High",
+   "unlocks": [
+    "atgm",
+    "recon",
+    "mortar",
+    "tank",
+    "mortar_off",
+    "manpads",
+    "drone",
+    "aa",
+    "artillery_off",
+    "air"
+   ],
+   "budgets": {
+    "squads": 1950,
+    "teams": 1600,
+    "carriers": 1130,
+    "tanks": 3700,
+    "offMap": 700
+   },
+   "tankChance": 0,
+   "aaQuota": { "aa": [1, 1] }
+  },
+  {
+   "tier": 4,
+   "battles": [
+    10,
+    11,
+    12
+   ],
+   "mapTiers": [
+    4
+   ],
+   "duration": 90,
+   "durationMax": 120,
+   "bigMapArea": 3,
+   "experience": "Veteran",
+   "motivation": "High",
+   "unlocks": [
+    "atgm",
+    "recon",
+    "mortar",
+    "tank",
+    "mortar_off",
+    "manpads",
+    "drone",
+    "artillery_off",
+    "aa",
+    "air"
+   ],
+   "budgets": {
+    "squads": 4500,
+    "teams": 3500,
+    "carriers": 3500,
+    "tanks": 9000,
+    "offMap": 1500
+   },
+   "tankChance": 0,
+   "aaQuota": { "aa": [2, 2] }
+  }
+ ],
+ "battle": {
+  "weather": {
+   "on": true,
+   "note": "17/10 (autor aprovou a tabela): perfis prontos, cada um fixa Weather, Wind Strength, Temperature e Ground (valores = posicao na lista do editor; neve e Extreme Cold de fora). Peso = w x byPeriod[periodo][grupo] x byTier[tier][grupo] (padrao 1); a direcao do vento e uniforme. Sorteado por no, publico.",
+   "names": {
+    "weather": ["Clear", "Hazy", "Thick Haze", "Overcast", "Light Rain", "Heavy Rain", "Downpour", "Mist", "Mist and Rain", "Light Fog", "Light Fog and Rain", "Heavy Fog", "Dense Fog"],
+    "wind": ["None", "Gentle", "Light", "Medium", "Heavy"],
+    "windSource": ["E", "NE", "N", "NW", "W", "SW", "S", "SE"],
+    "temp": ["Extreme Heat", "Hot", "Warm", "Cool", "Cold", "Freezing"],
+    "ground": ["Very Dry", "Dry", "Damp", "Wet", "Muddy"]
+   },
+   "profiles": [
+    { "id": "clear", "name": "Clear summer day", "w": 30, "weather": 0, "wind": 1, "temp": 2, "ground": 1 },
+    { "id": "heat-haze", "name": "Heat haze", "w": 10, "weather": 1, "wind": 2, "temp": 1, "ground": 0, "group": "heat" },
+    { "id": "hot-dry", "name": "Hot and dry", "w": 6, "weather": 0, "wind": 0, "temp": 0, "ground": 0, "group": "heat" },
+    { "id": "thick-haze", "name": "Thick haze", "w": 4, "weather": 2, "wind": 0, "temp": 1, "ground": 1, "group": "heat" },
+    { "id": "overcast", "name": "Overcast", "w": 14, "weather": 3, "wind": 3, "temp": 3, "ground": 2 },
+    { "id": "light-rain", "name": "Light rain", "w": 10, "weather": 4, "wind": 2, "temp": 3, "ground": 3, "group": "rain" },
+    { "id": "heavy-rain", "name": "Heavy rain", "w": 5, "weather": 5, "wind": 3, "temp": 3, "ground": 4, "group": "rain" },
+    { "id": "storm", "name": "Storm", "w": 3, "weather": 6, "wind": 4, "temp": 3, "ground": 4, "group": "rain" },
+    { "id": "mist", "name": "Morning mist", "w": 8, "weather": 7, "wind": 0, "temp": 3, "ground": 2, "group": "fog" },
+    { "id": "fog", "name": "Fog", "w": 7, "weather": 9, "wind": 0, "temp": 3, "ground": 2, "group": "fog" },
+    { "id": "dense-fog", "name": "Dense fog", "w": 3, "weather": 11, "wind": 0, "temp": 4, "ground": 3, "group": "fog" }
+   ],
+   "byPeriod": { "dawn": { "fog": 3, "heat": 0 }, "day": { "fog": 0 }, "dusk": { "fog": 1, "heat": 0.5 }, "night": { "fog": 1.5, "heat": 0 } },
+   "byTier": { "1": { "rain": 1.3 }, "2": { "rain": 1.3 }, "4": { "rain": 0.7, "heat": 1.5 } }
+  },
+  "calendar": {
+   "on": true,
+   "note": "17/10 (autor): uma data por batalha N (vale para qualquer no da linha), nao decrescente; janela por tier (inclusive); ano 2017. Sorteada pela semente da campanha.",
+   "year": 2017,
+   "byTier": { "1": ["06-01", "06-15"], "2": ["06-16", "06-30"], "3": ["07-01", "07-15"], "4": ["07-16", "08-31"] }
+  },
+  "timeOfDay": {
+   "on": true,
+   "relightOps": 1,
+   "note": "17/10 (autor): cada batalha do caminho sorteia o periodo (pesos w, 25 % cada) e uma hora cheia uniforme dentro dele; a luz no jogo vem da hora (cabecalho de data, fim+5, nos dois lugares), o Daylight e gravado coerente. Sempre visivel no no. Campanha sem caminho: a hora do mapa.",
+   "periods": [
+    { "id": "dawn", "name": "Dawn", "daylight": "Dawn", "w": 1, "hours": [4, 5, 6] },
+    { "id": "day", "name": "Day", "daylight": "Day", "w": 1, "hours": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] },
+    { "id": "dusk", "name": "Dusk", "daylight": "Dusk", "w": 1, "hours": [18, 19, 20] },
+    { "id": "night", "name": "Night", "daylight": "Night", "w": 1, "hours": [21, 22, 23, 0, 1, 2, 3] }
+   ]
+  },
+  "title": true,
+  "briefing": true,
+  "header": true,
+  "headerNote": "header (17/10, provado em jogo): o cabecalho da batalha (lista de cenarios e tela de saved game, que herda o da batalha) leva o titulo, tres linhas de descricao (Battle N of 12 e o tier; tipo e mapa; o inimigo so com intel) e o logo 170x170 de app/art/briefing; o .cam leva o nome da campanha, os exercitos e o logo no lugar do \"City\" do modelo.",
+  "images": true,
+  "imagesNote": "images (17/10, provado em jogo): as imagens do briefing, iguais nos dois lados: logo 224x224 (app/art/briefing/logo224.bmp), a arvore de batalhas da campanha desenhada a cada batalha (app/src/imagem.mjs arvoreDoCaminho, 702x224) e o Tactical Map do mapa (assets/map_images/<id>.tatico.png, gerado por tools/re/tatico.mjs). Cerca de 3 MB a mais por batalha (BMP sem compressao).",
+  "briefingNote": "briefing (28/09): as seis secoes do jogador (vermelho) escritas pela campanha no bloco 0 — situacao, missao pelo tipo, forca, e o inimigo so com intel —; o lado azul em branco. Sem isso a batalha herda a historia do mapa de QB (tools/re/briefing.mjs).",
+  "note": "title: o briefing mostra \"<campanha> - Battle <n>: <mapa>\" em vez do nome do mapa. Provado em jogo em 28/09 (ZZZ TITULO: o briefing mostrou o titulo de 58 caracteres inteiro e a batalha carregou). Limite 64 caracteres ASCII."
+ },
+ "duration": {
+  "extraTime": 0,
+  "extraTimeNote": "Variable Extra Time do editor, em minutos (0 = None, 5, 10, 15). autor, 07/09: nenhum. O mapa de origem pode trazer 5 ou 15 (9 dos 86 de cada tipo) e o gerador passou a escrever este valor em toda batalha (28/09).",
+  "note": "autor: the first mission gets 45 minutes and every tier adds 15 — so 45, 60, 75, 90, 105 as the base. The tier gives the base and a ceiling one step above it; a map in the upper half of its tier area, and a defense above the threshold, each add one step. The result is clamped to the tier ceiling and snapped to a length the game accepts. `allowed` is exactly the list the editor offers, READ FROM THE DROPDOWN (07/09): 10 to 55 in fives, then 60, 70, 80, 90, 100, 110, 120, 150, 180, 210, 240. The old list had 75 and 105, which the editor does not offer at all — a battle written with 75 is a value the game never produced, and the one time the app wrote 105 the briefing screen snapped it down to 1h40 on its own. Counted in UNITS, not men: the .btt does not say how many men a squad has. O tier 1 nao tem degrau: teto igual a base, 45 minutos sempre. Nos outros o degrau vale, e o gatilho de mapa grande (bigMapArea de cada tier) foi calibrado em 28/09 para dividir o pool do tier ao meio (Assault+Attack+Probe): tier 1 0.44 (51%, sem efeito porque o teto e a base), tier 2 0.74 (58%), tier 3 1.52 (50%); o tier 4 ficou em 3 (33%) porque o outro corte possivel, 2.56, da 67% — igualmente longe do meio. Antes: 73% / 29% / 75% / 33%. RECALIBRADO em 04/10 para o sorteio novo (a selecao do autor, app/data/mapas.json): tier 1 0.47 (50%, ainda sem efeito), tier 2 0.75 (42%: 15 dos 36 mapas tem exatamente 0.74, entao o corte so pode dar 83% ou 42%), tier 3 1.52 (50%, igual), tier 4 3 (57%, igual; 3.5 daria 43%, a mesma distancia do meio).",
+  "allowed": [
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   50,
+   55,
+   60,
+   70,
+   80,
+   90,
+   100,
+   110,
+   120,
+   150,
+   180,
+   210,
+   240
+  ],
+  "unitsPerStep": 15,
+  "unitsThreshold": 25,
+  "minutesPerStep": 15
+ },
+ "defense": {
+  "note": "THE ENEMY IS BOUGHT BY BUCKET, NOT BY FORMATION (E46, 12/09). autor: \"quando eu vejo um BTR, eu sei que no mapa so terao BTR\" — the planner used to take ONE library battalion and field whole sub-formations of it. Now every unit of every library formation of the nation is in one pool, sorted into four buckets, and each bucket gets a share of the budget by map profile (`composition`). Infantry squads are bought as LOTS (a platoon/section on foot: its squads, its weapons teams, its HQ team for free — the carriers go back to the pool as single vehicles); weapons teams, combat vehicles and off-map support are bought one by one, by TYPE drawn at random, so a defense mixes BTR, BMP and MT-LB the way a real sector does. Each library formation used comes into the file pruned to exactly what was bought (`ausentes` + unit ordinals). Trucks, supply and command vehicles are never bought: `buckets` says what is what.",
+  "keepAtLeastUnits": 6,
+  "offMapCapShare": 0.1,
+  "effort": {
+   "note": "30/10 (autor): o seletor do esforco saiu da criacao. 01/11: o esforco e DERIVADO da razao de forca, startingCredits / (E_1 x R) (effortFor; 1,008 em 1,6 ate 1,792 em 0,9), e so no Attack: o encontro e sempre 1x (enemyEffortFor). planDefense multiplica o orcamento por ele; os tetos em unidades nao escalam. Este default e o do encontro e o de quem chama planDefense sem campanha.",
+   "default": 1
+  },
+  "faceThePlayer": {
+   "note": "02/10: cada unidade inimiga posicionada aponta para o centro das unidades do jogador (a zona dele). O rumo e o f32 antes de x,y no elemento (FORMATO 132), em RADIANOS, anti-horario a partir do leste (+x); +y do arquivo e o norte — conferido na tela pelos ZZ RUMO (E122): 0 leste, pi/2 norte, pi oeste, 90 noroeste.",
+   "on": true,
+   "unit": "rad",
+   "sense": 1
+  },
+  "aiPlan": {
+   "note": "08/10 (E174): on a map whose blue AI plan the author reviewed in the editor (app/data/planos_ia.json — the ten maps of tier 1, three files each), every enemy unit goes to the AI group of its role (G2 machine guns, G3 ATGM, G5-G9 armour, G13 ambush, G15 the objective...) and is placed inside that group's Setup zone (app/src/aiplan.mjs, the same code as the ZZ IA test scenarios). Off: the generator's round-robin over the plan's groups, as on every other map.",
+   "on": true
+  },
+  "dismountInfantry": {
+   "note": "The AI places the carrier well and then drops its infantry underneath it, in the open, where it can neither take cover nor ambush. Dismounted at setup, the squads start where they should be. Written the way the editor writes it (FORMATO 112.11): the Vehicle Status of the foot units AND of the formations above them, with the vehicles untouched.",
+   "on": true
+  },
+  "freeHeadquarters": true,
+  "bucketSlack": 0.1,
+  "tankLadder": {
+   "note": "18/10 (autor): onde o tier da uma fatia do orcamento aos tanques (tiers[].tankShareByProfile), ela sai so de esquadras, equipes e transportes, na proporcao de cada um (scouts e fora do mapa nao mudam). O balde compra UM carro de combate, o mais barato do lado (T-64BV para US + UKR, T-72B3 para a Russia), no nivel mais alto que cabe na ordem de order (Veteran = preco da planilha; Regular e Green pelo experienceFactor), escrito com essa experiencia mesmo que o resto da defesa seja de outra; o que sobra compra cacas-tanques na experiencia do tier. A folga (bucketSlack) so vale para o balde de tanques quando o inimigo e um dos exercitos de slackFor.",
+   "on": true,
+   "order": ["Veteran", "Regular", "Green"],
+   "slackFor": ["RU"]
+  },
+  "buckets": {
+   "note": "Role -> bucket. `squads` are bought in lots (whole platoons on foot), the rest as single units. A unit whose name says it is a vehicle (BRDM-2M ATGM, BRM-1K, mortar carrier) goes to `carriers` (IFV/APC/AA) or `tanks` whatever its role; a name like \"3 x 152mm Howitzer\" is an off-map battery whatever the library flag says (the flag lies for organic battalion assets). Roles in no bucket are never bought: hq (comes free inside a lot), truck, support, trp, other.",
+   "squads": [
+    "infantry",
+    "engineer"
+   ],
+   "teams": [
+    "mg",
+    "at_inf",
+    "atgm",
+    "sniper",
+    "manpads",
+    "mortar"
+   ],
+   "carriers": [
+    "apc",
+    "ifv",
+    "aa"
+   ],
+   "tanks": [
+    "tank"
+   ],
+   "scouts": [
+    "recon"
+   ],
+   "offMap": [
+    "mortar_off",
+    "artillery_off",
+    "artillery",
+    "drone",
+    "air"
+   ]
+  },
+  "alwaysAllowed": [
+   "infantry",
+   "engineer",
+   "mg",
+   "at_inf",
+   "sniper",
+   "apc",
+   "ifv",
+   "hq"
+  ],
+  "alwaysAllowedNote": "Roles every tier may buy; `tiers[].unlocks` adds to them (ATGM and recon in tier 2, tanks in tier 3, artillery and air in tier 4).",
+  "airObserversNote": "02/11 (autor): toda aviacao inimiga vai acompanhada da Air Controller Section da faccao (so o controlador aereo guia o apoio aereo; o observador comum nao), de graca e no grupo dos observadores da IA (G11 na defesa; no encontro vai com o resto, G16). Uma secao por exercito que levou aviacao, fora da conta de maxSources; o encontro nao a compra paga (`names`: o papel do encontro e never).",
+  "airObservers": { "names": "Air Controller|JTAC|TACP", "sources": { "US": "US - Section (Air Controller)", "RU": "RU - Air Controller Section", "UKR": "UKR - Section (Air Controller)" } },
+  "maxSources": 5,
+  "carrierExcludeNote": "20/10 (autor): transportes que a defesa nunca compra, por exercito (regex no nome). RU: de MT-LB so o MT-LBM 6MB — o MT-LBM e o 6MA saem. O 6MB hoje so existe numa variante de raridade (fora do pool): ate o autor salvar formacoes com ele, a defesa russa nao tem MT-LB; o pelotao continua a venda, sem o seu transporte.",
+  "carrierExclude": { "RU": "\\(MT-LBM( 6MA)?\\)" },
+  "maxSourcesNote": "Library formations WITH UNITS ON THE MAP one defense may draw from. Each used source is one more top-level formation on the blue side of the file; two and three are proven in game (E17, E45), five is the ceiling until proven. A source that is nothing but off-map (a mortar platoon file, a battery, an aircraft) is not counted: one unit, nothing on the map.",
+  "ownCarriersFirst": 0.6,
+  "ownCarriersFirstNote": "When buying a vehicle, the chance of restricting the draw to the carriers of the platoons already bought (so a BTR platoon keeps some of its BTRs) instead of any combat vehicle type of the nation.",
+  "lotMinSquads": 2,
+  "draw": {
+   "note": "Weights per ROLE when the planner draws what to buy next in a bucket (the role is drawn by weight, then the type uniformly within the role, then the unit). Without them the draw over types fields snipers a third of the time and engineer platoons before rifle platoons, because the library has more KINDS of those. A role missing here weighs 1. CALIBRAR.",
+   "squads": {
+    "infantry": 5,
+    "engineer": 1
+   },
+   "teams": {
+    "mg": 4,
+    "at_inf": 4,
+    "atgm": 3,
+    "mortar": 1.5,
+    "sniper": 1,
+    "manpads": 0.7
+   },
+   "carriers": {
+    "apc": 3,
+    "ifv": 3,
+    "aa": 0.5
+   },
+   "tanks": {
+    "tank": 1
+   },
+   "scouts": {
+    "recon": 1
+   },
+   "offMap": {
+    "mortar_off": 3,
+    "artillery_off": 2,
+    "artillery": 2,
+    "drone": 1,
+    "air": 1
+   }
+  },
+  "roleCap": {
+   "note": "The most a single role may take of its bucket's share (fraction). Keeps the blind draw from filling the weapons-team money with MANPADS or snipers once the machine guns of the sources in use run out, and the squads with engineers. A role missing here is uncapped. CALIBRAR.",
+   "manpads": 0.1,
+   "sniper": 0.15,
+   "mortar": 0.3,
+   "engineer": 0.35,
+   "aa": 0.35
+  },
+  "budgetsNote": "THE DEFENSE BUDGET IS FIVE BUDGETS (E47, 12/09). autor: \"um orcamento para cada categoria que cresce conforme os tiers […] A ideia e ter dezenas de tanques nas batalhas finais. Gerar batalhas epicas. E os recursos do jogador tem que acompanhar isso.\" Each tier gives credits per category for its FIRST battle (`tiers[].budgets`); the second and third battles of the tier multiply everything by `battleGrowth` once and twice; then the enemy effort (01/11: derived from the force ratio, Attack only) and the map kind factor multiply too. The map profile moves money between foot and vehicles (`profileShift`). The sum is the budget the reward is computed from, so the player's income follows the curve by construction (reward.base = defenseCost).",
+  "mortarOnMap": false,
+  "mortarOnMapNote": "autor, 11/10: morteiro inimigo so fora do mapa. false = nenhuma equipe nem veiculo com Mortar no nome entra na defesa (defense.bucketOf); as baterias fora do mapa seguem o orcamento offMap e o unlock mortar_off.",
+  "battleGrowth": 1.3,
+  "profileShift": {
+   "note": "Fraction of money moved by the map profile: positive moves that share of the infantry money (squads + teams) to the vehicles (carriers + tanks, in proportion); negative moves that share of the vehicle money to the infantry. One number per profile instead of a table. CALIBRAR.",
+   "urbano": -0.3,
+   "misto": 0,
+   "aberto": 0.3
+  },
+  "mortarSurpriseNote": "`tiers[].mortarChance`: in a tier whose off-map budget is 0, the chance (seeded, per battle) that ONE off-map mortar battery shows up anyway - the price of the side's cheapest mortar_off battery (RU/UKR 3 x 120mm 2B11, US 2 x 60mm M224A1) is added to the off-map budget and the role is allowed for that battle. autor, 11/10: \"35% de probabilidade de morteiro off-map no tier 1\", so a bateria mais barata.",
+  "specialistTeamsNote": "28/10 (autor): arquivos da biblioteca com equipes AVULSAS do editor (Specialist Teams), so para a defesa (formations.defenseOnly). As equipes soltas deles contam para tiers[].teamQuota.mgSingles.",
+  "specialistTeams": { "RU": ["RU - Specialist Teams (MG)"] },
+  "scouts": {
+   "note": "autor, 11/10: 20% of the SQUAD budget goes to scout and recon squads, every tier, and only from these library files (the scout platoons of the cavalry squadrons; the recon platoon of the Ukrainian tactical groups; the recon platoons of the old Russian recon battalion). Foot recon of any other file is never bought; recon vehicles (BRDM, BRM-1K) are carriers. They are bought one by one and go to AI group 2 (Forward Deployed). autor, 11/10 (2): the US scouts are SECTIONS only (`names`) and never with a Javelin (`noWeapons`, hand codes of research/armas.json: 4/1 = Javelin) - \"com javelin eles ficam muito overpowered\". The Javelin lives in the section TYPE (factory weapons, research/fabrica.json), so the sections that carry one are simply not bought: of Squadron (Cavalry) 0x0a and 0x0b; 0x29, 0x49, 0x05 and the Stryker squadron 0x0e have none.",
+   "share": 0.2,
+   "sources": {
+    "US": ["US - Squadron (Cavalry)", "US - Squadron (Cavalry [Stryker])"],
+    "UKR": ["UKR - Tactical Group (Battalion [BTR])", "UKR - Tactical Group (Battalion [BMP])"],
+    "RU": ["RU - Reconnaissance Battalion [old]"]
+   },
+   "names": {
+    "US": ["Section (Scout)"]
+   },
+   "noWeapons": ["4/1"]
+  },
+  "tankSurpriseNote": "`tiers[].tankChance`: in a tier whose tank budget is 0, the chance (seeded, per battle) that ONE tank shows up anyway — its price is added to the tank budget and the role is allowed for that battle. autor: \"um seed de aleatoriedade que da alguma chance de spawn de tanque nas primeiras batalhas\".",
+  "unitCaps": {
+   "note": "CEILING IN UNITS per category, whatever the budget (autor, 13/09: \"podemos colocar um teto para cada categoria\"). The money buys until the category is full; what it could not spend goes to the other categories under their ceilings, and after that it is simply not spent (the reward follows the cost, not the budget). Squads counts the rifle/engineer squads only - the HQ teams that come free with a platoon ride along; `onMap` is the ceiling for everything that sets foot on the map. Drawn from the biggest scenarios the developers shipped (tools/re/scratch/censo_cenarios.mjs): 130 units on a side, 32 tanks, 58 vehicles. Fixed, not scaled by effort: it is what the engine has been seen to carry. autor, 13/09: squads 45 -> 35, teams 30 -> 35, tanks 24 -> 30. CALIBRAR. 01/11 (autor): sem teto pratico por categoria (999) e onMap 140 -> 250: com a razao de forca escalando o inimigo, os tetos cortavam a b10-b12 e a razao real ficava mais branda que a escolhida (Very Hard b12: 1,22 em vez de 0,9 contra RU). Medido: Medium b12 ~186 unidades, Very Hard ~200-237.",
+   "squads": 999,
+   "teams": 999,
+   "carriers": 999,
+   "tanks": 999,
+   "offMap": 6,
+   "onMap": 250
+  }
+ },
+ "victory": {
+  "note": "The victory level of a generated campaign is NOT in the save (FORMATO 111.27), so the app derives it. Two steps, both the manual's (Game Manual pp.89-90, `research/MANUAL_EDITOR.md` 4.7): V = (A + 10) / (B + 10), A the bigger score and B the smaller; then the level from V AND the fraction the winner made of ITS OWN potential — the points of the objectives on its list that have tiles (FORMATO 114 and 123.2). The +10 is the manual's smoothing: without it 40 x 20 reads as 2.0 and the game reads 1.67, and a 100 x 0 is infinite instead of 11. the author's case, which caught the two-sides reading in 07/09: 500 points of the 750 on that map, 66.7%, and the game called it a Major Victory — which is what these bands give. Until 23/09 the bands were 60/40/15% with ratios 2.5/1.5/1.15 and a plain p/e, which is NOT what this note claimed; the manual's own example (700 of 1000 against 150, V = 4.44 but 70%) is Major, and only these bands produce it.",
+  "levels": [
+   {
+    "level": "Total Victory",
+    "share": 0.8,
+    "ratio": 4
+   },
+   {
+    "level": "Major Victory",
+    "share": 0.55,
+    "ratio": 2.5
+   },
+   {
+    "level": "Tactical Victory",
+    "share": 0.3,
+    "ratio": 1.75
+   },
+   {
+    "level": "Minor Victory",
+    "share": 0,
+    "ratio": 1.25
+   }
+  ],
+  "semObjetivos": {
+   "note": "When the objectives cannot be read from the battle file the app falls back to the old two-side comparison, and says so in the log. It is optimistic when the defense scores nothing — that is the bug this replaced — so it is a fallback, not a mode. Since 23/09 the numbers are the same as the table above (they are the manual's); what differs is what `share` MEANS here — the side's slice of the two scores, not of its own potential, because without the battle file there is no potential to divide by.",
+   "levels": [
+    {
+     "level": "Total Victory",
+     "share": 0.8,
+     "ratio": 4
+    },
+    {
+     "level": "Major Victory",
+     "share": 0.55,
+     "ratio": 2.5
+    },
+    {
+     "level": "Tactical Victory",
+     "share": 0.3,
+     "ratio": 1.75
+    },
+    {
+     "level": "Minor Victory",
+     "share": 0,
+     "ratio": 1.25
+    }
+   ]
+  }
+ },
+ "progression": {
+  "note": "What a unit earns by fighting. Experience is bought at creation and then EARNED: a unit that took the field counts the battle, and if it was won it counts a victory too — both since it reached the level it is at now (they reset on promotion). `promotion.battles[level]` says how many battles the next step costs, and a victory counts as `promotion.victoryWorth` of them (2). autor wrote the table on 13/09 and it replaced the accumulated-xp scale, which said the same thing in a currency nobody could read on screen. Nothing is ever demoted: the game has no mechanic for forgetting, and losing men is punishment enough. Being in the thick of it (`blooded`) no longer counts — the outcome does. Motivation follows the campaign mood, one step per battle, inside the range a bought formation shows (Low..High). CALIBRATE.",
+  "on": true,
+  "promotion": {
+   "note": "Battles at the current level for the next one, and A VICTORY COUNTS AS TWO (`victoryWorth`). So a Regular needs 4: four draws or defeats, two victories, or any mix that adds to four. The counters reset on promotion, only one step is taken per battle, and Elite has no line because it is the top. autor wrote it as a single number per level on 13/09 — it was a pair (victories, battles) for a few hours, and one number with a multiplier says the same thing and handles the mixed run without a second rule.",
+   "victoryWorth": 2,
+   "battles": {
+    "Conscript": 1,
+    "Green": 2,
+    "Regular": 4,
+    "Veteran": 6,
+    "Crack": 10
+   }
+  },
+  "training": {
+   "on": false,
+   "offNote": "18/10 (autor, corrigido no mesmo dia): desligado. Uma unidade que ja existe nao muda de experiencia pagando; so lutando. Na COMPRA (criacao, recrutamento, arsenal) o nivel continua a escolha do jogador, pelo preco do nivel.",
+   "note": "Plano 3: pagar para subir UM degrau de experiencia de uma unidade que esta em campo, entre batalhas. O teto e de proposito — o treino leva a unidade ate Veteran e o resto se ganha lutando, que e o que mantem Crack e Elite valendo alguma coisa. O preco e a diferenca de preco da unidade entre o nivel de hoje e o de amanha, a mesma escala da compra no arsenal (E53), com um piso para que treinar um esquadrao barato nao saia de graca. CALIBRAR.",
+   "pricePerStep": 150,
+   "factor": 3,
+   "maxLevel": "Veteran"
+  },
+  "motivation": {
+   "onVictory": 1,
+   "onDefeat": -1,
+   "max": "High",
+   "min": "Low"
+  },
+  "leadership": {
+   "note": "18/10 (autor): a leadership (-2..+2) de cada unidade do jogador e SORTEADA quando ela e paga (na criacao, no arsenal, no recrutamento e na maquina reconstruida) e o jogador so a ve depois de pagar. Pesos puxados para baixo (draw). Sobe um degrau a cada cleanBattlesPerStep batalhas sem perdas, ACUMULADAS (perda nao zera); perda = homem ferido ou morto da unidade, ou o veiculo destruido (imobilizado nao conta). Teto max.",
+   "on": true,
+   "draw": { "-2": 10, "-1": 30, "0": 45, "+1": 12, "+2": 3 },
+   "cleanBattlesPerStep": 2,
+   "max": "+2"
+  }
+ },
+ "difficulty": {
+  "note": "18/10 (autor): os presets da tela de criacao. Escolher um escreve todos os parametros; qualquer combinacao que nao bata com um deles e Custom. O inimigo 'US' e o lado US + UKR. state.difficulty guarda o nome, calculado no servidor (difficultyOf). 30/10: o esforco do inimigo saiu e a razao de forca entrou; 01/11: as razoes 1,6 / 1,45 / 1,3 / 1,1 / 0,9. 06/11 (autor): o preco da Special Forces entra no preset (600 em todos); gratis e Custom.",
+  "default": "Medium",
+  "ratioNote": "30/10 (autor): a razao de forca R e A dificuldade. 01/11 (autor): pelo lado do INIMIGO — o jogador comeca sempre com startingCredits e recebe o mesmo em todo nivel (reward.note); o inimigo de um Attack e a escada do jogador / R (esforco startingCredits / (E_1 x R), effortFor). O Meeting Engagement e 1:1 em todo nivel (o orcamento dele nao leva o esforco). Quem nao perde nada fica em R:1 a campanha inteira. Custom escolhe da mesma lista.",
+  "ratioOptions": [1.6, 1.45, 1.3, 1.1, 0.9],
+  "presets": [
+   { "name": "Very Easy", "armies": ["US", "UKR"], "enemySide": "RU", "ratio": 1.6, "rescueChance": 0.75, "opPoints": 5, "defeats": 4, "specialForcesPrice": 600 },
+   { "name": "Easy", "armies": ["US"], "enemySide": "RU", "ratio": 1.45, "rescueChance": 0.75, "opPoints": 3, "defeats": 3, "specialForcesPrice": 600 },
+   { "name": "Medium", "armies": ["RU"], "enemySide": "US", "ratio": 1.3, "rescueChance": 0.5, "opPoints": 3, "defeats": 2, "specialForcesPrice": 600 },
+   { "name": "Hard", "armies": ["RU"], "enemySide": "US", "ratio": 1.1, "rescueChance": 0.5, "opPoints": 2, "defeats": 2, "specialForcesPrice": 600 },
+   { "name": "Very Hard", "armies": ["UKR"], "enemySide": "RU", "ratio": 0.9, "rescueChance": 0.5, "opPoints": 2, "defeats": 2, "specialForcesPrice": 600 }
+  ]
+ },
+ "campaign": {
+  "note": "The eight bytes the .cam carries for every battle and the save keeps a copy of (FORMATO 110.2/110.6). The manual (p. 115) defines them: the chance a unit has of being completely replaced if lost (REFIT), repaired if damaged, vehicle only (REPAIR), topped off with ammo (RESUPPLY) and brought back rested (REST). Same numbers for both sides. REFIT stays at 0 because replacements are BOUGHT in the app -- men by the head, a lost vehicle by the price of the machine. REPAIR is 100 so a damaged vehicle comes back whole: nothing about a dented Stryker should follow the player for twelve battles. RESUPPLY volta a 0 em 08/09 (FORMATO 119): com 100 o jogo escreve o roster da virada SEM o inventario dos homens -- mesmos soldados, cauda de 11 bytes em vez de 39, sem arma nem municao -- e com isso o app perde a leitura do equipamento, a coluna carrying da tela de Personnel e qualquer tela de equipar. Quem repoe municao e o app (replacement.appResupply), por um caminho ja provado em jogo (E33). O preco de deixar em 0 e o homem que perdeu a lista de municao inteira: sem paiol proprio, o app nao tem onde escrever de volta.",
+  "percentages": {
+   "refit": 0,
+   "repair": 100,
+   "resupply": 0,
+   "rest": 100
+  }
+ },
+ "meet": {
+  "note": "O ENCONTRO (Meeting Engagement, autor 12/10/2026; 01/11: 1:1 em todo nivel, o orcamento nao leva o esforco da dificuldade): a IA azul ATACA, e a forca dela e comprada por papeis proprios, nao como uma defesa (app/src/meet.mjs). Orcamento = o total da defesa daquela batalha (tierBudgets x kindBudgetFactor.Meet), dividido por `shares` (12/10: 50 tanques, 5 leves, 5 reconhecimento, 30 mecanizada, 5 equipes, 5 AA — a mecanizada subiu para haver infantaria para tomar o objetivo desde as primeiras batalhas) e gasto na ordem de `order`; a sobra de um balde desce para o seguinte; `secondPass` gasta o que sobrou no fim. Ninguem a pe no setup: esquadras so em pelotao com os seus blindados de transporte (`carriers`), equipes no veiculo organico do pelotao (`teamRides` aceita HMMWV e caminhao), e o app nao desmonta o lado azul (`dismount: false`). Tanques, reconhecimento e blindados leves por nacao e tier: `match` e um regex no nome da unidade, `tiers` os tiers em que vale, `sources` (opcional) os arquivos da biblioteca de onde pode sair, `needsTeam` (opcional) so num pelotao que tenha uma equipe com esse nome (o Platoon (Assault) Standard tem HMG; o Antitank nao). Nomes que ainda nao estao na biblioteca (BRM-3K, BRDM-2M, BRDM-2 (AT-5), Shturm-S e Khrizantema russos) ja estao nas listas: entram quando o autor salvar as formacoes com a troca. `variants`: as proporcoes A/B/C (esquerda/centro/direita do atacante) de tanques, leves e mecanizada em cada plano de IA. `doctrine`: o relogio da doutrina atacante (tools/re/ia_encontro.mjs), em segundos e tiles.",
+  "order": ["support", "tanks", "light", "recon", "mech", "teams", "aa"],
+  "shares": { "tanks": 0.5, "light": 0.05, "recon": 0.05, "mech": 0.3, "teams": 0.05, "aa": 0.05 },
+  "sharesByTier": {
+   "2": { "tanks": 0.55, "light": 0.05, "recon": 0.05, "mech": 0.1, "teams": 0.1, "aa": 0.05, "support": 0.1 },
+   "3": { "tanks": 0.55, "light": 0.05, "recon": 0.05, "mech": 0.1, "teams": 0.1, "aa": 0.05, "support": 0.1 },
+   "4": { "tanks": 0.55, "light": 0.05, "recon": 0.05, "mech": 0.1, "teams": 0.1, "aa": 0.05, "support": 0.1 }
+  },
+  "playerFloor": { "on": true, "ceiling": 1.5, "note": "autor, 25/10 (UKR b8: 18.886 cr de encontro contra 21.526 cr da forca dele, 15.015 em tanques): o orcamento do encontro e o maior entre a escala do tier (tierBudgets x kindBudgetFactor.Meet) e o valor da forca do jogador em campo (precos das unidades presentes, nao destruidas, nao vendidas), com teto de ceiling x a escala. Aplicado quando a batalha e preparada (ou antes, se o jogador revela o inimigo inteiro na Intel); so nos encontros." },
+  "sharesByTierNote": "autor, 25/10: 5 % da mecanizada e 5 % dos leves para os tanques nos tiers 2-4 (tanks 0.45 -> 0.55, mech 0.15 -> 0.10, light 0.10 -> 0.05); o tier 1 nao muda. autor, 17/10: 5 % da mecanizada para as equipes desde o tier 2 (mech 0.2 -> 0.15, teams 0.05 -> 0.1), pelos circulos de equipes dos mapas de roteiro (282: tres). Medido em 30 sementes: US tier 3 passa de 2,2 para 3,3 formacoes de equipes; RU quase nao muda (faltam formacoes, nao dinheiro) - por isso a divisao equipe a equipe em meetGroupsRoteiro.",
+  "supportRoles": ["mortar_off", "artillery_off", "air"],
+  "excludeByNationNote": "06/11 (autor): o canhao anticarro ucraniano (Team (Antitank Gun)) nao entra no encontro, lento demais para atacar; na defesa continua. Regex no nome, por exercito (meet.papelEncontro).",
+  "excludeByNation": { "UKR": "Antitank Gun" },
+  "guaranteedMortarTiers": [1],
+  "supportNote": "autor, 14/10: o tier 1 fica com as fatias de 'shares' (sem suporte); do tier 2 em diante 'sharesByTier', com 10 % de suporte (morteiro, artilharia e aereo FORA do mapa, do pool da defesa, so os papeis liberados no tier). O suporte e o primeiro da cascata (como o offMap da defesa); o que sobra dele desce para os tanques. Um mapa com 'garantias: { morteiro: true }' no registro (planos_ia.json) compra no tier 1 a bateria de morteiro fora do mapa mais barata do lado, por cima do orcamento.",
+  "tankRoundUp": 0.75,
+  "tankRoundUpNote": "autor, 14/10: sem tanque comprado e com o pote dos tanques cobrindo 75 % do tanque mais barato, o pote sobe ate o preco dele (o no leve do tier 1, 992 contra um T-72B3 de 1000, ficava sem tanque); a diferenca sai dos baldes seguintes na cascata. 0 desliga.",
+  "secondPass": ["mech", "light", "recon", "teams"],
+  "freeHeadquarters": true,
+  "dismount": false,
+  "tanks": {
+   "US": [{ "match": "M1A2", "tiers": [2, 3, 4] }],
+   "UKR": [{ "match": "T-64BV|BM Oplot", "tiers": [1, 2, 3, 4] }],
+   "RU": [{ "match": "T-72B3", "tiers": [1, 2, 3, 4] }, { "match": "T-90", "tiers": [2, 3, 4] }]
+  },
+  "recon": {
+   "US": [
+    { "match": "M1200 Armored Knight", "tiers": [1] },
+    { "match": "M3A3 Bradley", "tiers": [2, 3, 4], "sources": ["US - Cavalry Squadron"] },
+    { "match": "M1127 Stryker", "tiers": [1, 2, 3, 4] }
+   ],
+   "UKR": [
+    { "match": "Reconnaissance Vehicle \\(BRM-1K\\)", "tiers": [1, 2, 3, 4] },
+    { "match": "Reconnaissance Vehicle \\(BRDM-2\\)", "tiers": [1, 2] }
+   ],
+   "RU": [
+    { "match": "Reconnaissance Vehicle \\(BRDM-2\\)|Reconnaissance Vehicle \\(BRDM-2M\\)", "tiers": [1] },
+    { "match": "Reconnaissance Vehicle \\(BRM-1K\\)|Reconnaissance Vehicle \\(BRM-3K\\)", "tiers": [1, 2, 3, 4] },
+    { "match": "Tigr \\((MG|AGS-17)\\)", "tiers": [1] }
+   ]
+  },
+  "light": {
+   "US": [
+    { "match": "M1151 HMMWV|M1167 HMMWV", "tiers": [1], "sources": ["US - Battalion (Infantry)"], "needsTeam": "HMG" },
+    { "match": "M1134 Stryker|M1128 Stryker", "tiers": [1, 2, 3, 4] }
+   ],
+   "UKR": [{ "match": "9P149 Shturm-S", "tiers": [1, 2, 3, 4] }],
+   "RU": [{ "match": "9P157-2 Khrizantema|9P149 Shturm-S|BRDM-2 \\(AT-5\\)|BRDM-2M \\(AT-5\\)|MT-LBM 6MB", "tiers": [1, 2, 3, 4] }]
+  },
+  "carriers": "Bradley|BMP-|BTR-4|BTR-70|BTR-80|BTR-82|M1126 Stryker|MT-LB",
+  "mechExceptionsNote": "autor, 12/10: na PRIMEIRA batalha do tier 1 nenhum pelotao mecanizado cabe nos 30 % (465 de 1.550), entao estes pelotoes entram como infantaria mecanizada mesmo em HMMWV/Tigr: US+UKR os pelotoes de engenharia do Battalion (Brigade Engineer) (3 esquadras + HQ em 4 HMMWV, ~425), RU os pelotoes de reconhecimento do Battalion (Reconnaissance [new]) (2-3 esquadras em 3 Tigr, 255-330). So nas batalhas de `battles`.",
+  "mechExceptions": {
+   "US": [{ "source": "US - Battalion (Brigade Engineer)", "leaf": "^Platoon \\(Engineer\\)$", "battles": [1] }],
+   "RU": [{ "source": "RU - Battalion (Reconnaissance [new])", "leaf": "^Platoon \\(Recon\\)$", "battles": [1] }]
+  },
+  "teamRides": "HMMWV|Truck|Ural|KamAZ|LMTV|MTVR|Multipurpose Vehicle|Tigr|Utility Vehicle|Armored Personnel Carrier|BTR-|MT-LB|Stryker|Bradley|BMP-",
+  "aaVehicles": "Tunguska|Strela-10|Shilka|Antiaircraft|Avenger|Linebacker",
+  "seatsNote": "Quantas EQUIPES cabem num veiculo de um lote de equipes (o jogo embarca pela lotacao ao carregar; o que nao cabe comeca a pe — o observador do Platoon (Scout) do Cavalry Squadron, 12/10). O primeiro regex que casa vale; o resto leva 1. Os pelotoes mecanizados vem inteiros, na lotacao do proprio TO&E.",
+  "seats": [["Truck|Ural|KamAZ|LMTV|MTVR|M1152 HMMWV\\)|Cargo", 3], ["Infantry Fighting|Infantry Carrier|Armored Personnel|BTR-|BMP-|MT-LB|Bradley", 2], ["HMMWV|Tigr|Observer \\(|Reconnaissance Vehicle|BRDM|BRM-", 1]],
+  "teamRoles": ["mg", "atgm", "sniper", "at_inf"],
+  "teamNames": "Forward Observer|Observer Team|Fire Support Team|\\bFIST\\b|JTAC|TACP",
+  "variants": {
+   "balanced": { "A": 0.2, "B": 0.6, "C": 0.2 },
+   "right": { "A": 0.2, "B": 0.4, "C": 0.4 },
+   "left": { "A": 0.4, "B": 0.4, "C": 0.2 },
+   "fire": { "A": 0.2, "B": 0.6, "C": 0.2 }
+  },
+  "doctrine": { "tanksLeave": [0, 60], "reconDelay": 60, "lightDelay": 120, "mechDelay": 90, "aaLeave": [60, 240], "followBehind": 7, "reconBehind": 2, "lightBehind": 4, "assaultLine": 10, "holdSeconds": 90, "fireHoldSeconds": 600, "smallMapTiles": 24, "speedMps": 1.0 },
+  "assaultNote": "O ASSALTO DIRETO do mapa pequeno (autor, 12/10 noite, depois de jogar o 015r com os lances): num mapa em que D (da faixa ao objetivo) < doctrine.smallMapTiles nao ha lances. Tanques, reconhecimento e a escolta de leves descem a rua central em Assault na hora zero ate o centro do objetivo. A mecanizada se divide em DOIS grupos por pelotao — esquadras e veiculos (o 01 teste dele: o IFV desmonta e segue sozinho): a parcela 1 desmonta nas casas do centro do objetivo e os IFVs recuam para as arvores atras delas, entrando no objetivo centreVehHold s depois; a parcela 2 desmonta nas casas afastadas do objetivo, os IFVs vao pela borda do flanco ate standoff tiles do setup do jogador e fecham sobre o objetivo em Assault, e as esquadras esperam farInfWait s para entrar. Leves divididos entre escolta (com os tanques) e guarda de flanco. Variantes: o flanco da parcela 2 (left = esquerda do atacante, right = direita, both = os dois).",
+  "assault": {
+   "groups": { "tanks": 1, "recon": 2, "escort": 3, "guardA": 4, "guardC": 5, "centreVeh": 6, "centreInf": 7, "farVehA": 8, "farInfA": 9, "farVehC": 10, "farInfC": 11, "teams": 12, "aa": 13, "rest": 14 },
+   "variants": { "flankLeft": { "flank": "A" }, "flankRight": { "flank": "C" }, "both": { "flank": "AC" } },
+   "clock": { "leave": [0, 60], "escortDelay": 30, "centreVehHold": 1800, "farInfWait": 900, "finalPush": 2100, "finalBound": 120 },
+   "finalNote": "A investida final (autor, 13/10): aos finalPush s (35:00) a IA vai tomar finalFraction (3/4) do caminho entre a faixa azul e a do jogador — blindados pesados e leves em lances de finalBoundTiles tiles a cada finalBound s (Assault), a infantaria de cobertura a cobertura (casa ou mata).",
+   "finalFraction": 0.75,
+   "finalBoundTiles": 10,
+   "standoff": [10, 20],
+   "centreHouses": 12,
+   "farHouses": 4,
+   "treesBehind": [4, 16]
+  },
+  "aberto": {
+   "note": "A DOUTRINA DE TERRENO ABERTO (autor, 13/10/2026, Open-Rural 306): os pesados em dois grupos (tanksA/tanksC, o recon junto) tomam o objetivo na hora zero; equipes e a parcela 2 da mecanizada desembarcam atras da floresta do lado azul e vao a pe a borda dela; os IFVs da parcela 2 voltam ao setup coberto pelo relevo, sobem pela borda do mapa e flanqueiam; a parcela 1 desembarca nas casas do objetivo e os IFVs ficam atras delas; leves metade vigia (borda da floresta), metade flanco; AA fica no setup. Aos finalPush (35:00) os blindados em lances ate 3/4 do mapa, os flanqueadores viram para dentro (inwardBounds tiles da borda) e a infantaria da floresta ataca as casas do jogador. Variantes flankLeft (A) e flankRight (C): so quem flanqueia muda de lado. Um pelotao mecanizado so vai as casas do objetivo. As bordas, standoff, finalFraction e finalBoundTiles vem de meet.assault (zonas compartilhadas).",
+   "groups": { "tanksA": 1, "tanksC": 2, "lightOver": 3, "lightFlank": 4, "centreVeh": 5, "centreInf": 6, "forestVeh": 7, "forestInf": 8, "teamVeh": 9, "teams": 10, "aa": 11, "rest": 12 },
+   "variants": { "flankLeft": { "flank": "A" }, "flankRight": { "flank": "C" } },
+   "clock": { "leave": [0, 60], "forestBack": [0, 60], "forestEdge": 600, "forestFar": 1200, "lightEdge": 300, "lightFar": 1200, "finalPush": 2100, "finalBound": 120 },
+   "overwatchScore": 0.8,
+   "forestDepth": 2,
+   "behindForest": 5,
+   "inwardBounds": [10, 20]
+  },
+  "roteiro": {
+   "alignSetupNote": "autor, 28/10 (Village-Forest 012r: grupos cruzando o mapa de lado ao sair do setup): o Setup nomeado setup.<kind>.<A|B|C> ou setup.fundo vira a banda daquele kind numa janela lateral em torno do inicio da rota do grupo (setupWindow tiles para cada lado, crescendo ate setupMinTiles); a infantaria mecanizada fica com a janela do transporte. { setup, fixo: true } ou ajustes.alignSetup false mantem o terco.",
+   "alignSetup": true, "setupWindow": 12, "setupMinTiles": 30,
+   "note": "A DOUTRINA ROTEIRO (autor, 14/10/2026, Small Town-Forest 018r): o plano do mapa e DADO, nao codigo. research/ia/<slug>.meet.ajustes.json traz as marcas do desenho, os grupos (nome -> numero), a alocacao das unidades (papel -> grupo; mech = parcelas [veiculos, esquadras]), os planos (cadeias de ordens por grupo, por nome de zona; um plano pode ser 'como' outro com 'trocar' grupos) e os alvos de apoio. O escritor (tools/re/ia_encontro.mjs cadeiasRoteiro) e o app (meet.mjs meetGroupsRoteiro) leem esses dados; o registro do mapa (planos_ia.json) guarda grupos e alocacao."
+  },
+  "posicional": {
+   "note": "A DOUTRINA POSICIONAL (autor, 14/10/2026, Small Hills-Forest-Village 024r): mapa apertado, combate de posicao. As marcas do mapa (ajustes.marcas) dizem onde cada parcela desmonta. Pesados e recon (G1) pela rua central ao objetivo na hora zero; a mecanizada em dois grupos, o vermelho (3/4) desmonta na mata ao sul da vila (forest) ou nas arvores do comeco da seta e flanqueia por ela em lances de infBoundTiles a cada infBoundEvery s (flank), o amarelo (5/6) nas casas do lado azul da vila; aos finalPush a infantaria toma o resto da cidade e para; leves (G2) e equipes (G7) na linha verde, o alto que ve a cidade, e aos finalPush os leves ocupam o objetivo inteiro; AA (G8) e o resto (G9) no setup. Um pelotao so vai ao grupo vermelho.",
+   "groups": { "tanks": 1, "lightOver": 2, "redVeh": 3, "redInf": 4, "yellowVeh": 5, "yellowInf": 6, "teams": 7, "aa": 8, "rest": 9 },
+   "variants": { "forest": {}, "flank": {} },
+   "clock": { "leave": [0, 60], "finalPush": 2100, "flankStart": 240, "infBoundEvery": 120, "infBoundTiles": 8 }
+  }
+ },
+ "path": {
+  "note": "O CAMINHO DE BATALHAS (autor, 10-11/10/2026, E176): a campanha e uma arvore de 12 linhas, a linha n e a batalha n. A linha 1 e o Start (um no so, a batalha 1 montada na criacao); das linhas 2 a 12 cada linha tem 2-4 nos, cada no liga a 1-3 nos da linha seguinte (caminhadas a la Slay the Spire em columns colunas, walks caminhadas, sem arestas cruzadas). Cada no e uma batalha comum ou, com meetShare, um Meeting Engagement (23/10: os tipos Probe/Attack/Assault sairam, eram o mesmo mapa), um peso da forca inimiga escondido (bands: o orcamento da defesa vezes budget; a recompensa ja segue o custo, entao pesado paga mais), um multiplicador de creditos visivel (rewardMults) e os pontos operacionais que paga (opsRewards, pagos quando o resultado e lido e a batalha nao foi perdida). O mapa e a composicao inimiga de cada no sao sorteados NA CRIACAO e ficam em segredo em path.json; o jogador revela os filhos do no atual pagando pontos (reveal: mapa, formacoes inimigas, composicao inteira; a inteira depois das formacoes custa a diferenca). O estoque inicial de pontos e parametro da criacao (startingPointsOptions). meetShare > 0 poe Meeting Engagements no sorteio dos tipos (ainda 0).",
+  "on": true,
+  "columns": 4,
+  "walks": 5,
+  "rowWidth": [2, 4],
+  "startingPointsOptions": [0, 1, 2, 3, 4, 5],
+  "fitsDefaultNote": "18/10 (autor): a campanha nasce sem forca (Battle Path > Quartermaster > Intel > Battle) e o caminho e sorteado antes dela, com mapas que comportam fitsDefault unidades em campo; todo tier tem mapa para 30 (teste 9). Uma forca maior troca de mapa na montagem da batalha (makeBattle, path.mapSwapped).",
+  "fitsDefault": 30,
+  "startingPointsDefault": 2,
+  "revealNote": "24/10 (autor): so o mapa (1, no no do caminho) e o inimigo inteiro (2, na Intel, pela batalha escolhida); o nivel formacoes saiu.",
+  "reveal": { "map": 1, "full": 2 },
+  "enemyWeightsNote": "18/10 (autor): o peso do inimigo e publico: pesado (orcamento x1,25), leve (x0,8), normal (x1). Era bands (secreto) + rewardMults, sorteados separados. 30/10 (a escada): `budget` escala o inimigo (01/11: costAtOne saiu, ninguem lia); `mult` age SO no teto da cobertura de reposicao (reward.replacement.capShare) — antes ele multiplicava a recompensa inteira por cima do orcamento ja pesado, e o no pesado pagava 1,25 x 1,3.",
+  "enemyWeights": [ { "id": "light", "budget": 0.8, "mult": 0.8, "w": 1 }, { "id": "normal", "budget": 1, "mult": 1, "w": 2 }, { "id": "heavy", "budget": 1.25, "mult": 1.3, "w": 1 } ],
+  "balance": {
+   "note": "18/10 (autor): decisao custa, dificuldade paga. Cada no tem beneficios (ramificacoes alem da primeira, pontos operacionais, inimigo leve) e dificuldades (inimigo pesado, EW inimiga por nivel, iluminacao ruim: noite para a defesa e dia para o Meeting Engagement, temperatura extrema). O gerador sorteia o saldo alvo (beneficios - dificuldades) de targets e completa com o peso do inimigo, pontos (ate maxOps), mais EW (dentro do que o tier permite) e luz ruim; o que nao fecha fica em residual. Sem balanco (on false), peso e pontos saem sorteados por enemyWeights e opsRewards.",
+   "on": true,
+   "points": { "branch": 1, "ops": 1, "lightEnemy": 1, "heavyEnemy": 1, "ew": { "Light": 1, "Medium": 2, "Strong": 3 }, "badLight": 1, "extremeTemp": 1 },
+   "badLight": { "defense": ["night"], "Meet": ["day"] },
+   "extremeTemps": [0, 5],
+   "targets": [ { "net": -1, "w": 1 }, { "net": 0, "w": 2 }, { "net": 1, "w": 1 } ],
+   "maxOps": 2,
+   "lightEnemyChance": 0.4
+  },
+  "opsRewards": [ { "ops": 0, "w": 3 }, { "ops": 1, "w": 2 }, { "ops": 2, "w": 0.5 } ],
+  "meetShare": 0.2,
+  "meetOnlyAuthored": true,
+  "meetNote": "13/10/2026 (autor): 20 % dos nos do caminho viram Meeting Engagement, mas so numa linha cujo tier tem mapa Meet com plano de encontro em planos_ia.json (meetOnlyAuthored); sem ele o no fica no tipo de sempre. Hoje: Small Village 015r, tier 1."
+ },
+ "abilities": {
+  "note": "Plano 2: uma compra de efeito unico para UMA batalha, feita no quartel-mestre e consumida quando a batalha seguinte e montada. O preco parte de ~8 cr/min (15 min = 120) para calibrar contra reposicao de homem (30) e TRP (500). \"push-on\" e o pedido do autor no TODO — mais 30 minutos, mas sem reabastecer nem descansar —, e por isso custa menos que os 30 limpos: o relogio vem no lugar da municao. DESDE 11/10 (E176) so as de tempo se compram, e na tela Intel, depois do Apply, sobre a batalha ja montada; push-on, intel e interdiction ficam com retired: true para as batalhas antigas que as usaram (a revelacao por pontos operacionais tomou o lugar do intel). Os efeitos que o codigo conhece sao estes quatro; o JSON so mexe em preco e valor. O relogio nao passa do maior valor que o editor oferece (240) e cai no degrau mais proximo da lista, entao o que o jogador recebe de verdade aparece na tela e no log.",
+  "on": true,
+  "campaign": {
+   "on": true,
+   "note": "18/10 (autor): as Campaign Operational Abilities valem para a campanha inteira, compradas uma vez com pontos operacionais, na aba Intel ou no quartermaster, em qualquer estagio menos com a campanha encerrada; nada e remontado e o undo nao devolve. As Map Operational Abilities (relogio, intel inimiga, EW proprio, troca de luz) seguem na aba Intel, por batalha.",
+   "list": [
+    { "id": "black-market", "name": "Access to Black Market", "ops": 1, "effect": { "blackMarket": true }, "desc": "Your special forces can buy the weapons and kit of the other armies, at the same prices as their own." }
+   ]
+  },
+  "enemyIntel": {
+   "on": true,
+   "note": "17/10: Early Intel / Intel Strength do cenario (aba Data do editor; gerar_batalha.escreverIntel), comprados na aba Intel com PONTOS OPERACIONAIS, para o lado do jogador (Red). Subir de nivel paga a diferenca. Toda batalha grava o campo (Neither/0 sem compra). Provado em jogo: ZZ INTEL RED 70 mostrou os contatos inimigos no setup.",
+   "levels": [
+    { "strength": 10, "ops": 1 },
+    { "strength": 30, "ops": 2 },
+    { "strength": 50, "ops": 3 },
+    { "strength": 70, "ops": 4 },
+    { "strength": 100, "ops": 5 }
+   ]
+  },
+  "list": [
+   {
+    "id": "clock-15",
+    "name": "Extend the clock by 15 minutes",
+    "opsNote": "18/10 (autor): o tempo extra se paga com pontos operacionais, como as outras habilidades de mapa do Intel: 1 ponto pelo +15, 2 pelo +30.",
+    "ops": 1,
+    "maxStacks": 2,
+    "effect": {
+     "minutes": 15
+    }
+   },
+   {
+    "id": "clock-30",
+    "name": "Extend the clock by 30 minutes",
+    "ops": 2,
+    "maxStacks": 1,
+    "effect": {
+     "minutes": 30
+    }
+   },
+   {
+    "id": "push-on",
+    "retired": true,
+    "name": "Push on: 30 minutes more, no resupply and no rest",
+    "price": 90,
+    "maxStacks": 1,
+    "effect": {
+     "minutes": 30,
+     "noRefit": true
+    }
+   },
+   {
+    "id": "intel",
+    "retired": true,
+    "name": "Intelligence: the enemy order of battle before the battle",
+    "price": 150,
+    "maxStacks": 1,
+    "effect": {
+     "intel": true
+    }
+   },
+   {
+    "id": "interdiction",
+    "retired": true,
+    "name": "Interdiction: the defense gets a fifth less to spend",
+    "price": 300,
+    "maxStacks": 1,
+    "effect": {
+     "defenseBudget": -0.2
+    }
+   }
+  ]
+ },
+ "ew": {
+  "on": true,
+  "note": "17/10: Blue/Red Electronic Warfare Strength do cenario (cabecalho da forca, m+3/m+4; gerar_batalha.escreverEW). O inimigo (Blue; o jogador e sempre Red) e sorteado por no do caminho pela tabela por tier (o resto e None) e aparece de graca no no; o counter (aba Battle path, so antes de montar) anula e custa o nivel; o EW proprio (Red) e comprado na aba Intel, subir paga a diferenca. Toda batalha grava os dois (None/None sem nada).",
+  "levels": ["None", "Light", "Medium", "Strong"],
+  "enemyByTier": {
+   "1": { "Light": 0.2 },
+   "2": { "Light": 0.3, "Medium": 0.1 },
+   "3": { "Light": 0.4, "Medium": 0.2, "Strong": 0.1 },
+   "4": { "Light": 0.5, "Medium": 0.3, "Strong": 0.2 }
+  },
+  "counter": { "Light": 1, "Medium": 2, "Strong": 3 },
+  "own": { "Light": 1, "Medium": 2, "Strong": 3 }
+ },
+ "formations": {
+  "typesNote": "The library is shown in a table with a Type column (autor, 27/09). The first rule whose pattern matches the formation name wins; Special Forces comes from the list below, before these. A name that matches nothing is 'Other' — the tests require there be none.",
+  "types": [
+   { "type": "Fortification", "match": "Barbed Wire|Foxholes|Sandbag Wall|Trench|Mines|Target Reference Point" },
+   { "type": "Air Support", "match": "Apache|Fighting Falcon|Strike Eagle|Fencer|Frogfoot|Fullback|Havoc|Hind|Alligator|Air Controller" },
+   { "type": "UAV", "match": "Gray Eagle|Raven|Shadow|Orlan|Pchela|Zala" },
+   { "type": "AA Support", "match": "Air Defense|MANPADS" },
+   { "type": "Antitank Support", "match": "ATGM Battery|Antitank Gun" },
+   { "type": "Artillery Support", "match": "Mortar|Howitzer|Gun \\[light\\]|Self-Propelled|Forward Observer|COLT" },
+   { "type": "Tactical Group", "match": "^Tactical Group" },
+   { "type": "Battalion", "match": "Battalion" },
+   { "type": "Squadron", "match": "Squadron" },
+   { "type": "Company", "match": "Company|^Troop" },
+   { "type": "Platoon", "match": "Platoon" },
+   { "type": "Section", "match": "Section|Specialist Teams" }
+  ],
+  "specialForcesNote": "Special Forces (autor, 27/09): only these, each a fixed piece of a library formation. `keep` lists subtree roots; everything outside them goes into the file absent and is never for sale. Their men are the only ones whose weapons the player can change (gear.specialForcesOnly). At most maxSpecialForces per campaign. 18/10 (autor): a SF russa passou a ser a fatia da Recon Company [new] do batalhao de reconhecimento (Command Squad e o Tigr da companhia + o 3rd Platoon inteiro, 8 unidades); a Engineer Sapper ficou `retired`: fora da vitrine e recusada em compra nova, mas as campanhas que ja a tem continuam se cobrando e reabrindo.",
+  "specialForces": [
+   { "source": "US - Platoon (LRS)", "name": "LRS Platoon", "keep": ["0"] },
+   { "source": "UKR - Company (Brigade Reconnaissance)", "name": "Brigade Reconnaissance, 1st Platoon", "keep": ["0.4"] },
+   { "source": "RU - Battalion (Reconnaissance [new])", "name": "Recon Platoon", "keep": ["0.4.0", "0.4.1", "0.4.4"] },
+   { "source": "RU - Engineer Sapper Company", "name": "Engineer Sapper Platoon", "keep": ["0.2"], "retired": true }
+  ],
+  "specialForcesPriceNote": "Every special forces formation costs specialForcesPrice credits, whatever its units, and every unit of it is specialForcesExperience; the shop does not let the experience change (autor, 10/10/2026).",
+  "specialForcesPrice": 600,
+  "specialForcesPriceOptionsNote": "18/10 (autor): o preco da SF e parametro da criacao da campanha (state.specialForcesPrice): gratis, 500 ou 1000 cr; o padrao e specialForcesPrice. 21/10 (autor): so gratis ou 600 cr (a soma das unidades no Veteran vai de 350 a 690); campanha criada antes guarda o preco dela. Campanha antiga sem o campo fica no padrao. 06/11 (autor): o preco faz parte do preset da dificuldade (difficulty.presets) e do multiplicador do placar.",
+  "specialForcesPriceOptions": [0, 600],
+  "specialForcesExperience": "Veteran",
+  "maxSpecialForces": 1,
+  "kitOutNote": "19/10 (autor): a Special Forces comprada (na criacao ou no meio da campanha) ganha um KIT-OUT antes da batalha seguinte: o menor mapa que a comporta, so ela em campo, uma Section (Supply) inimiga (o gerador nao escreve batalha sem defensor), `duration` minutos. O jogador faz o deploy e da Cease Fire; o jogo nomeia os homens e a loja abre so para armas e itens. Nao conta: sem credito, derrota, historico, mapa jogado nem ponto; tudo o que se perdeu nele volta de graca. on: false desliga (a SF fica com o kit de fabrica ate a primeira batalha).",
+  "kitOut": { "on": true, "duration": 10 },
+  "availabilityNote": "AVAILABILITY (autor, 04/10, coluna da aba Formacoes de formacoes_e_pendentes.xlsx): quantas copias de uma formacao a campanha pode ter ao mesmo tempo, pelo arquivo da biblioteca. O que nao esta na lista vale `availabilityDefault`. Uma copia vendida inteira nao conta; a Special Forces conta a parte, por maxSpecialForces. A criacao com a mesma fonte duas vezes foi provada em jogo pela bateria de carga (B034, RU Air Controller Section duplicada: b1, virada e b2).",
+  "discardedNote": "FORMACOES DESCARTADAS (autor, 24/10/2026; o UKR Hind F (Mi-24P) em 25/10): saem da biblioteca da loja, do planejador da defesa e do encontro (catalog.libFormations), e a compra e recusada (checkDiscardedFormations). Pelo source, sem .btt. Campanha que ja tem uma delas continua com ela.",
+  "defenseOnlyNote": "28/10 (autor): formacoes so da defesa inimiga: fora da loja (catalog.libraryForArmies) e compra recusada (checkDiscardedFormations); o planejador da defesa as ve.",
+  "defenseOnly": ["RU - Specialist Teams (MG)"],
+  "discarded": ["UKR - Company (Brigade Reconnaissance) [Breach]", "UKR - Hind F (Mi-24P [antitank])", "US - Apache Longbow (AH-64D)", "UKR - Hind F (Mi-24P)"],
+  "availabilityDefault": 1,
+  "availability": {
+    "RU - (Zala 421-08).btt": 3,
+    "RU - Air Controller Section.btt": 3,
+    "RU - Air Controller Section [RU C2 15].btt": 3,
+    "RU - Section (Forward Observer).btt": 3,
+    "RU - Section (Forward Observer) [RU C2 14].btt": 3,
+    "UKR - Section (Air Controller).btt": 3,
+    "UKR - Section (Air Controller) [UKR C2 12].btt": 3,
+    "UKR - Section (Forward Observer).btt": 3,
+    "UKR - Section (Forward Observer) [UKR C2 11].btt": 3,
+    "US - Section (Air Controller).btt": 3
+  }
+ },
+ "kit": {
+  "note": "05/10 (E145, autor): um item de inventario por soldado das Special Forces, alem da arma — lancador na mao 2 (o que a fabrica do exercito poe na mao 2 de alguma vaga: RPG-22/26, AT4, RPO, Javelin, Stinger, Igla, Corsar), cargas de demolicao (x2/x4) ou designador laser. Comprado uma vez, reposto toda batalha pelo reset de fabrica; o soldado que cai perde o item, sem reembolso. Lancador so para quem tem a mao 2 de fabrica livre. Breach Kit e do tipo da unidade (E120) e binoculos sao a marca do lider: fora. Mesmo escopo da troca de arma (gear.specialForcesOnly).",
+  "classes": [ { "match": "Javelin|Corsar|Stugna|Konkurs|Kornet", "class": "atgm" }, { "match": "Stinger|Igla", "class": "manpads" } ],
+  "price": { "at": 60, "atgm": 120, "manpads": 60, "demo2": 20, "demo4": 40, "laser": 40 },
+  "ammo": {}
+ },
+ "gear": {
+  "note": "Plano 1 fase C: o jogador escolhe a arma de um soldado, entre as que o exercito dele carrega neste save. A escrita e a provada em jogo — dois bytes (classe|item) no lugar, E30 e E54 — e a municao da arma nova entra pelo refit, que olha a arma que o homem segura (E37/E54/E60). Nada e removido, porque encolher o registro nunca foi aceito (E28/E29): o calibre antigo fica no paiol como peso morto. Quem esta de pe pode trocar; a baixa reposta volta com a arma da vaga dela e troca na virada seguinte; tripulacao de maquina nao entra. CALIBRAR os precos, referencia: reposicao de homem 30, TRP 500.",
+  "enabled": false,
+  "specialForcesOnly": true,
+  "blackMarket": { "on": true, "note": "18/10: o catalogo de fora (armas e itens dos outros exercitos para as SF) so aparece com a habilidade de campanha black-market comprada E esta chave ligada. PROVADO EM JOGO 18/10 (ZZ BLACK MARKET [B02]): soldado russo com M4A1 e 5.56mm 210, e AT4 americano na segunda mao." },
+  "menu": "army",
+  "menuNote": "army (28/09, autor): o menu de cada soldado e toda arma pessoal (classe 2) que a fabrica poe na mao 1 de alguma vaga do exercito dele (research/fabrica.json), mais o que a forca carrega; so entra arma com linha de municao colhida e nunca uma secundaria. force: so o que esta forca carrega (o comportamento ate 27/09). E o soldado que CAI (estado 2/3) perde a arma comprada e volta, quando voltar, com a de fabrica da vaga dele — sem reembolso.",
+  "specialForcesOnlyNote": "With enabled false, this still lets the player change the weapons of Special Forces men, and only theirs (autor, 27/09). Same menu, prices and write as plan 1 phase C.",
+  "classes": [
+   {
+    "match": "PKM|PKP|RPK|M249|M240|Machinegun|\\bLMG\\b",
+    "class": "mg"
+   },
+   {
+    "match": "SVD|CSASS|M110|M25 CDTE|M107|Mk21|PSR|Sniper|TWS",
+    "class": "sniper"
+   },
+   {
+    "match": "GP-25|GP-30|M320|M203|AGS-",
+    "class": "grenadeLauncher"
+   }
+  ],
+  "byWeaponClassNote": "A classe do id quando o nome nao diz (FORMATO 113.1): 2 arma pessoal, 3 arma de guarnicao, 4 lanca-rojao, 5 missil ou sem recuo.",
+  "byWeaponClass": {
+   "2": "personal",
+   "3": "crew",
+   "4": "at",
+   "5": "atgm"
+  },
+  "price": {
+   "personal": 0,
+   "grenadeLauncher": 20,
+   "mg": 40,
+   "sniper": 60,
+   "crew": 60,
+   "at": 60,
+   "atgm": 120,
+   "other": 40
+  },
+  "enabledNote": "DESLIGADA a pedido do autor em 20/09: \"nao precisa da funcionalidade de comprar arma para soldados individuais ainda na ferramenta\". O codigo continua inteiro (gear.mjs, a secao da tela, os testes) e volta com esta chave em true — por isso \"ainda\". Com ela em false o servidor nao le o inventario para a tela (`result.gear` nao existe), a tela nao desenha a secao e um pedido de troca que chegue assim mesmo e ignorado sem cobrar. O reset de arma da E78 respeita `state.gear`, que fica onde esta: uma campanha que ja comprou uma arma continua com ela."
+ },
+ "singleVehicles": {
+  "note": "Which roles show up in the single-vehicle menu, the one the game calls Single Vehicles. Off-map units never do: they cannot be attached to anything and cannot be lost. A vehicle attached to a formation being bought is an EXTRA of it (E51, 13/09): synthesized inside that formation when the core force is minted (FORMATO 98), priced like any unit of that name at `experience` (the level it is written with), roster line and core id like everything else. A vehicle attached to a formation ALREADY in the campaign is inserted into it too (30/10, autor: the truck bought for the Grenade Launcher platoon showed up in an Engineer platoon): synthesized the same way and written as the last child of that formation with id max + 1, the editor's own rule, so no core id moves (forge.growCoreForce attachOwned, campaign.attachOwnedOf). Until then it bought the cheapest free copy in the library and grafted its whole source, and the machine fought wherever that copy lived.",
+  "roles": [
+   "apc",
+   "ifv",
+   "tank",
+   "afv",
+   "recon",
+   "support",
+   "engineer",
+   "truck"
+  ],
+  "experience": "Regular",
+  "allowNote": "18/10 (autor): so estes veiculos sao vendidos como anexo, por exercito. O menu oferece os de todos os exercitos da biblioteca (US + UKR mostra os quatro americanos e o Ural), e o servidor recusa qualquer outro nome. Sem a lista, vale o filtro de papeis.",
+  "allow": {
+   "US": ["Infantry Carrier Vehicle (M1126 Stryker)", "Infantry Carrier Vehicle (M1126 Stryker (Mk19))", "Multipurpose Vehicle (M1152 HMMWV)", "Truck (LMTV (Armored))"],
+   "UKR": ["Truck (Ural-4320)"],
+   "RU": ["Truck (Ural-4320)"]
+  },
+  "exclude": [
+   { "type": [58, 0], "name": "Infantry Fighting Vehicle (BMP-3M)", "why": "No factory data (E119: the game writes no men and no state in its block) and it cannot be synthesized as an extra (the type catalogue mistakes it for the 2S24 tube; B013). Sold only inside its formations." },
+   { "type": [106, 14], "name": "Breach Team", "why": "No factory data (E119): the game writes no men and no state in its block, so as a lone unit it would come back whole every battle. Sold only inside its formation." }
+  ]
+ },
+ "tiersNote": "02/10 (autor): MANPADS liberados a partir do tier 2 (batalha 4) e SPAAG a partir do tier 3 (batalha 7), um tier mais cedo; o sorteio continua cego, sem reagir a aviacao do jogador. autor, 12/09: quatro tiers de tres batalhas, e dentro de cada tier a ordem dos mapas de Quick Battle e Probe, Attack, Assault — o tipo do mapa e a escada de dificuldade (a zona de setup e os objetivos sao desenhados para ele). `mapTiers` sao os tiers de AREA do censo (research/mapas_*.json: <0,5 | <1 | <2 | <4 | resto km2) de onde o tier sorteia; o tier 4 juntava os dois maiores (12/10: o autor eliminou o tier 5 na selecao, mapas.json, e o tier 4 sorteia so o 4). O tipo escolhido e o de `kinds` na posicao da batalha dentro do tier; sem mapa daquele tipo que sirva, qualquer tipo do tier serve, e o log diz (`map.fallback`). `unlocks` (E45): os papeis que os ANEXOS podem trazer naquele tier — tanques a partir do tier 3, como a tabela de spec/dominio.md secao 4 sempre disse; o espinhaco nao passa por eles. `budgetPerBattle` subiu de 250 para 350 em 12/09: com 250 a defesa comprava o mesmo pelotao de BMP nas tres primeiras batalhas (a compra e por sub-formacao inteira e a proxima custava 2220), e um pelotao de tanques a 3000 nunca cabia. `defenseBudget` por tier (E45): 1200/1600/3000/4200 — o salto no tier 3 e o que paga um pelotao de tanques (3000 na planilha) ao lado da infantaria. `unlocks` (E46): what the tier adds to `defense.alwaysAllowed` for the whole pool — ATGM/recon/mortars in tier 2, tanks/off-map mortars/MANPADS/drones in tier 3, artillery/AA/air in tier 4. `budgets` (E47): creditos por categoria na primeira batalha do tier — 1.550 / 3.750 / 9.080 / 22.000 no total — escada de razao 2,42 entre tiers (autor, 13/09: \"uma escada proporcional ate o tier 4\"; antes o tier 4 era 2,8x o 3 e os outros 2,2x), e os tanques na mesma escada (3.700 no tier 3 = 9.000 / 2,42) —, x1,3 a cada batalha dentro do tier (b12 = 37.180, com 15.210 de tanques: as batalhas finais sao epicas de proposito). `tankChance`: chance de um tanque surpresa onde o orcamento de tanques e zero.",
+ "maps": {
+  "memoryExclude": [],
+  "memoryExcludeNote": "05/10 (E139, bateria de memoria m2): o Huge Rough-Water-Town 026r deu Out of memory no briefing com 3 unidades e ficou fora do sorteio. 12/10: a causa era a marca de cenario, que corrompia um byte do bloco LZ 0 desse mapa (E175, hoje recusada nele); sem ela o autor carregou no jogo uma batalha minima e a da campanha (b12, US+UKR, 90 min). Lista vazia; o mecanismo fica para o proximo mapa que nao carregar.",
+  "note": "23/10 (autor): as tres versoes de cada mapa de QB (Probe, Attack, Assault) sao o MESMO mapa — terreno, objetivos, zonas e planos de IA iguais, so o byte do tipo muda. O app fica so com a versao Attack (assets/qb_attack, research/mapas_attack.json) e o inimigo vale 1x em toda batalha comum. kindBudgetFactor so tem o encontro (Meet, autor 12/10): 1,6x, porque no encontro os dois lados atacam; a recompensa segue o custo.",
+  "kindBudgetFactor": {
+   "Meet": 1.6
+  }
+ }
+}
