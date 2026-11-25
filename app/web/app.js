@@ -947,9 +947,16 @@ function attachRow(alvos) {
   }
   // The list is built here, not when the dropdown opens: the browser opens it at once and an async
   // fill lands too late, which is why clicking it looked dead.
-  const vs = vehicleMenu();
+  // only vehicles of the formation's own army (25/11): the game leaves a US vehicle in a Ukrainian company out of the battle
+  const nacao = alvo.pick.formation.nation;
+  const todos = vehicleMenu();
+  const vs = todos ? todos.filter((v) => !nacao || (v.copies || []).some((c) => c.nation === nacao)) : null;
+  if (vs && !vs.length) {
+    row.append(el('span', {}, 'Attach'), el('span', { class: 'hint' }, `No single vehicle of the ${nacao} army is sold — a vehicle of another army would be left out of the battle.`));
+    return row;
+  }
   const sel = el('select', { class: 'mods-sel' },
-    el('option', { value: '' }, vs ? `Attach a vehicle to ${alvo.node.name}…` : 'reading the library…'));
+    el('option', { value: '' }, vs ? `Attach a ${nacao ? nacao + ' ' : ''}vehicle to ${alvo.node.name}…` : 'reading the library…'));
   if (!vs) sel.disabled = true;
   let papel = null;
   for (const v of vs || []) {
@@ -1900,7 +1907,7 @@ function linhaDaLista(pick, n, fundo, idx, modo, parts, linhas) {
   const chips = [];
   if (n.isFormation) chips.push(chip('formation', 'A formation heading: everything under it comes with it', 'kind'));
   if (n.offMap) chips.push(chip('off-map', 'Fires from off the map: called by menu, cannot be seen or hit'));
-  if (n.extra) chips.push(chip('single vehicle', 'Bought as a single vehicle for this formation', 'att'));
+  if (n.extra || n.singleOwned) chips.push(chip('single vehicle', 'Bought as a single vehicle for this formation', 'att'));
   else if (n.ghost || (pick.attached && pick.attached.has(n.key))) chips.push(chip('attached', 'Bought from the library and attached here', 'att'));
   if (fora) chips.push(chip(fora.label.toLowerCase(), 'Out of the next battle', 'warn'));
   if (perdido) chips.push(chip(perdido.bought ? 'replacement bought' : 'destroyed', perdido.bought ? 'Rebuilt in its slot for the next battle' : 'Destroyed: replace it in Vehicles and guns', perdido.bought ? 'ok' : 'bad'));
@@ -4949,6 +4956,27 @@ async function ownedPicksOf(s) {
       if (n.owned) keep.add(n.key);
     };
     tree.roots.forEach(mark);
+    // OS AVULSOS QUE ELE JA TEM (25/11, relato de um jogador): a arvore vem da fonte da biblioteca, e o veiculo anexado
+    // (na criacao ou depois, `attachOwned`) nao existe nela — e um filho a mais da formacao, chave max + 1. Sem isto ele
+    // sumia da lista depois do Raise, embora estivesse no estado e na batalha. Pendurado sob a formacao dele, como o
+    // ultimo filho, que e onde o forge o escreveu.
+    const resto = (k) => (k.includes('.') ? k.slice(k.indexOf('.')) : '');
+    const porResto = new Map();
+    const indexar = (n) => { porResto.set(resto(n.key), n); (n.children || []).forEach(indexar); };
+    tree.roots.forEach(indexar);
+    for (const u of s.units || []) {
+      if (!u.key || !u.key.startsWith(`${i}.`) || porResto.has(resto(u.key))) continue;
+      const pai = porResto.get(resto(u.key).replace(/\.\d+$/, ''));
+      if (!pai || !pai.isFormation) continue;
+      const no = {
+        key: `${pai.key}.${u.key.split('.').pop()}`, name: u.name, isFormation: false, offMap: !!u.offMap, type: u.type,
+        role: u.role, experience: u.experience, price: u.price, children: [], coreId: u.coreId, singleOwned: true,
+        owned: !!(u.present || foraDeCampo.has(u.coreId)), sold: vendidasJa.has(u.coreId),
+      };
+      pai.children = [...(pai.children || []), no];
+      porResto.set(resto(no.key), no);
+      if (no.owned) keep.add(no.key);
+    }
     // A special forces pick shows only its piece, and nothing of it is for sale (autor, 27/09).
     const arvore = p.sf ? sfTree(tree, new Set(p.keep || [])) : tree;
     out.push({

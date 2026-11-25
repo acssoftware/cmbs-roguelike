@@ -7437,6 +7437,32 @@ if (!fs.existsSync(path.join(import.meta.dirname, '..', '.git')) || !fs.existsSy
   ok(!maus.length, `(250) a copia publica: o pacote sem o Node e o .exe, com README, LICENSE e .gitignore, sem dado pessoal${maus.length ? ' — ' + maus.join('; ') : ''}`);
 }
 
+// 251. O AVULSO SO ENTRA EM FORMACAO DO PROPRIO EXERCITO (25/11, relato de um jogador com US + UKR): o M1126, o M1152 e o
+//      LMTV anexados a uma companhia ucraniana ficaram fora da batalha (instantiated 0 no save), o Ural entrou. O
+//      servidor recusa o anexo de outro exercito, a tela so oferece os do exercito da formacao, e a lista da forca
+//      desenha o avulso que ja e dele (que nao existe na arvore da biblioteca).
+{
+  const maus = [];
+  try {
+    const { extrasOf } = await import('./src/campaign.mjs');
+    const aceita = (nacao, tipo) => {
+      const f = libFormations(nacao, { rules: R }).find((x) => !x.trp && formationTree(x.file).roots.some((r) => r.isFormation));
+      const tree = formationTree(f.file); const raiz = tree.roots.find((r) => r.isFormation);
+      try { return extrasOf({ source: f.file, nation: nacao, extras: [{ tipo, key: raiz.key }] }, tree, nacao, R).length === 1 ? 'ok' : 'vazio'; } catch (e) { return e.message; }
+    };
+    const stryker = 'Infantry Carrier Vehicle (M1126 Stryker)', ural = 'Truck (Ural-4320)';
+    const r1 = aceita('UKR', stryker), r2 = aceita('UKR', ural), r3 = aceita('US', stryker), r4 = aceita('US', ural);
+    if (!/is a US vehicle and cannot join a UKR formation/.test(r1)) maus.push(`Stryker em formacao UKR: ${r1.slice(0, 80)}`);
+    if (r2 !== 'ok') maus.push(`Ural em formacao UKR: ${r2.slice(0, 80)}`);
+    if (r3 !== 'ok') maus.push(`Stryker em formacao US: ${r3.slice(0, 80)}`);
+    if (!/is a UKR\/RU vehicle and cannot join a US formation/.test(r4)) maus.push(`Ural em formacao US: ${r4.slice(0, 80)}`);
+    const js = fs.readFileSync(path.join(import.meta.dirname, 'web', 'app.js'), 'utf8');
+    if (!/c\.nation === nacao/.test(js)) maus.push('o menu de anexos nao filtra pelo exercito da formacao');
+    if (!/singleOwned: true/.test(js) || !/n\.extra \|\| n\.singleOwned/.test(js)) maus.push('a lista da forca nao desenha o avulso que ja e dele');
+  } catch (e) { maus.push(e.message.slice(0, 200)); }
+  ok(!maus.length, `(251) avulso so no proprio exercito: US em UKR recusado, Ural em UKR e Stryker em US aceitos; tela filtra e desenha o avulso comprado${maus.length ? ' — ' + maus.join('; ') : ''}`);
+}
+
 // 93-100 (o mapa a partir do CSV do CMAutoEditor e a ferramenta de mapas offline) foram com a ferramenta para
 // CMAUTOEDITOR/map_maker (04/10/2026): rodam la, com `node test.mjs`.
 

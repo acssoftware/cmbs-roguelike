@@ -1599,6 +1599,15 @@ export function extrasOf(p, tree, nation, R = rules()) {
     if (permitidos && !Object.values(permitidos).some((l) => (l || []).includes(e.tipo))) {
       throw new Error(`${e.tipo}: not sold as a single vehicle — the attached vehicles are ${[...new Set(Object.values(permitidos).flat())].join(', ')}`);
     }
+    // SO DO EXERCITO DA FORMACAO (25/11, relato de um jogador, US + UKR): o M1126, o M1152 e o LMTV anexados a uma
+    // companhia ucraniana entraram no arquivo e o jogo os deixou fora da batalha (instantiated 0 no save; o Ural, da
+    // UKR, entrou). O jogo nao poe veiculo de outro exercito numa formacao. So na compra: o que ja foi comprado assim
+    // nao passa mais por aqui.
+    const exercito = p.nation || nation;
+    if (permitidos && permitidos[exercito] && !permitidos[exercito].includes(e.tipo)) {
+      const dono = Object.keys(permitidos).filter((k) => (permitidos[k] || []).includes(e.tipo)).join('/');
+      throw new Error(`${e.tipo} is a ${dono} vehicle and cannot join a ${exercito} formation — the game leaves it out of the battle. A ${exercito} formation takes ${permitidos[exercito].join(', ') || 'no single vehicle'}.`);
+    }
     const em = pathTo(tree, e.key);
     const experience = extraLevel(R);
     const priced = priceUnits([{ name: e.tipo, offMap: false, type: e.type || null, experience, single: true }], p.nation || nation, R);
