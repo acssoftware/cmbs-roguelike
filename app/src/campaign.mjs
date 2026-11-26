@@ -24,7 +24,7 @@ import { writeHeader, EXPERIENCE_LEVELS } from './re.mjs';
 import { readKills, readPersonnel } from './personnel.mjs';
 import { unitLedger, honourableMentions, leadersOf } from './honours.mjs';
 import { findCampaignSaves, saveFacts, sha1, LIVE_BATTLE_BYTES, readTransition, casualtyList, lightlyWounded, toeWeapons, lostWeapons, offIssueWeapons, fullLoads, poolLoads, missingLoads, missingGrenades, resetPlan, AAR_ZERO } from './transition.mjs';
-import { readGear, priceGear, applyGear, forgetGear, priceKit, applyKit, kitAmmo, kitAmmoForReset } from './gear.mjs';
+import { readGear, priceGear, applyGear, forgetGear, priceKit, applyKit, kitAmmo, kitAmmoForReset, boughtLaunchers, launcherBackToHand2 } from './gear.mjs';
 import { issueTable as readIssueTable } from '../../tools/re/dotacao.mjs';
 import { imageId, APP_IMAGES, desenharParaApp } from '../../tools/re/galeria_mapas.mjs';
 import { atlas, arvoreDoCaminho, pngParaBmp, lerPng } from './imagem.mjs';
@@ -203,6 +203,14 @@ function factoryReset({ source, workDir, tag, factory, armies, gear, keep, kit =
     for (const [id, nome] of names) { const row = factory.maquinas?.[`${byArmy.get(id)}|${clean(nome)}`]; if (row?.paiol) paiol[clean(nome)] = row.paiol; }
     return stripVehicleGear({ save: src, workDir, tag, rules: S.rules, names, armies: byArmy, paiol, trace }).save;
   };
+  // 26/11: o lancador comprado volta para a mao 2 ANTES de tudo — o jogo o devolve na mao 1, e a troca de arma (mao 1),
+  // a troca do item (mao 2) e a variante do reset (o par) contam com a mao em que o app o escreveu
+  const lancadores = boughtLaunchers(source, keepKit, kit);
+  if (lancadores.size) {
+    const out = path.join(workDir, `hands-${tag}.bts`);
+    const r = launcherBackToHand2({ save: source, out, launchers: lancadores, trace });
+    if (r.homens) source = out;
+  }
   if (gear.length) {
     const out = path.join(workDir, `gear-${tag}.bts`);
     const r = applyGear({ save: source, out, changes: gear, trace });
@@ -2532,7 +2540,7 @@ function harvestMap(onMap, trace) {
   return cabe[0];
 }
 
-function pickMap(state, n, R, trace, { kind: tipo = null } = {}) {
+export function pickMap(state, n, R, trace, { kind: tipo = null } = {}) {
   const real = n % 1000 || n;
   const tier = tierOf(real, R);
   const sizes = tier.mapTiers || [tier.tier];
@@ -2540,21 +2548,24 @@ function pickMap(state, n, R, trace, { kind: tipo = null } = {}) {
   const kind = tipo === 'Meet' ? 'Meet' : null;
   // Everything of yours that sets foot on the map has to have a tile to stand on in the setup zone.
   const onMap = (state.units || []).filter((u) => u.present && !u.offMap).length;
-  const skip = [...state.playedMaps, ...(state.badMaps || [])];
+  // 26/11: o mapa que o transplante recusou fica de fora de TODOS os degraus — os de recurso ("todo mapa ja jogado")
+  // esqueciam a lista e sorteavam de novo o mapa que acabara de falhar (relato de um jogador: o 313 Meet tres vezes)
+  const ruins = state.badMaps || [];
+  const skip = [...state.playedMaps, ...ruins];
   // In order: this kind, unplayed and big enough; this kind, any big enough; then the same two
   // without the kind; then, only if the force fits nowhere, unplayed at all — said out loud.
   // um no de encontro (13/10) sorteia entre os mapas de encontro elegiveis; sem nenhum, cai nos degraus de sempre (o
   // no vira o tipo do mapa sorteado e planForNode replaneja a defesa)
   const encontros = kind === 'Meet' ? [
     { pool: meetPool(sizes, skip, onMap, R, real), why: null },
-    { pool: meetPool(sizes, [], onMap, R, real), why: 'every meeting engagement map already played' },
+    { pool: meetPool(sizes, ruins, onMap, R, real), why: 'every meeting engagement map already played' },
   ] : [];
   const ladder = [
     ...encontros,
     { pool: mapPool(sizes, skip, onMap, kind), why: kind === 'Meet' ? 'no meeting engagement map fits the force' : null },
-    { pool: mapPool(sizes, [], onMap, kind), why: 'every map of this kind already played' },
+    { pool: mapPool(sizes, ruins, onMap, kind), why: 'every map of this kind already played' },
     { pool: mapPool(sizes, skip, onMap), why: 'no map of this kind fits the force' },
-    { pool: mapPool(sizes, [], onMap), why: 'no map of this kind, and every map of the tier already played' },
+    { pool: mapPool(sizes, ruins, onMap), why: 'no map of this kind, and every map of the tier already played' },
     { pool: mapPool(sizes, skip), why: 'the force fits nowhere in the tier' },
   ].filter((s) => s.pool.length);
   const step = ladder[0];
@@ -3182,7 +3193,11 @@ async function makeBattle(state, n, map, R, trace0, { node = null, intel = null,
       state.playedMaps = state.playedMaps.filter((m) => m !== (map.familia || map.f));
       trace.event('map.rejected', { battle: n, map: map.f, reason: e.message.slice(0, 160), attempt });
       const antes = map.f;
-      map = pickMap(state, n + attempt * 1000, R, trace, node ? { kind: node.kind } : {});
+      // 26/11: sem outro mapa, para aqui com o motivo do mapa recusado (antes sorteava o mesmo mapa ate a 4a tentativa)
+      try { map = pickMap(state, n + attempt * 1000, R, trace, node ? { kind: node.kind } : {}); } catch (sem) { map = null; }
+      if (!map || map.f === antes) {
+        throw new Error(`battle ${n} could not be built: ${antes} was refused (${e.message.slice(0, 200)}) and no other map of this tier is left to take its place. Send the diagnostics so the map can be fixed.`);
+      }
       // o no troca de campo de batalha: a defesa dele e replanejada no mapa novo, com a mesma semente e o mesmo peso
       if (node?.defense) {
         defense = planForNode(state, node, map, R);

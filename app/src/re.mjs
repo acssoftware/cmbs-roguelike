@@ -63,6 +63,7 @@ const tipoBatalha = await import('../../tools/re/tipo_batalha.mjs');
 const briefing = await import('../../tools/re/briefing.mjs');
 const cabecalhoLista = await import('../../tools/re/ext.mjs');
 const rosterCam = await import('../../tools/re/roster_cam.mjs');
+const pecas = await import('../../tools/re/pecas.mjs');
 const roster = await import('../../tools/re/roster.mjs');
 const removerMod = await import('../../tools/re/remover.mjs');
 const desmontarMod = await import('../../tools/re/desmontar.mjs');
@@ -134,6 +135,7 @@ export const presentUnderMask = core.presentesSobMascara;    // units switched o
 export const pruneFormation = podar.podar;                   // what the editor's Delete on a sub-formation does, by code
 export const contentEnd = core.fimDoConteudo;                // where a record's content ends
 export const coreUnits = rosterCam.unidadesDoCore;           // core ids of a core force
+export const pieceOfPair = pecas.pecaDoPar;                   // (val, tab, category) -> the off-map piece a vehicle's pair hides (25/11)
 export const writeCampaign = rosterCam.escreverCampanha;     // the whole .cam
 export const readCampaign = cam.lerCam;
 export const unitPosition = acrescentar.posicaoNoCompleto;   // null = fora do mapa (off-map)

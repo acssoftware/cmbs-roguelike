@@ -19,6 +19,7 @@
 //                      caminho do `crescerRoster`. Grava 0 = sao, que e o que o reforco deve fazer.
 import fs from 'node:fs';
 import { descomprimir, comprimirLiterais } from './lz.mjs';
+import { pecaDoPar, blocoDaIrma } from './pecas.mjs';
 import { cabecalhoDoBloco, decodificar, expandir, codificarComoJogo } from './escape.mjs';
 import { anatomiaDoSave } from './cam.mjs';
 import { comAtributos, comEquipe, unidadesDoCore } from './roster_cam.mjs';
@@ -1007,7 +1008,9 @@ export function crescerRoster(entrada, saida, novos, tabela) {
   const blocos = []; const feitos = [];
   for (const u of novos) {
     if (jaTem.has(u.coreId)) throw new Error(`o core id ${u.coreId} ja esta no roster`);
-    const t = porPar.get(`${u.val},${u.tab}`);
+    // a peca fora do mapa com o par de um veiculo (25/11, tools/re/pecas.mjs): a categoria do registro decide a linha
+    const peca = pecaDoPar(u.val, u.tab, u.categoria);
+    const t = peca || porPar.get(`${u.val},${u.tab}`);
     if (!t) throw new Error(`sem molde de roster para val=${u.val} tab=${u.tab}${u.nome ? ` (${u.nome})` : ''}`);
     const molde = Buffer.from(t.bloco, 'hex');
     const tipo = molde.readUInt16LE(4);
@@ -1021,7 +1024,7 @@ export function crescerRoster(entrada, saida, novos, tabela) {
     // da b10/b11, e na b12 as 8 aeronaves novas: Out of memory). A peca fora do mapa se reconhece pela FAMILIA do tipo
     // (byte baixo 0x09 artilharia, 0x0a aeronave/drone), nao pelo tamanho do molde.
     const semHomens = molde.length <= 42 || FAMILIAS_SEM_HOMENS.has(tipo & 0xff);
-    const daColheita = !doador.get(tipo) && semHomens ? (doadoresDaColheita().get(tipo) || blocoDaFamilia(tipo)) : null;
+    const daColheita = !doador.get(tipo) && semHomens ? (doadoresDaColheita().get(tipo) || blocoDaFamilia(tipo) || blocoDaIrma(peca, doadoresDaColheita())) : null;
     if (!doador.get(tipo) && semHomens && !daColheita) throw new Error(`sem bloco do jogo para ${u.nome || `tipo ${tipo}`} (unidade sem homens): o molde do .cam nao serve num save`);
     const d = doador.get(tipo) || daColheita;
     // O clone traz os atributos de quem doou o bloco — os da unidade comprada vem por cima (112.12).

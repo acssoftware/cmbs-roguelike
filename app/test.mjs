@@ -5582,6 +5582,7 @@ const todasAsChaves = (tree) => {
 {
   const CAT = await import('./src/catalog.mjs'); const C = await import('./src/campaign.mjs'); const M = await import('./src/meet.mjs');
   const maus = []; const fora = R.formations.discarded || [];
+  // 25/11 os tres pelotoes com a peca fora do mapa no par de um veiculo entraram; 26/11 voltaram, provados em jogo (teste 253)
   if (fora.length !== 4) maus.push(`${fora.length} descartadas`);
   for (const src of fora) if (!fs.existsSync(path.join(paths().lib, src + '.btt'))) maus.push(`${src} nao esta na biblioteca (nome errado?)`);
   const loja = [...CAT.libraryForArmies(['US', 'UKR'], { specialForces: true }), ...CAT.libFormations('UKR'), ...CAT.libFormations('US')].map((f) => f.source);
@@ -7461,6 +7462,180 @@ if (!fs.existsSync(path.join(import.meta.dirname, '..', '.git')) || !fs.existsSy
     if (!/singleOwned: true/.test(js) || !/n\.extra \|\| n\.singleOwned/.test(js)) maus.push('a lista da forca nao desenha o avulso que ja e dele');
   } catch (e) { maus.push(e.message.slice(0, 200)); }
   ok(!maus.length, `(251) avulso so no proprio exercito: US em UKR recusado, Ural em UKR e Stryker em US aceitos; tela filtra e desenha o avulso comprado${maus.length ? ' — ' + maus.join('; ') : ''}`);
+}
+
+// 252. O MARCADOR DE FIM DE MAPA CONFERIDO PELA LARGURA DO CABECALHO (25/11, relato de um jogador: Meeting Engagement
+//      no Open-Rural 313 que deixou de montar depois de uma compra). O cabecalho da forca e `00 a b ewAzul ewVerm X ...`;
+//      com b = 0, a guerra eletronica em None e o byte baixo de X em zero, quatro zeros viram um token 03 cujo literal cai
+//      em marcador+5, e o "ultimo candidato antes da forca" era ele. `transplantar` cortava ali, a batalha saia com o
+//      cabecalho sem os 5 primeiros bytes e o `battle.mapKept` a recusava em toda tentativa. Aqui o mesmo desenho e
+//      fabricado num arquivo da biblioteca (X = 0xa700, como o do jogador) e recodificado como o jogo grava.
+{
+  const maus = [];
+  try {
+    const T = await import('../tools/re/transplante.mjs');
+    const E = await import('../tools/re/escape.mjs');
+    const f = path.join(import.meta.dirname, '..', 'assets', 'lib', 'UKR - Section (Forward Observer).btt');
+    const d = T.ler(f); const m = openBtt(f).m;
+    const { completo } = E.expandir(d.cru, d.tokens);
+    const c2 = Buffer.from(completo); c2[m + 5] = 0; c2[m + 6] = 0xa7;
+    const enc = E.codificarComoJogo(c2, d.esc);
+    const d2 = { esc: d.esc, ...E.decodificar(enc, d.esc, 2, enc.length, []) };
+    const mk = T.marcador(d2);
+    const ex = E.expandir(d2.cru, d2.tokens); const inv = new Map(); ex.mapa.forEach((o, i) => { if (o >= 0 && !inv.has(o)) inv.set(o, i); });
+    if (!mk.corrigido) maus.push('o desenho fabricado nao produziu o candidato falso (o teste nao prova nada)');
+    else if (inv.get(mk.corrigido.de) !== m + 5) maus.push(`o candidato falso caiu em ${inv.get(mk.corrigido.de) - m} e nao em +5`);
+    if (inv.get(mk.pos) !== m) maus.push(`marcador em ${inv.get(mk.pos)}, o certo e ${m}`);
+    // e no arquivo intacto nada muda
+    if (T.marcador(d).corrigido) maus.push('o arquivo intacto teve o marcador corrigido');
+  } catch (e) { maus.push(e.message.slice(0, 200)); }
+  ok(!maus.length, `(252) marcador conferido pela largura do cabecalho: o token de 4 zeros em marcador+5 nao e mais escolhido${maus.length ? ' — ' + maus.join('; ') : ''}`);
+}
+
+// 253. A PECA FORA DO MAPA COM O PAR DE UM VEICULO (25/11, relato de um jogador: o UKR Platoon (Mortar [medium]) aparecia
+//      como "BMP-3M" e nao entrava no jogo). O par [58,0] e o BMP-3M no mapa e a peca de 82mm fora dele; a tabela de tipos
+//      so conhece o veiculo, e o roster recebia a linha dele (ZZ MORTAR 82: o 3 x 82mm sumiu do painel de apoio). A
+//      CATEGORIA do registro decide (tools/re/pecas.mjs, research/tipos_pecas.json): as pecas tem o nome certo, a linha
+//      de artilharia (tipo deduzido, bloco da irma de 6 pecas) e nao contam mais como colisao; o veiculo de verdade nao
+//      muda. Os tres pelotoes ficam descartados ate a prova em jogo; nenhuma formacao a venda tem peca sem cobertura.
+{
+  const maus = [];
+  try {
+    const { uncoveredUnits, formationTree: arvore } = await import('./src/catalog.mjs');
+    const P = await import('../tools/re/pecas.mjs');
+    const descartadas = new Set(R.formations.discarded || []);
+    const colisoes = (f) => uncoveredUnits(arvore(f)).filter((u) => u.colisao);
+    const folhas = (f) => { const o = []; const w = (n) => { if (!n.isFormation) o.push(n); (n.children || []).forEach(w); }; arvore(f).roots.forEach(w); return o; };
+    const esperado = { 'UKR - Platoon (Mortar [medium]).btt': '3 x 82mm Mortar (2B14)', 'RU - Platoon (Mortar [medium]).btt': '3 x 82mm Mortar (2B14)', 'RU - Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15].btt': '3 x 152mm Howitzer (2S19M1)' };
+    for (const [f, nome] of Object.entries(esperado)) {
+      const u = folhas(f)[0];
+      if (u?.name !== nome) maus.push(`${f}: a peca se chama ${u?.name}`);
+      if (colisoes(f).length) maus.push(`${f}: ainda acusada como colisao`);
+      // provados em jogo em 26/11 (ZZ MORTAR 82 B): de volta a venda
+      if (descartadas.has(f.replace(/\.btt$/, ''))) maus.push(`${f}: ainda descartada`);
+    }
+    // a peca organica da Battery (Mortar) do batalhao russo e o Stryker de verdade
+    const org = folhas('RU - Tactical Group (Battalion [BTR]).btt').find((n) => n.type[0] === 58 && n.type[1] === 0);
+    if (org?.name !== '3 x 82mm Mortar (2B14)' || org?.category !== 0x90) maus.push(`organica do TG [BTR]: ${org?.name} cat ${org?.category}`);
+    if (!folhas('US - Battalion (Stryker Infantry [Task Force]).btt').some((n) => n.name === 'Infantry Carrier Vehicle (M1126 Stryker)')) maus.push('o M1126 Stryker de verdade mudou de nome');
+    // INVARIANTE na biblioteca inteira: so vira peca quem e fora do mapa ou organica; nenhuma unidade no mapa
+    let pecas = 0;
+    for (const f of fs.readdirSync(path.join(import.meta.dirname, '..', 'assets', 'lib')).filter((x) => x.endsWith('.btt'))) {
+      let fs_ = []; try { fs_ = folhas(f); } catch { continue; }
+      for (const n of fs_) {
+        if (!P.pecaDoPar(n.type[0], n.type[1], n.category)) continue;
+        pecas++;
+        if (!n.offMap && !n.organic) maus.push(`${f} ${n.key} ${n.name}: virou peca estando no mapa (cat 0x${n.category.toString(16)})`);
+      }
+    }
+    if (pecas < 15) maus.push(`so ${pecas} pecas reconhecidas na biblioteca (esperava as 13 baterias organicas + os 3 pelotoes)`);
+    if (P.pecaDoPar(1, 0, 0x90)) maus.push('[1,0] na categoria 0x90 (nunca observada) virou peca');
+    if (!P.pecaDoPar(58, 0, 0x91)) maus.push('o grupo de reforco (bits baixos) tirou a peca da categoria');
+    // a linha: familia de artilharia, o tipo da tabela, o bloco da irma com o tipo trocado
+    for (const [val, tipo, irma] of [[58, 0x0c09, 0x0d09], [1, 0x1a09, 0x1b09]]) {
+      const p = P.pecaDoPar(val, 0, 0x50);
+      if (!p || p.tipo !== tipo || Buffer.from(p.bloco, 'hex').readUInt16LE(4) !== tipo || p.irma !== irma) maus.push(`linha de [${val},0]: ${JSON.stringify(p && { tipo: p.tipo, irma: p.irma })}`);
+      if (P.pecaDoPar(val, 0, 0x10)) maus.push(`[${val},0] na categoria de veiculo virou peca`);
+      const doado = Buffer.alloc(50); doado.writeUInt16LE(irma, 4);
+      const doadores = new Map([[irma, doado]]);
+      const b = P.blocoDaIrma(p, doadores);
+      if (!b || b.readUInt16LE(4) !== tipo) maus.push(`bloco da irma de [${val},0] sem o tipo trocado`);
+    }
+    for (const f of fs.readdirSync(path.join(import.meta.dirname, '..', 'assets', 'lib')).filter((x) => x.endsWith('.btt'))) {
+      if (descartadas.has(f.replace(/\.btt$/, ''))) continue;
+      let c = []; try { c = colisoes(f); } catch { continue; }
+      if (c.length) maus.push(`${f} a venda com ${c.map((u) => `${u.name} ${JSON.stringify(u.type)}`).join(', ')}`);
+    }
+    // as baterias de morteiro medio, com o tipo certo, continuam
+    for (const f of ['UKR - Battery (Mortar [medium]).btt', 'RU - Battery (Mortar [medium]).btt']) if (colisoes(f).length || descartadas.has(f.replace(/\.btt$/, ''))) maus.push(`${f} saiu junto`);
+  } catch (e) { maus.push(e.message.slice(0, 200)); }
+  ok(!maus.length, `(253) peca fora do mapa com par de veiculo: nome e linha de artilharia pela categoria, o veiculo de verdade intacto, os tres pelotoes de volta a venda${maus.length ? ' — ' + maus.slice(0, 5).join('; ') : ''}`);
+}
+
+// 254. TROCAR O JAVELIN COMPRADO PELO MISSIL (26/11, relato de um jogador): dois homens ucranianos da SF com o Javelin (US)
+//      do mercado negro, sem missil (o lancador recarregavel vem vazio, 18/10). Trocar o lancador de UM deles pela recarga
+//      travava o Apply: o priceKit lia a mao 2 do save (o Javelin que ele ia largar) e dizia "carries the launcher". Agora
+//      vale a mao 2 de DEPOIS da lista: quem troca o lancador pelo missil leva o missil para o outro; quem larga o lancador
+//      na mesma lista nao serve de atirador.
+{
+  const G = await import('./src/gear.mjs'); const C = await import('./src/campaign.mjs');
+  const maus = [];
+  const cat = G.kitCatalog(['UKR'], C.factoryTable(), R, undefined, { blackMarket: true });
+  const missil = (cat.UKR || []).find((x) => x.id === 'reload:4/1');
+  if (!missil || missil.foreign !== 'US' || !missil.ammo?.[57]) maus.push(`sem o Javelin missile (US) no catalogo ucraniano: ${JSON.stringify(missil)}`);
+  // como o save le os dois: o Javelin comprado na mao 2 (second) e no kit; a mao 2 de fabrica de um era 2/43
+  const homem = (index, factorySecond) => ({ index, slot: index, name: `H${index}`, canTake: true, weapon: '2/3', second: '4/1', kit: '4/1', factorySecond });
+  const unidade = () => [{ coreId: 11, nation: 'UKR', men: [homem(0, '2/43'), homem(1, G.NO_WEAPON)] }];
+  const tenta = (kit) => { try { return G.priceKit(kit, { units: unidade(), kitCatalog: cat }, R); } catch (e) { return e.message; } };
+  const troca = tenta([{ index: 1, item: 'reload:4/1' }]);
+  if (typeof troca === 'string' || troca.changes[0]?.from !== '4/1' || troca.changes[0]?.to !== 'reload:4/1' || troca.cost !== missil?.price) maus.push(`a troca do jogador: ${JSON.stringify(troca)}`);
+  const ambos = tenta([{ index: 0, item: 'reload:4/1' }, { index: 1, item: 'reload:4/1' }]);
+  if (!/nobody in his unit/.test(String(ambos))) maus.push(`os dois largaram o lancador e levaram o missil: ${JSON.stringify(ambos)}`);
+  const larga = tenta([{ index: 0, item: null }, { index: 1, item: 'reload:4/1' }]);
+  if (!/nobody in his unit/.test(String(larga))) maus.push(`o atirador largou o lancador na mesma lista: ${JSON.stringify(larga)}`);
+  const fica = tenta([{ index: 0, item: 'reload:4/1' }]);
+  if (typeof fica === 'string') maus.push(`o outro Javelin nao contou: ${fica}`);
+  ok(!maus.length, `(254) Javelin comprado trocado pelo missil: a troca passa com o outro atirador, e recusa quando ninguem fica com o lancador${maus.length ? ' — ' + maus.slice(0, 4).join('; ') : ''}`);
+}
+
+// 255. O MAPA RECUSADO NAO VOLTA NO SORTEIO (26/11, relato de um jogador: a b3 Meet tentou o 313 Meet tres vezes, porque
+//      os degraus de recurso do pickMap — "todo mapa ja jogado" — esqueciam state.badMaps). Com todo mapa jogado e o 313
+//      recusado, nenhuma semente devolve o 313; e o laço da montagem para com a mensagem quando nao sobra outro mapa.
+{
+  const C = await import('./src/campaign.mjs'); const CAT = await import('./src/catalog.mjs');
+  const maus = [];
+  const trace = { event: () => {} };
+  let sorteios = 0, meets = 0;
+  for (let seed = 1; seed <= 40; seed++) {
+    for (const n of [1, 2, 3]) {
+      // o mapa que o sorteio daria, ja jogado junto com todos os outros; depois recusado: tem de sair outro
+      let m0 = null; try { m0 = C.pickMap({ seed, units: [], playedMaps: [] }, n, R, trace, { kind: 'Meet' }); } catch { continue; }
+      if (/Meet/.test(m0.f)) meets++;
+      const jogados = [...new Set([...CAT.mapCensus().map((m) => m.familia || m.f), m0.familia || m0.f])];
+      let m = null; try { m = C.pickMap({ seed, units: [], playedMaps: jogados, badMaps: [m0.f] }, n, R, trace, { kind: 'Meet' }); } catch { continue; }
+      sorteios++;
+      if (m.f === m0.f) { maus.push(`semente ${seed}, batalha ${n}: o ${m0.f} recusado voltou`); break; }
+    }
+  }
+  if (!meets) maus.push('nenhum mapa de encontro sorteado');
+  if (!sorteios) maus.push('nenhum sorteio');
+  const fonte = fs.readFileSync(path.join(import.meta.dirname, 'src', 'campaign.mjs'), 'utf8');
+  if (!/no other map of this tier is left to take its place/.test(fonte)) maus.push('o laço sem a mensagem de parada');
+  ok(!maus.length, `(255) mapa recusado fora de todos os degraus do sorteio (${sorteios} sorteios com todo mapa jogado, ${meets} de encontro), parada com motivo${maus.length ? ' — ' + maus.slice(0, 3).join('; ') : ''}`);
+}
+
+// 256. O JOGO DEVOLVE O LANCADOR COMPRADO NA MAO 1 (26/11, prova em jogo ZZ JAVELIN MORTAR). O app entregou Koval e Klymenko
+//      com o Javelin (US) na mao 2 (2/25 + 4/1, 2/44 + 4/1) e o save da transicao, depois de um cessar-fogo no turno 0, os
+//      traz com as maos trocadas (4/1 + 2/25). Lido assim o Javelin era a arma dele e a troca pelo missil era recusada.
+//      Agora: a loja le as maos desinvertidas, a troca passa, e a entrega devolve o lancador a mao 2 antes de tudo.
+{
+  const G = await import('./src/gear.mjs'); const C = await import('./src/campaign.mjs');
+  const maus = [];
+  const d = (a, b, l) => G.desinverter(a, b, l).join(' + ');
+  if (d('4/1', '2/25', '4/1') !== '2/25 + 4/1' || d('2/25', '4/1', '4/1') !== '2/25 + 4/1' || d('4/1', '2/25', 'reload:4/1') !== '4/1 + 2/25' || d('4/1', '4/1', '4/1') !== '4/1 + 4/1' || d('4/1', '2/25', null) !== '4/1 + 2/25') maus.push('desinverter');
+  const save = path.join(paths().savedGames, 'ZZ JAVELIN MORTAR 002.bts');
+  let real = 'sem o save da ZZ JAVELIN MORTAR';
+  if (fs.existsSync(save)) {
+    const st = { nation: 'UKR', baseline: {}, units: [{ coreId: 12, name: 'Squad (Recon)', present: true, role: 'infantry', nation: 'UKR' }], kit: { 12: { 0: '4/1', 1: '4/1' } }, kitHand2: { 12: { 0: '4/15' } } };
+    const g = G.readGear(save, st, R, { factory: C.factoryTable(), blackMarket: true });
+    const homens = (g.units[0]?.men || []).slice(0, 2);
+    const visto = homens.map((m) => `${m.name} ${m.weapon} + ${m.second}`).join(', ');
+    if (homens.length !== 2 || homens.some((m) => m.second !== '4/1' || m.weapon === '4/1')) maus.push(`a loja leu o Javelin como arma: ${visto}`);
+    const troca = (() => { try { return G.priceKit([{ index: homens[1].index, item: 'reload:4/1' }], g, R); } catch (e) { return e.message; } })();
+    if (typeof troca === 'string') maus.push(`troca recusada no save real: ${troca}`);
+    // a entrega: o lancador volta a mao 2 (o que ja era dele pelo keepKit, o que ele larga pela troca)
+    const tmp = path.join(os.tmpdir(), `cmbs-256-${process.pid}.bts`);
+    try {
+      const lanc = G.boughtLaunchers(save, { 12: { 0: '4/1' } }, [{ index: homens[1].index, from: '4/1', to: 'reload:4/1' }]);
+      const r = G.launcherBackToHand2({ save, out: tmp, launchers: lanc, trace: { event: () => {} } });
+      const { readRosterTails } = await import('./src/re.mjs');
+      const t = readRosterTails(tmp);
+      const maos = homens.map((m) => { const c = t[m.index].cauda; return `${c[1]}/${c[2]} + ${c[4]}/${c[5]}`; });
+      if (r.homens !== 2 || maos.join() !== `${homens[0].weapon} + 4/1,${homens[1].weapon} + 4/1`) maus.push(`entrega: ${r.homens} homens, ${maos.join('; ')}`);
+      real = `${visto}; a troca do Klymenko pelo missil a ${troca.cost} cr; a entrega devolve os dois a mao 2`;
+    } finally { fs.rmSync(tmp, { force: true }); }
+  }
+  ok(!maus.length, `(256) lancador comprado que o jogo passou para a mao 1: ${real}${maus.length ? ' — ' + maus.slice(0, 4).join('; ') : ''}`);
 }
 
 // 93-100 (o mapa a partir do CSV do CMAutoEditor e a ferramenta de mapas offline) foram com a ferramenta para

@@ -323,11 +323,13 @@ function renderCanvas(pick, onChange, priceOf, { onRemove, hurt, onHeal, lost, o
       item.className = `man-opt${atual ? ' on' : ''}`;
       const sai = substitui(s, o);
       if (o.kind === 'launcher' && s.why2 === 'hand2' && o.id !== s.kit) item.title = `He drops ${s.factorySecondName || s.factorySecond} from his other hand while he carries it; it comes back if the item is dropped`;
+      // 26/11 (relato de um jogador): o lancador recarregavel vem vazio (18/10) — a tela tem de dizer
+      if (o.kind === 'launcher' && o.empty) item.title = `${item.title ? item.title + '. ' : ''}The launcher comes without its missile: buy the missile for another man of the same unit`;
       const nome = document.createElement('span');
       nome.textContent = o.name + (o.id === s.kit && o.id ? ' — has it' : '') + (sai.length ? ` (replaces ${sai.join(' and ')})` : '');
       const preco = document.createElement('span');
       preco.className = 'man-opt-price';
-      preco.textContent = o.undo || o.id === null || o.id === s.kit ? '' : `${o.kind === 'launcher' ? 'launcher' : o.kind}${o.price ? ' · ' + o.price + ' cr' : ''}`;
+      preco.textContent = o.undo || o.id === null || o.id === s.kit ? '' : `${o.kind === 'launcher' ? (o.empty ? 'launcher, no missile' : 'launcher') : o.kind}${o.price ? ' · ' + o.price + ' cr' : ''}`;
       item.append(nome, preco);
       item.addEventListener('click', (ev) => {
         ev.stopPropagation();

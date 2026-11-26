@@ -311,7 +311,8 @@ export function growSaveRoster({ save, out, units, coreFile, typeTable, trace })
   // The block also carries the unit's soft factors, and a cloned one carries the DONOR's. The real
   // ones come from the core force, by core id (FORMATO 112.12).
   const core = new Map(coreFile ? coreUnits(coreFile).map((u) => [u.coreId, u]) : []);
-  const r = growRosterBytes(save, out, units.map((u) => ({ coreId: u.coreId, val: u.type[0], tab: u.type[1], nome: u.name, atributos: core.get(u.coreId)?.atributos, b8: core.get(u.coreId)?.b8 })), typeTable);
+  // a categoria vem da forca core: e ela que separa a peca fora do mapa do veiculo de mesmo par (tools/re/pecas.mjs)
+  const r = growRosterBytes(save, out, units.map((u) => ({ coreId: u.coreId, val: u.type[0], tab: u.type[1], nome: u.name, atributos: core.get(u.coreId)?.atributos, b8: core.get(u.coreId)?.b8, categoria: core.get(u.coreId)?.categoria })), typeTable);
   trace.wrote('roster.grown', out);
   trace.event('roster.grow', { from: r.antes, to: r.depois, added: r.acrescentados, rosterBytes: r.roster });
   return r;

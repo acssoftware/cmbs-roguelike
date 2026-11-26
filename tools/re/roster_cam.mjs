@@ -27,6 +27,7 @@ import { descomprimir, comprimirLiterais } from './lz.mjs';
 import { cabecalhoDoBloco, decodificar, expandir, codificarComoJogo } from './escape.mjs';
 import { abrirCompleto } from './anexar2.mjs';
 import { fimDoConteudo } from './core.mjs';
+import { pecaDoPar } from './pecas.mjs';
 import { decodificar as lerAtributos, EXPERIENCIA, MOTIVACAO, FITNESS, SUPRIMENTO, LIDERANCA } from './atributos.mjs';
 
 // A assinatura e `05 04 03` e um quarto byte que varia (00 nas campanhas US/RU, 01 no catalogo
@@ -173,7 +174,9 @@ export function unidadesDoCore(caminho) {
     if (r.form || c[r.c + 12] === 0x60) continue;
     let i; try { i = fimDoConteudo(c, r, X.R[k + 1] ? X.R[k + 1].c : c.length); } catch { continue; }
     if (!i.core) continue;
-    out.push({ coreId: c.readUInt32LE(i.fim), val: r.val, tab: r.tab, nome: r.nm, presente: c[i.fim + 4], atributos: lerAtributos(c, r.c), b8: c[r.c + 8] });
+    // a categoria (+12) separa a peca fora do mapa do veiculo de mesmo par (tools/re/pecas.mjs)
+    const categoria = c[r.c + 12]; const peca = pecaDoPar(r.val, r.tab, categoria);
+    out.push({ coreId: c.readUInt32LE(i.fim), val: r.val, tab: r.tab, categoria, nome: peca ? peca.nome : r.nm, presente: c[i.fim + 4], atributos: lerAtributos(c, r.c), b8: c[r.c + 8] });
   }
   return out.sort((a, b) => a.coreId - b.coreId);
 }
@@ -184,7 +187,7 @@ export function blocosDeForca(caminho, tabela) {
   const porPar = new Map(tabela.filter((x) => x.bloco).map((x) => [`${x.val},${x.tab}`, x]));
   const faltando = [];
   const blocos = unidadesDoCore(caminho).map((u) => {
-    const t = porPar.get(`${u.val},${u.tab}`);
+    const t = pecaDoPar(u.val, u.tab, u.categoria) || porPar.get(`${u.val},${u.tab}`);
     if (!t) { faltando.push(u); return null; }
     const buf = comEquipe(comAtributos(Buffer.from(t.bloco, 'hex'), u.atributos), u.b8);
     buf.writeUInt32LE(u.coreId, 0);

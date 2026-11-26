@@ -1,0 +1,34 @@
+{
+ "nota": "25/11/2026 (relato de um jogador; prova no editor e no jogo pelo autor). O par (val, tab) nao e unico: [58,0] e o BMP-3M no mapa (categoria 0x10) e a peca \"3 x 82mm Mortar (2B14)\" fora dele (0x50 no pelotao avulso, 0x90 organica na Battery (Mortar) dos batalhoes russos); [1,0] e o M1126 Stryker e o \"3 x 152mm Howitzer (2S19M1)\" do RU Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15]. tipos_roster.json tem uma linha por par, a do veiculo, e o roster recebia a linha dele: o jogo descartava a peca (ZZ MORTAR 82: so os tres 2S24 no painel de apoio, sem o 3 x 82mm). Aqui as pecas por categoria. O TIPO E DEDUZIDO da numeracao dos tipos de artilharia (familia 0x09), que vem em pares 3/6 por peca e tem buracos exatamente em 0x0c09 (entre 6 x 155mm M777 e 6 x 82mm 2B14) e 0x1a09 (entre 6 x 2S19 e 6 x 2S19M1); o bloco e o da irma de 6 pecas com o tipo trocado. Prova em jogo pendente. 26/11: as categorias de cada peca sao as OBSERVADAS na biblioteca (o [1,0] so fora do mapa; o 0x90 e a categoria da Battery (Mortar) organica inteira, nao so da peca, e o M1126 Stryker de verdade so aparece em 0x10); os 3 bits baixos de +12 sao o grupo de reforco e nao entram na comparacao.",
+ "pecas": [
+  {
+   "val": 58,
+   "tab": 0,
+   "categorias": [
+    80,
+    88,
+    144
+   ],
+   "nome": "3 x 82mm Mortar (2B14)",
+   "tipo": 3081,
+   "irma": 3337,
+   "irmaNome": "6 x 82mm Mortar (2B14)",
+   "blocoN": 0,
+   "bloco": "bd0e0000090c000000000202020200050403010000000000000000008300000000000000000000000000"
+  },
+  {
+   "val": 1,
+   "tab": 0,
+   "categorias": [
+    80,
+    88
+   ],
+   "nome": "3 x 152mm Howitzer (2S19M1)",
+   "tipo": 6665,
+   "irma": 6921,
+   "irmaNome": "6 x 152mm Howitzer (2S19M1)",
+   "blocoN": 0,
+   "bloco": "63180000091a000000010202020202050403000000000000000000000000000000000000000000000000"
+  }
+ ]
+}

@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { paths, DATA_DIR, RESEARCH_DIR } from './settings.mjs';
-import { openBtt, forceTree, unitAttributes, equipmentRecords, equipmentTable, typeKey, toeVehicleTable } from './re.mjs';
+import { openBtt, forceTree, unitAttributes, equipmentRecords, equipmentTable, typeKey, toeVehicleTable, pieceOfPair as pecaDoPar } from './re.mjs';
 
 // THE TWO SIDES, which is what the war has, and THE THREE ARMIES, which is what the library has.
 // The enemy is a side — the campaign is fought against one of the two — but the player's own
@@ -89,12 +89,38 @@ function blocosSemHomens() {
   return semHomensCache;
 }
 
+// A PECA FORA DO MAPA COM O PAR DE UM VEICULO (25/11/2026, relato de um jogador). O par (val, tab) nao e unico no jogo:
+// [58,0] e o BMP-3M no mapa e a peca de 82mm do UKR/RU Platoon (Mortar [medium]) fora dele; [1,0] e o M1126 Stryker e o
+// obus do RU Platoon (Self-Propelled Howitzer [heavy]) [RU C3 15]. A tabela de tipos (`tipos_roster.json`) tem uma linha
+// por par, a do veiculo, e o roster da campanha recebia a linha dele: o jogo descartava a peca, e a tela a chamava de
+// "BMP-3M". A peca fora do mapa tem a familia 0x09 (artilharia) ou 0x0a (aeronave, drone) no tipo do roster; outra
+// familia e colisao, e a unidade conta como sem molde ate o tipo certo ser colhido num save do jogo.
+const FAMILIAS_FORA_DO_MAPA = new Set([0x09, 0x0a]);
+let familiaCache = null;
+function familiaDoPar() {
+  if (familiaCache) return familiaCache;
+  const rows = JSON.parse(fs.readFileSync(paths().typeTable, 'utf8'));
+  familiaCache = new Map(rows.filter((r) => r.bloco).map((r) => [`${r.val},${r.tab}`, Buffer.from(r.bloco, 'hex').readUInt16LE(4) & 0xff]));
+  return familiaCache;
+}
+
 export function uncoveredUnits(tree) {
   const have = rosterTemplates();
   const comBloco = blocosSemHomens();
+  const familia = familiaDoPar();
   const out = [];
   const walk = (n) => {
-    if (!n.isFormation) { const k = `${n.type[0]},${n.type[1]}`; if (!have.has(k)) out.push({ name: n.name, type: n.type }); else if (comBloco.get(k) === false) out.push({ name: n.name, type: n.type, semBloco: true }); return; }
+    if (!n.isFormation) {
+      const k = `${n.type[0]},${n.type[1]}`;
+      if (pecaDoPar(n.type[0], n.type[1], n.category)) return;   // coberta por research/tipos_pecas.json (linha e bloco da irma)
+      if (!have.has(k)) out.push({ name: n.name, type: n.type });
+      // So a peca marcada fora do mapa. A bateria ORGANICA (sem posicao) dos batalhoes russos tem a mesma colisao ([58,0] na
+      // Battery (Mortar)) e esta em quase todo batalhao russo: recusa-la tiraria da loja a forca russa inteira. Fica em
+      // aberto ate a prova em jogo (25/11): se ela some da batalha, o conserto e o tipo certo colhido, nao a recusa.
+      else if (n.offMap && !FAMILIAS_FORA_DO_MAPA.has(familia.get(k))) out.push({ name: n.name, type: n.type, colisao: true });
+      else if (comBloco.get(k) === false) out.push({ name: n.name, type: n.type, semBloco: true });
+      return;
+    }
     n.children.forEach(walk);
   };
   tree.roots.forEach(walk);
@@ -431,9 +457,11 @@ export function formationTree(sourceFile) {
     // A Target Reference Point is category 0x60 and the type catalogue has no name for it — it
     // comes back as whatever unit shares its type id (a Stryker, of all things). The source file
     // is the reliable label.
-    const bruto = trp && !r.form && c[r.c + 12] === 0x60 ? 'Target Reference Point' : (r.nm || '(unnamed)');
-    const occurrence = siblings.filter((s) => (s.r.nm || '(unnamed)') === bruto).indexOf(node) + 1;
     const category = c[r.c + 12];
+    // a peca fora do mapa com o par de um veiculo (25/11, tools/re/pecas.mjs): o catalogo diz "BMP-3M", a categoria diz morteiro
+    const peca = r.form ? null : pecaDoPar(r.val, r.tab, category);
+    const bruto = trp && !r.form && category === 0x60 ? 'Target Reference Point' : peca ? peca.nome : (r.nm || '(unnamed)');
+    const occurrence = siblings.filter((s) => (s.r.nm || '(unnamed)') === (r.nm || '(unnamed)')).indexOf(node) + 1;
     const name = readingOf(bruto, OFF_MAP_CATEGORIES.has(category));
     const reg = regs[node.i];
     const escolha = !r.form && reg && reg.n > 0 && /^(time|veiculo|sem-posicao)/.test(reg.kind || '');
@@ -778,11 +806,12 @@ export function meetCensus() {
 // OS ENCONTROS QUE O SORTEIO USA (13/10/2026): os do censo que o jogo carrega e, com `path.meetOnlyAuthored` (autor:
 // "so nos mapas com plano autoral"), so os que tem plano de encontro em `planos_ia.json`. `tier` = um tier do censo ou
 // uma lista (null = todos); `fits` = unidades do jogador no mapa; `battle` (17/10) = a batalha, para os mapas "b1".
+// 26/11: `alreadyPlayed` leva a familia (os jogados) e o arquivo (state.badMaps, o mapa que o transplante recusou)
 export function meetPool(tier = null, alreadyPlayed = [], fits = 0, R = null, battle = null) {
   const regras = R || JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'rules.json'), 'utf8'));
   const seen = new Set(alreadyPlayed);
   const tiers = tier == null ? null : new Set(Array.isArray(tier) ? tier : [tier]);
-  return meetCensus().filter((m) => (!tiers || meetFits(m, tiers, battle)) && !seen.has(m.familia || m.f) && loadsInGame(m, regras)
+  return meetCensus().filter((m) => (!tiers || meetFits(m, tiers, battle)) && !seen.has(m.familia || m.f) && !seen.has(m.f) && loadsInGame(m, regras)
     && (!regras.path?.meetOnlyAuthored || !!authoredPlan(mapFile(m))?.encontro)
     && (!fits || (m.capVermelho ?? 0) >= fits));
 }
@@ -832,7 +861,7 @@ export function mapPool(tier, alreadyPlayed = [], fits = 0, kind = null) {
   const seen = new Set(alreadyPlayed);
   const tiers = new Set(Array.isArray(tier) ? tier : [tier]);
   const R = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'rules.json'), 'utf8'));
-  return mapCensus().filter((m) => tiers.has(m.tier) && !seen.has(m.familia || m.f) && loadsInGame(m, R)
+  return mapCensus().filter((m) => tiers.has(m.tier) && !seen.has(m.familia || m.f) && !seen.has(m.f) && loadsInGame(m, R)
     && (!kind || m.tipo === kind)
     && (!fits || (m.capVermelho ?? 0) >= fits));
 }

@@ -20,7 +20,7 @@ import fs from 'fs';
 import { abrir, lerListaStrings } from './ext.mjs';
 import { descomprimirDoContainer } from './lz.mjs';
 import { decodificar, codificar, escDoBloco, cabecalhoDoBloco } from './escape.mjs';
-import { inicioDaForca, MINIMO_FORCA } from './regs.mjs';
+import { inicioDaForca, MINIMO_FORCA, registros } from './regs.mjs';
 import { expandir } from './escape.mjs';
 import { fimDaRegiaoIA } from './mapa.mjs';
 import { reconstruir } from './rebuild.mjs';
@@ -94,15 +94,43 @@ export function marcador(d) {
     candidatos.push({ k, pos: p, variante: `${c[p + 1].toString(16).padStart(2, '0')} ${c[p + 2].toString(16).padStart(2, '0')}` });
   }
   if (!candidatos.length) throw new Error('marcador de fim de mapa nao achado');
-  const m = candidatos[candidatos.length - 1];
+  let m = candidatos[candidatos.length - 1];
   if (inicioDaForca_ < 0 && c.length - m.pos > 4096)
     throw new Error(`mapa sem tropas mas com ${c.length - m.pos} bytes depois do marcador`);
-  // ATENCAO: "o ULTIMO token 0x03 antes da forca" acerta em 235 dos 236 arquivos medidos, mas NAO e
-  // garantia. Numa batalha de 13 topos o proprio cabecalho da forca produziu um token que parecia
-  // marcador e este `pos` saiu 5 bytes adiante do certo (E70). `abrirCompleto` conserta sozinho,
-  // pela largura fixa do cabecalho; quem chamar `marcador` direto para LER cabecalho fica com o
-  // erro.
+  // "O ULTIMO token 0x03 antes da forca" acerta quase sempre, mas NAO e garantia: o proprio cabecalho da forca pode
+  // produzir um token que parece marcador, e o `pos` sai 5 bytes adiante do certo (E70, numa batalha de 13 topos).
+  // 25/11/2026 (relato de um jogador, Meeting Engagement no Open-Rural 313): o mesmo erro no TRANSPLANTE. A forca
+  // composta (8 formacoes azuis + a do jogador) tinha um campo do cabecalho com o byte baixo zero, o candidato caiu
+  // 5 bytes dentro do cabecalho, `transplantar` cortou ali e a batalha saiu com o cabecalho sem os 5 primeiros bytes
+  // (o `battle.mapKept` recusava, com razao, e a campanha travava: tirar qualquer formacao da forca mudava os bytes e
+  // o erro sumia). Agora o candidato e CONFERIDO pela largura fixa do cabecalho, a mesma regra de `abrirCompleto`:
+  // do marcador ao primeiro registro sao 14 bytes (azul primeiro) ou 18 (vermelho primeiro). Quando o ultimo nao
+  // confere, vale o ultimo que confere; se nenhum confere, o de sempre.
+  if (inicioDaForca_ >= 0 && candidatos.length > 1) {
+    const conferido = conferirPelaLargura(d, candidatos);
+    if (conferido && conferido !== m) m = { ...conferido, corrigido: { de: m.pos, para: conferido.pos } };
+  }
   return { ...m, semTropas: inicioDaForca_ < 0 };
+}
+
+// A FORMA DO CABECALHO DA FORCA, no fluxo completo (sem tokens): byte 0 em zero e, conforme a distancia ate o primeiro
+// registro, `K_azul` entre 1 e o numero de registros (14, azul primeiro) ou `K_azul` zero com `K_verm` >= 1 (18,
+// vermelho primeiro). E a regra de `anexar2.abrirCompleto`, medida em 149 + 86 arquivos (E70).
+function conferirPelaLargura(d, candidatos) {
+  const { completo, mapa } = expandir(d.cru, d.tokens);
+  const inv = new Map(); mapa.forEach((o, i) => { if (o >= 0 && !inv.has(o)) inv.set(o, i); });
+  const R = registros(completo);
+  if (!R.length) return null;
+  const primeiro = R.reduce((a, r) => (r.off < a ? r.off : a), Infinity);
+  const forma = (x) => {
+    if (x === undefined || x < 0 || x + 21 > completo.length || completo[x] !== 0x00) return false;
+    const dif = primeiro - x;
+    if (dif === 14) { const k = completo.readUInt32LE(x + 13); return k >= 1 && k <= R.length; }
+    if (dif === 18) return completo.readUInt32LE(x + 13) === 0 && completo.readUInt32LE(x + 17) >= 1;
+    return false;
+  };
+  for (let i = candidatos.length - 1; i >= 0; i--) if (forma(inv.get(candidatos[i].pos))) return candidatos[i];
+  return null;
 }
 
 // Contagem de formacoes de topo de um lado: u32 colado antes do id da primeira formacao,

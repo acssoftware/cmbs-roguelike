@@ -126,7 +126,9 @@ export function readGear(savePath, state, R, { crewRoles = null, offMap = null, 
     u.soldados.forEach((s, slot) => {
       const c = tails[s.indice]?.cauda;
       const paiol = readAmmoVector(c);
-      const arma = paiol ? par(c[1], c[2]) : null;
+      // 26/11: o lancador comprado que o jogo passou para a mao 1 e lido de volta na mao 2 (desinverter)
+      const comprado = state.kit?.[u.coreId]?.[slot] || null;
+      const [arma, segunda] = paiol ? desinverter(par(c[1], c[2]), par(c[4], c[5]), comprado) : [null, null];
       anota(nacao, arma);
       // e o que a campanha aprendeu para esta vaga tambem conta como arma do exercito
       anota(nacao, state.baseline?.[u.tipo]?.[slot]?.arma);
@@ -134,8 +136,6 @@ export function readGear(savePath, state, R, { crewRoles = null, offMap = null, 
       const porque = tripulacao ? 'crew' : s.estado > 1 ? 'down' : null;
       // O ITEM DE INVENTARIO (05/10, E145): um por soldado. O comprado mora em state.kit[coreId][slot]; um lancador
       // precisa da mao 2 livre — a de FABRICA da vaga, porque o lancador comprado e disparado volta pelo reset.
-      const segunda = par(c[4], c[5]);
-      const comprado = state.kit?.[u.coreId]?.[slot] || null;
       const vaga = fabricaDa(nacao, u.tipo, slot);
       // a variante de fabrica que ele carrega (a mesma conta do resetPlan); um par que a fabrica nunca deu cai na base.
       // Se a mao 2 dele e o lancador COMPRADO, a conta e feita com a mao 2 vazia.
@@ -151,7 +151,7 @@ export function readGear(savePath, state, R, { crewRoles = null, offMap = null, 
       men.push({
         index: s.indice, name: s.nome, state: s.estado, slot,
         weapon: arma, weaponName: nomeDe(nomes, nacao, arma), class: arma ? weaponClass(arma, nomeDe(nomes, nacao, arma), R, nacao) : null,
-        second: par(c[4], c[5]), ammo: carregado(s.indice),
+        second: segunda, ammo: carregado(s.indice),
         canChange: !porque && arma !== null, why: porque,
         // comprada numa batalha anterior e ainda na mao (a tela marca "bought")
         bought: !!arma && state.gear?.[u.coreId]?.[slot] === arma,
@@ -352,12 +352,16 @@ export function priceKit(kit, { units, kitCatalog: cat = {} }, R) {
     // cair) ela volta pelo reset. So nao se compra o lancador que a fabrica ja poe na mao dele.
     if (escolha.kind === 'launcher' && escolha.id === m.factorySecond) throw new Error(`${m.name} already carries ${m.secondName || m.factorySecond} in his other hand`);
     if (escolha.kind === 'reload') {
+      // 26/11 (relato de um jogador): quem segura o lancador e o que a mao 2 tera DEPOIS desta lista, nao o que o save
+      // diz agora. O homem com o Javelin comprado que o troca pelo missil deixa de segurar o lancador (a mao 2 dele volta
+      // a de fabrica), e o que larga o lancador nesta lista nao serve de atirador para a recarga de outro.
       const L = escolha.launcher;
-      const segura = (h) => h.second === L || h.weapon === L || h.kit === L;
+      const lancador = (id) => !!id && /^\d+\/\d+$/.test(id);
+      const kitDepois = (h) => { const o = (kit || []).find((x) => Number(x.index) === h.index); return o ? (o.item === null || o.item === undefined || o.item === '' ? null : String(o.item)) : h.kit; };
+      const maoDois = (h) => { const k = kitDepois(h); return lancador(k) ? k : lancador(h.kit) ? h.factorySecond : h.second; };
+      const segura = (h) => h.weapon === L || maoDois(h) === L;
       if (segura(m)) throw new Error(`${m.name} carries the launcher and its round already: a reload is carried by another man of the unit`);
-      // na unidade, alguem com o lancador: de fabrica, comprado antes, ou comprado nesta mesma lista
-      const nestaLista = (kit || []).some((o) => String(o.item) === L && m.unit.men.some((h) => h.index === Number(o.index)));
-      if (!m.unit.men.some(segura) && !nestaLista) throw new Error(`${m.name}: nobody in his unit carries the ${L} this round is for`);
+      if (!m.unit.men.some(segura)) throw new Error(`${m.name}: nobody in his unit carries the ${L} this round is for`);
     }
     if (escolha.id === m.kit) continue;
     out.push({ index: m.index, slot: m.slot, name: m.name, coreId: m.unit.coreId, from: m.kit, to: escolha.id, toName: escolha.name, kind: escolha.kind, ammo: escolha.ammo, class: escolha.class, price: escolha.price, factoryDemo: m.factoryDemo, factoryLaser: m.factoryLaser, factorySecond: m.factorySecond });
@@ -379,6 +383,43 @@ export function kitBytes(cauda, de, para, { factoryDemo = 0, factoryLaser = fals
   if (ligar7) r.ligar7 = ligar7;
   if (desligar7) r.desligar7 = desligar7;
   return Object.keys(r).length ? r : null;
+}
+
+// O LANCADOR QUE O JOGO PASSA PARA A MAO 1 (26/11/2026, prova em jogo ZZ JAVELIN MORTAR). O app escreve o lancador comprado
+// na mao 2 (save entregue: 2/25 + 4/1) e o jogo devolve o homem com as maos trocadas (save da transicao: 4/1 + 2/25), ate
+// num cessar-fogo no turno 0. Lido assim, o Javelin parecia a arma dele: a loja dizia que ele "segura o lancador" e recusava
+// a troca pelo missil (relato de um jogador), a troca de arma escrevia por cima do Javelin e o reset perdia a variante da vaga
+// (o par nao casava). `desinverter(c, lancador)` diz as maos como o app as escreveu; `launcherBackToHand2` grava isso no
+// save, antes de qualquer outra escrita da entrega. `launchers` = Map indice do soldado -> par do lancador comprado.
+export function desinverter(a1, a2, lancador) {
+  return lancador && /^\d+\/\d+$/.test(lancador) && a1 === lancador && a2 !== lancador ? [a2, a1] : [a1, a2];
+}
+export function launcherBackToHand2({ save, out, launchers, trace }) {
+  if (!launchers?.size) return { homens: 0 };
+  const tails = readRosterTails(save);
+  const maos = {}, quem = [];
+  for (const [index, L] of launchers) {
+    const c = tails[index]?.cauda; if (!c || c.length < 6) continue;
+    const a1 = par(c[1], c[2]), a2 = par(c[4], c[5]);
+    const [m1, m2] = desinverter(a1, a2, L);
+    if (m1 === a1) continue;
+    const [classe, item] = m1.split('/').map(Number), [classe2, item2] = m2.split('/').map(Number);
+    maos[index] = { classe, item, classe2, item2 };
+    quem.push(`${tails[index]?.nome || index}: ${a1} + ${a2} -> ${m1} + ${m2}`);
+  }
+  if (!quem.length) return { homens: 0 };
+  const r = rearmMen(save, out, maos);
+  trace?.event('kit.handsBack', { men: quem });
+  return { homens: r.homens };
+}
+// os lancadores comprados de um save, por indice do soldado: o que ja era dele (`keepKit`, core -> vaga -> item) e o que ele
+// larga nesta virada (`changes`.from)
+export function boughtLaunchers(save, keepKit, changes = []) {
+  const out = new Map();
+  const lancador = (id) => !!id && /^\d+\/\d+$/.test(id);
+  if (keepKit) for (const u of readRoster(save).unidades) u.soldados.forEach((s, slot) => { const k = keepKit[u.coreId]?.[slot]; if (lancador(k)) out.set(s.indice, k); });
+  for (const c of changes || []) if (lancador(c.from) && !out.has(c.index)) out.set(c.index, c.from);
+  return out;
 }
 
 // A ESCRITA DO ITEM: lancador na mao 2 (o par; o foguete entra no reset do mesmo refit, que segue `keepKit`), bits

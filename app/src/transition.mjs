@@ -18,7 +18,7 @@ import crypto from 'node:crypto';
 import { paths } from './settings.mjs';
 import { saveAnatomy, readRoster, readRosterTails, readAmmoVector, readGrenades, grenadePlan, pointsAtStake } from './re.mjs';
 import { fileFacts } from './trace.mjs';
-import { KIT_BITS } from './gear.mjs';
+import { KIT_BITS, desinverter } from './gear.mjs';
 
 // O QUE SEPARA UM SAVE DE TRANSICAO DE UM SAVE DE DENTRO DA BATALHA.
 //
@@ -695,8 +695,10 @@ export function resetPlan(savePath, factory, { armies = null, keep = null, weapo
       const pairOf = (a, b) => [a, b].sort().join(' + ');
       // o lancador comprado no lugar da arma de fabrica da mao 2 (19/10) desfaz o par: a variante sai da mao 1
       const kitDele = keepKit?.[u.coreId]?.[slot] || null;
-      const pelaMao1 = kitDele && arms.a2 === kitDele ? (row0.variantes || []).find((v) => v.mao1 === arms.a1) : null;
-      const want = (row0.variantes || []).find((v) => v.maos.join(' + ') === pairOf(arms.a1, arms.a2)) || pelaMao1 || row0;
+      // 26/11: o jogo devolve o lancador comprado na mao 1; o par e lido como o app o escreveu (gear.desinverter)
+      const [a1, a2] = desinverter(arms.a1, arms.a2, kitDele);
+      const pelaMao1 = kitDele && a2 === kitDele ? (row0.variantes || []).find((v) => v.mao1 === a1) : null;
+      const want = (row0.variantes || []).find((v) => v.maos.join(' + ') === pairOf(a1, a2)) || pelaMao1 || row0;
       let h1 = want.mao1 || want.maos.find((k) => k !== NO_WEAPON) || want.maos[0];
       const rest = [...want.maos]; rest.splice(rest.indexOf(h1), 1);
       let h2 = rest[0] || NO_WEAPON;
